@@ -43,7 +43,6 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var scrollView: UIScrollView!
     
     
-    
     //The Labels for the textField and the picker
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
