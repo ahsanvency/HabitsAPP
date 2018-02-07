@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>775183960773-lbkmq3c78q2k265u30arenqpvrqqu6ls.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.775183960773-lbkmq3c78q2k265u30arenqpvrqqu6ls</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBrXVTwHz-yUDb3W6jhRUXpLswnZUZJA08</string>
+	<key>GCM_SENDER_ID</key>
+	<string>775183960773</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ahsanvency.Habits</string>
+	<key>PROJECT_ID</key>
+	<string>habits-bfff6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>habits-bfff6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:775183960773:ios:8c36549bf9207d91</string>
+	<key>DATABASE_URL</key>
+	<string>https://habits-bfff6.firebaseio.com</string>
+</dict>
+</plist>
