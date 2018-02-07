@@ -12,7 +12,8 @@ import SwiftKeychainWrapper
 
 class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    @IBOutlet weak var screenTitle: UILabel!
+    
     @IBOutlet weak var tableView: UITableView!
     
     var intrinsicQuestions = [String]()
@@ -27,6 +28,9 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var myGradient = UIImage(named: "textGradient.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        
         guard let user = Auth.auth().currentUser else {
             print("User not found")
             return

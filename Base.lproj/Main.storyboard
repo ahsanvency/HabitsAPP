@@ -442,9 +442,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mph-jn-MEF" userLabel="Title View">
                                 <rect key="frame" x="0.0" y="20" width="375" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HD Logo here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7QL-W8-6oA">
-                                        <rect key="frame" x="65" y="22" width="245" height="27.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7QL-W8-6oA">
+                                        <rect key="frame" x="65" y="14.5" width="245" height="41"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
                                         <color key="textColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -466,7 +466,7 @@
                                             <constraint firstAttribute="height" constant="50" id="guM-F5-Ddu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="LOGOUT">
+                                        <state key="normal" title="Logout">
                                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -692,6 +692,7 @@
                         <viewLayoutGuide key="safeArea" id="kEF-aT-C4Z"/>
                     </view>
                     <connections>
+                        <outlet property="screenTitle" destination="7QL-W8-6oA" id="fzK-29-oFd"/>
                         <outlet property="tableView" destination="Yaf-Ci-rLg" id="xN1-lG-Swv"/>
                         <segue destination="ocZ-h0-lAE" kind="show" identifier="toRewardsScreen" id="A2B-BA-a99"/>
                     </connections>

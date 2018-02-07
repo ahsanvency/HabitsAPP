@@ -13,6 +13,9 @@ import Firebase
 import SwiftKeychainWrapper
 
 class RegisterScreen: UIViewController {
+    
+    
+    
     //Outlets
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
