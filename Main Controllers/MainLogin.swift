@@ -14,9 +14,16 @@ class MainLogin: UIViewController {
 
     var success: Int?
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        UIApplication.shared.statusBarStyle = .lightContent
+//    }
+//    override var preferredStatusBarStyle : UIStatusBarStyle {
+//        return .lightContent
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     //If the user already logged in it will take them to the main screen with swift keychainwrapper
