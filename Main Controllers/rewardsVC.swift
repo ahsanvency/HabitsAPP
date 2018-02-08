@@ -36,6 +36,15 @@ class rewardsVC: UIViewController {
     var timerWin = Timer()
     var timerUpAlert = Timer()
     
+    
+    var success: Int?
+    
+    var basicGap: Int?
+    var basicGap1: Int?
+    var intermediateGap: Int?
+    var intermediateGap1: Int?
+    var advancedGap: Int?
+    
     //Number of times to spin each column
     var numberOfTimesSpinLeft: Int!
     var numberOfTimesSpinMiddle: Int!
@@ -95,6 +104,12 @@ class rewardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        basicGap = 7
+        basicGap1 = 7
+        intermediateGap = 6
+        intermediateGap1 = 5
+        advancedGap = 4
+        
         let layerTop: CALayer = CALayer()
         layerTop.backgroundColor = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1.0).cgColor //Background color of the view added
         layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  -slotsView.bounds.height / 2 + 162) //position of the added view
@@ -121,7 +136,9 @@ class rewardsVC: UIViewController {
         slotsView.layer.addSublayer(layerTop)
         slotsView.layer.addSublayer(layerBottom)
         
-        items = [oneTop, oneBottom, whiteTop, whiteBottom, twoTop, twoBottom, oneTop, oneBottom, whiteTop, whiteBottom, oneTop, oneBottom, whiteTop, whiteBottom, threeTop, threeBottom, whiteTop, whiteBottom, twoTop, twoBottom, whiteTop, whiteBottom, oneTop, oneBottom, twoTop, twoBottom, whiteTop, whiteBottom, oneTop, oneBottom]
+        items = [oneTop, oneBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom, threeTop, threeBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom, threeTop, threeBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom]
+        
+        print("ITEMS: \(items.count)")
         
         isSpinning = false
         selectedItemLeft = 1
@@ -152,7 +169,7 @@ class rewardsVC: UIViewController {
             let firstDict = value![firstKey] as! Dictionary<String,Any>
             
             var rewardsDict = firstDict["Rewards"] as? Dictionary<String, Any>
-            var success = rewardsDict!["Success"] as? Int
+            self.success = (rewardsDict!["Success"] as? Int)!
             
             let time = Date.init()
             let calender = Calendar.current
@@ -173,14 +190,13 @@ class rewardsVC: UIViewController {
                     self.present(spinAlert, animated: true, completion: nil)
 
                 } else {
-                    success = success! + 1
-                    DataService.ds.REF_HABITS.child(uid).child("\(firstKey)").child("Rewards").updateChildValues(["Success": success!,"SpunDay":day])
+                    self.success = self.success! + 1
+                    DataService.ds.REF_HABITS.child(uid).child("\(firstKey)").child("Rewards").updateChildValues(["Success": self.success,"SpunDay":day])
                     self.runSpin()
                 }
-                
             } else {
-                success = success! + 1
-                DataService.ds.REF_HABITS.child(uid).child("\(firstKey)").child("Rewards").updateChildValues(["Success": success!,"SpunDay":day])
+                self.success = self.success! + 1
+                DataService.ds.REF_HABITS.child(uid).child("\(firstKey)").child("Rewards").updateChildValues(["Success": self.success,"SpunDay":day])
                 self.runSpin()
             }
         })
@@ -205,10 +221,7 @@ class rewardsVC: UIViewController {
         if (isSpinning){
             return
         }
-        
         updateSuccess()
-        
-
     }
     
     func prepareNextSpin(){
@@ -250,7 +263,7 @@ class rewardsVC: UIViewController {
         if (leftCurrentSpinCount <= numberOfTimesSpinLeft){
             selectedItemLeft = selectedItemLeft - 1
             if selectedItemLeft == -1 {
-                selectedItemLeft = 29
+                selectedItemLeft = 33
             }
             rotateitems(index: selectedItemLeft, columnIndex: 1)
         }
@@ -276,7 +289,7 @@ class rewardsVC: UIViewController {
         if (middleCurrentSpinCount <= numberOfTimesSpinMiddle){
             selectedItemMiddle = selectedItemMiddle - 1
             if selectedItemMiddle == -1 {
-                selectedItemMiddle = 29
+                selectedItemMiddle = 33
             }
             rotateitems(index: selectedItemMiddle, columnIndex: 2)
         }
@@ -304,7 +317,7 @@ class rewardsVC: UIViewController {
         if (rightCurrentSpinCount <= numberOfTimesSpinRight){
             selectedItemRight = selectedItemRight - 1
             if selectedItemRight == -1 {
-                selectedItemRight = 29
+                selectedItemRight = 33
             }
             rotateitems(index: selectedItemRight, columnIndex: 3)
         }
@@ -365,40 +378,39 @@ class rewardsVC: UIViewController {
         
         var index1Top = index - 3
         if index1Top == -3{
-            index1Top = 27
+            index1Top = 31
         }else if index1Top == -2{
-            index1Top = 28
+            index1Top = 32
         }else if index1Top == -1{
-            index1Top = 29
+            index1Top = 33
         }
         
         var index1Bottom = index - 2
         if index1Bottom == -2{
-            index1Bottom = 28
+            index1Bottom = 32
         }else if index1Bottom == -1{
-            index1Bottom = 29
+            index1Bottom = 33
         }
         
         var index2Top = index - 1
         if index2Top == -1{
-            index2Top = 29
+            index2Top = 33
         }
         
         let index2Bottom = index
         
         var index3Top = index + 1
-        if index3Top == 30{
+        if index3Top == 34{
             index3Top = 0
         }
         
         
         var index3Bottom = index + 2
-        if index3Bottom == 31{
+        if index3Bottom == 35{
             index3Bottom = 1
-        }else if index3Bottom == 30{
+        }else if index3Bottom == 34{
             index3Bottom = 0
         }
-        
         imageTop1.image = items[index1Top].image
         imageBottom1.image = items[index1Bottom].image
         imageTop2.image = items[index2Top].image
@@ -411,7 +423,6 @@ class rewardsVC: UIViewController {
         let leftCheck = items[selectedItemLeft].reward
         let middleCheck = items[selectedItemMiddle].reward
         let rightCheck = items[selectedItemRight].reward
-        
         
         //current user
         guard let user = Auth.auth().currentUser else {
@@ -508,40 +519,86 @@ class rewardsVC: UIViewController {
     }
     
     func returnStop() -> Int{
-        let rand = Int(arc4random_uniform(UInt32(105)))
+        if (self.success! < 10 && self.success! > 4) || (self.success! > 20 && self.success! < 26){
+            intermediateGap = 10
+            intermediateGap1 = 10
+        }
+        
+        if (self.success! > 9 && self.success! < 15) || (self.success! > 25 && self.success! < 31){
+            basicGap1 = 11
+            advancedGap = 11
+        }
+        
+        let x1 = 1
+        let x2 = x1 + basicGap1!
+        let x3 = x2 + basicGap!
+        let x4 = x3 + intermediateGap!
+        let x5 = x4 + basicGap!
+        let x6 = x5 + advancedGap!
+        let x7 = x6 + basicGap!
+        let x8 = x7 + intermediateGap!
+        let x9 = x8 + basicGap!
+        let x10 = x9 + basicGap!
+        let x11 = x10 + intermediateGap1!
+        let x12 = x11 + basicGap!
+        let x13 = x12 + advancedGap!
+        let x14 = x13 + basicGap!
+        let x15 = x14 + intermediateGap1!
+        let x16 = x15  + basicGap!
+        let x17 = x16 + intermediateGap1!
+        let x18 = x17 + basicGap!
+
+        
+        var rand = Int(arc4random_uniform(UInt32(x18)))
         var stop = 0;
         
         switch rand {
-        case 0..<10:
-            stop = 0
-        case 10..<12:
-            stop = 1
-        case 13..<20:
+        case x1..<x2:
+            if (success! < 16 && success! > 9) || (success! > 19 && success! < 26){
+                stop = 1
+            }else if (success! > 15 && success! < 21) || (success! > 25 && success! < 31){
+                stop = 1
+            }else{
+                stop = 1
+            }
+        case x2..<x3:
             stop = 2
-        case 20..<30:
+        case x3..<x4:
             stop = 3
-        case 30..<34:
+        case x4..<x5:
             stop = 4
-        case 34..<45:
+        case x5..<x6:
             stop = 5
-        case 45..<53:
+        case x6..<x7:
             stop = 6
-        case 53..<58:
+        case x7..<x8:
             stop = 7
-        case 58..<66:
-            stop = 8
-        case 66..<73:
+        case x8..<x9:
+            if success! > 10 && success! < 16{
+                stop = 8
+            }else {
+                stop = 8
+            }
+        case x9..<x10:
             stop = 9
-        case 73..<76:
+        case x10..<x11:
             stop = 10
-        case 76..<86:
+        case x11..<x12:
             stop = 11
-        case 86..<92:
+        case x12..<x13:
             stop = 12
-        case 92..<96:
+        case x13..<x14:
             stop = 13
-        default:
+        case x14..<x15:
             stop = 14
+        case x15..<x16:
+            stop = 15
+        case x16..<x17:
+            stop = 16
+        case x17..<x18:
+            stop = 17
+        default:
+            break;
         }
         return stop * 2;
     }
@@ -569,9 +626,6 @@ class rewardsVC: UIViewController {
         let whenView = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
         self.present(whenView,animated: true, completion: nil)
     }
-    
-    
-    
 }
 
 
