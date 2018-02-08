@@ -92,20 +92,24 @@ class rewardsVC: UIViewController {
     @IBOutlet weak var right3Bottom: UIImageView!
     
     
-    let oneTop = slotComp(image: UIImage(named: "topBlue7"), reward: "basic")
-    let oneBottom = slotComp(image: UIImage(named: "bottomBlue7"), reward: "basic")
-    let twoTop = slotComp(image: UIImage(named: "twoTop"), reward: "intermediate")
-    let twoBottom = slotComp(image: UIImage(named: "twoBottom"), reward: "intermediate")
-    let threeTop = slotComp(image: UIImage(named: "threeTop"), reward: "advanced")
-    let threeBottom = slotComp(image: UIImage(named: "threeBottom"), reward: "advanced")
-    let whiteTop = slotComp(image: nil, reward: "nil")
-    let whiteBottom = slotComp(image: nil, reward: "nil")
+    let oneTopBlue = slotComp(image: UIImage(named: "topBlue7"), reward: "Basic")
+    let oneBottomBlue = slotComp(image: UIImage(named: "bottomBlue7"), reward: "Basic")
+    let oneTopGreen = slotComp(image: UIImage(named: "topGreen7"), reward: "Basic")
+    let oneBottomGreen = slotComp(image: UIImage(named: "bottomGreen7"), reward: "Basic")
+    let oneTopRed = slotComp(image: UIImage(named: "topRed7"), reward: "Basic")
+    let oneBottomRed = slotComp(image: UIImage(named: "bottomRed7"), reward: "Basic")
+    let twoTop = slotComp(image: UIImage(named: "twoTop"), reward: "Intermediate")
+    let twoBottom = slotComp(image: UIImage(named: "twoBottom"), reward: "Intermediate")
+    let threeTop = slotComp(image: UIImage(named: "threeTop"), reward: "Advanced")
+    let threeBottom = slotComp(image: UIImage(named: "threeBottom"), reward: "Advanced")
+//    let whiteTop = slotComp(image: nil, reward: "nil")
+//    let whiteBottom = slotComp(image: nil, reward: "nil")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        basicGap = 7
-        basicGap1 = 7
+        basicGap = 5
+        basicGap1 = 10
         intermediateGap = 6
         intermediateGap1 = 5
         advancedGap = 4
@@ -136,7 +140,7 @@ class rewardsVC: UIViewController {
         slotsView.layer.addSublayer(layerTop)
         slotsView.layer.addSublayer(layerBottom)
         
-        items = [oneTop, oneBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom, threeTop, threeBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom, threeTop, threeBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom, twoTop, twoBottom, oneTop, oneBottom]
+        items = [oneTopBlue, oneBottomBlue, oneTopRed, oneBottomRed, twoTop, twoBottom, oneTopGreen, oneBottomGreen, threeTop, threeBottom, oneTopBlue, oneBottomBlue, twoTop, twoBottom, oneTopRed, oneBottomRed, oneTopGreen, oneBottomGreen, twoTop, twoBottom, oneTopBlue, oneBottomBlue, threeTop, threeBottom, oneTopRed, oneBottomRed, twoTop, twoBottom, oneTopGreen, oneBottomGreen, twoTop, twoBottom, oneTopGreen, oneBottomGreen]
         
         print("ITEMS: \(items.count)")
         
@@ -208,8 +212,6 @@ class rewardsVC: UIViewController {
         isSpinning = true
         spinBtn.isEnabled = false
         prepareNextSpin()
-        //print("SelectedLeft: \(selectedItemLeft!)")
-        //print("SpinLeft: \(numberOfTimesSpinLeft!)")
         timerLeft = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateLeft), userInfo: nil, repeats: true)
         timerMiddle = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateMiddle), userInfo: nil, repeats: true)
         timerRight = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateRight), userInfo: nil, repeats: true)
@@ -229,7 +231,6 @@ class rewardsVC: UIViewController {
         let stopLeft = returnStop()
         let stopMiddle = returnStop()
         let stopRight = returnStop()
-        
 //        let stopLeft = 17
 //        let stopMiddle = 17
 //        let stopRight = 17
@@ -445,24 +446,27 @@ class rewardsVC: UIViewController {
             let intMessage = "Congratulations you have earned: \(rewardsDict!["Int"]!)"
             let advMessage = "You really deserve this: \(rewardsDict!["Adv"]!)"
             
-            if leftCheck == "basic" && middleCheck == "basic" && rightCheck == "basic"{
+            if leftCheck == "Basic" && middleCheck == "Basic" && rightCheck == "Basic"{
                 self.winner()
                 self.upAlert(messages: basicMessage)
             }
-            else if ((leftCheck == "basic" && middleCheck == "basic") || (leftCheck == "basic" && rightCheck == "basic") || (middleCheck == "basic" && rightCheck == "basic")) && (leftCheck == "intermediate" || middleCheck == "intermediate" || rightCheck == "intermediate" || leftCheck == "advanced" || middleCheck == "advanced" || rightCheck == "advanced"){
+            else if (leftCheck == "Basic" && middleCheck == "Basic") || (leftCheck == "Basic" && rightCheck == "Basic") && (middleCheck == "Basic" && rightCheck == "Basic") && (leftCheck == "Advanced" || middleCheck == "Advanced" || rightCheck == "Advanced"){
                 self.winner()
                 self.upAlert(messages: basicMessage)
             }
-            else if leftCheck == "intermediate" && middleCheck == "intermediate" && rightCheck == "intermediate"{
+            else if leftCheck == "Intermediate" && middleCheck == "Intermediate" && rightCheck == "Intermediate"{
                 self.winner()
                 self.upAlert(messages: intMessage)
             }
-            else if ((leftCheck == "intermediate" && middleCheck == "intermediate") || (middleCheck == "intermediate" && rightCheck == "intermediate") || (leftCheck == "intermediate" && rightCheck == "intermediate")) && (leftCheck == "basic" || middleCheck == "basic" || rightCheck == "basic" || leftCheck == "advanced" || middleCheck == "advanced" || rightCheck == "advanced"){
+            else if (leftCheck == "Intermediate" && middleCheck == "Intermediate") || (leftCheck == "Intermediate" && rightCheck == "Intermediate") && (middleCheck == "Intermediate" && rightCheck == "Intermediate") && (leftCheck == "Advanced" || middleCheck == "Advanced" || rightCheck == "Advanced"){
                 self.winner()
                 self.upAlert(messages: intMessage)
             }
-            else if leftCheck == "advanced" && middleCheck == "advanced" && rightCheck == "advanced"{
-                
+            else if leftCheck == "Advanced" && middleCheck == "Advanced" && rightCheck == "Advanced"{
+                self.winner()
+                self.upAlert(messages: advMessage)
+            }
+            else if (leftCheck == "Advanced" && middleCheck == "Advanced") || (leftCheck == "Advanced" && rightCheck == "Advanced") && (middleCheck == "Advanced" && rightCheck == "Advanced") && (leftCheck == "Intermediate" || middleCheck == "Intermediate" || rightCheck == "Intermediate"){
                 self.winner()
                 self.upAlert(messages: advMessage)
             }
@@ -525,31 +529,30 @@ class rewardsVC: UIViewController {
         }
         
         if (self.success! > 9 && self.success! < 15) || (self.success! > 25 && self.success! < 31){
-            basicGap1 = 11
             advancedGap = 11
         }
         
         let x1 = 1
-        let x2 = x1 + basicGap1!
+        let x2 = x1 + basicGap!
         let x3 = x2 + basicGap!
         let x4 = x3 + intermediateGap!
-        let x5 = x4 + basicGap!
+        let x5 = x4 + basicGap1!
         let x6 = x5 + advancedGap!
-        let x7 = x6 + basicGap!
+        let x7 = x6 + basicGap1!
         let x8 = x7 + intermediateGap!
         let x9 = x8 + basicGap!
         let x10 = x9 + basicGap!
         let x11 = x10 + intermediateGap1!
-        let x12 = x11 + basicGap!
+        let x12 = x11 + basicGap1!
         let x13 = x12 + advancedGap!
-        let x14 = x13 + basicGap!
+        let x14 = x13 + basicGap1!
         let x15 = x14 + intermediateGap1!
         let x16 = x15  + basicGap!
         let x17 = x16 + intermediateGap1!
         let x18 = x17 + basicGap!
 
         
-        var rand = Int(arc4random_uniform(UInt32(x18)))
+        let rand = Int(arc4random_uniform(UInt32(x18)))
         var stop = 0;
         
         switch rand {
