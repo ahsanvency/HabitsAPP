@@ -9,7 +9,9 @@
 import UIKit
 import MultiSelectSegmentedControl
 
-class whenAddPopupVC: UIViewController {
+class whenAddPopupVC: UIViewController{
+
+    
     
     var weekArray = [Int]()
     var timeDict:Dictionary = [String:Int]()
@@ -25,16 +27,20 @@ class whenAddPopupVC: UIViewController {
     var advStr: String = ""
     
     @IBOutlet weak var questionLbl: UILabel!
+    @IBOutlet weak var screenTitle: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        var myGradient = UIImage(named: "Rectangle1x.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         let indexSet = NSMutableIndexSet()
         weekArray.forEach(indexSet.add)
         questionLbl.text = "When can you consistently start \(habitName!)"
         segmentedControl.selectedSegmentIndexes = indexSet as IndexSet!
-        
-        
+//        timePicker.delegate = self
+//        timePicker.dataSource = self
+        timePicker.backgroundColor = UIColor(red: 243/255, green: 235/255, blue: 218/255, alpha: 1)
     }
     
     
@@ -123,7 +129,11 @@ class whenAddPopupVC: UIViewController {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let whenView = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+            whenView.editButtonPressed = 0
+        }
     }
     
 }

@@ -26,11 +26,14 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var advText: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var screenTitle: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var myGradient = UIImage(named: "Rectangle1x.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        
         basicText.text = basicStr
         intText.text = intStr
         advText.text = advStr

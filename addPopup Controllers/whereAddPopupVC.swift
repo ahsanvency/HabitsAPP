@@ -23,10 +23,13 @@ class whereAddPopupVC: UIViewController {
     
     @IBOutlet weak var whereText: fancyField!
     @IBOutlet weak var questionLabel: UILabel!
-    
+    @IBOutlet weak var screenTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var myGradient = UIImage(named: "Rectangle1x.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        
         questionLabel.text = "Where is a consistent location you can \(String(describing: habitName!))"
         
         //habitTxt.text = habitName
@@ -49,7 +52,11 @@ class whereAddPopupVC: UIViewController {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let whereView = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+            whereView.editButtonPressed = 0
+        }
     }
     
     

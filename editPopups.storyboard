@@ -121,6 +121,7 @@
                         <viewLayoutGuide key="safeArea" id="NK2-eC-CKk"/>
                     </view>
                     <connections>
+                        <outlet property="screenTitle" destination="vmg-58-1VR" id="Ybk-D1-tmM"/>
                         <outlet property="segmentedControl" destination="fzh-yv-Vn4" id="UjN-ja-8fh"/>
                         <outlet property="timePicker" destination="TPI-aW-FEt" id="u0x-ip-4bA"/>
                     </connections>
@@ -213,6 +214,7 @@
                         <viewLayoutGuide key="safeArea" id="2L0-Pm-GYb"/>
                     </view>
                     <connections>
+                        <outlet property="screenTitle" destination="hkb-IG-WtD" id="x4U-0f-Cx5"/>
                         <outlet property="whereText" destination="U5f-BT-AFy" id="AxQ-YA-qb7"/>
                     </connections>
                 </viewController>

@@ -45,6 +45,9 @@ class rewardsVC: UIViewController {
     var intermediateGap1: Int?
     var advancedGap: Int?
     
+    @IBOutlet weak var screenTitle: UILabel!
+    
+    
     //Number of times to spin each column
     var numberOfTimesSpinLeft: Int!
     var numberOfTimesSpinMiddle: Int!
@@ -108,6 +111,9 @@ class rewardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var myGradient = UIImage(named: "Rectangle1x.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        
         basicGap = 5
         basicGap1 = 10
         intermediateGap = 6
@@ -145,9 +151,19 @@ class rewardsVC: UIViewController {
         print("ITEMS: \(items.count)")
         
         isSpinning = false
-        selectedItemLeft = 1
-        selectedItemMiddle = 1
-        selectedItemRight = 1
+        selectedItemLeft = Int(arc4random_uniform(UInt32(34)))
+        if selectedItemLeft%2 == 0{
+            selectedItemLeft = selectedItemLeft + 1
+        }
+        selectedItemMiddle = Int(arc4random_uniform(UInt32(34)))
+        if selectedItemMiddle%2 == 0{
+            selectedItemMiddle = selectedItemMiddle + 1
+        }
+        
+        selectedItemRight = Int(arc4random_uniform(UInt32(34)))
+        if selectedItemRight%2 == 0{
+            selectedItemRight = selectedItemRight + 1
+        }
         
         //UNCOMMENT
         rotateitems(index: selectedItemLeft, columnIndex: 1)
@@ -480,7 +496,7 @@ class rewardsVC: UIViewController {
         isSpinning = false
         spinBtn.setTitle("SPIN", for: UIControlState.normal)
         spinBtn.isEnabled = true
-        spinBtn.backgroundColor = UIColor(red: 208/255, green: 2/255, blue: 27/255, alpha: 1.0)
+        spinBtn.backgroundColor = UIColor(red: 60/255, green: 95/255, blue: 156/255, alpha: 1.0)
         timerGetReadyForNextSpin.invalidate()
     }
     

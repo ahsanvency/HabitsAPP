@@ -153,6 +153,7 @@
                     </view>
                     <connections>
                         <outlet property="nameOfhabit" destination="i4c-Cy-ojv" id="4I2-UV-YKW"/>
+                        <outlet property="screenTitle" destination="BLb-5Q-IPX" id="gCs-qB-HSF"/>
                         <outlet property="whyText" destination="bW4-e1-d7a" id="cXU-Zq-7gm"/>
                     </connections>
                 </viewController>
@@ -278,6 +279,7 @@
                     </view>
                     <connections>
                         <outlet property="questionLbl" destination="ect-Rv-Ed9" id="vUM-08-jl4"/>
+                        <outlet property="screenTitle" destination="WLN-wH-Nj0" id="9hO-PD-qaA"/>
                         <outlet property="segmentedControl" destination="QbV-2T-pfz" id="BD5-qR-5kH"/>
                         <outlet property="timePicker" destination="kmc-47-INR" id="Ye9-32-5R7"/>
                     </connections>
@@ -383,6 +385,7 @@
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="Koj-Ba-YRL" id="dSh-de-yqa"/>
+                        <outlet property="screenTitle" destination="5Ga-D1-Hdt" id="4uP-pP-I29"/>
                         <outlet property="whereText" destination="9tC-It-QfT" id="B1a-w1-WgE"/>
                     </connections>
                 </viewController>
@@ -688,6 +691,7 @@
                         <outlet property="advText" destination="ol5-1R-1WO" id="Mel-5O-Unr"/>
                         <outlet property="basicText" destination="mBp-7l-0Hq" id="PdW-g6-i53"/>
                         <outlet property="intText" destination="tpT-qg-nUB" id="WWi-jO-gfB"/>
+                        <outlet property="screenTitle" destination="8Oa-z2-MXX" id="lFP-iY-QMg"/>
                         <outlet property="scrollView" destination="GIF-QX-Epe" id="EHO-Th-nQp"/>
                     </connections>
                 </viewController>

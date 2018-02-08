@@ -26,13 +26,14 @@ class whyPopupVC: UIViewController {
     
     @IBOutlet weak var whyText: UITextField!
     @IBOutlet weak var nameOfhabit: UILabel!
-    
+    @IBOutlet weak var screenTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         whyText.text = whyLblText
         nameOfhabit.text = habitName
-        // Do any additional setup after loading the view.
+        var myGradient = UIImage(named: "Rectangle1x.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
     }
     
     @IBAction func saveButton(_ sender: Any) {
@@ -66,7 +67,11 @@ class whyPopupVC: UIViewController {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true) {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let whyInfo = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+            whyInfo.editButtonPressed = 0
+        }
     }
     
     

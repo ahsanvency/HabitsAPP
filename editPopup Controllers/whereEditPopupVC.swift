@@ -13,9 +13,12 @@ class whereEditPopupVC: UIViewController {
     @IBOutlet weak var whereText: fancyField!
     var ref: DatabaseReference = Database.database().reference()
     
+    @IBOutlet weak var screenTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var myGradient = UIImage(named: "Rectangle1x.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         //current user
         guard let user = Auth.auth().currentUser else {

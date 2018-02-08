@@ -28,7 +28,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myGradient = UIImage(named: "textGradient.png")
+        var myGradient = UIImage(named: "Rectangle1x.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         guard let user = Auth.auth().currentUser else {

@@ -15,11 +15,13 @@ class whenEditPopupVC: UIViewController {
     var timeDict:Dictionary = [String:Int]()
     var ref: DatabaseReference = Database.database().reference()
 
+    @IBOutlet weak var screenTitle: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        var myGradient = UIImage(named: "Rectangle1x.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         //current user
         guard let user = Auth.auth().currentUser else {
@@ -56,7 +58,7 @@ class whenEditPopupVC: UIViewController {
             print(error.localizedDescription)
         }
         
-        
+        timePicker.backgroundColor = UIColor(red: 243/255, green: 235/255, blue: 218/255, alpha: 1)
         
     }
     
