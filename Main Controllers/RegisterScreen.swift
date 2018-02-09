@@ -26,7 +26,8 @@ class RegisterScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        passwordField.isSecureTextEntry = true
+        confirmPasswordField.isSecureTextEntry = true
     }
     
     

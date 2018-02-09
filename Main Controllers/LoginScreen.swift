@@ -20,6 +20,7 @@ class LoginScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwordField.isSecureTextEntry = true
     }
     
     @IBAction func goBack(_ sender: Any) {

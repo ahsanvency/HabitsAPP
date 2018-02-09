@@ -197,17 +197,17 @@ class rewardsVC: UIViewController {
         
         //Generates the number of times for each column to spin
         numberOfTimesSpinLeft = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopLeft + selectedItemLeft
-        if numberOfTimesSpinLeft%2 == 1{
-            numberOfTimesSpinLeft = numberOfTimesSpinLeft + 1
-        }
+//        if numberOfTimesSpinLeft%2 == 1{
+//            numberOfTimesSpinLeft = numberOfTimesSpinLeft + 1
+//        }
         numberOfTimesSpinMiddle = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopMiddle + selectedItemMiddle
-        if numberOfTimesSpinMiddle%2 == 1{
-            numberOfTimesSpinMiddle = numberOfTimesSpinMiddle + 1
-        }
+//        if numberOfTimesSpinMiddle%2 == 1{
+//            numberOfTimesSpinMiddle = numberOfTimesSpinMiddle + 1
+//        }
         numberOfTimesSpinRight = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopRight + selectedItemRight
-        if numberOfTimesSpinRight%2 == 1{
-            numberOfTimesSpinRight = numberOfTimesSpinRight + 1
-        }
+//        if numberOfTimesSpinRight%2 == 1{
+//            numberOfTimesSpinRight = numberOfTimesSpinRight + 1
+//        }
         
         leftCurrentSpinCount = 0;
         middleCurrentSpinCount = 0;
@@ -517,52 +517,52 @@ class rewardsVC: UIViewController {
         switch rand {
         case x1..<x2:
             if (success! < 16 && success! > 9) || (success! > 19 && success! < 26){
-                stop = 1
+                stop = 7
             }else if (success! > 15 && success! < 21) || (success! > 25 && success! < 31){
-                stop = 1
+                stop = 12
             }else{
-                stop = 1
+                stop = 0
             }
         case x2..<x3:
-            stop = 2
+            stop = 1
         case x3..<x4:
             stop = 3
         case x4..<x5:
-            stop = 4
+            stop = 3
         case x5..<x6:
-            stop = 5
+            stop = 4
         case x6..<x7:
-            stop = 6
+            stop = 5
         case x7..<x8:
-            stop = 7
+            stop = 6
         case x8..<x9:
             if success! > 10 && success! < 16{
-                stop = 8
-            }else {
-                stop = 8
+                stop = 7
+            }else{
+                stop = 7
             }
         case x9..<x10:
-            stop = 9
+            stop = 8
         case x10..<x11:
-            stop = 10
+            stop = 9
         case x11..<x12:
-            stop = 11
+            stop = 10
         case x12..<x13:
-            stop = 12
+            stop = 11
         case x13..<x14:
-            stop = 13
+            stop = 12
         case x14..<x15:
-            stop = 14
+            stop = 13
         case x15..<x16:
-            stop = 15
+            stop = 14
         case x16..<x17:
-            stop = 16
+            stop = 15
         case x17..<x18:
-            stop = 17
+            stop = 16
         default:
             break;
         }
-        return stop * 2;
+        return stop * 2 + 1;
     }
     
     func winner(){
