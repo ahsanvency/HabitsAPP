@@ -32,7 +32,7 @@ class whenAddPopupVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myGradient = UIImage(named: "textWhenPopup.png")
+        let myGradient = UIImage(named: "textWhenPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         let indexSet = NSMutableIndexSet()
         weekArray.forEach(indexSet.add)

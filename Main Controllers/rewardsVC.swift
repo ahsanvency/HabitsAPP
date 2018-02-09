@@ -68,8 +68,6 @@ class rewardsVC: UIViewController {
     @IBOutlet weak var slotsView: UIView!
     
     
-    
-    
     //Left Column
     @IBOutlet weak var left1Top: UIImageView!
     @IBOutlet weak var left1Bottom: UIImageView!
@@ -111,7 +109,7 @@ class rewardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var myGradient = UIImage(named: "textRewardsScreen.png")
+        let myGradient = UIImage(named: "textRewardsScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         basicGap = 5
@@ -120,52 +118,9 @@ class rewardsVC: UIViewController {
         intermediateGap1 = 5
         advancedGap = 4
         
-        let layerTop: CALayer = CALayer()
-        layerTop.backgroundColor = UIColor(red: 8/255, green: 37/255, blue: 43/255, alpha: 1.0).cgColor //Background color of the view added
-        layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  slotsView.bounds.height - 330) //position of the added view
-        layerTop.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2) //creates a rectange for the added view
-        layerTop.shadowColor = UIColor.black.cgColor //shadow color
-        layerTop.shadowOffset = CGSize(width: 0,height: 8) //size of the shadow offset
-        layerTop.shadowOpacity = 1 //opacity
-        layerTop.shadowRadius = 8 //radius of the offset
-        //higher radius means more of a gradient
-        //Lower radius means a darker shadow
+        shadowlayer()
         
-        let layerBottom: CALayer = CALayer()
-        layerBottom.backgroundColor = UIColor(red: 8/255, green: 37/255, blue: 43/255, alpha: 1.0).cgColor
-        layerBottom.position = CGPoint(x: slotsView.bounds.width / 2, y: slotsView.bounds.height)
-        layerBottom.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2)
-        layerBottom.shadowColor = UIColor.black.cgColor
-        layerBottom.shadowOffset = CGSize(width: 0,height: 8)
-        layerBottom.shadowOpacity = 1
-        layerBottom.shadowRadius = 8
-        let degrees = 180.0
-        let radians = CGFloat(degrees * Double.pi / 180)
-        layerBottom.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0)
         
-        slotsView.layer.addSublayer(layerTop)
-        slotsView.layer.addSublayer(layerBottom)
-        
-        items = [oneTopBlue, oneBottomBlue, oneTopRed, oneBottomRed, twoTop, twoBottom, oneTopGreen, oneBottomGreen, threeTop, threeBottom, oneTopBlue, oneBottomBlue, twoTop, twoBottom, oneTopRed, oneBottomRed, oneTopGreen, oneBottomGreen, twoTop, twoBottom, oneTopBlue, oneBottomBlue, threeTop, threeBottom, oneTopRed, oneBottomRed, twoTop, twoBottom, oneTopGreen, oneBottomGreen, twoTop, twoBottom, oneTopGreen, oneBottomGreen]
-        
-        print("ITEMS: \(items.count)")
-        
-        isSpinning = false
-        selectedItemLeft = Int(arc4random_uniform(UInt32(34)))
-        if selectedItemLeft%2 == 0{
-            selectedItemLeft = selectedItemLeft + 1
-        }
-        selectedItemMiddle = Int(arc4random_uniform(UInt32(34)))
-        if selectedItemMiddle%2 == 0{
-            selectedItemMiddle = selectedItemMiddle + 1
-        }
-        
-        selectedItemRight = Int(arc4random_uniform(UInt32(34)))
-        if selectedItemRight%2 == 0{
-            selectedItemRight = selectedItemRight + 1
-        }
-        
-        //UNCOMMENT
         rotateitems(index: selectedItemLeft, columnIndex: 1)
         rotateitems(index: selectedItemMiddle, columnIndex: 2)
         rotateitems(index: selectedItemRight, columnIndex: 3)
@@ -222,17 +177,6 @@ class rewardsVC: UIViewController {
         })
     }
     
-    func runSpin(){
-    
-        spinBtn.setTitle("Good Luck", for: UIControlState.normal)
-        isSpinning = true
-        spinBtn.isEnabled = false
-        prepareNextSpin()
-        timerLeft = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateLeft), userInfo: nil, repeats: true)
-        timerMiddle = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateMiddle), userInfo: nil, repeats: true)
-        timerRight = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateRight), userInfo: nil, repeats: true)
-    
-    }
     
     @IBAction func spinButton(_ sender: Any) {
         
@@ -244,24 +188,23 @@ class rewardsVC: UIViewController {
     
     func prepareNextSpin(){
         //can eventually delete these to replace it with returnStop in the functions below
-        let stopLeft = returnStop()
-        let stopMiddle = returnStop()
-        let stopRight = returnStop()
-//        let stopLeft = 17
-//        let stopMiddle = 17
-//        let stopRight = 17
-        
+//        let stopLeft = returnStop()
+//        let stopMiddle = returnStop()
+//        let stopRight = returnStop()
+        let stopLeft = 1
+        let stopMiddle = 3
+        let stopRight = 5
         
         //Generates the number of times for each column to spin
-        numberOfTimesSpinLeft = 60 * Int(arc4random_uniform(UInt32(3))+2) + stopLeft - selectedItemLeft
+        numberOfTimesSpinLeft = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopLeft + selectedItemLeft
         if numberOfTimesSpinLeft%2 == 1{
             numberOfTimesSpinLeft = numberOfTimesSpinLeft + 1
         }
-        numberOfTimesSpinMiddle = 60 * Int(arc4random_uniform(UInt32(3))+2) + stopMiddle - selectedItemMiddle
+        numberOfTimesSpinMiddle = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopMiddle + selectedItemMiddle
         if numberOfTimesSpinMiddle%2 == 1{
             numberOfTimesSpinMiddle = numberOfTimesSpinMiddle + 1
         }
-        numberOfTimesSpinRight = 60 * Int(arc4random_uniform(UInt32(3))+2) + stopRight - selectedItemRight
+        numberOfTimesSpinRight = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopRight + selectedItemRight
         if numberOfTimesSpinRight%2 == 1{
             numberOfTimesSpinRight = numberOfTimesSpinRight + 1
         }
@@ -290,6 +233,7 @@ class rewardsVC: UIViewController {
         }
         if leftCurrentSpinCount >= numberOfTimesSpinLeft{
             timerLeft.invalidate()
+            print("Left \(selectedItemLeft!)")
         }
         
         if leftCurrentSpinCount >= numberOfTimesSpinLeft && middleCurrentSpinCount >= numberOfTimesSpinMiddle && rightCurrentSpinCount >= numberOfTimesSpinRight {
@@ -440,6 +384,9 @@ class rewardsVC: UIViewController {
         let leftCheck = items[selectedItemLeft].reward
         let middleCheck = items[selectedItemMiddle].reward
         let rightCheck = items[selectedItemRight].reward
+        print(leftCheck)
+        print(middleCheck)
+        print(rightCheck)
         
         //current user
         guard let user = Auth.auth().currentUser else {
@@ -644,6 +591,61 @@ class rewardsVC: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let whenView = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
         self.present(whenView,animated: true, completion: nil)
+    }
+    
+    func shadowlayer(){
+        let layerTop: CALayer = CALayer()
+        layerTop.backgroundColor = UIColor(red: 8/255, green: 37/255, blue: 43/255, alpha: 1.0).cgColor //Background color of the view added
+        layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  slotsView.bounds.height - 330) //position of the added view
+        layerTop.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2) //creates a rectange for the added view
+        layerTop.shadowColor = UIColor.black.cgColor //shadow color
+        layerTop.shadowOffset = CGSize(width: 0,height: 8) //size of the shadow offset
+        layerTop.shadowOpacity = 1 //opacity
+        layerTop.shadowRadius = 8 //radius of the offset
+        //higher radius means more of a gradient
+        //Lower radius means a darker shadow
+        
+        let layerBottom: CALayer = CALayer()
+        layerBottom.backgroundColor = UIColor(red: 8/255, green: 37/255, blue: 43/255, alpha: 1.0).cgColor
+        layerBottom.position = CGPoint(x: slotsView.bounds.width / 2, y: slotsView.bounds.height)
+        layerBottom.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2)
+        layerBottom.shadowColor = UIColor.black.cgColor
+        layerBottom.shadowOffset = CGSize(width: 0,height: 8)
+        layerBottom.shadowOpacity = 1
+        layerBottom.shadowRadius = 8
+        let degrees = 180.0
+        let radians = CGFloat(degrees * Double.pi / 180)
+        layerBottom.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0)
+        
+        slotsView.layer.addSublayer(layerTop)
+        slotsView.layer.addSublayer(layerBottom)
+        
+        items = [oneTopBlue, oneBottomBlue, oneTopRed, oneBottomRed, twoTop, twoBottom, oneTopGreen, oneBottomGreen, threeTop, threeBottom, oneTopBlue, oneBottomBlue, twoTop, twoBottom, oneTopRed, oneBottomRed, oneTopGreen, oneBottomGreen, twoTop, twoBottom, oneTopBlue, oneBottomBlue, threeTop, threeBottom, oneTopRed, oneBottomRed, twoTop, twoBottom, oneTopGreen, oneBottomGreen, twoTop, twoBottom, oneTopGreen, oneBottomGreen]
+        
+        isSpinning = false
+        selectedItemLeft = Int(arc4random_uniform(UInt32(34)))
+        if selectedItemLeft%2 == 0{
+            selectedItemLeft = selectedItemLeft + 1
+        }
+        selectedItemMiddle = Int(arc4random_uniform(UInt32(34)))
+        if selectedItemMiddle%2 == 0{
+            selectedItemMiddle = selectedItemMiddle + 1
+        }
+        
+        selectedItemRight = Int(arc4random_uniform(UInt32(34)))
+        if selectedItemRight%2 == 0{
+            selectedItemRight = selectedItemRight + 1
+        }
+    }
+    
+    func runSpin(){
+        spinBtn.setTitle("Good Luck", for: UIControlState.normal)
+        isSpinning = true
+        spinBtn.isEnabled = false
+        prepareNextSpin()
+        timerLeft = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateLeft), userInfo: nil, repeats: true)
+        timerMiddle = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateMiddle), userInfo: nil, repeats: true)
+        timerRight = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateRight), userInfo: nil, repeats: true)
     }
 }
 

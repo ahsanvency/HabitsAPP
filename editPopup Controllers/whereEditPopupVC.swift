@@ -17,7 +17,7 @@ class whereEditPopupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myGradient = UIImage(named: "textWherePopup.png")
+        let myGradient = UIImage(named: "textWherePopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         //current user

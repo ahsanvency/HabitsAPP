@@ -31,7 +31,7 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myGradient = UIImage(named: "textRewardsPopup.png")
+        let myGradient = UIImage(named: "textRewardsPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
     }
     

@@ -28,7 +28,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myGradient = UIImage(named: "textMainScreen.png")
+        let myGradient = UIImage(named: "textMainScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         guard let user = Auth.auth().currentUser else {
@@ -36,8 +36,8 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             return
         }
         let uid = user.uid
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
+//        var ref: DatabaseReference!
+//        ref = Database.database().reference()
         
         
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
