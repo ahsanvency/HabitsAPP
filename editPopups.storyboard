@@ -78,7 +78,7 @@
                                     <constraint firstAttribute="width" constant="125" id="B7f-f6-k5l"/>
                                     <constraint firstAttribute="height" constant="125" id="lZT-5o-xdm"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Save"/>
+                                <state key="normal" backgroundImage="BlueChip"/>
                                 <connections>
                                     <action selector="saveButton:" destination="44y-D1-48f" eventType="touchUpInside" id="ARA-3U-rYd"/>
                                 </connections>
@@ -100,6 +100,16 @@
                                     <action selector="segmentSelected:" destination="44y-D1-48f" eventType="valueChanged" id="hef-9S-5Vw"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbI-N8-qRc">
+                                <rect key="frame" x="180.66666666666666" y="595" width="54" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="I3J-ip-CvU"/>
+                                    <constraint firstAttribute="width" constant="54" id="Vgs-2Q-32J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.1450980392" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -109,9 +119,11 @@
                             <constraint firstItem="NK2-eC-CKk" firstAttribute="trailing" secondItem="pjp-eq-4f3" secondAttribute="trailing" constant="30" id="JXE-Cr-MeY"/>
                             <constraint firstItem="pjp-eq-4f3" firstAttribute="top" secondItem="1nB-e3-wXb" secondAttribute="bottom" constant="20" id="Oce-aN-C7v"/>
                             <constraint firstItem="mpZ-4e-j8i" firstAttribute="leading" secondItem="NK2-eC-CKk" secondAttribute="leading" id="Qw2-c4-i0K"/>
+                            <constraint firstItem="gbI-N8-qRc" firstAttribute="centerX" secondItem="X42-hJ-n9X" secondAttribute="centerX" id="Yu2-mG-mDA"/>
                             <constraint firstItem="1nB-e3-wXb" firstAttribute="leading" secondItem="NK2-eC-CKk" secondAttribute="leading" constant="30" id="ZgR-ih-Q5Q"/>
                             <constraint firstItem="X42-hJ-n9X" firstAttribute="centerX" secondItem="gBJ-WO-iik" secondAttribute="centerX" id="aAc-xc-T20"/>
                             <constraint firstItem="X42-hJ-n9X" firstAttribute="top" secondItem="fzh-yv-Vn4" secondAttribute="bottom" constant="37" id="cgF-Zd-UI3"/>
+                            <constraint firstItem="gbI-N8-qRc" firstAttribute="centerY" secondItem="X42-hJ-n9X" secondAttribute="centerY" id="cmr-TB-eJK"/>
                             <constraint firstItem="1nB-e3-wXb" firstAttribute="top" secondItem="mpZ-4e-j8i" secondAttribute="bottom" constant="20" id="eS4-8I-DHR"/>
                             <constraint firstItem="NK2-eC-CKk" firstAttribute="trailing" secondItem="mpZ-4e-j8i" secondAttribute="trailing" id="ky3-WW-1iC"/>
                             <constraint firstItem="fzh-yv-Vn4" firstAttribute="leading" secondItem="NK2-eC-CKk" secondAttribute="leading" constant="36" id="moJ-QS-QdC"/>
@@ -185,27 +197,39 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="lJs-qg-quE"/>
                                 </constraints>
-                                <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaL-TQ-J5i">
-                                <rect key="frame" x="144.66666666666666" y="428" width="124.99999999999997" height="125"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaL-TQ-J5i">
+                                <rect key="frame" x="145.33333333333334" y="428" width="125.00000000000003" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="4wP-8E-jJ4"/>
                                     <constraint firstAttribute="width" constant="125" id="Gsa-GD-8bA"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="Save"/>
+                                <state key="normal" image="BlueChip"/>
                                 <connections>
                                     <action selector="saveButton:" destination="8aE-8D-hy9" eventType="touchUpInside" id="4Cm-ZL-M7V"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwk-9s-uIS">
+                                <rect key="frame" x="181" y="474" width="54" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="fjM-Ym-ye5"/>
+                                    <constraint firstAttribute="height" constant="33" id="qq4-Lt-WzS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.1450980392" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="U5f-BT-AFy" firstAttribute="leading" secondItem="2L0-Pm-GYb" secondAttribute="leading" constant="30" id="4jZ-e9-Df3"/>
                             <constraint firstItem="2L0-Pm-GYb" firstAttribute="trailing" secondItem="U5f-BT-AFy" secondAttribute="trailing" constant="30" id="6RU-he-bpc"/>
+                            <constraint firstItem="Bwk-9s-uIS" firstAttribute="centerX" secondItem="FaL-TQ-J5i" secondAttribute="centerX" id="Bas-La-phB"/>
                             <constraint firstItem="NIB-Lm-SmR" firstAttribute="leading" secondItem="2L0-Pm-GYb" secondAttribute="leading" constant="30" id="H1i-Xe-Od5"/>
+                            <constraint firstItem="Bwk-9s-uIS" firstAttribute="centerY" secondItem="FaL-TQ-J5i" secondAttribute="centerY" id="MXa-Xn-kN1"/>
                             <constraint firstItem="ZH3-ty-jET" firstAttribute="centerX" secondItem="18i-so-ZWs" secondAttribute="centerX" id="PS7-Fp-eTU"/>
                             <constraint firstItem="FaL-TQ-J5i" firstAttribute="centerX" secondItem="18i-so-ZWs" secondAttribute="centerX" id="ZDR-wB-oEt"/>
                             <constraint firstItem="ZH3-ty-jET" firstAttribute="centerY" secondItem="18i-so-ZWs" secondAttribute="centerY" constant="-25" id="alS-Nk-f04"/>
@@ -230,6 +254,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Save" width="123" height="124"/>
+        <image name="BlueChip" width="464" height="461"/>
     </resources>
 </document>

@@ -41,6 +41,7 @@ class whenAddPopupVC: UIViewController{
 //        timePicker.delegate = self
 //        timePicker.dataSource = self
         timePicker.backgroundColor = UIColor(red: 243/255, green: 235/255, blue: 218/255, alpha: 1)
+        timePicker.setValue(UIColor(red: 71/255, green: 10/255, blue: 86/255, alpha: 1), forKeyPath: "textColor")
     }
     
     
