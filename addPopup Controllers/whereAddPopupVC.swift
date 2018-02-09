@@ -27,7 +27,7 @@ class whereAddPopupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myGradient = UIImage(named: "Rectangle1x.png")
+        var myGradient = UIImage(named: "textWherePopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         questionLabel.text = "Where is a consistent location you can \(String(describing: habitName!))"

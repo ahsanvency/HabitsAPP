@@ -31,12 +31,8 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myGradient = UIImage(named: "Rectangle1x.png")
+        var myGradient = UIImage(named: "textRewardsPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
-        
-        basicText.text = basicStr
-        intText.text = intStr
-        advText.text = advStr
     }
     
     @IBAction func backButton(_ sender: Any) {

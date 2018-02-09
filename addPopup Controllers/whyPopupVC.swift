@@ -30,9 +30,8 @@ class whyPopupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        whyText.text = whyLblText
         nameOfhabit.text = habitName
-        var myGradient = UIImage(named: "Rectangle1x.png")
+        var myGradient = UIImage(named: "textWhyPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
     }
     

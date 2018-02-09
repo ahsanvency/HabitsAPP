@@ -20,7 +20,7 @@ class whenEditPopupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var myGradient = UIImage(named: "Rectangle1x.png")
+        var myGradient = UIImage(named: "textWhenPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         //current user

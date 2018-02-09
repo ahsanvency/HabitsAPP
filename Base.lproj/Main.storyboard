@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aWf-MG-rFl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ocZ-h0-lAE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -443,9 +443,9 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7QL-W8-6oA">
-                                        <rect key="frame" x="62.5" y="10" width="250" height="50"/>
+                                        <rect key="frame" x="72.5" y="10" width="230" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="KwQ-aJ-BXg"/>
+                                            <constraint firstAttribute="width" constant="230" id="KwQ-aJ-BXg"/>
                                             <constraint firstAttribute="height" constant="50" id="Q94-OA-9D8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
@@ -458,7 +458,9 @@
                                             <constraint firstAttribute="width" constant="50" id="AKE-oJ-zFb"/>
                                             <constraint firstAttribute="height" constant="50" id="gnq-a2-P1c"/>
                                         </constraints>
-                                        <state key="normal" image="Plus Button"/>
+                                        <state key="normal" image="Plus Button">
+                                            <color key="titleColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="addNewHabitBtn:" destination="aWf-MG-rFl" eventType="touchUpInside" id="M4M-bb-mHv"/>
                                         </connections>
@@ -471,7 +473,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Logout">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="menuAsLogout:" destination="aWf-MG-rFl" eventType="touchUpInside" id="8Cu-Yg-wm8"/>
@@ -487,7 +489,6 @@
                                     <constraint firstItem="7QL-W8-6oA" firstAttribute="centerX" secondItem="mph-jn-MEF" secondAttribute="centerX" id="ZdG-0b-j4E"/>
                                     <constraint firstAttribute="height" constant="70" id="iBF-rk-fOG"/>
                                     <constraint firstAttribute="trailing" secondItem="rda-9C-EvJ" secondAttribute="trailing" constant="10" id="pbC-a7-UpM"/>
-                                    <constraint firstItem="7QL-W8-6oA" firstAttribute="centerY" secondItem="mph-jn-MEF" secondAttribute="centerY" id="sF8-5c-ITa"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-Ci-rLg">
@@ -860,88 +861,80 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ml-9v-D1c" userLabel="Basic Rewards" customClass="fancyView" customModule="Habits" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="226" width="355" height="35"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nhT-8k-4mN" userLabel="Basic Stack">
-                                                        <rect key="frame" x="3" y="0.5" width="280.5" height="33"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruC-qs-HXL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="64" height="33"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                                                <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creates Popup Box " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GU6-6i-n0p">
-                                                                <rect key="frame" x="66" y="0.0" width="214.5" height="33"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                                                <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruC-qs-HXL">
+                                                        <rect key="frame" x="5" y="2.5" width="59" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                                        <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Basic Rewards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GU6-6i-n0p">
+                                                        <rect key="frame" x="69" y="1" width="220" height="33"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                        <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="ruC-qs-HXL" firstAttribute="centerY" secondItem="5ml-9v-D1c" secondAttribute="centerY" id="1iu-XN-fng"/>
+                                                    <constraint firstItem="ruC-qs-HXL" firstAttribute="leading" secondItem="s2a-51-FFB" secondAttribute="leading" constant="5" id="5qY-v9-1W2"/>
                                                     <constraint firstAttribute="height" constant="35" id="Dsz-mq-hXh"/>
-                                                    <constraint firstItem="nhT-8k-4mN" firstAttribute="centerY" secondItem="5ml-9v-D1c" secondAttribute="centerY" id="Iq9-QQ-um1"/>
-                                                    <constraint firstItem="nhT-8k-4mN" firstAttribute="leading" secondItem="s2a-51-FFB" secondAttribute="leading" constant="3" id="riy-jU-Sw0"/>
+                                                    <constraint firstItem="GU6-6i-n0p" firstAttribute="leading" secondItem="ruC-qs-HXL" secondAttribute="trailing" constant="5" id="oiX-kd-MW1"/>
+                                                    <constraint firstItem="GU6-6i-n0p" firstAttribute="centerY" secondItem="5ml-9v-D1c" secondAttribute="centerY" id="xXd-C5-w4X"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="safeArea" id="s2a-51-FFB"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaA-qE-UnV" userLabel="Intermediate Rewards" customClass="fancyView" customModule="Habits" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="276" width="355" height="35"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="erL-YO-7MA" userLabel="Intermediate Stack">
-                                                        <rect key="frame" x="3" y="2" width="334" height="30.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qg-8E-dmT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="30.5"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
-                                                                <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creates Popup Box " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6It-c1-ytt">
-                                                                <rect key="frame" x="137.5" y="0.0" width="196.5" height="30.5"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
-                                                                <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Intermediate:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qg-8E-dmT">
+                                                        <rect key="frame" x="5" y="3.5" width="123" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Intermediate Rewards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6It-c1-ytt">
+                                                        <rect key="frame" x="133.5" y="2.5" width="216.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                                        <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="6XR-QS-2iz"/>
-                                                    <constraint firstItem="erL-YO-7MA" firstAttribute="leading" secondItem="YQr-iu-oW1" secondAttribute="leading" constant="3" id="AgX-w0-8sy"/>
-                                                    <constraint firstItem="erL-YO-7MA" firstAttribute="centerY" secondItem="BaA-qE-UnV" secondAttribute="centerY" id="PP7-ts-fU7"/>
-                                                    <constraint firstItem="erL-YO-7MA" firstAttribute="centerY" secondItem="BaA-qE-UnV" secondAttribute="centerY" id="RgE-to-cOU"/>
+                                                    <constraint firstItem="6It-c1-ytt" firstAttribute="centerY" secondItem="BaA-qE-UnV" secondAttribute="centerY" id="AOZ-kk-iEz"/>
+                                                    <constraint firstItem="0qg-8E-dmT" firstAttribute="centerY" secondItem="BaA-qE-UnV" secondAttribute="centerY" id="dLR-Ni-stL"/>
+                                                    <constraint firstItem="6It-c1-ytt" firstAttribute="leading" secondItem="0qg-8E-dmT" secondAttribute="trailing" constant="5" id="ig4-Ya-5My"/>
+                                                    <constraint firstItem="0qg-8E-dmT" firstAttribute="leading" secondItem="YQr-iu-oW1" secondAttribute="leading" constant="5" id="jfO-fO-kQs"/>
+                                                    <constraint firstItem="YQr-iu-oW1" firstAttribute="trailing" secondItem="6It-c1-ytt" secondAttribute="trailing" constant="5" id="rfs-HE-BrM"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="safeArea" id="YQr-iu-oW1"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NPi-Xe-BxI" userLabel="Advanced Rewards" customClass="fancyView" customModule="Habits" customModuleProvider="target">
                                                 <rect key="frame" x="10" y="326" width="355" height="35"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-f3-L0U" userLabel="Advanced Stack">
-                                                        <rect key="frame" x="3" y="0.5" width="335.5" height="33"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-st-77c">
-                                                                <rect key="frame" x="0.0" y="0.0" width="119" height="33"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                                                <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creates Popup Box " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZO-Ec-v0j">
-                                                                <rect key="frame" x="121" y="0.0" width="214.5" height="33"/>
-                                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
-                                                                <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-st-77c">
+                                                        <rect key="frame" x="5" y="4" width="99" height="27.5"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                        <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Enter Advanced Rewards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QZO-Ec-v0j">
+                                                        <rect key="frame" x="109" y="1" width="241" height="33"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                                        <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="b4z-f3-L0U" firstAttribute="leading" secondItem="QHy-ll-3cQ" secondAttribute="leading" constant="3" id="GAx-Lu-Bct"/>
+                                                    <constraint firstItem="nbg-st-77c" firstAttribute="leading" secondItem="QHy-ll-3cQ" secondAttribute="leading" constant="5" id="8zT-iN-64Z"/>
+                                                    <constraint firstItem="QZO-Ec-v0j" firstAttribute="leading" secondItem="nbg-st-77c" secondAttribute="trailing" constant="5" id="BPy-Un-ubo"/>
+                                                    <constraint firstItem="QZO-Ec-v0j" firstAttribute="centerY" secondItem="NPi-Xe-BxI" secondAttribute="centerY" id="SY9-T1-pcx"/>
+                                                    <constraint firstItem="QHy-ll-3cQ" firstAttribute="trailing" secondItem="QZO-Ec-v0j" secondAttribute="trailing" constant="5" id="Tkc-as-qTM"/>
                                                     <constraint firstAttribute="height" constant="35" id="Wk3-I2-zyN"/>
-                                                    <constraint firstItem="b4z-f3-L0U" firstAttribute="centerY" secondItem="NPi-Xe-BxI" secondAttribute="centerY" id="rcw-vU-suH"/>
+                                                    <constraint firstItem="nbg-st-77c" firstAttribute="centerY" secondItem="NPi-Xe-BxI" secondAttribute="centerY" id="uRY-vl-WW3"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="safeArea" id="QHy-ll-3cQ"/>
                                             </view>
@@ -1067,7 +1060,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezM-NZ-fs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="-436"/>
+            <point key="canvasLocation" x="309.60000000000002" y="-436.73163418290858"/>
         </scene>
         <!--UIViewController-44y-D1-48f-->
         <scene sceneID="ZVS-YL-y2F">
@@ -1097,8 +1090,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REWARDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yY-Sx-dti">
-                                        <rect key="frame" x="118.5" y="6.5" width="137.5" height="38.5"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                                        <rect key="frame" x="109" y="3.5" width="157" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="157" id="Ycv-5R-cwA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
                                         <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>

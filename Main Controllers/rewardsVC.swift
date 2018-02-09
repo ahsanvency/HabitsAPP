@@ -111,7 +111,7 @@ class rewardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var myGradient = UIImage(named: "Rectangle1x.png")
+        var myGradient = UIImage(named: "textRewardsScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         basicGap = 5
@@ -121,8 +121,8 @@ class rewardsVC: UIViewController {
         advancedGap = 4
         
         let layerTop: CALayer = CALayer()
-        layerTop.backgroundColor = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1.0).cgColor //Background color of the view added
-        layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  -slotsView.bounds.height / 2 + 162) //position of the added view
+        layerTop.backgroundColor = UIColor(red: 8/255, green: 37/255, blue: 43/255, alpha: 1.0).cgColor //Background color of the view added
+        layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  slotsView.bounds.height - 330) //position of the added view
         layerTop.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2) //creates a rectange for the added view
         layerTop.shadowColor = UIColor.black.cgColor //shadow color
         layerTop.shadowOffset = CGSize(width: 0,height: 8) //size of the shadow offset
@@ -132,11 +132,11 @@ class rewardsVC: UIViewController {
         //Lower radius means a darker shadow
         
         let layerBottom: CALayer = CALayer()
-        layerBottom.backgroundColor = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1.0).cgColor
-        layerBottom.position = CGPoint(x: slotsView.bounds.width / 2, y: 329)
+        layerBottom.backgroundColor = UIColor(red: 8/255, green: 37/255, blue: 43/255, alpha: 1.0).cgColor
+        layerBottom.position = CGPoint(x: slotsView.bounds.width / 2, y: slotsView.bounds.height)
         layerBottom.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2)
         layerBottom.shadowColor = UIColor.black.cgColor
-        layerBottom.shadowOffset = CGSize(width: 0,height: 5)
+        layerBottom.shadowOffset = CGSize(width: 0,height: 8)
         layerBottom.shadowOpacity = 1
         layerBottom.shadowRadius = 8
         let degrees = 180.0

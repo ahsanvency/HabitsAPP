@@ -56,8 +56,11 @@
                                 <rect key="frame" x="0.0" y="108" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-58-1VR">
-                                        <rect key="frame" x="151" y="0.0" width="113" height="50"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
+                                        <rect key="frame" x="157.33333333333334" y="3" width="100.33333333333334" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="101" id="UaD-2a-sjA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
                                         <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -142,8 +145,11 @@
                                 <rect key="frame" x="0.0" y="163" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkb-IG-WtD">
-                                        <rect key="frame" x="142.66666666666666" y="0.0" width="129.99999999999997" height="50"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
+                                        <rect key="frame" x="150.33333333333334" y="3" width="115.00000000000003" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="115" id="xZH-Rn-r0Y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
                                         <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
