@@ -188,12 +188,12 @@ class rewardsVC: UIViewController {
     
     func prepareNextSpin(){
         //can eventually delete these to replace it with returnStop in the functions below
-//        let stopLeft = returnStop()
-//        let stopMiddle = returnStop()
-//        let stopRight = returnStop()
-        let stopLeft = 1
-        let stopMiddle = 3
-        let stopRight = 5
+        let stopLeft = returnStop()
+        let stopMiddle = returnStop()
+        let stopRight = returnStop()
+//        let stopLeft = 1
+//        let stopMiddle = 3
+//        let stopRight = 5
         
         //Generates the number of times for each column to spin
         numberOfTimesSpinLeft = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopLeft + selectedItemLeft
@@ -233,7 +233,6 @@ class rewardsVC: UIViewController {
         }
         if leftCurrentSpinCount >= numberOfTimesSpinLeft{
             timerLeft.invalidate()
-            print("Left \(selectedItemLeft!)")
         }
         
         if leftCurrentSpinCount >= numberOfTimesSpinLeft && middleCurrentSpinCount >= numberOfTimesSpinMiddle && rightCurrentSpinCount >= numberOfTimesSpinRight {
@@ -384,9 +383,6 @@ class rewardsVC: UIViewController {
         let leftCheck = items[selectedItemLeft].reward
         let middleCheck = items[selectedItemMiddle].reward
         let rightCheck = items[selectedItemRight].reward
-        print(leftCheck)
-        print(middleCheck)
-        print(rightCheck)
         
         //current user
         guard let user = Auth.auth().currentUser else {
@@ -405,7 +401,7 @@ class rewardsVC: UIViewController {
             let firstDict = value![firstKey] as! Dictionary<String,Any>
             
             var rewardsDict = firstDict["Rewards"] as? Dictionary<String, Any>
-            let basicMessage = "Good effort have earned: \(rewardsDict!["Basic"]!)"
+            let basicMessage = "Good effort you have earned: \(rewardsDict!["Basic"]!)"
             let intMessage = "Congratulations you have earned: \(rewardsDict!["Int"]!)"
             let advMessage = "You really deserve this: \(rewardsDict!["Adv"]!)"
             
@@ -413,7 +409,7 @@ class rewardsVC: UIViewController {
                 self.winner()
                 self.upAlert(messages: basicMessage)
             }
-            else if (leftCheck == "Basic" && middleCheck == "Basic") || (leftCheck == "Basic" && rightCheck == "Basic") && (middleCheck == "Basic" && rightCheck == "Basic") && (leftCheck == "Advanced" || middleCheck == "Advanced" || rightCheck == "Advanced"){
+            else if ((leftCheck == "Basic" && middleCheck == "Basic") || (leftCheck == "Basic" && rightCheck == "Basic") || (middleCheck == "Basic" && rightCheck == "Basic")) && (leftCheck == "Advanced" || middleCheck == "Advanced" || rightCheck == "Advanced"){
                 self.winner()
                 self.upAlert(messages: basicMessage)
             }
