@@ -105,7 +105,7 @@ class HabitCell: UITableViewCell {
                 let cminutes = calendar.component(.minute, from: date)
                 
                 
-                if (chour > currentHabitTimeHours! && cminutes > currentHabitTimeMin!){
+                if (chour >= currentHabitTimeHours! && cminutes > currentHabitTimeMin!){
                     //start get next workout
                     var gotWorkOut = false
                     //Check 1
@@ -125,7 +125,7 @@ class HabitCell: UITableViewCell {
                             var value = x as! Int
                             if value < cDay {
                                 lowerDays.append(value)
-                            } else {
+                            } else if value > cDay {
                                 higherDays.append(value)
                             }
                             
@@ -170,7 +170,7 @@ class HabitCell: UITableViewCell {
                             var value = x as! Int
                             if value < cDay {
                                 lowerDays.append(value)
-                            } else {
+                            } else if value > cDay {
                                 higherDays.append(value)
                             }
                             
