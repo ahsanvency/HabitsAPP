@@ -439,7 +439,7 @@ class rewardsVC: UIViewController {
         isSpinning = false
         spinBtn.setTitle("SPIN", for: UIControlState.normal)
         spinBtn.isEnabled = true
-        spinBtn.backgroundColor = UIColor(red: 60/255, green: 95/255, blue: 156/255, alpha: 1.0)
+        spinBtn.backgroundColor = UIColor(r: 60, g: 95, b: 156)
         timerGetReadyForNextSpin.invalidate()
     }
     
@@ -591,7 +591,7 @@ class rewardsVC: UIViewController {
     
     func shadowlayer(){
         let layerTop: CALayer = CALayer()
-        layerTop.backgroundColor = UIColor(red: 8/255, green: 37/255, blue: 43/255, alpha: 1.0).cgColor //Background color of the view added
+        layerTop.backgroundColor = UIColor(r: 8, g: 37, b: 43).cgColor //Background color of the view added
         layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  slotsView.bounds.height - 330) //position of the added view
         layerTop.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2) //creates a rectange for the added view
         layerTop.shadowColor = UIColor.black.cgColor //shadow color
@@ -602,7 +602,7 @@ class rewardsVC: UIViewController {
         //Lower radius means a darker shadow
         
         let layerBottom: CALayer = CALayer()
-        layerBottom.backgroundColor = UIColor(red: 8/255, green: 37/255, blue: 43/255, alpha: 1.0).cgColor
+        layerBottom.backgroundColor = UIColor(r: 8, g: 37, b: 43).cgColor
         layerBottom.position = CGPoint(x: slotsView.bounds.width / 2, y: slotsView.bounds.height)
         layerBottom.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2)
         layerBottom.shadowColor = UIColor.black.cgColor

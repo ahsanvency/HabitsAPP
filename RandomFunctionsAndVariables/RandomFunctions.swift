@@ -21,3 +21,11 @@ let KEY_UID = "uid"
 let habitsDict = ["Why": "Click To Edit", "When": "Click To Edit", "Where": "Click To Edit"];
 
 let SHADOW_GRAY: CGFloat = 120.0 / 255.0
+
+extension UIColor {
+    
+    //This is extending the function and making it easier to use
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat){
+        self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
+    }
+}

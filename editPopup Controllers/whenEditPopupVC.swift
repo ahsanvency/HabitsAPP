@@ -58,8 +58,8 @@ class whenEditPopupVC: UIViewController {
             print(error.localizedDescription)
         }
         
-        timePicker.backgroundColor = UIColor(red: 243/255, green: 235/255, blue: 218/255, alpha: 1)
-        timePicker.setValue(UIColor(red: 71/255, green: 10/255, blue: 86/255, alpha: 1), forKeyPath: "textColor")
+        timePicker.backgroundColor = UIColor(r: 243, g: 235, b: 218)
+        timePicker.setValue(UIColor(r: 71, g: 10, b: 86), forKeyPath: "textColor")
         
     }
     
