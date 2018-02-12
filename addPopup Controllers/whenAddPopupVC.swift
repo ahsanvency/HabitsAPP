@@ -15,17 +15,16 @@ class whenAddPopupVC: UIViewController{
     
     var weekArray = [Int]()
     var timeDict:Dictionary = [String:Int]()
+    var habitRow: Int?
     var habitName: String?
-    var whyLblText: String = ""
-    var timeStrText:String = ""
-    var whereLblText:String = ""
-    var whenLblText:String = ""
-    var currentText:String = ""
-
-    var basicStr: String = ""
-    var intStr: String = ""
-    var advStr: String = ""
+    var whyLblText: String?
+    var whenLblText:String?
+    var whereLblText:String?
+    var currentText:String?
     
+    var basicStr: String?
+    var intStr: String?
+    var advStr: String?
     @IBOutlet weak var questionLbl: UILabel!
     @IBOutlet weak var screenTitle: UILabel!
     
@@ -117,12 +116,12 @@ class whenAddPopupVC: UIViewController{
             let whenView = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
             whenView.weekArray = weekArray
             whenView.whenLblText = daysOfWeekStr + timeStr
-            whenView.whereLblText = whereLblText
-            whenView.whyLblText = whyLblText
-            whenView.currentText = currentText
-            whenView.basicStr = basicStr
-            whenView.intStr = intStr
-            whenView.advStr = advStr
+            whenView.whereLblText = whereLblText!
+            whenView.whyLblText = whyLblText!
+            whenView.currentText = currentText!
+            whenView.basicStr = basicStr!
+            whenView.intStr = intStr!
+            whenView.advStr = advStr!
             whenView.editButtonPressed = 0
             self.present(whenView,animated: true, completion: nil)
         }
@@ -130,11 +129,19 @@ class whenAddPopupVC: UIViewController{
     }
     
     @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true){
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let whenView = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+            whenView.weekArray = weekArray
+            whenView.whereLblText = whereLblText!
+            whenView.whyLblText = whyLblText!
+            whenView.currentText = currentText!
+            whenView.basicStr = basicStr!
+            whenView.intStr = intStr!
+            whenView.advStr = advStr!
             whenView.editButtonPressed = 0
-        }
+            self.present(whenView,animated: true, completion: nil)
     }
     
 }

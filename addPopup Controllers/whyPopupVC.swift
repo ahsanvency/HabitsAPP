@@ -13,15 +13,15 @@ class whyPopupVC: UIViewController {
     
     var habitRow: Int?
     var habitName: String?
-    var whyLblText: String = ""
+    var whyLblText: String?
     var weekArray = [Int]()
-    var whenLblText:String = ""
-    var whereLblText:String = ""
-    var currentText:String = ""
+    var whenLblText:String?
+    var whereLblText:String?
+    var currentText:String?
     
-    var basicStr: String = ""
-    var intStr: String = ""
-    var advStr: String = ""
+    var basicStr: String?
+    var intStr: String?
+    var advStr: String?
     
     
     @IBOutlet weak var whyText: UITextField!
@@ -43,13 +43,12 @@ class whyPopupVC: UIViewController {
             let whyInfo = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
             whyInfo.whyLblText = whyText.text!
             whyInfo.weekArray = weekArray
-            whyInfo.whenLblText = whenLblText
-            whyInfo.whereLblText = whereLblText
-            
-            whyInfo.basicStr = basicStr
-            whyInfo.intStr = intStr
-            whyInfo.advStr = advStr
-            whyInfo.currentText = currentText
+            whyInfo.whenLblText = whenLblText!
+            whyInfo.whereLblText = whereLblText!
+            whyInfo.basicStr = basicStr!
+            whyInfo.intStr = intStr!
+            whyInfo.advStr = advStr!
+            whyInfo.currentText = currentText!
             whyInfo.editButtonPressed = 0
             self.present(whyInfo,animated: true, completion: nil)
         }
@@ -69,6 +68,14 @@ class whyPopupVC: UIViewController {
         dismiss(animated: true) {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let whyInfo = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+            whyInfo.whyLblText = self.whyText.text!
+            whyInfo.weekArray = self.weekArray
+            whyInfo.whenLblText = self.whenLblText!
+            whyInfo.whereLblText = self.whereLblText!
+            whyInfo.basicStr = self.basicStr!
+            whyInfo.intStr = self.intStr!
+            whyInfo.advStr = self.advStr!
+            whyInfo.currentText = self.currentText!
             whyInfo.editButtonPressed = 0
         }
     }
