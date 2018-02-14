@@ -37,9 +37,6 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var basicLbl: UILabel!
     @IBOutlet weak var intLbl: UILabel!
     @IBOutlet weak var advLbl: UILabel!
-    
-    
-    
     @IBOutlet weak var scrollView: UIScrollView!
     
     
@@ -49,15 +46,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var habitPic: UIImageView!
     
     
-
-    //delete
-
-    
-    
     //creates the list for the picker view
     //Add more if you see fit
     var list = ["Running","Meditating","Waking Up Early","Coding","Journaling"]
-    var list2 = ["Run","Meditate","Wake up early","Code","Journal"]
+    var listDict = ["running":"run","meditating":"meditate","waking up early":"wake up early","coding":"code","journaling":"journal"]
+    var list2 = ["run","meditate","wake up early","code","journal"]
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,6 +59,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         }
         print(editButtonPressed)
     }
+    
     //Starts off with just the picker for editing
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +77,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         advLbl.text = advStr
         
         if currentText != ""{
+            habitName = currentText
             self.habitPic.image = UIImage(named: currentText);
             self.habitPic.isHidden = false;
             self.dropDown.isHidden = true;
@@ -189,7 +184,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "whenAddPopup") as! whenAddPopupVC
             
-            newViewController.habitName = "start " + habitName.lowercased() + "?"
+            newViewController.habitName =  habitName.lowercased() + "?"
             newViewController.whyLblText = whyLblText
             newViewController.weekArray = weekArray
             newViewController.whenLblText = whenLblText
@@ -207,8 +202,8 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "whereAddPopup") as! whereAddPopupVC
             
-            
-            newViewController.habitName =  list2[habitRow].lowercased() + "?"
+
+            newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
             newViewController.whyLblText = whyLblText
             newViewController.weekArray = weekArray
             newViewController.whenLblText = whenLblText
@@ -223,28 +218,6 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     
-//    @objc func onRewardsViewTapped(sender: UITapGestureRecognizer){
-//
-//            let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
-//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "rewardsPopupVC") as! rewardsPopupVC
-//
-//
-//            newViewController.habitName =  list2[habitRow].lowercased() + "?"
-//            newViewController.whyLblText = whyLblText
-//            newViewController.weekArray = weekArray
-//            newViewController.whenLblText = whenLblText
-//            newViewController.whereLblText = whereLblText
-//            newViewController.basicStr = basicStr
-//            newViewController.intStr = intStr
-//            newViewController.advStr = advStr
-//            newViewController.currentText = currentText
-//
-//            self.present(newViewController, animated: true, completion: nil)
-//    }
-    
-//    @IBAction func editRewards(_ sender: Any) {
-//
-//    }
     
     @IBAction func editRewardsBtn(_ sender: Any) {
 
