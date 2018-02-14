@@ -1022,7 +1022,7 @@
                                                     <constraint firstAttribute="height" constant="125" id="7xj-5o-5ho"/>
                                                     <constraint firstAttribute="width" constant="125" id="MXf-5f-wF3"/>
                                                 </constraints>
-                                                <state key="normal" image="Save"/>
+                                                <state key="normal" image="BlueChip"/>
                                                 <connections>
                                                     <action selector="addHabit:" destination="RYe-QU-wGA" eventType="touchUpInside" id="Awm-uv-cCp"/>
                                                 </connections>
@@ -1041,6 +1041,15 @@
                                                     <action selector="editRewardsBtn:" destination="RYe-QU-wGA" eventType="touchUpInside" id="nen-fF-cwA"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcu-LY-LM0">
+                                                <rect key="frame" x="160" y="504.5" width="54" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="RUz-Or-kji"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.031372549020000001" green="0.1450980392" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -1053,6 +1062,7 @@
                                             <constraint firstAttribute="trailing" secondItem="vXh-8f-mel" secondAttribute="trailing" constant="100" id="Ecp-Hi-pn1"/>
                                             <constraint firstItem="EUY-2V-IhY" firstAttribute="leading" secondItem="KVy-Cy-PsV" secondAttribute="leading" constant="10" id="EqL-B6-ubb"/>
                                             <constraint firstAttribute="trailing" secondItem="rIG-dZ-MXo" secondAttribute="trailing" id="HLB-aQ-gNv"/>
+                                            <constraint firstItem="vcu-LY-LM0" firstAttribute="centerY" secondItem="KUI-hJ-nxt" secondAttribute="centerY" id="Ibr-Ii-EjA"/>
                                             <constraint firstItem="5ml-9v-D1c" firstAttribute="top" secondItem="yqg-6s-kJJ" secondAttribute="bottom" constant="15" id="LeH-U2-h5v"/>
                                             <constraint firstAttribute="trailing" secondItem="NPi-Xe-BxI" secondAttribute="trailing" constant="10" id="O2w-hP-z04"/>
                                             <constraint firstItem="vXh-8f-mel" firstAttribute="leading" secondItem="KVy-Cy-PsV" secondAttribute="leading" constant="100" id="Sc2-iQ-Y9e"/>
@@ -1060,6 +1070,7 @@
                                             <constraint firstItem="fEp-Ef-k1u" firstAttribute="leading" secondItem="KVy-Cy-PsV" secondAttribute="leading" constant="10" id="VAW-jI-qYN"/>
                                             <constraint firstAttribute="trailing" secondItem="BaA-qE-UnV" secondAttribute="trailing" constant="10" id="avL-7h-Kdh"/>
                                             <constraint firstAttribute="trailing" secondItem="yqg-6s-kJJ" secondAttribute="trailing" id="biO-ch-qiX"/>
+                                            <constraint firstItem="vcu-LY-LM0" firstAttribute="centerX" secondItem="KUI-hJ-nxt" secondAttribute="centerX" id="buq-Nc-ukI"/>
                                             <constraint firstItem="B0W-MM-cTP" firstAttribute="leading" secondItem="KVy-Cy-PsV" secondAttribute="leading" id="dlR-1d-mGt"/>
                                             <constraint firstAttribute="trailing" secondItem="B0W-MM-cTP" secondAttribute="trailing" id="eKo-9O-jrw"/>
                                             <constraint firstItem="yqg-6s-kJJ" firstAttribute="leading" secondItem="KVy-Cy-PsV" secondAttribute="leading" id="hHc-0x-zrb"/>
@@ -1442,7 +1453,6 @@
         <image name="BlueChip" width="464" height="461"/>
         <image name="HD logo" width="1270" height="1270"/>
         <image name="Habit Pic" width="200" height="200"/>
-        <image name="Save" width="123" height="124"/>
         <image name="handPointer" width="100" height="100"/>
         <image name="loginactual" width="287" height="67"/>
     </resources>

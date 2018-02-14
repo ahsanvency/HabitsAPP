@@ -263,17 +263,10 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         newViewController.currentText = currentText
         
         self.present(newViewController, animated: true, completion: nil)
-
-        
-        
-        
-        
     }
     
     
     @IBAction func addHabit(_ sender: Any) {
-        
-        
         if Auth.auth().currentUser?.uid != nil {
             
             //checks to see if txtFeilds are empty
@@ -303,11 +296,10 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                 //Adding rewards to habit
                 DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["Basic":basicLbl.text,"Int":intLbl.text,"Adv":advLbl.text, "Success": 0])
                 
-                
-                
                 //Segue
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+                newViewController.firstTimeLoaded = 1;
                 self.present(newViewController, animated: true){
                     self.startAnimation()
                 } 

@@ -18,13 +18,41 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var animationLabel: UILabel!
     
     var intrinsicQuestions = [String]()
-    var randomPopupNumber = 10
+    var randomPopupNumber = 7
+    var firstTimeLoaded: Int?
     
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.async {
             //HabitCell().reload()
             self.tableView.reloadData()
         }
+        
+        if firstTimeLoaded != 0{
+            UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
+                self.animationView.frame.origin.x -= 20
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.55, delay: 0, options: [], animations: {
+                    self.animationView.frame.origin.x += 20
+                }, completion: { _ in
+                    UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
+                        self.animationView.frame.origin.x -= 20
+                    }, completion: { _ in
+                        UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
+                            self.animationView.frame.origin.x += 20
+                        }, completion: { _ in
+                        })
+                    })
+                })
+            })
+            UIView.animate(withDuration: 1.5, delay: 1.5, options: [], animations: {
+                self.animationLabel.alpha = 0
+                self.animationView.alpha = 0
+            }, completion: { _ in
+                self.animationLabel.isHidden = true
+                self.animationView.isHidden = true
+            })
+        }
+        
         UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
            self.animationView.frame.origin.x -= 20
         }, completion: { _ in
@@ -62,8 +90,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let uid = user.uid
 //        var ref: DatabaseReference!
 //        ref = Database.database().reference()
-        
-        
+        firstTimeLoaded = 0;
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
