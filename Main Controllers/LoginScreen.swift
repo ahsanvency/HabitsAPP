@@ -17,10 +17,13 @@ class LoginScreen: UIViewController {
     //Outlets
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var forgotPassword: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailField.keyboardType = .emailAddress
         passwordField.isSecureTextEntry = true
+        forgotPassword.isHidden = true
         self.hideKeyboardWhenTappedAround()
     }
     

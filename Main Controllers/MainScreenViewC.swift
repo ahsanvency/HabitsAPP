@@ -17,9 +17,10 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var animationView: UIImageView!
     @IBOutlet weak var animationLabel: UILabel!
     
+    
     var intrinsicQuestions = [String]()
     var randomPopupNumber = 7
-    var firstTimeLoaded: Int?
+    var firstTimeLoaded = 0
     
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.async {
@@ -27,7 +28,9 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             self.tableView.reloadData()
         }
         
-        if firstTimeLoaded != 0{
+        if firstTimeLoaded == 1{
+            self.animationLabel.isHidden = false
+            self.animationView.isHidden = false
             UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
                 self.animationView.frame.origin.x -= 20
             }, completion: { _ in
@@ -51,31 +54,13 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 self.animationLabel.isHidden = true
                 self.animationView.isHidden = true
             })
+            self.firstTimeLoaded = 0
+        }else {
+            self.animationView.isHidden = true
+            self.animationLabel.isHidden = true
         }
         
-        UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-           self.animationView.frame.origin.x -= 20
-        }, completion: { _ in
-            UIView.animate(withDuration: 0.55, delay: 0, options: [], animations: {
-                self.animationView.frame.origin.x += 20
-            }, completion: { _ in
-                UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-                    self.animationView.frame.origin.x -= 20
-                }, completion: { _ in
-                    UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-                        self.animationView.frame.origin.x += 20
-                    }, completion: { _ in
-                    })
-                })
-            })
-        })
-            UIView.animate(withDuration: 1.5, delay: 1.5, options: [], animations: {
-                self.animationLabel.alpha = 0
-                self.animationView.alpha = 0
-            }, completion: { _ in
-                self.animationLabel.isHidden = true
-                self.animationView.isHidden = true
-            })
+        
     }
     
     override func viewDidLoad() {
@@ -90,7 +75,6 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let uid = user.uid
 //        var ref: DatabaseReference!
 //        ref = Database.database().reference()
-        firstTimeLoaded = 0;
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary

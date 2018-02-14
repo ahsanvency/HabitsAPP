@@ -585,14 +585,14 @@ class rewardsVC: UIViewController {
     
     @IBAction func backButton(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let whenView = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
-        self.present(whenView,animated: true, completion: nil)
+        let mainView = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+        self.present(mainView,animated: true, completion: nil)
     }
     
     func shadowlayer(){
         let layerTop: CALayer = CALayer()
         layerTop.backgroundColor = UIColor(r: 8, g: 37, b: 43).cgColor //Background color of the view added
-        layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  slotsView.bounds.height - 330) //position of the added view
+        layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  slotsView.bounds.height - 320) //position of the added view
         layerTop.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2) //creates a rectange for the added view
         layerTop.shadowColor = UIColor.black.cgColor //shadow color
         layerTop.shadowOffset = CGSize(width: 0,height: 8) //size of the shadow offset

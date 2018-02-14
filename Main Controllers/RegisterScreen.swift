@@ -26,6 +26,7 @@ class RegisterScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailField.keyboardType = .emailAddress
         passwordField.isSecureTextEntry = true
         confirmPasswordField.isSecureTextEntry = true
         self.hideKeyboardWhenTappedAround()
