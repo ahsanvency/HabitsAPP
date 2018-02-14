@@ -732,19 +732,42 @@
                                     <outlet property="delegate" destination="aWf-MG-rFl" id="5H2-wB-RaW"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handPointer" translatesAutoresizingMaskIntoConstraints="NO" id="wXZ-wl-qNv">
+                                <rect key="frame" x="295" y="362" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9Bz-7D-fkk"/>
+                                    <constraint firstAttribute="width" constant="100" id="VYm-3M-2Rv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Left When Habit Completed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZu-Dj-ENM">
+                                <rect key="frame" x="205" y="297" width="160" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="F8u-09-ogD"/>
+                                    <constraint firstAttribute="width" constant="160" id="QeF-xS-pcX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.1450980392" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yaf-Ci-rLg" firstAttribute="leading" secondItem="kEF-aT-C4Z" secondAttribute="leading" id="D8T-PQ-VBH"/>
                             <constraint firstItem="mph-jn-MEF" firstAttribute="top" secondItem="kEF-aT-C4Z" secondAttribute="top" id="E5y-gA-Kdr"/>
+                            <constraint firstItem="kEF-aT-C4Z" firstAttribute="trailing" secondItem="wXZ-wl-qNv" secondAttribute="trailing" constant="-20" id="Emh-DH-SIq"/>
                             <constraint firstItem="Yaf-Ci-rLg" firstAttribute="trailing" secondItem="kEF-aT-C4Z" secondAttribute="trailing" id="Hub-TO-WMl"/>
                             <constraint firstItem="mph-jn-MEF" firstAttribute="leading" secondItem="kEF-aT-C4Z" secondAttribute="leading" id="PqK-QT-nCr"/>
+                            <constraint firstItem="Yaf-Ci-rLg" firstAttribute="top" secondItem="wXZ-wl-qNv" secondAttribute="bottom" constant="5" id="bVV-eq-jmB"/>
+                            <constraint firstItem="wXZ-wl-qNv" firstAttribute="top" secondItem="JZu-Dj-ENM" secondAttribute="bottom" constant="10" id="fCI-DG-7Yr"/>
                             <constraint firstItem="kEF-aT-C4Z" firstAttribute="trailing" secondItem="mph-jn-MEF" secondAttribute="trailing" id="l8G-Jz-Uwg"/>
                             <constraint firstItem="kEF-aT-C4Z" firstAttribute="bottom" secondItem="Yaf-Ci-rLg" secondAttribute="bottom" id="qU2-Ct-qC5"/>
+                            <constraint firstItem="kEF-aT-C4Z" firstAttribute="trailing" secondItem="JZu-Dj-ENM" secondAttribute="trailing" constant="10" id="uKf-hR-Dnk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kEF-aT-C4Z"/>
                     </view>
                     <connections>
+                        <outlet property="animationLabel" destination="JZu-Dj-ENM" id="Wdy-lB-7sc"/>
+                        <outlet property="animationView" destination="wXZ-wl-qNv" id="RNL-DQ-LQH"/>
                         <outlet property="screenTitle" destination="7QL-W8-6oA" id="fzK-29-oFd"/>
                         <outlet property="tableView" destination="Yaf-Ci-rLg" id="xN1-lG-Swv"/>
                         <segue destination="ocZ-h0-lAE" kind="show" identifier="toRewardsScreen" id="A2B-BA-a99"/>
@@ -1420,6 +1443,7 @@
         <image name="HD logo" width="1270" height="1270"/>
         <image name="Habit Pic" width="200" height="200"/>
         <image name="Save" width="123" height="124"/>
+        <image name="handPointer" width="100" height="100"/>
         <image name="loginactual" width="287" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
