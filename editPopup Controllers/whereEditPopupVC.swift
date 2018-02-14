@@ -17,6 +17,8 @@ class whereEditPopupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
         let myGradient = UIImage(named: "textWherePopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         

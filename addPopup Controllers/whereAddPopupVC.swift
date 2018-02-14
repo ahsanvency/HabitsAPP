@@ -32,7 +32,7 @@ class whereAddPopupVC: UIViewController {
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         questionLabel.text = "Where is a consistent location you can \(String(describing: habitName!))"
-        
+        self.hideKeyboardWhenTappedAround()
         //habitTxt.text = habitName
         // Do any additional setup after loading the view.
     }

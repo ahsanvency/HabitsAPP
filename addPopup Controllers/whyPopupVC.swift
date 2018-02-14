@@ -33,6 +33,7 @@ class whyPopupVC: UIViewController {
         nameOfhabit.text = habitName
         let myGradient = UIImage(named: "textWhyPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func saveButton(_ sender: Any) {

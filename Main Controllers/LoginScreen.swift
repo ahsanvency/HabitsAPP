@@ -21,6 +21,7 @@ class LoginScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func goBack(_ sender: Any) {
@@ -89,5 +90,6 @@ class LoginScreen: UIViewController {
 
         KeychainWrapper.standard.set(id, forKey: KEY_UID);
     }
-    
 }
+
+

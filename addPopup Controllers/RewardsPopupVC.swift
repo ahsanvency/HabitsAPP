@@ -33,6 +33,7 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         let myGradient = UIImage(named: "textRewardsPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func backButton(_ sender: Any) {

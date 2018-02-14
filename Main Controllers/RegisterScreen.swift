@@ -28,6 +28,7 @@ class RegisterScreen: UIViewController {
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
         confirmPasswordField.isSecureTextEntry = true
+        self.hideKeyboardWhenTappedAround()
     }
     
     
