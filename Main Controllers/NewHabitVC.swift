@@ -48,9 +48,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     //creates the list for the picker view
     //Add more if you see fit
-    var list = ["Running","Meditating","Waking Up Early","Coding","Journaling"]
-    var listDict = ["running":"run","meditating":"meditate","waking up early":"wake up early","coding":"code","journaling":"journal"]
-    var list2 = ["run","meditate","wake up early","code","journal"]
+    var list = ["Running","Meditating","Waking Up Early","Coding","Journaling", "Eating Healthy", "Praying", "Reading", "Daily Act of Kindness", "Lifting", "Sleeping on Time"]
+    
+    var listDict = ["running":"run","meditating":"meditate","waking up early":"wake up early","coding":"code","journaling":"journal", "eating healthy":"eat healthy", "praying":"pray", "reading":"read", "daily act of kindness":"perform an act of kindness", "lifting":"lift", "sleeping on time":"sleep on time"]
+    var list2 = ["run","meditate","wake up early","code","journal", "eat healthy", "pray", "read", "perform an act of kindness", "lift", "sleep on time"]
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +65,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     //Starts off with just the picker for editing
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Puts the list in alphabetical order
+        list.sort()
+        list2.sort()
+        
         //Starts the screen with the habit pic being hidden
         habitPic.isHidden = true
         

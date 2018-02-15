@@ -27,7 +27,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         DispatchQueue.main.async {
             //HabitCell().reload()
             self.tableView.reloadData()
-            self.notif()
+            //self.notif()
         }
         
         if firstTimeLoaded == 1{
