@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>775183960773-lbkmq3c78q2k265u30arenqpvrqqu6ls.apps.googleusercontent.com</string>
+	<string>707453630426-ah3l5nvi7t6p1fucr92ngnna2ksue6se.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.775183960773-lbkmq3c78q2k265u30arenqpvrqqu6ls</string>
+	<string>com.googleusercontent.apps.707453630426-ah3l5nvi7t6p1fucr92ngnna2ksue6se</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBrXVTwHz-yUDb3W6jhRUXpLswnZUZJA08</string>
+	<string>AIzaSyDhWUAlch6-Tbac-SFhl4jiKMcUa3ZYPLY</string>
 	<key>GCM_SENDER_ID</key>
-	<string>775183960773</string>
+	<string>707453630426</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>ahsanvency.Habits</string>
+	<string>com.ahsanvency.Habits</string>
 	<key>PROJECT_ID</key>
-	<string>habits-bfff6</string>
+	<string>habitsapp-7ea48</string>
 	<key>STORAGE_BUCKET</key>
-	<string>habits-bfff6.appspot.com</string>
+	<string>habitsapp-7ea48.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:775183960773:ios:8c36549bf9207d91</string>
+	<string>1:707453630426:ios:d49d9f051e9d5540</string>
 	<key>DATABASE_URL</key>
-	<string>https://habits-bfff6.firebaseio.com</string>
+	<string>https://habitsapp-7ea48.firebaseio.com</string>
 </dict>
 </plist>
