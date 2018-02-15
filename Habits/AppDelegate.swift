@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FBSDKCoreKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,19 +21,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         UIApplication.shared.statusBarStyle = .lightContent
         
-        if #available(iOS 11.0, *) {
-            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-            application.registerForRemoteNotifications()
-        } else {
-            let types: UIRemoteNotificationType = [.alert, .badge, .sound]
-            application.registerForRemoteNotifications(matching: types)
-            
-        }
+        UNUserNotificationCenter.current().delegate = self
+//        if #available(iOS 11.0, *) {
+//            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+//            application.registerUserNotificationSettings(settings)
+//            application.registerForRemoteNotifications()
+//        } else {
+//            let types: UIRemoteNotificationType = [.alert, .badge, .sound]
+//            application.registerForRemoteNotifications(matching: types)
+//
+//        }
         
         FirebaseApp.configure()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
         
        //To connect it to facebook type this line of code
     FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -84,6 +86,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+}
 
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(.alert)
+    }
 }
 

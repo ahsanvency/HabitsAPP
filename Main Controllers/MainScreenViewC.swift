@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SwiftKeychainWrapper
+import UserNotifications
 
 class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -26,6 +27,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         DispatchQueue.main.async {
             //HabitCell().reload()
             self.tableView.reloadData()
+            self.notif()
         }
         
         if firstTimeLoaded == 1{
@@ -65,6 +67,12 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
+        }
+        
+        
+        
         let myGradient = UIImage(named: "textMainScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
@@ -228,6 +236,22 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             }
         }) { (error) in
             print(error.localizedDescription)
+        }
+    }
+    
+    func notif(){
+        //Creates the notification
+        let content = UNMutableNotificationContent()
+        content.title = "The 5 seconds are up!"
+        content.subtitle = "They are up now"
+        content.body = "The 5 seconds are really up!!!!"
+        //App icon for the badge
+        content.badge = 1
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+        let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
+        //Adds to the notification center which has the job of displaying it
+        
+        UNUserNotificationCenter.current().add(request) { (error) in
         }
     }
 }
