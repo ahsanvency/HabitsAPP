@@ -19,8 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        if #available(iOS 11.0, *) {
+            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+        } else {
+            let types: UIRemoteNotificationType = [.alert, .badge, .sound]
+            application.registerForRemoteNotifications(matching: types)
+            
+        }
+        
         FirebaseApp.configure()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification(notification:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
         
        //To connect it to facebook type this line of code
     FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -42,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        Messaging.messaging().disconnect()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -55,7 +68,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    @objc func tokenRefreshNotification(notification: NSNotification){
+        let refreshedToken = InstanceID.instanceID().token()!
+        print("InstanceID token: \(refreshedToken)")
+        connectToFirebaseMessaging()
+    }
+    
+    func connectToFirebaseMessaging(){
+        Messaging.messaging().connect{ (error) in
+            if error != nil{
+                print("Unable to connect \(error)")
+            }else{
+                print("CONNECTED")
+            }
+        }
+    }
 
 }
 
