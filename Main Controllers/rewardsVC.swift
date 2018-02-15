@@ -586,6 +586,7 @@ class rewardsVC: UIViewController {
     @IBAction func backButton(_ sender: Any) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainView = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+        mainView.firstTimeLoaded = 0
         self.present(mainView,animated: true, completion: nil)
     }
     
