@@ -145,7 +145,10 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 }
                 let habitName = firstDict["name"] as? String
                 
-                self.intrinsicQuestions = ["How are you progressing with \(habitName!)?","Why do you want to continue \(habitName!)?","How does \(habitName!) relate to your values?","How do you feel \(habitName!)?","What do you gain by \(habitName!)?"]
+                self.intrinsicQuestions = ["How are you progressing with \(habitName!)?",
+                    "Why do you want to continue \(habitName!)?",
+                    "How does \(habitName!) relate to your values?",
+                    "What do you gain by \(habitName!)?"]
                 
                 let test = Int(arc4random_uniform(UInt32(self.randomPopupNumber)))
                 if test == 0 {
