@@ -35,11 +35,11 @@
                                             <constraint firstAttribute="height" constant="50" id="8tD-iZ-1VZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
-                                        <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.96862745098039216" green="0.94117647058823528" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.23529411764705882" green="0.37254901960784315" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.082352941176470587" green="0.26666666666666666" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Jkx-gh-gga" firstAttribute="top" secondItem="CRa-mv-HBh" secondAttribute="top" id="3zT-Tr-xuS">
                                         <variation key="heightClass=regular" constant="0.0"/>
@@ -154,7 +154,7 @@
                                             <constraint firstAttribute="width" constant="250" id="775-Xg-nFl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
-                                        <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDW-zn-MIE">
@@ -171,7 +171,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.27450980390000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="qff-Da-Ace" firstAttribute="centerX" secondItem="XFW-dH-FSA" secondAttribute="centerX" id="Btk-FI-Zuc"/>
                                     <constraint firstItem="qff-Da-Ace" firstAttribute="centerY" secondItem="XFW-dH-FSA" secondAttribute="centerY" id="HRJ-9E-trv"/>
@@ -344,7 +344,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.27450980390000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="3Ip-oq-wge"/>
                                     <constraint firstItem="hiK-tY-06N" firstAttribute="centerY" secondItem="ECT-TL-Hu9" secondAttribute="centerY" id="MPp-MJ-Nro"/>
@@ -358,7 +358,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOa-KH-5Nf" customClass="fancyButton" customModule="Habits">
                                 <rect key="frame" x="47" y="482.5" width="281" height="40"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6lh-Rh-BfL"/>
                                 </constraints>
@@ -392,7 +392,7 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="baZ-hD-vxx">
                                 <rect key="frame" x="47" y="382.5" width="281" height="40"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96862745098039216" green="0.94117647058823528" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bsS-dd-xB2"/>
                                 </constraints>
@@ -405,7 +405,7 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-Sq-qwY">
                                 <rect key="frame" x="47" y="422.5" width="281" height="40"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="shx-Kg-03U"/>
                                 </constraints>
@@ -483,12 +483,12 @@
                                             <constraint firstAttribute="height" constant="50" id="Q94-OA-9D8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
-                                        <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.08235294118" green="0.2666666667" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rda-9C-EvJ" userLabel="addHabits" customClass="fancyButton" customModule="Habits" customModuleProvider="target">
                                         <rect key="frame" x="320" y="12.5" width="45" height="45"/>
-                                        <color key="backgroundColor" red="0.24066054910000001" green="0.36947833489999998" blue="0.5507380194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.08235294118" green="0.2666666667" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="AKE-oJ-zFb"/>
                                             <constraint firstAttribute="height" constant="45" id="gnq-a2-P1c"/>
@@ -508,7 +508,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Logout">
-                                            <color key="titleColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="menuAsLogout:" destination="aWf-MG-rFl" eventType="touchUpInside" id="8Cu-Yg-wm8"/>
@@ -548,7 +548,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-Ci-rLg">
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
-                                <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="rSR-GV-1b2"/>
                                 </constraints>
@@ -567,7 +567,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="oSH-CW-eMb"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.74901960784313726" green="0.031372549019607843" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GGo-uz-FSM" customClass="logoView" customModule="Habits" customModuleProvider="target">
@@ -590,7 +590,7 @@
                                                                         <constraint firstAttribute="height" constant="25" id="cdj-Xr-yud"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                                                    <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.74901960784313726" green="0.031372549019607843" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Better Physical Health" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-Ak-V2B">
@@ -599,7 +599,7 @@
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="g9v-IT-QBV"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
-                                                                    <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.74901960784313726" green="0.031372549019607843" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -626,7 +626,7 @@
                                                                         <constraint firstAttribute="height" constant="25" id="vmC-ZV-29I"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                                                    <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.74901960784313726" green="0.031372549019607843" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="8:00 PM, 12/25/17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNJ-1Y-b75">
@@ -635,7 +635,7 @@
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="144" id="O1x-cO-Yoh"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
-                                                                    <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.74901960784313726" green="0.031372549019607843" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -666,7 +666,7 @@
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="pCp-pS-fId"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                                                    <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.74901960779999999" green="0.031372549020000001" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="La Fitness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iEa-Ly-VRg">
@@ -675,7 +675,7 @@
                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Xqg-zY-eOD"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
-                                                                    <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.74901960779999999" green="0.031372549020000001" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -723,7 +723,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="uZS-tv-Ebm" secondAttribute="trailing" constant="10" id="zzN-8i-ZQG"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.96862745098039216" green="0.94117647058823528" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="habitPic" destination="GGo-uz-FSM" id="zeF-Io-KnI"/>
                                             <outlet property="nameLbl" destination="il6-Gt-bpR" id="3LQ-9f-OZx"/>
@@ -753,7 +753,7 @@
                                     <constraint firstAttribute="width" constant="160" id="QeF-xS-pcX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -853,7 +853,7 @@
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.94901960780000005" green="0.90588235289999997" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="1b4-Dj-PCh"/>
@@ -1184,13 +1184,13 @@
                                             <constraint firstAttribute="width" constant="157" id="Ycv-5R-cwA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
-                                        <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVz-XO-ARj">
                                         <rect key="frame" x="8" y="10" width="34" height="30"/>
                                         <state key="normal" title="Back">
-                                            <color key="titleColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="backButton:" destination="ocZ-h0-lAE" eventType="touchUpInside" id="jIu-RY-hJf"/>
@@ -1208,7 +1208,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mti-Xz-PZ3" customClass="fancyButton" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="10" y="557" width="355" height="80"/>
-                                <color key="backgroundColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.27450980390000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="aSI-oA-T0v"/>
                                 </constraints>
