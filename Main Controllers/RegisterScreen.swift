@@ -20,28 +20,24 @@ class RegisterScreen: UIViewController {
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var screenTitle: UILabel!
+    @IBOutlet weak var logoPic: logoView!
     @IBOutlet weak var sloganLbl: UILabel!
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var nameField: fancyField!
+    @IBOutlet weak var emailField: fancyField!
+
+    @IBOutlet weak var passwordField: fancyField!
+    @IBOutlet weak var confirmPasswordField: fancyField!
     @IBOutlet weak var newUserButton: fancyButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //setupScreen()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        newUserButton.layer.borderColor = blueColor.cgColor
-        newUserButton.layer.borderWidth = 2.0
-        nameField.layer.borderWidth = 0
-        emailField.layer.borderWidth = 0
-        passwordField.layer.borderWidth = 0
-        confirmPasswordField.layer.borderWidth = 0
+        setupScreen()
         
-        passwordField.isSecureTextEntry = true
-        confirmPasswordField.isSecureTextEntry = true
         self.hideKeyboardWhenTappedAround()
     }
     
@@ -143,20 +139,35 @@ class RegisterScreen: UIViewController {
     }
     
     func setupScreen(){
-        titleView.backgroundColor = blueColor
-        backBtn.setTitleColor(satinColor, for: .normal)
-        screenTitle.textColor = satinColor
-        sloganLbl.textColor = satinColor
-        nameField.backgroundColor = satinColor
-        nameField.textColor = blueColor
-        emailField.backgroundColor = satinColor
-        emailField.textColor = blueColor
-        passwordField.backgroundColor = satinColor
-        passwordField.textColor = blueColor
-        confirmPasswordField.backgroundColor = satinColor
-        confirmPasswordField.textColor = blueColor
-        newUserButton.backgroundColor = satinColor
-        newUserButton.setTitleColor(seaFoamColor, for: .normal)
+        newUserButton.layer.borderColor = blueColor.cgColor
+        newUserButton.layer.borderWidth = 2.0
+        nameField.layer.borderWidth = 0
+        emailField.layer.borderWidth = 0
+        passwordField.layer.borderWidth = 0
+        confirmPasswordField.layer.borderWidth = 0
+        passwordField.isSecureTextEntry = true
+        confirmPasswordField.isSecureTextEntry = true
+        nameField.autocorrectionType = .no
+        emailField.autocorrectionType = .no
         emailField.keyboardType = .emailAddress
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= (keyboardSize.height - 120)
+            }
+        }
+        
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += (keyboardSize.height - 120)
+            }
+        }
     }
 }

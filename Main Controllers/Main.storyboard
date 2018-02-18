@@ -304,11 +304,12 @@
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="DDW-zn-MIE" id="dOy-VN-4bi"/>
-                        <outlet property="confirmPasswordField" destination="n7M-WB-NTM" id="4aF-uH-XpM"/>
-                        <outlet property="emailField" destination="vE3-oI-YkF" id="D3m-ct-8QD"/>
-                        <outlet property="nameField" destination="uhq-fD-uLQ" id="N9S-el-iVX"/>
+                        <outlet property="confirmPasswordField" destination="n7M-WB-NTM" id="9Wv-9x-Wrp"/>
+                        <outlet property="emailField" destination="vE3-oI-YkF" id="crD-Sa-juW"/>
+                        <outlet property="logoPic" destination="E3Z-Kq-Yeu" id="geG-wh-Tdo"/>
+                        <outlet property="nameField" destination="uhq-fD-uLQ" id="99J-qI-lmE"/>
                         <outlet property="newUserButton" destination="gMn-j0-lhd" id="tna-6x-VoP"/>
-                        <outlet property="passwordField" destination="bub-0A-HzR" id="aap-w7-y8c"/>
+                        <outlet property="passwordField" destination="bub-0A-HzR" id="CXi-om-7wz"/>
                         <outlet property="screenTitle" destination="qff-Da-Ace" id="Zs3-s8-0Wh"/>
                         <outlet property="sloganLbl" destination="2vK-i6-axO" id="vDP-Ch-3jv"/>
                         <outlet property="titleView" destination="XFW-dH-FSA" id="yzV-fv-lRz"/>
@@ -423,6 +424,9 @@
                                 <color key="textColor" red="0.23529411759999999" green="0.37254901959999998" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="33"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ruo-rJ-U8R" id="xTV-9Z-ddn"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="Enjoy Better Behaviors" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atL-c0-4IJ" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="97" y="302.5" width="180.5" height="70"/>
@@ -467,10 +471,11 @@
                     </view>
                     <connections>
                         <outlet property="backBtn" destination="hiK-tY-06N" id="tY1-wx-w0X"/>
-                        <outlet property="emailField" destination="baZ-hD-vxx" id="lGg-dK-ixo"/>
+                        <outlet property="emailField" destination="baZ-hD-vxx" id="Ky9-cb-cIQ"/>
                         <outlet property="forgotPasswordBtn" destination="hGw-m9-nRx" id="R8q-Pd-87x"/>
                         <outlet property="loginBtn" destination="EOa-KH-5Nf" id="Uuf-I2-CKL"/>
-                        <outlet property="passwordField" destination="nDq-Sq-qwY" id="wN8-6Y-cRn"/>
+                        <outlet property="logoPic" destination="cGl-sX-4Qg" id="XSy-yx-9Zg"/>
+                        <outlet property="passwordField" destination="nDq-Sq-qwY" id="VvS-tM-iC5"/>
                         <outlet property="screenTitle" destination="ECT-TL-Hu9" id="cK2-Hq-IpS"/>
                         <outlet property="sloganLbl" destination="atL-c0-4IJ" id="mkv-UR-PKB"/>
                         <outlet property="titleView" destination="d9P-yq-qbl" id="cyA-VN-j4U"/>
@@ -1533,6 +1538,6 @@
         <image name="loginactual" width="287" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="47N-rc-6Fl"/>
+        <segue reference="4WS-j3-O85"/>
     </inferredMetricsTieBreakers>
 </document>

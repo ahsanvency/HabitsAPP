@@ -428,6 +428,9 @@ class rewardsVC: UIViewController {
             else if leftCheck == "Advanced" && middleCheck == "Advanced" && rightCheck == "Advanced"{
                 self.winner()
                 self.upAlert(messages: advMessage)
+            }else if (leftCheck == "Advanced" && middleCheck == "Advanced") || (leftCheck == "Advanced" && rightCheck == "Advanced") && (middleCheck == "Advanced" && rightCheck == "Advanced") && (leftCheck == "Basic" || middleCheck == "Basic" || rightCheck == "Basic"){
+                self.winner()
+                self.upAlert(messages: intMessage)
             }
             else if (leftCheck == "Advanced" && middleCheck == "Advanced") || (leftCheck == "Advanced" && rightCheck == "Advanced") && (middleCheck == "Advanced" && rightCheck == "Advanced") && (leftCheck == "Intermediate" || middleCheck == "Intermediate" || rightCheck == "Intermediate"){
                 self.winner()

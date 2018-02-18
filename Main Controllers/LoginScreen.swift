@@ -12,15 +12,16 @@ import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 
-class LoginScreen: UIViewController {
+class LoginScreen: UIViewController, UITextFieldDelegate {
     
     //Outlets
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var logoPic: logoView!
     @IBOutlet weak var sloganLbl: UILabel!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var emailField: fancyField!
+    @IBOutlet weak var passwordField: fancyField!
     @IBOutlet weak var loginBtn: fancyButton!
     @IBOutlet weak var forgotPasswordBtn: UIButton!
     
@@ -29,14 +30,10 @@ class LoginScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        setupScreen()
         
-        loginBtn.layer.borderColor = blueColor.cgColor
-        loginBtn.layer.borderWidth = 2.0
-        emailField.layer.borderWidth = 0
-        passwordField.layer.borderWidth = 0
-        
-        passwordField.isSecureTextEntry = true
-        forgotPasswordBtn.isHidden = true
         self.hideKeyboardWhenTappedAround()
     }
     
@@ -108,20 +105,33 @@ class LoginScreen: UIViewController {
     }
     
     func setupScreen(){
-        backBtn.setTitleColor(satinColor, for: .normal)
-        screenTitle.textColor = satinColor
-        titleView.backgroundColor = blueColor
-        sloganLbl.textColor = satinColor
-        emailField.backgroundColor = satinColor
-        emailField.textColor = blueColor
-        passwordField.backgroundColor = satinColor
-        passwordField.textColor = blueColor
-        loginBtn.backgroundColor = satinColor
-        loginBtn.setTitleColor(seaFoamColor, for: .normal)
-        forgotPasswordBtn.setTitleColor(satinColor, for: .normal)
-        
+        loginBtn.layer.borderColor = blueColor.cgColor
+        loginBtn.layer.borderWidth = 2.0
+        emailField.layer.borderWidth = 0
+        passwordField.layer.borderWidth = 0
+        passwordField.isSecureTextEntry = true
+        forgotPasswordBtn.isHidden = true
+        emailField.autocorrectionType = .no
         emailField.keyboardType = .emailAddress
         
+    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= (keyboardSize.height - 125)
+            }
+        }
+        
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += (keyboardSize.height - 125)
+            }
+        }
     }
 }
 

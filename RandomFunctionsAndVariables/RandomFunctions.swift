@@ -46,3 +46,20 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+extension UIViewController {
+    func registerForKeyboardDidShowNotification(usingBlock block: ((NSNotification, CGSize) -> Void)? = nil) {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardDidShow, object: nil, queue: nil, using: { (notification) -> Void in
+            let userInfo = notification.userInfo!
+            guard let keyboardSize = (userInfo[UIKeyboardFrameBeginUserInfoKey] as? AnyObject)?.cgRectValue.size else { fatalError("Can't grab the keyboard frame") }
+            
+            block?(notification as NSNotification, keyboardSize)
+        })
+    }
+    
+    func registerForKeyboardWillHideNotification(usingBlock block: ((NSNotification) -> Void)? = nil) {
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillHide, object: nil, queue: nil, using: { (notification) -> Void in
+            block?(notification as NSNotification)
+        })
+    }
+}

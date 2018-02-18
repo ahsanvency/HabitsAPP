@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import UserNotifications
-import IQKeyboardManagerSwift
+//import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Configures firebase
         FirebaseApp.configure()
         
-        IQKeyboardManager.sharedManager().enable = true
+        //IQKeyboardManager.sharedManager().enable = true
         
        //To connect it to facebook type this line of code
     FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)

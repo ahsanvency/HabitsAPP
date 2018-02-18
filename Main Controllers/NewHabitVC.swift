@@ -24,9 +24,9 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     var whereLblText:String = "Tap to Edit"
     var currentText:String = ""
     
-    var basicStr: String = "Enter Basic Rewards"
-    var intStr: String = "Enter Intermediate Rewards"
-    var advStr: String = "Enter Advanced Rewards"
+    var basicStr: String = "Tap Edit Rewards"
+    var intStr: String = "Tap Edit Rewards"
+    var advStr: String = "Tap Edit Rewards"
     
     var editButtonPressed = 0
     
@@ -106,6 +106,13 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
         //added touch events to views
         addTouchEvents()
+    }
+    
+    func upAlert (messages: String) {
+        let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
     
@@ -306,36 +313,36 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func validateTextFeilds() -> Bool{
         if (whyLbl.text == "Tap to Edit") {
             //handel the errors properly
-            print("Error1")
+            upAlert(messages: "Please fill out Why.")
             return false
         }
         if (whenLbl.text == "Tap to Edit"){
-            print("Error2")
+            upAlert(messages: "Please fill out When.")
             return false
         }
         if (whereLbl.text == "Tap to Edit"){
-            print("Error3")
+            upAlert(messages: "Please fill out Where.")
             return false
         }
 
         if (habitName == ""){
-            print("Error7")
+            upAlert(messages: "Please pick a Habit")
             return false
         }
-        if (basicStr == "Enter Basic Rewards"){
-            print("Error8")
+        if (basicStr == "Tap Edit Rewards" || basicStr == ""){
+            upAlert(messages: "Please enter Basic Rewards")
             return false
         }
-        if (intStr == "Enter Intermediate Rewards"){
-            print("Error9")
+        if (intStr == "Tap Edit Rewards" || intStr == ""){
+            upAlert(messages: "Please enter Intermediate Rewards")
             return false
         }
-        if (advStr == "Enter Advanced Rewards"){
-            print("Error10")
+        if (advStr == "Tap Edit Rewards" || advStr == ""){
+            upAlert(messages: "Please enter an Advanced Reward")
             return false
         }
         if textBox.text == "Pick your habit below"{
-            print("error 11")
+            upAlert(messages: "Please pick a Habit")
             return false
         }
         
