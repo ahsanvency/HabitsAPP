@@ -60,7 +60,7 @@
                                 </constraints>
                                 <state key="normal" image="BlueChip"/>
                                 <connections>
-                                    <segue destination="Ruo-rJ-U8R" kind="show" id="4aM-ry-jld"/>
+                                    <segue destination="XgS-HH-Oou" kind="show" id="NI7-2Y-H7X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCY-Ng-dcs" userLabel="Register Chip">
@@ -71,7 +71,7 @@
                                 </constraints>
                                 <state key="normal" image="BlueChip"/>
                                 <connections>
-                                    <segue destination="XgS-HH-Oou" kind="show" identifier="" id="rYQ-0F-UAs"/>
+                                    <segue destination="Ruo-rJ-U8R" kind="show" id="ddC-LV-YZR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="254" verticalHuggingPriority="200" verticalCompressionResistancePriority="500" text="Enjoy Better Behaviors" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gl-Ig-YfW" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
@@ -83,20 +83,20 @@
                                 <color key="textColor" red="0.96862745100000003" green="0.93725490199999995" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MSk-ef-90R" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="167.5" y="410.5" width="41.5" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MSk-ef-90R" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="157.5" y="410.5" width="61.5" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="q0p-ti-gqu"/>
-                                    <constraint firstAttribute="width" constant="41.5" id="xrT-F9-WVC"/>
+                                    <constraint firstAttribute="width" constant="61.5" id="xrT-F9-WVC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.93725490199999995" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VRG-9x-ZH2" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="559.5" width="61" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VRG-9x-ZH2" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="167.5" y="559.5" width="41.5" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="61.5" id="Qy2-A7-Pil"/>
+                                    <constraint firstAttribute="width" constant="41.5" id="Qy2-A7-Pil"/>
                                     <constraint firstAttribute="height" constant="22" id="vNf-V2-Wkr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
@@ -163,11 +163,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDW-zn-MIE" customClass="satinButton" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="7.5" y="5" width="40" height="40"/>
+                                        <rect key="frame" x="5" y="2.5" width="45" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="YGn-qH-m2s"/>
-                                            <constraint firstAttribute="width" constant="40" id="ct3-jV-9AG"/>
+                                            <constraint firstAttribute="height" constant="45" id="YGn-qH-m2s"/>
+                                            <constraint firstAttribute="width" constant="45" id="ct3-jV-9AG"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -181,7 +182,7 @@
                                     <constraint firstItem="qff-Da-Ace" firstAttribute="centerX" secondItem="XFW-dH-FSA" secondAttribute="centerX" id="Btk-FI-Zuc"/>
                                     <constraint firstItem="qff-Da-Ace" firstAttribute="centerY" secondItem="XFW-dH-FSA" secondAttribute="centerY" id="HRJ-9E-trv"/>
                                     <constraint firstAttribute="height" constant="50" id="OPE-e5-73C"/>
-                                    <constraint firstItem="DDW-zn-MIE" firstAttribute="leading" secondItem="XFW-dH-FSA" secondAttribute="leading" constant="7.5" id="fI9-Z8-Nse"/>
+                                    <constraint firstItem="DDW-zn-MIE" firstAttribute="leading" secondItem="XFW-dH-FSA" secondAttribute="leading" constant="5" id="fI9-Z8-Nse"/>
                                     <constraint firstItem="DDW-zn-MIE" firstAttribute="centerY" secondItem="XFW-dH-FSA" secondAttribute="centerY" id="lvy-Bq-geW"/>
                                 </constraints>
                             </view>
@@ -316,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKr-WT-odB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-494" y="-546"/>
+            <point key="canvasLocation" x="-500" y="-1325"/>
         </scene>
         <!--Login Screen-->
         <scene sceneID="sWE-OX-rKV">
@@ -340,12 +341,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiK-tY-06N" customClass="satinButton" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="7.5" y="5" width="40" height="40"/>
+                                        <rect key="frame" x="5" y="2.5" width="45" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="jzB-5Z-nG2"/>
-                                            <constraint firstAttribute="width" constant="40" id="mVw-wp-RRX"/>
+                                            <constraint firstAttribute="height" constant="45" id="jzB-5Z-nG2"/>
+                                            <constraint firstAttribute="width" constant="45" id="mVw-wp-RRX"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -359,7 +360,7 @@
                                     <constraint firstAttribute="height" constant="50" id="3Ip-oq-wge"/>
                                     <constraint firstItem="hiK-tY-06N" firstAttribute="centerY" secondItem="ECT-TL-Hu9" secondAttribute="centerY" id="MPp-MJ-Nro"/>
                                     <constraint firstItem="ECT-TL-Hu9" firstAttribute="centerY" secondItem="d9P-yq-qbl" secondAttribute="centerY" id="RFl-NX-68R"/>
-                                    <constraint firstItem="hiK-tY-06N" firstAttribute="leading" secondItem="d9P-yq-qbl" secondAttribute="leading" constant="7.5" id="fEh-MS-wbO"/>
+                                    <constraint firstItem="hiK-tY-06N" firstAttribute="leading" secondItem="d9P-yq-qbl" secondAttribute="leading" constant="5" id="fEh-MS-wbO"/>
                                     <constraint firstItem="ECT-TL-Hu9" firstAttribute="centerX" secondItem="d9P-yq-qbl" secondAttribute="centerX" id="qp6-Xd-9pG"/>
                                 </constraints>
                             </view>
@@ -478,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iw4-t7-qar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-495" y="-1325"/>
+            <point key="canvasLocation" x="-500" y="-547"/>
         </scene>
         <!--Main Screen ViewC-->
         <scene sceneID="M0e-SY-O3i">
@@ -502,11 +503,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rda-9C-EvJ" userLabel="addHabits" customClass="blueButton" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="325" y="15" width="40" height="40"/>
+                                        <rect key="frame" x="322.5" y="12.5" width="45" height="45"/>
                                         <color key="backgroundColor" red="0.08235294118" green="0.2666666667" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="AKE-oJ-zFb"/>
-                                            <constraint firstAttribute="height" constant="40" id="gnq-a2-P1c"/>
+                                            <constraint firstAttribute="width" constant="45" id="AKE-oJ-zFb"/>
+                                            <constraint firstAttribute="height" constant="45" id="gnq-a2-P1c"/>
                                         </constraints>
                                         <state key="normal">
                                             <color key="titleColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -516,12 +517,12 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgu-lj-bB0" userLabel="Menu" customClass="blueButton" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="7.5" y="15" width="40" height="40"/>
+                                        <rect key="frame" x="7.5" y="12.5" width="45" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="PgM-ZD-ERC"/>
-                                            <constraint firstAttribute="height" constant="40" id="guM-F5-Ddu"/>
+                                            <constraint firstAttribute="width" constant="45" id="PgM-ZD-ERC"/>
+                                            <constraint firstAttribute="height" constant="45" id="guM-F5-Ddu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                         <state key="normal" title="Logout">
                                             <color key="titleColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -557,7 +558,7 @@
                                     <constraint firstItem="7QL-W8-6oA" firstAttribute="centerX" secondItem="mph-jn-MEF" secondAttribute="centerX" id="ZdG-0b-j4E"/>
                                     <constraint firstAttribute="height" constant="70" id="iBF-rk-fOG"/>
                                     <constraint firstItem="sl1-yA-jBH" firstAttribute="centerX" secondItem="Iz0-hd-jni" secondAttribute="centerX" id="k58-D9-SEu"/>
-                                    <constraint firstAttribute="trailing" secondItem="rda-9C-EvJ" secondAttribute="trailing" constant="10" id="pbC-a7-UpM"/>
+                                    <constraint firstAttribute="trailing" secondItem="rda-9C-EvJ" secondAttribute="trailing" constant="7.5" id="pbC-a7-UpM"/>
                                     <constraint firstItem="Iz0-hd-jni" firstAttribute="centerY" secondItem="mph-jn-MEF" secondAttribute="centerY" id="tOY-WE-lF5"/>
                                 </constraints>
                             </view>
@@ -818,7 +819,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oj3-Ff-elO" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="25" width="275" height="30"/>
+                                <rect key="frame" x="75" y="25" width="225" height="30"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" red="0.27783440529999998" green="0.03824105706" blue="0.33751897330000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -828,7 +829,7 @@
                                 </connections>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWi-2d-sZ0">
-                                <rect key="frame" x="50" y="55" width="275" height="150"/>
+                                <rect key="frame" x="75" y="55" width="225" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="HUc-06-JK1"/>
@@ -1121,6 +1122,14 @@
                                     <constraint firstAttribute="trailing" secondItem="KVy-Cy-PsV" secondAttribute="trailing" id="th0-wk-v9f"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lt-sR-Ebh" customClass="satinButton" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="5" y="20" width="46" height="32"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="Logout:" destination="RYe-QU-wGA" eventType="touchUpInside" id="bMD-ro-s40"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.031372549020000001" green="0.1450980392" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1128,17 +1137,19 @@
                             <constraint firstItem="UQy-Kg-1qb" firstAttribute="trailing" secondItem="38r-pY-cSR" secondAttribute="trailing" constant="97.5" id="34Q-Fh-Az9"/>
                             <constraint firstItem="QWk-H6-Z61" firstAttribute="top" secondItem="dWi-2d-sZ0" secondAttribute="bottom" constant="65" id="38e-K1-8DT"/>
                             <constraint firstItem="Oj3-Ff-elO" firstAttribute="top" secondItem="UQy-Kg-1qb" secondAttribute="top" constant="5" id="BKA-fD-o3T"/>
+                            <constraint firstItem="5Lt-sR-Ebh" firstAttribute="leading" secondItem="UQy-Kg-1qb" secondAttribute="leading" constant="5" id="E1j-6y-cz6"/>
                             <constraint firstItem="QWk-H6-Z61" firstAttribute="bottom" secondItem="UQy-Kg-1qb" secondAttribute="bottom" id="MjV-W9-y95"/>
                             <constraint firstItem="UQy-Kg-1qb" firstAttribute="trailing" secondItem="QWk-H6-Z61" secondAttribute="trailing" id="NVi-JZ-qaW"/>
                             <constraint firstItem="38r-pY-cSR" firstAttribute="leading" secondItem="UQy-Kg-1qb" secondAttribute="leading" constant="97.5" id="RVs-B4-k4B"/>
                             <constraint firstItem="QWk-H6-Z61" firstAttribute="leading" secondItem="UQy-Kg-1qb" secondAttribute="leading" id="S81-Wi-Guh"/>
                             <constraint firstItem="QWk-H6-Z61" firstAttribute="centerX" secondItem="rX8-y8-1DI" secondAttribute="centerX" id="TO6-jI-ZRg"/>
-                            <constraint firstAttribute="trailing" secondItem="dWi-2d-sZ0" secondAttribute="trailing" constant="50" id="cJW-2W-Vtj"/>
-                            <constraint firstItem="dWi-2d-sZ0" firstAttribute="leading" secondItem="UQy-Kg-1qb" secondAttribute="leading" constant="50" id="fHj-f9-Fu0"/>
-                            <constraint firstItem="Oj3-Ff-elO" firstAttribute="leading" secondItem="UQy-Kg-1qb" secondAttribute="leading" constant="50" id="hwR-uP-m7D"/>
+                            <constraint firstAttribute="trailing" secondItem="dWi-2d-sZ0" secondAttribute="trailing" constant="75" id="cJW-2W-Vtj"/>
+                            <constraint firstItem="dWi-2d-sZ0" firstAttribute="leading" secondItem="UQy-Kg-1qb" secondAttribute="leading" constant="75" id="fHj-f9-Fu0"/>
+                            <constraint firstItem="Oj3-Ff-elO" firstAttribute="leading" secondItem="UQy-Kg-1qb" secondAttribute="leading" constant="75" id="hwR-uP-m7D"/>
                             <constraint firstItem="dWi-2d-sZ0" firstAttribute="top" secondItem="Oj3-Ff-elO" secondAttribute="bottom" id="qGS-mV-iv2"/>
                             <constraint firstItem="38r-pY-cSR" firstAttribute="top" secondItem="Oj3-Ff-elO" secondAttribute="bottom" constant="15" id="s2Z-kA-bp1"/>
-                            <constraint firstItem="UQy-Kg-1qb" firstAttribute="trailing" secondItem="Oj3-Ff-elO" secondAttribute="trailing" constant="50" id="vZS-ju-laQ"/>
+                            <constraint firstItem="5Lt-sR-Ebh" firstAttribute="top" secondItem="UQy-Kg-1qb" secondAttribute="top" id="tYB-cF-gBF"/>
+                            <constraint firstItem="UQy-Kg-1qb" firstAttribute="trailing" secondItem="Oj3-Ff-elO" secondAttribute="trailing" constant="75" id="vZS-ju-laQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UQy-Kg-1qb"/>
                     </view>
@@ -1205,10 +1216,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVz-XO-ARj" customClass="blueButton" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="5" width="40" height="40"/>
+                                        <rect key="frame" x="5" y="2.5" width="45" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="DgT-uk-SAD"/>
-                                            <constraint firstAttribute="width" constant="40" id="ejc-1p-KH8"/>
+                                            <constraint firstAttribute="height" constant="45" id="DgT-uk-SAD"/>
+                                            <constraint firstAttribute="width" constant="45" id="ejc-1p-KH8"/>
                                         </constraints>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1221,7 +1232,7 @@
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="LHJ-3g-EN9"/>
-                                    <constraint firstItem="nVz-XO-ARj" firstAttribute="leading" secondItem="ret-H6-qz0" secondAttribute="leading" constant="10" id="eQQ-Os-cOe"/>
+                                    <constraint firstItem="nVz-XO-ARj" firstAttribute="leading" secondItem="ret-H6-qz0" secondAttribute="leading" constant="5" id="eQQ-Os-cOe"/>
                                     <constraint firstItem="7yY-Sx-dti" firstAttribute="centerY" secondItem="ret-H6-qz0" secondAttribute="centerY" id="hFG-lf-OjG"/>
                                     <constraint firstItem="nVz-XO-ARj" firstAttribute="centerY" secondItem="ret-H6-qz0" secondAttribute="centerY" id="oak-Ze-vm0"/>
                                     <constraint firstItem="7yY-Sx-dti" firstAttribute="centerX" secondItem="ret-H6-qz0" secondAttribute="centerX" id="zyj-1Z-VWj"/>
@@ -1440,7 +1451,6 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mti-Xz-PZ3" customClass="blueButton" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="10" y="557" width="355" height="80"/>
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.27450980390000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="aSI-oA-T0v"/>
                                 </constraints>
@@ -1512,6 +1522,6 @@
         <image name="loginactual" width="287" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4WS-j3-O85"/>
+        <segue reference="47N-rc-6Fl"/>
     </inferredMetricsTieBreakers>
 </document>

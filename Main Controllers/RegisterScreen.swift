@@ -33,6 +33,13 @@ class RegisterScreen: UIViewController {
         
         //setupScreen()
         
+        newUserButton.layer.borderColor = blueColor.cgColor
+        newUserButton.layer.borderWidth = 2.0
+        nameField.layer.borderWidth = 0
+        emailField.layer.borderWidth = 0
+        passwordField.layer.borderWidth = 0
+        confirmPasswordField.layer.borderWidth = 0
+        
         passwordField.isSecureTextEntry = true
         confirmPasswordField.isSecureTextEntry = true
         self.hideKeyboardWhenTappedAround()

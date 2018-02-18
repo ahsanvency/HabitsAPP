@@ -110,6 +110,9 @@ class rewardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        spinBtn.layer.borderWidth = 2.0
+        spinBtn.layer.borderColor = satinColor.cgColor
+        
         let myGradient = UIImage(named: "textRewardsScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
@@ -594,8 +597,22 @@ class rewardsVC: UIViewController {
     }
     
     func shadowlayer(){
+        let spinBtnLayer: CALayer = CALayer()
+        spinBtnLayer.backgroundColor = seaFoamColor.cgColor
+        spinBtnLayer.position = CGPoint(x: spinBtn.bounds.width/2, y: spinBtn.bounds.height)
+        
+        spinBtnLayer.bounds = CGRect(x: 0, y: 0, width: spinBtn.bounds.width, height: 2)
+        spinBtnLayer.shadowColor = seaFoamColor.cgColor
+        spinBtnLayer.shadowOffset = CGSize(width: 0,height: 8)
+        spinBtnLayer.shadowOpacity = 1
+        spinBtnLayer.shadowRadius = 8
+        let degrees = 180.0
+        let radians = CGFloat(degrees * Double.pi / 180)
+        spinBtnLayer.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0)
+        
+        
         let layerTop: CALayer = CALayer()
-        layerTop.backgroundColor = UIColor(r: 8, g: 37, b: 43).cgColor //Background color of the view added
+        layerTop.backgroundColor = seaFoamColor.cgColor //Background color of the view added
         layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  slotsView.bounds.height - 320) //position of the added view
         layerTop.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2) //creates a rectange for the added view
         layerTop.shadowColor = UIColor.black.cgColor //shadow color
@@ -606,15 +623,13 @@ class rewardsVC: UIViewController {
         //Lower radius means a darker shadow
         
         let layerBottom: CALayer = CALayer()
-        layerBottom.backgroundColor = UIColor(r: 8, g: 37, b: 43).cgColor
+        layerBottom.backgroundColor = seaFoamColor.cgColor
         layerBottom.position = CGPoint(x: slotsView.bounds.width / 2, y: slotsView.bounds.height)
         layerBottom.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2)
         layerBottom.shadowColor = UIColor.black.cgColor
         layerBottom.shadowOffset = CGSize(width: 0,height: 8)
         layerBottom.shadowOpacity = 1
         layerBottom.shadowRadius = 8
-        let degrees = 180.0
-        let radians = CGFloat(degrees * Double.pi / 180)
         layerBottom.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0)
         
         slotsView.layer.addSublayer(layerTop)

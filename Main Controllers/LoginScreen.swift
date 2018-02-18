@@ -29,7 +29,12 @@ class LoginScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //setupScreen()
+        
+        loginBtn.layer.borderColor = blueColor.cgColor
+        loginBtn.layer.borderWidth = 2.0
+        emailField.layer.borderWidth = 0
+        passwordField.layer.borderWidth = 0
+        
         passwordField.isSecureTextEntry = true
         forgotPasswordBtn.isHidden = true
         self.hideKeyboardWhenTappedAround()

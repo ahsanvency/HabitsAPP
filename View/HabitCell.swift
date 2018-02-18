@@ -24,6 +24,10 @@ class HabitCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        habitPic.layer.borderColor = maroonColor.cgColor
+        habitPic.layer.borderWidth = 1.0
+        
         // Initialization code
         progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 20);
         progressBar.tintColor = blueColor
