@@ -18,6 +18,14 @@
 		3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */; };
 		3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */; };
 		3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */; };
+		3A918ECD20395AD500490104 /* coloredLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ECC20395AD500490104 /* coloredLabel.swift */; };
+		3A918ED120395B9700490104 /* normalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED020395B9700490104 /* normalLabel.swift */; };
+		3A918ED320395C6800490104 /* titleViewLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED220395C6800490104 /* titleViewLogin.swift */; };
+		3A918ED520395DC500490104 /* normalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED420395DC500490104 /* normalView.swift */; };
+		3A918ED72039601800490104 /* titleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED62039601800490104 /* titleView.swift */; };
+		3A918ED92039669C00490104 /* blueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED82039669C00490104 /* blueButton.swift */; };
+		3A918EDB2039671400490104 /* satinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918EDA2039671400490104 /* satinButton.swift */; };
+		3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918EDC20396DEA00490104 /* backgroundView.swift */; };
 		3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A95581FFF8A5C00502707 /* Habit.swift */; };
 		3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A955C1FFF8E4F00502707 /* HabitCell.swift */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
@@ -52,6 +60,14 @@
 		3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitVC.swift; sourceTree = "<group>"; };
 		3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewC.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		3A918ECC20395AD500490104 /* coloredLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coloredLabel.swift; sourceTree = "<group>"; };
+		3A918ED020395B9700490104 /* normalLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalLabel.swift; sourceTree = "<group>"; };
+		3A918ED220395C6800490104 /* titleViewLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleViewLogin.swift; sourceTree = "<group>"; };
+		3A918ED420395DC500490104 /* normalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalView.swift; sourceTree = "<group>"; };
+		3A918ED62039601800490104 /* titleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleView.swift; sourceTree = "<group>"; };
+		3A918ED82039669C00490104 /* blueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blueButton.swift; sourceTree = "<group>"; };
+		3A918EDA2039671400490104 /* satinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = satinButton.swift; sourceTree = "<group>"; };
+		3A918EDC20396DEA00490104 /* backgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
 		3A9A95581FFF8A5C00502707 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		3A9A955C1FFF8E4F00502707 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,10 +178,18 @@
 			isa = PBXGroup;
 			children = (
 				3A9A955C1FFF8E4F00502707 /* HabitCell.swift */,
+				3A918ED82039669C00490104 /* blueButton.swift */,
+				3AF646D02015674B002F86B8 /* fancyButton.swift */,
+				3A918EDA2039671400490104 /* satinButton.swift */,
+				3A918ED020395B9700490104 /* normalLabel.swift */,
+				3A918ECC20395AD500490104 /* coloredLabel.swift */,
+				3AF646CE2015663A002F86B8 /* fancyField.swift */,
+				3A918EDC20396DEA00490104 /* backgroundView.swift */,
 				3AD55F6020153F5F001B9A23 /* logoView.swift */,
 				3AF646D220156C73002F86B8 /* fancyView.swift */,
-				3AF646CE2015663A002F86B8 /* fancyField.swift */,
-				3AF646D02015674B002F86B8 /* fancyButton.swift */,
+				3A918ED420395DC500490104 /* normalView.swift */,
+				3A918ED62039601800490104 /* titleView.swift */,
+				3A918ED220395C6800490104 /* titleViewLogin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,25 +398,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF47FD62007F50B00F00F42 /* User.swift in Sources */,
+				3A918ED520395DC500490104 /* normalView.swift in Sources */,
 				3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */,
+				3A918ED92039669C00490104 /* blueButton.swift in Sources */,
 				3A3DA5811FFB2F14004C1143 /* RegisterScreen.swift in Sources */,
 				3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */,
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
 				3AD55F6120153F5F001B9A23 /* logoView.swift in Sources */,
+				3A918ED72039601800490104 /* titleView.swift in Sources */,
 				3A2BB1D0201FDF8A00E39CEB /* RewardsPopupVC.swift in Sources */,
 				3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */,
 				3AA5A3AD1FFB08CE0035A16E /* MainLogin.swift in Sources */,
 				3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */,
+				3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */,
 				3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */,
+				3A918ED320395C6800490104 /* titleViewLogin.swift in Sources */,
 				3ADE3D3D2014701C003A114B /* whyPopupVC.swift in Sources */,
 				3AF646CF2015663A002F86B8 /* fancyField.swift in Sources */,
 				3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */,
 				3AF646D320156C73002F86B8 /* fancyView.swift in Sources */,
 				3ADE3D3F2014794B003A114B /* whenAddPopupVC.swift in Sources */,
+				3A918EDB2039671400490104 /* satinButton.swift in Sources */,
+				3A918ECD20395AD500490104 /* coloredLabel.swift in Sources */,
 				3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */,
 				3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */,
 				3A3DA57F1FFB2EF5004C1143 /* LoginScreen.swift in Sources */,
+				3A918ED120395B9700490104 /* normalLabel.swift in Sources */,
 				3AF646D12015674B002F86B8 /* fancyButton.swift in Sources */,
 				3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */,
 			);

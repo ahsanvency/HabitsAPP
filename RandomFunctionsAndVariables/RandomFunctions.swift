@@ -22,6 +22,11 @@ let habitsDict = ["Why": "Click To Edit", "When": "Click To Edit", "Where": "Cli
 
 let SHADOW_GRAY: CGFloat = 120.0 / 255.0
 
+let blueColor : UIColor = UIColor(r: 13, g: 76, b: 153)
+let satinColor : UIColor = UIColor(r: 247, g: 239, b: 208)
+let maroonColor : UIColor = UIColor(r: 186, g: 7, b: 29)
+let seaFoamColor : UIColor = UIColor(r: 9, g: 42, b: 48)
+
 extension UIColor {
     
     //This is extending the function and making it easier to use

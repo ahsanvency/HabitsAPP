@@ -28,11 +28,21 @@ class whyPopupVC: UIViewController {
     @IBOutlet weak var nameOfhabit: UILabel!
     @IBOutlet weak var screenTitle: UILabel!
     
+    
+    @IBOutlet weak var whyTextView: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        whyText.textColor = maroonColor
         nameOfhabit.text = habitName
         let myGradient = UIImage(named: "textWhyPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        
+        whyTextView.backgroundColor = satinColor
+        whyTextView.textColor = maroonColor
+        
         self.hideKeyboardWhenTappedAround()
     }
     

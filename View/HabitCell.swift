@@ -26,6 +26,7 @@ class HabitCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 20);
+        progressBar.tintColor = blueColor
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
             
@@ -51,6 +52,7 @@ class HabitCell: UITableViewCell {
                 self.success = rewardsDict!["Success"] as? Double
                
                 self.progressBar.progress = Float(self.success!/30)
+                self.progressBar.tintColor = blueColor
                 
                 //getting dict values and assigning them to labels
                 self.nameLbl.text = firstDict["name"] as? String
@@ -229,6 +231,7 @@ class HabitCell: UITableViewCell {
             self.success = rewardsDict!["Success"] as? Double
     
             self.progressBar.progress = Float(self.success!/30)
+            self.progressBar.tintColor = blueColor
             // ...
         }) { (error) in
             print(error.localizedDescription)

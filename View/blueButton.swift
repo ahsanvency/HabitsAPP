@@ -1,25 +1,25 @@
 //
-//  fancyButton.swift
+//  blueButtons.swift
 //  Habits
 //
-//  Created by Ahsan Vency on 1/21/18.
+//  Created by Ahsan Vency on 2/18/18.
 //  Copyright © 2018 ahsan vency. All rights reserved.
 //
 
 import UIKit
 
-class fancyButton: UIButton {
-
+class blueButton: UIButton {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.shadowColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.6).cgColor;
         layer.shadowOpacity = 0.8;
         layer.shadowRadius = 5.0;
         layer.shadowOffset = CGSize(width: 1.0, height: 1.0);
-        layer.cornerRadius = 8.0;
+        layer.cornerRadius = 5.0;
         layer.masksToBounds = true;
-        backgroundColor = satinColor
-        setTitleColor(seaFoamColor, for: .normal)
+        backgroundColor = blueColor
+        setTitleColor(satinColor, for: .normal)
     }
-
+    
 }

@@ -15,15 +15,23 @@ import SwiftKeychainWrapper
 class LoginScreen: UIViewController {
     
     //Outlets
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var screenTitle: UILabel!
+    @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var sloganLbl: UILabel!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var forgotPassword: UIButton!
+    @IBOutlet weak var loginBtn: fancyButton!
+    @IBOutlet weak var forgotPasswordBtn: UIButton!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailField.keyboardType = .emailAddress
+        
+        //setupScreen()
         passwordField.isSecureTextEntry = true
-        forgotPassword.isHidden = true
+        forgotPasswordBtn.isHidden = true
         self.hideKeyboardWhenTappedAround()
     }
     
@@ -92,6 +100,23 @@ class LoginScreen: UIViewController {
     func completeSignIn(id: String){
 
         KeychainWrapper.standard.set(id, forKey: KEY_UID);
+    }
+    
+    func setupScreen(){
+        backBtn.setTitleColor(satinColor, for: .normal)
+        screenTitle.textColor = satinColor
+        titleView.backgroundColor = blueColor
+        sloganLbl.textColor = satinColor
+        emailField.backgroundColor = satinColor
+        emailField.textColor = blueColor
+        passwordField.backgroundColor = satinColor
+        passwordField.textColor = blueColor
+        loginBtn.backgroundColor = satinColor
+        loginBtn.setTitleColor(seaFoamColor, for: .normal)
+        forgotPasswordBtn.setTitleColor(satinColor, for: .normal)
+        
+        emailField.keyboardType = .emailAddress
+        
     }
 }
 

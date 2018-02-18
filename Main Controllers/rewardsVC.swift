@@ -65,6 +65,7 @@ class rewardsVC: UIViewController {
     
     //Other Outlets
     @IBOutlet weak var spinBtn: UIButton!
+    @IBOutlet weak var spinBtnLbl: normalLabel!
     @IBOutlet weak var slotsView: UIView!
     
     
@@ -437,9 +438,10 @@ class rewardsVC: UIViewController {
     
     @objc func getReadyForNextSpin(){
         isSpinning = false
-        spinBtn.setTitle("SPIN", for: UIControlState.normal)
+        spinBtnLbl.text = "SPIN"
+        //spinBtn.setTitle("SPIN", for: UIControlState.normal)
         spinBtn.isEnabled = true
-        spinBtn.backgroundColor = UIColor(r: 60, g: 95, b: 156)
+        spinBtn.backgroundColor = blueColor
         timerGetReadyForNextSpin.invalidate()
     }
     
@@ -566,7 +568,8 @@ class rewardsVC: UIViewController {
     }
     
     func winner(){
-        spinBtn.setTitle("WINNER", for: UIControlState.normal)
+        spinBtnLbl.text = "WINNER"
+        //spinBtn.setTitle("WINNER", for: UIControlState.normal)
         spinBtn.backgroundColor = UIColor.green
         startBlinking()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
@@ -636,7 +639,8 @@ class rewardsVC: UIViewController {
     }
     
     func runSpin(){
-        spinBtn.setTitle("Good Luck", for: UIControlState.normal)
+        spinBtnLbl.text = "GOOD LUCK"
+        //spinBtn.setTitle("Good Luck", for: UIControlState.normal)
         isSpinning = true
         spinBtn.isEnabled = false
         prepareNextSpin()

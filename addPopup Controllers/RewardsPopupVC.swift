@@ -28,11 +28,10 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var screenTitle: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myGradient = UIImage(named: "textRewardsPopup.png")
-        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        
+        
         self.hideKeyboardWhenTappedAround()
     }
     
@@ -79,5 +78,17 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
     DispatchQueue.main.async(execute: {
     self.scrollView.setContentOffset(CGPoint(x: 0,y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height - y), animated: true)
     })
+    }
+    
+    func setupScreen(){
+        let myGradient = UIImage(named: "textRewardsPopup.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        
+        basicText.backgroundColor = satinColor
+        basicText.textColor = maroonColor
+        intText.backgroundColor = satinColor
+        intText.textColor = maroonColor
+        advText.backgroundColor = satinColor
+        advText.textColor = maroonColor
     }
 }

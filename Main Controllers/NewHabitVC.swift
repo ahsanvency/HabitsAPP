@@ -46,6 +46,9 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var habitPic: UIImageView!
     
     
+    @IBOutlet weak var editRewardsBtn: fancyButton!
+    
+    
     //creates the list for the picker view
     //Add more if you see fit
     var list = ["Running","Meditating","Waking Up Early","Coding","Journaling", "Eating Healthy", "Praying", "Reading", "Daily Act of Kindness", "Lifting", "Sleeping on Time"]
@@ -65,6 +68,12 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     //Starts off with just the picker for editing
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        editRewardsBtn.backgroundColor = blueColor
+        editRewardsBtn.setTitleColor(satinColor, for: .normal)
+        
+        textBox.textColor = blueColor
+        self.dropDown.setValue(maroonColor, forKeyPath: "textColor")
         
         //Puts the list in alphabetical order
         list.sort()
@@ -95,6 +104,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         //added touch events to views
         addTouchEvents()
     }
+    
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
         return 1

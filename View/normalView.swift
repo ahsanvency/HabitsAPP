@@ -1,14 +1,14 @@
 //
-//  fancyField.swift
+//  normalField.swift
 //  Habits
 //
-//  Created by Ahsan Vency on 1/21/18.
+//  Created by Ahsan Vency on 2/18/18.
 //  Copyright © 2018 ahsan vency. All rights reserved.
 //
 
 import UIKit
 
-class fancyField: UITextField {
+class normalView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -17,8 +17,7 @@ class fancyField: UITextField {
         layer.borderWidth = 0
         layer.cornerRadius = 5.0;
         layer.masksToBounds = true;
-        backgroundColor = satinColor
-        textColor = blueColor
+        backgroundColor = UIColor.white
     }
-
+    
 }

@@ -17,16 +17,22 @@ class RegisterScreen: UIViewController {
     
     
     //Outlets
+    @IBOutlet weak var titleView: UIView!
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var screenTitle: UILabel!
+    @IBOutlet weak var sloganLbl: UILabel!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
-    
+    @IBOutlet weak var newUserButton: fancyButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailField.keyboardType = .emailAddress
+        
+        //setupScreen()
+        
         passwordField.isSecureTextEntry = true
         confirmPasswordField.isSecureTextEntry = true
         self.hideKeyboardWhenTappedAround()
@@ -87,7 +93,7 @@ class RegisterScreen: UIViewController {
     }
     
     //Handles the registration of the text field
-    @IBAction func registerButton(_ sender: Any) {
+    @IBAction func newUserButton(_ sender: Any) {
         //Makes sure all the textfields have a value
         if let email = emailField.text, let pwd = passwordField.text, let name = nameField.text, let pwd2 = confirmPasswordField.text {
             if (email.isEmpty || name.isEmpty || pwd.isEmpty || pwd2.isEmpty) {
@@ -127,5 +133,23 @@ class RegisterScreen: UIViewController {
     func completeSignIn(id: String, userData: Dictionary<String, AnyObject>){
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         KeychainWrapper.standard.set(id, forKey: KEY_UID);
+    }
+    
+    func setupScreen(){
+        titleView.backgroundColor = blueColor
+        backBtn.setTitleColor(satinColor, for: .normal)
+        screenTitle.textColor = satinColor
+        sloganLbl.textColor = satinColor
+        nameField.backgroundColor = satinColor
+        nameField.textColor = blueColor
+        emailField.backgroundColor = satinColor
+        emailField.textColor = blueColor
+        passwordField.backgroundColor = satinColor
+        passwordField.textColor = blueColor
+        confirmPasswordField.backgroundColor = satinColor
+        confirmPasswordField.textColor = blueColor
+        newUserButton.backgroundColor = satinColor
+        newUserButton.setTitleColor(seaFoamColor, for: .normal)
+        emailField.keyboardType = .emailAddress
     }
 }

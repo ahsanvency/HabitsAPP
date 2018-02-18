@@ -39,8 +39,8 @@ class whenAddPopupVC: UIViewController{
         segmentedControl.selectedSegmentIndexes = indexSet as IndexSet!
 //        timePicker.delegate = self
 //        timePicker.dataSource = self
-        timePicker.backgroundColor = UIColor(r: 243, g: 235, b: 218)
-        timePicker.setValue(UIColor(r: 71, g: 10, b: 86), forKeyPath: "textColor")
+        timePicker.backgroundColor = satinColor
+        timePicker.setValue(blueColor, forKeyPath: "textColor")
         self.hideKeyboardWhenTappedAround()
     }
     

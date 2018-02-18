@@ -172,7 +172,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             })
             
         }
-        rewardsAction.backgroundColor = UIColor(r: 60, g: 95, b: 156)
+        rewardsAction.backgroundColor = blueColor
         return [rewardsAction]
     }
     
