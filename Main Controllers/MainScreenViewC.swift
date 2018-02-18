@@ -15,8 +15,9 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var animationView: UIImageView!
     @IBOutlet weak var animationLabel: UILabel!
+    @IBOutlet weak var fakeView: UIView!
+    @IBOutlet weak var fakeLabel: UILabel!
     
     
     var intrinsicQuestions = [String]()
@@ -28,38 +29,38 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             //HabitCell().reload()
             self.tableView.reloadData()
             //self.notif()
+
         }
         
-        
-        if firstTimeLoaded == 1{
+        if firstTimeLoaded == 0{
             self.animationLabel.isHidden = false
-            self.animationView.isHidden = false
             UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-                self.animationView.frame.origin.x -= 20
+                self.tableView.frame.origin.x -= 75
+                self.fakeView.frame.origin.x -= 75
             }, completion: { _ in
-                UIView.animate(withDuration: 0.55, delay: 0, options: [], animations: {
-                    self.animationView.frame.origin.x += 20
+                UIView.animate(withDuration: 0.75, delay: 0.3, options: [], animations: {
+                    self.tableView.frame.origin.x += 75
+                    self.fakeView.frame.origin.x += 75
                 }, completion: { _ in
-                    UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-                        self.animationView.frame.origin.x -= 20
-                    }, completion: { _ in
-                        UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-                            self.animationView.frame.origin.x += 20
-                        }, completion: { _ in
-                        })
-                    })
+//                    UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
+//                        self.tableView.frame.origin.x -= 75
+//                        self.fakeView.frame.origin.x -= 75
+//                    }, completion: { _ in
+//                        UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
+//                            self.tableView.frame.origin.x += 75
+//                            self.fakeView.frame.origin.x += 75
+//                        }, completion: { _ in
+//                        })
+//                    })
                 })
             })
-            UIView.animate(withDuration: 1.5, delay: 1.5, options: [], animations: {
+            UIView.animate(withDuration: 0.75, delay: 1.05, options: [], animations: {
                 self.animationLabel.alpha = 0
-                self.animationView.alpha = 0
             }, completion: { _ in
                 self.animationLabel.isHidden = true
-                self.animationView.isHidden = true
             })
             self.firstTimeLoaded = 0
         }else {
-            self.animationView.isHidden = true
             self.animationLabel.isHidden = true
         }
         
