@@ -30,6 +30,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             //self.notif()
         }
         
+        
         if firstTimeLoaded == 1{
             self.animationLabel.isHidden = false
             self.animationView.isHidden = false
@@ -107,6 +108,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HabitCell", for: indexPath) as? HabitCell{
             return cell;
         }
+        
         return HabitCell();
     }
     
