@@ -18,6 +18,8 @@ class whyPopupVC: UIViewController {
     var whenLblText:String?
     var whereLblText:String?
     var currentText:String?
+    var habitQuestion: String?
+    
     
     var basicStr: String?
     var intStr: String?

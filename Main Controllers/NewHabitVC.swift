@@ -51,9 +51,12 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     //creates the list for the picker view
     //Add more if you see fit
-    var list = ["Running","Meditating","Waking Up Early","Coding","Journaling", "Eating Healthy", "Praying", "Reading", "Daily Act of Kindness", "Lifting", "Sleeping on Time"]
+    var list = ["Running","Meditating","Waking Up Early","Coding","Journaling", "Eating Healthy", "Praying", "Reading", "Act of Kindness", "Lifting", "Sleeping on Time"]
     
-    var listDict = ["running":"run","meditating":"meditate","waking up early":"wake up early","coding":"code","journaling":"journal", "eating healthy":"eat healthy", "praying":"pray", "reading":"read", "daily act of kindness":"perform an act of kindness", "lifting":"lift", "sleeping on time":"sleep on time"]
+    var listDict = ["running":"run","meditating":"meditate","waking up early":"wake up early","coding":"code","journaling":"journal", "eating healthy":"eat healthy", "praying":"pray", "reading":"read", "act of kindness":"perform an act of kindness", "lifting":"lift", "sleeping on time":"sleep on time"]
+    
+    var intrinsicDict = ["running": "Feel Healthier or Enhance Mood", "meditating":"Peace of Mind or Inner Purity", "waking up early":"Be More Productive or Have More Time", "coding":"Learn a New Skill or Solve Problems", "journaling":"Calm Emotions or Better Emotional Intelligence", "eating healthy":"Feel Cleaner or Have More Energy", "praying":"Feel at Peace or Show Gratitude", "reading":"Gain Knowledge or Stimulate Imagination", "act of kindness":"Better Relationships or Pay it Forward", "lifting":"Physical Health or Enhance Mood", "sleeping on time":"More Energy or Better Focus"]
+    
     var list2 = ["run","meditate","wake up early","code","journal", "eat healthy", "pray", "read", "perform an act of kindness", "lift", "sleep on time"]
     
     
@@ -193,6 +196,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             
             newViewController.whyLblText = whyLblText
             newViewController.habitName = habitName.lowercased() + "?"
+            newViewController.habitQuestion = intrinsicDic[habitName.lowercased()]!
             newViewController.habitRow = habitRow
             newViewController.weekArray = weekArray
             newViewController.whenLblText = whenLblText
@@ -231,6 +235,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             
 
             newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
+        
             newViewController.whyLblText = whyLblText
             newViewController.weekArray = weekArray
             newViewController.whenLblText = whenLblText
