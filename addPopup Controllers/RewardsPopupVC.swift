@@ -60,19 +60,15 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
         
         if textView == self.basicText {
             self.basicText.becomeFirstResponder()
-            scrollDown(y: 583)
+            scrollDown(y: 593)
         }else if textView == self.intText {
             self.intText.becomeFirstResponder()
-            scrollDown(y: 283)
+            scrollDown(y: 293)
         }else{
             self.advText.becomeFirstResponder()
-            scrollDown(y: -17)
+            scrollDown(y: -7)
         }
     }
-    
-//    func textViewDidChange(_ textView: UITextView){
-//        scrollDown()
-//    }
     
     func scrollDown(y: CGFloat){
     DispatchQueue.main.async(execute: {

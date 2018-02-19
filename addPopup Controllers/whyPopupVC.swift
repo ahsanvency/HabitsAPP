@@ -18,7 +18,7 @@ class whyPopupVC: UIViewController {
     var whenLblText:String?
     var whereLblText:String?
     var currentText:String?
-    var habitQuestion: String?
+    var intrinsicStatement: String?
     
     
     var basicStr: String?
@@ -29,9 +29,8 @@ class whyPopupVC: UIViewController {
     @IBOutlet weak var whyText: UITextField!
     @IBOutlet weak var nameOfhabit: UILabel!
     @IBOutlet weak var screenTitle: UILabel!
+    @IBOutlet weak var whyQuestion: normalLabel!
     
-    
-    @IBOutlet weak var whyTextView: UITextView!
     
     
     override func viewDidLoad() {
@@ -39,11 +38,13 @@ class whyPopupVC: UIViewController {
         
         whyText.textColor = maroonColor
         nameOfhabit.text = habitName
+        whyQuestion.text = "Did you know intrinsic reasons like \(intrinsicStatement!) are more likely to help you succeed!"
         let myGradient = UIImage(named: "textWhyPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
-        whyTextView.backgroundColor = satinColor
-        whyTextView.textColor = maroonColor
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         self.hideKeyboardWhenTappedAround()
     }
@@ -93,5 +94,21 @@ class whyPopupVC: UIViewController {
         }
     }
     
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= (keyboardSize.height - 125)
+            }
+        }
+    }
     
+    @objc func keyboardWillHide(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += (keyboardSize.height - 125)
+            }
+        }
+    }
 }

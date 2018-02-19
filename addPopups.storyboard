@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoC-Og-KwT" userLabel="Screen Title" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="17.5" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="63.5" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLb-5Q-IPX">
                                         <rect key="frame" x="149.5" y="3" width="76" height="44"/>
@@ -60,54 +60,17 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="AwR-4l-6kY"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why do you want to start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh8-MI-Fty" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="87.5" width="315" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know intrinsic reasons are more likely to help you succeed?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1B-NV-sm5" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="30" y="133.5" width="315" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ij6-n6-JiT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name of habit)?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Cy-ojv" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="118.5" width="315" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="eya-sk-WPl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know intrinsic reasons are more likely to help you succeed?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1B-NV-sm5" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="283.5" width="315" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="csS-SE-R7k"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="xFb-8Z-tJj">
-                                <rect key="frame" x="30" y="153.5" width="315" height="100"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="ifG-LG-8Ry"/>
-                                </constraints>
-                                <color key="textColor" red="0.72941176470000002" green="0.027450980390000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want to:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBZ-aM-Jel" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="135.5" y="393.5" width="104" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="b4p-VL-IVG"/>
+                                    <constraint firstAttribute="height" constant="200" id="csS-SE-R7k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write Short Intrinsic Reward.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW4-e1-d7a" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="428.5" width="315" height="40"/>
+                                <rect key="frame" x="30" y="424.5" width="315" height="40"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wCa-df-RWr"/>
@@ -117,7 +80,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5v-5R-eYE">
-                                <rect key="frame" x="125" y="504" width="125" height="125"/>
+                                <rect key="frame" x="125" y="500" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="O4p-Vz-CJE"/>
                                     <constraint firstAttribute="height" constant="125" id="bSX-YP-7xg"/>
@@ -128,10 +91,28 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFi-uS-eCF" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="550" width="54" height="33"/>
+                                <rect key="frame" x="160.5" y="546" width="54" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="RqO-Y4-98v"/>
                                     <constraint firstAttribute="width" constant="54" id="fVn-GO-UkM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name of habit)?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Cy-ojv" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="30" y="384.5" width="315" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eya-sk-WPl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why do you want to start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh8-MI-Fty" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="30" y="353.5" width="315" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ij6-n6-JiT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -142,14 +123,12 @@
                         <constraints>
                             <constraint firstItem="i1B-NV-sm5" firstAttribute="leading" secondItem="AmH-mU-3k7" secondAttribute="leading" constant="30" id="0Tl-Wc-2de"/>
                             <constraint firstItem="i4c-Cy-ojv" firstAttribute="top" secondItem="Vh8-MI-Fty" secondAttribute="bottom" constant="1" id="0YZ-N7-2DJ"/>
-                            <constraint firstItem="bW4-e1-d7a" firstAttribute="top" secondItem="WBZ-aM-Jel" secondAttribute="bottom" constant="5" id="2pa-UZ-5f3"/>
+                            <constraint firstItem="i1B-NV-sm5" firstAttribute="top" secondItem="DoC-Og-KwT" secondAttribute="bottom" constant="20" id="5dF-v3-AWf"/>
                             <constraint firstItem="i4c-Cy-ojv" firstAttribute="leading" secondItem="AmH-mU-3k7" secondAttribute="leading" constant="30" id="6CG-b7-3vS"/>
                             <constraint firstItem="DoC-Og-KwT" firstAttribute="leading" secondItem="AmH-mU-3k7" secondAttribute="leading" id="6JG-nO-UhS"/>
-                            <constraint firstItem="i1B-NV-sm5" firstAttribute="top" secondItem="xFb-8Z-tJj" secondAttribute="bottom" constant="30" id="B8A-FW-pHT"/>
-                            <constraint firstItem="xFb-8Z-tJj" firstAttribute="top" secondItem="i4c-Cy-ojv" secondAttribute="bottom" constant="5" id="CCH-4D-sTg"/>
                             <constraint firstItem="Vh8-MI-Fty" firstAttribute="leading" secondItem="AmH-mU-3k7" secondAttribute="leading" constant="30" id="DOz-K5-raX"/>
-                            <constraint firstItem="WBZ-aM-Jel" firstAttribute="centerX" secondItem="qW8-nc-VrS" secondAttribute="centerX" id="GnN-IQ-Ubi"/>
-                            <constraint firstItem="WBZ-aM-Jel" firstAttribute="top" secondItem="i1B-NV-sm5" secondAttribute="bottom" constant="10" id="J0F-ql-PIW"/>
+                            <constraint firstItem="Vh8-MI-Fty" firstAttribute="top" secondItem="i1B-NV-sm5" secondAttribute="bottom" constant="20" id="G1K-Nk-6vJ"/>
+                            <constraint firstItem="i1B-NV-sm5" firstAttribute="centerY" secondItem="qW8-nc-VrS" secondAttribute="centerY" constant="-100" id="JNB-17-Oxp"/>
                             <constraint firstItem="AmH-mU-3k7" firstAttribute="trailing" secondItem="bW4-e1-d7a" secondAttribute="trailing" constant="30" id="Jzn-f9-a4u"/>
                             <constraint firstItem="DoC-Og-KwT" firstAttribute="trailing" secondItem="AmH-mU-3k7" secondAttribute="trailing" id="TMg-sd-hAR"/>
                             <constraint firstItem="DFi-uS-eCF" firstAttribute="centerX" secondItem="V5v-5R-eYE" secondAttribute="centerX" id="TRh-MJ-R25"/>
@@ -158,21 +137,18 @@
                             <constraint firstItem="AmH-mU-3k7" firstAttribute="trailing" secondItem="Vh8-MI-Fty" secondAttribute="trailing" constant="30" id="Wgs-dR-Zxh"/>
                             <constraint firstItem="i1B-NV-sm5" firstAttribute="centerX" secondItem="qW8-nc-VrS" secondAttribute="centerX" id="aTd-vi-c97"/>
                             <constraint firstItem="AmH-mU-3k7" firstAttribute="trailing" secondItem="i4c-Cy-ojv" secondAttribute="trailing" constant="30" id="cZm-Ff-DXa"/>
-                            <constraint firstItem="Vh8-MI-Fty" firstAttribute="top" secondItem="DoC-Og-KwT" secondAttribute="bottom" constant="20" id="eg7-Uj-co3"/>
                             <constraint firstItem="DFi-uS-eCF" firstAttribute="centerY" secondItem="V5v-5R-eYE" secondAttribute="centerY" id="gZd-YU-heP"/>
-                            <constraint firstItem="AmH-mU-3k7" firstAttribute="trailing" secondItem="xFb-8Z-tJj" secondAttribute="trailing" constant="30" id="h8l-oe-Vjj"/>
-                            <constraint firstItem="xFb-8Z-tJj" firstAttribute="leading" secondItem="AmH-mU-3k7" secondAttribute="leading" constant="30" id="hBe-uk-Pu2"/>
                             <constraint firstItem="V5v-5R-eYE" firstAttribute="centerX" secondItem="qW8-nc-VrS" secondAttribute="centerX" id="j20-Ok-YgY"/>
                             <constraint firstItem="AmH-mU-3k7" firstAttribute="trailing" secondItem="i1B-NV-sm5" secondAttribute="trailing" constant="30" id="nWr-FI-0W9"/>
-                            <constraint firstItem="i1B-NV-sm5" firstAttribute="centerY" secondItem="qW8-nc-VrS" secondAttribute="centerY" id="v1k-za-43j"/>
+                            <constraint firstItem="bW4-e1-d7a" firstAttribute="top" secondItem="i4c-Cy-ojv" secondAttribute="bottom" constant="10" id="ozA-NY-sbf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AmH-mU-3k7"/>
                     </view>
                     <connections>
                         <outlet property="nameOfhabit" destination="i4c-Cy-ojv" id="4I2-UV-YKW"/>
                         <outlet property="screenTitle" destination="BLb-5Q-IPX" id="gCs-qB-HSF"/>
+                        <outlet property="whyQuestion" destination="i1B-NV-sm5" id="yjW-M7-U90"/>
                         <outlet property="whyText" destination="bW4-e1-d7a" id="cXU-Zq-7gm"/>
-                        <outlet property="whyTextView" destination="xFb-8Z-tJj" id="Cz9-Oe-bfp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAw-yh-cii" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -458,10 +434,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LD9-kN-VVa" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rewards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Oa-z2-MXX">
-                                        <rect key="frame" x="124" y="-2" width="127.5" height="44"/>
+                                        <rect key="frame" x="124" y="3" width="127.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="127.5" id="Ywi-mp-1bI"/>
                                         </constraints>
@@ -470,7 +446,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2a-zv-Mhr" customClass="blueButton" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="8" y="5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Dod-8V-ZLq"/>
                                             <constraint firstAttribute="width" constant="40" id="OQu-EB-Zir"/>
@@ -489,12 +465,12 @@
                                     <constraint firstItem="8Oa-z2-MXX" firstAttribute="centerX" secondItem="LD9-kN-VVa" secondAttribute="centerX" id="EIa-MR-pyX"/>
                                     <constraint firstItem="V2a-zv-Mhr" firstAttribute="leading" secondItem="LD9-kN-VVa" secondAttribute="leading" constant="8" id="HB7-TY-OSO"/>
                                     <constraint firstItem="V2a-zv-Mhr" firstAttribute="centerY" secondItem="LD9-kN-VVa" secondAttribute="centerY" id="SmT-l8-yxo"/>
-                                    <constraint firstAttribute="height" constant="40" id="c6d-Zk-Ufx"/>
+                                    <constraint firstAttribute="height" constant="50" id="c6d-Zk-Ufx"/>
                                     <constraint firstItem="8Oa-z2-MXX" firstAttribute="centerY" secondItem="LD9-kN-VVa" secondAttribute="centerY" id="vyu-xE-zIK"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rewards help keep you MOTIVATED" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-SZ-zxZ">
-                                <rect key="frame" x="0.0" y="70" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="EEj-JE-qIE"/>
                                 </constraints>
@@ -503,7 +479,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIF-QX-Epe">
-                                <rect key="frame" x="0.0" y="150" width="375" height="1225"/>
+                                <rect key="frame" x="0.0" y="160" width="375" height="1215"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lat-LY-WG7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>

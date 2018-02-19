@@ -122,7 +122,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
                 self.view.frame.origin.y -= (keyboardSize.height - 125)
             }
         }
-        
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
