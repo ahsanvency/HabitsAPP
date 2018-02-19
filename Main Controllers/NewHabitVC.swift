@@ -72,13 +72,17 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textBox.textColor = maroonColor
+        
+        editRewardsBtn.layer.borderColor = satinColor.cgColor
+        editRewardsBtn.layer.borderWidth = 1.0
+        
         habitPic.layer.borderColor = maroonColor.cgColor
         habitPic.layer.borderWidth = 1.0
         
         editRewardsBtn.backgroundColor = blueColor
         editRewardsBtn.setTitleColor(satinColor, for: .normal)
         
-        textBox.textColor = blueColor
         self.dropDown.setValue(maroonColor, forKeyPath: "textColor")
         
         //Puts the list in alphabetical order
@@ -151,7 +155,6 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
         if textField == self.textBox {
             self.dropDown.isHidden = false;
             habitPic.isHidden = true
@@ -159,6 +162,8 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             textField.endEditing(true)
         }
     }
+    
+    
     
     @IBOutlet weak var WhyView: fancyView!
     @IBOutlet weak var WhenView: fancyView!
@@ -180,6 +185,9 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let whereGesture = UITapGestureRecognizer(target: self, action:  #selector (self.onWhereViewTapped(sender:)))
         self.whereView.addGestureRecognizer(whereGesture)
         
+        let chooseHabitGesture = UITapGestureRecognizer(target: self, action:  #selector (self.onHabitPicTapped(sender:)))
+        self.habitPic.addGestureRecognizer(chooseHabitGesture)
+        
 //        let rewardsGesture1 = UITapGestureRecognizer(target: self, action:  #selector (self.onRewardsViewTapped(sender:)))
 //        let rewardsGesture2 = UITapGestureRecognizer(target: self, action:  #selector (self.onRewardsViewTapped(sender:)))
 //        let rewardsGesture3 = UITapGestureRecognizer(target: self, action:  #selector (self.onRewardsViewTapped(sender:)))
@@ -187,6 +195,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
 //        self.basicView.addGestureRecognizer(rewardsGesture1)
 //        self.intView.addGestureRecognizer(rewardsGesture2)
 //        self.advView.addGestureRecognizer(rewardsGesture3)
+    }
+    
+    @objc func onHabitPicTapped(sender: UITapGestureRecognizer){
+        self.dropDown.isHidden = false;
+        habitPic.isHidden = true
     }
     
     @objc func onWhyViewTapped(sender: UITapGestureRecognizer){
