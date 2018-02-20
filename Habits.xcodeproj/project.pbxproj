@@ -16,6 +16,9 @@
 		3A3DA5811FFB2F14004C1143 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5801FFB2F14004C1143 /* RegisterScreen.swift */; };
 		3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */; };
 		3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */; };
+		3A521436203B5AB6006232FC /* basicRewardPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A521435203B5AB6006232FC /* basicRewardPopupVC.swift */; };
+		3A521438203B621E006232FC /* intRewardsPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A521437203B621E006232FC /* intRewardsPopupVC.swift */; };
+		3A52143A203B6284006232FC /* advRewardsPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A521439203B6284006232FC /* advRewardsPopup.swift */; };
 		3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */; };
 		3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */; };
 		3A918ECD20395AD500490104 /* coloredLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ECC20395AD500490104 /* coloredLabel.swift */; };
@@ -58,6 +61,9 @@
 		3A3DA5841FFB7537004C1143 /* Habits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Habits.entitlements; sourceTree = "<group>"; };
 		3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
 		3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A521435203B5AB6006232FC /* basicRewardPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicRewardPopupVC.swift; sourceTree = "<group>"; };
+		3A521437203B621E006232FC /* intRewardsPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intRewardsPopupVC.swift; sourceTree = "<group>"; };
+		3A521439203B6284006232FC /* advRewardsPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advRewardsPopup.swift; sourceTree = "<group>"; };
 		3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitVC.swift; sourceTree = "<group>"; };
 		3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		3A918ECC20395AD500490104 /* coloredLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coloredLabel.swift; sourceTree = "<group>"; };
@@ -210,6 +216,9 @@
 				3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */,
 				3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */,
 				3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */,
+				3A521435203B5AB6006232FC /* basicRewardPopupVC.swift */,
+				3A521437203B621E006232FC /* intRewardsPopupVC.swift */,
+				3A521439203B6284006232FC /* advRewardsPopup.swift */,
 			);
 			path = "addPopup Controllers";
 			sourceTree = "<group>";
@@ -399,6 +408,8 @@
 			files = (
 				3AF47FD62007F50B00F00F42 /* User.swift in Sources */,
 				3A918ED520395DC500490104 /* normalView.swift in Sources */,
+				3A521438203B621E006232FC /* intRewardsPopupVC.swift in Sources */,
+				3A52143A203B6284006232FC /* advRewardsPopup.swift in Sources */,
 				3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */,
 				3A918ED92039669C00490104 /* blueButton.swift in Sources */,
 				3A3DA5811FFB2F14004C1143 /* RegisterScreen.swift in Sources */,
@@ -423,6 +434,7 @@
 				3A918ECD20395AD500490104 /* coloredLabel.swift in Sources */,
 				3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */,
 				3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */,
+				3A521436203B5AB6006232FC /* basicRewardPopupVC.swift in Sources */,
 				3A3DA57F1FFB2EF5004C1143 /* LoginScreen.swift in Sources */,
 				3A918ED120395B9700490104 /* normalLabel.swift in Sources */,
 				3AF646D12015674B002F86B8 /* fancyButton.swift in Sources */,

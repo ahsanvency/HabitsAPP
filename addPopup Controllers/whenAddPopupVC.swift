@@ -12,12 +12,11 @@ import MultiSelectSegmentedControl
 class whenAddPopupVC: UIViewController{
 
     
-    
-    var weekArray = [Int]()
     var timeDict:Dictionary = [String:Int]()
     var habitRow: Int?
     var habitName: String?
     var whyLblText: String?
+    var weekArray = [Int]()
     var whenLblText:String?
     var whereLblText:String?
     var currentText:String?
@@ -25,6 +24,13 @@ class whenAddPopupVC: UIViewController{
     var basicStr: String?
     var intStr: String?
     var advStr: String?
+    
+    var basicReward1: String?
+    var basicReward2: String?
+    
+    var intReward1: String?
+    var intReward2: String?
+    
     @IBOutlet weak var questionLbl: UILabel!
     @IBOutlet weak var screenTitle: UILabel!
     
@@ -121,24 +127,31 @@ class whenAddPopupVC: UIViewController{
             whenView.whyLblText = whyLblText!
             whenView.currentText = currentText!
             whenView.basicStr = basicStr!
+            whenView.basicReward1 = basicReward1!
+            whenView.basicReward2 = basicReward2!
             whenView.intStr = intStr!
+            whenView.intReward1 = intReward1!
+            whenView.intReward2 = intReward2!
             whenView.advStr = advStr!
             whenView.editButtonPressed = 0
             self.present(whenView,animated: true, completion: nil)
         }
-        
     }
     
     @IBAction func backButton(_ sender: Any) {
 
-        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let whenView = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+        let whenView = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
             whenView.weekArray = weekArray
             whenView.whereLblText = whereLblText!
             whenView.whyLblText = whyLblText!
             whenView.currentText = currentText!
             whenView.basicStr = basicStr!
+            whenView.basicReward1 = basicReward1!
+            whenView.basicReward2 = basicReward2!
+            whenView.intStr = intStr!
+            whenView.intReward1 = intReward1!
+            whenView.intReward2 = intReward2!
             whenView.intStr = intStr!
             whenView.advStr = advStr!
             whenView.editButtonPressed = 0

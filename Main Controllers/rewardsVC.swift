@@ -405,8 +405,19 @@ class rewardsVC: UIViewController {
             let firstDict = value![firstKey] as! Dictionary<String,Any>
             
             var rewardsDict = firstDict["Rewards"] as? Dictionary<String, Any>
-            let basicMessage = "Good effort you have earned: \(rewardsDict!["Basic"]!)"
-            let intMessage = "Congratulations you have earned: \(rewardsDict!["Int"]!)"
+            let randomMessage = Int(arc4random_uniform(UInt32(2)))
+            
+            var basicMessage = ""
+            var intMessage = ""
+            
+            if randomMessage == 0{
+                basicMessage = "Good effort you have earned: \(rewardsDict!["basicReward1"]!)"
+                intMessage = "Congratulations you have earned: \(rewardsDict!["intReward1"]!)"
+            }else{
+                basicMessage = "Good effort you have earned: \(rewardsDict!["basicReward2"]!)"
+                intMessage = "Congratulations you have earned: \(rewardsDict!["intReward2"]!)"
+            }
+            
             let advMessage = "You really deserve this: \(rewardsDict!["Adv"]!)"
             
             if leftCheck == "Basic" && middleCheck == "Basic" && rightCheck == "Basic"{

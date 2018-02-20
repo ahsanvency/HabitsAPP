@@ -22,6 +22,12 @@ class whereAddPopupVC: UIViewController {
     var intStr: String?
     var advStr: String?
     
+    var basicReward1: String?
+    var basicReward2: String?
+    
+    var intReward1: String?
+    var intReward2: String?
+    
     @IBOutlet weak var whereText: fancyField!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var screenTitle: UILabel!
@@ -48,7 +54,11 @@ class whereAddPopupVC: UIViewController {
         whereView.whyLblText = whyLblText!
         whereView.whenLblText = whenLblText!
         whereView.basicStr = basicStr!
+        whereView.basicReward1 = basicReward1!
+        whereView.basicReward2 = basicReward2!
         whereView.intStr = intStr!
+        whereView.intReward1 = intReward1!
+        whereView.intReward2 = intReward2!
         whereView.advStr = advStr!
         whereView.currentText = currentText!
         whereView.editButtonPressed = 1
@@ -63,10 +73,15 @@ class whereAddPopupVC: UIViewController {
             whereView.whyLblText = self.whyLblText!
             whereView.whenLblText = self.whenLblText!
             whereView.basicStr = self.basicStr!
+            whereView.basicReward1 = self.basicReward1!
+            whereView.basicReward2 = self.basicReward2!
             whereView.intStr = self.intStr!
+            whereView.intReward1 = self.intReward1!
+            whereView.intReward2 = self.intReward2!
             whereView.advStr = self.advStr!
             whereView.currentText = self.currentText!
-            whereView.editButtonPressed = 1
+            whereView.editButtonPressed = 0
+            self.present(whereView, animated: true, completion: nil)
         }
     }
     

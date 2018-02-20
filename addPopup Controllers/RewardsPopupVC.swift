@@ -21,6 +21,12 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
     var whereLblText:String = ""
     var currentText:String = ""
 
+    var basicReward1: String?
+    var basicReward2: String?
+    
+    var intReward1: String?
+    var intReward2: String?
+    
     @IBOutlet weak var basicText: UITextView!
     @IBOutlet weak var intText: UITextView!
     @IBOutlet weak var advText: UITextView!
@@ -48,7 +54,11 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
         backView.whyLblText = whyLblText
         backView.whenLblText = whenLblText
         backView.basicStr = basicText.text
+        backView.basicReward1 = basicReward1!
+        backView.basicReward2 = basicReward2!
         backView.intStr = intText.text
+        backView.intReward1 = intReward1!
+        backView.intReward2 = intReward2!
         backView.advStr = advText.text
         backView.currentText = currentText
         self.present(backView, animated: true) {
@@ -79,7 +89,6 @@ class rewardsPopupVC: UIViewController, UITextViewDelegate {
     func setupScreen(){
         let myGradient = UIImage(named: "textRewardsPopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
-        
         basicText.backgroundColor = satinColor
         basicText.textColor = maroonColor
         intText.backgroundColor = satinColor

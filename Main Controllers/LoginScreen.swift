@@ -113,7 +113,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         forgotPasswordBtn.isHidden = true
         emailField.autocorrectionType = .no
         emailField.keyboardType = .emailAddress
-        
+        passwordField.textContentType = UITextContentType("")
     }
     @objc func keyboardWillShow(notification: NSNotification) {
         

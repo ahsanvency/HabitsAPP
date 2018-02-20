@@ -149,6 +149,10 @@ class RegisterScreen: UIViewController {
         confirmPasswordField.isSecureTextEntry = true
         nameField.autocorrectionType = .no
         emailField.autocorrectionType = .no
+        nameField.textContentType = UITextContentType("")
+        emailField.textContentType = UITextContentType("")
+        passwordField.textContentType = UITextContentType("")
+        confirmPasswordField.textContentType = UITextContentType("")
         emailField.keyboardType = .emailAddress
     }
     
@@ -159,7 +163,6 @@ class RegisterScreen: UIViewController {
                 self.view.frame.origin.y -= (keyboardSize.height - 120)
             }
         }
-        
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {

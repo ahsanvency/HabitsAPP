@@ -14,6 +14,7 @@ import SwiftKeychainWrapper
 class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate{
     
     
+    
     //Variables
     var habitRow: Int = 0
     var habitName: String = "Running"
@@ -28,6 +29,14 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     var intStr: String = "Tap Edit Rewards"
     var advStr: String = "Tap Edit Rewards"
     
+    var basicReward1: String = ""
+    var basicReward2: String = ""
+    
+    var intReward1: String = ""
+    var intReward2: String = ""
+    
+    var advReward: String = ""
+    
     var editButtonPressed = 0
     
     //Why, When, Where habit labels
@@ -38,7 +47,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var intLbl: UILabel!
     @IBOutlet weak var advLbl: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    
+    @IBOutlet weak var viewInScroll: UIView!
     
     //The Labels for the textField and the picker
     @IBOutlet weak var textBox: UITextField!
@@ -46,7 +55,6 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var habitPic: UIImageView!
     
     
-    @IBOutlet weak var editRewardsBtn: fancyButton!
     
     
     //creates the list for the picker view
@@ -65,52 +73,12 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         if editButtonPressed != 0{
             startAnimation()
         }
-        print(editButtonPressed)
     }
     
     //Starts off with just the picker for editing
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textBox.textColor = maroonColor
-        
-        editRewardsBtn.layer.borderColor = satinColor.cgColor
-        editRewardsBtn.layer.borderWidth = 1.0
-        
-        habitPic.layer.borderColor = maroonColor.cgColor
-        habitPic.layer.borderWidth = 1.0
-        
-        editRewardsBtn.backgroundColor = blueColor
-        editRewardsBtn.setTitleColor(satinColor, for: .normal)
-        
-        self.dropDown.setValue(maroonColor, forKeyPath: "textColor")
-        
-        //Puts the list in alphabetical order
-        list.sort()
-        list2.sort()
-        
-        //Starts the screen with the habit pic being hidden
-        habitPic.isHidden = true
-        
-        self.textBox.text = "Pick your habit below"
-        
-        //getting values from pop up
-        whyLbl.text = whyLblText
-        whenLbl.text = whenLblText
-        whereLbl.text = whereLblText
-        basicLbl.text = basicStr
-        intLbl.text = intStr
-        advLbl.text = advStr
-        
-        if currentText != ""{
-            habitName = currentText
-            self.habitPic.image = UIImage(named: currentText);
-            self.habitPic.isHidden = false;
-            self.dropDown.isHidden = true;
-            self.textBox.text = currentText;
-        }
-        
-        
+        setupScreen()
         //added touch events to views
         addTouchEvents()
     }
@@ -130,6 +98,23 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         return list.count
     }
+
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = list[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:maroonColor])
+        return myTitle
+    }
+    
+//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//        var label: UILabel
+//        if let view = view as? UILabel { label = view }
+//        else { label = UILabel() }
+//
+//        label.textColor = maroonColor
+//        label.text = getTextForPicker(atRow: row)
+//
+//        return label
+//    }
     
     //Functionality for the pickerView and the textfield that works with it
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -152,7 +137,6 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         self.habitPic.isHidden = false;
         self.habitPic.image = UIImage(named: habitName); //Changes the pic to correspond with the habit
     }
-    
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.textBox {
@@ -188,6 +172,15 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let chooseHabitGesture = UITapGestureRecognizer(target: self, action:  #selector (self.onHabitPicTapped(sender:)))
         self.habitPic.addGestureRecognizer(chooseHabitGesture)
         
+        let basicGesture = UITapGestureRecognizer(target: self, action:  #selector (self.basicViewTapped(sender:)))
+        self.basicView.addGestureRecognizer(basicGesture)
+        
+        let intGesture = UITapGestureRecognizer(target: self, action:  #selector (self.intViewTapped(sender:)))
+        self.intView.addGestureRecognizer(intGesture)
+        
+        let advGesture = UITapGestureRecognizer(target: self, action:  #selector (self.advViewTapped(sender:)))
+        self.advView.addGestureRecognizer(advGesture)
+        
 //        let rewardsGesture1 = UITapGestureRecognizer(target: self, action:  #selector (self.onRewardsViewTapped(sender:)))
 //        let rewardsGesture2 = UITapGestureRecognizer(target: self, action:  #selector (self.onRewardsViewTapped(sender:)))
 //        let rewardsGesture3 = UITapGestureRecognizer(target: self, action:  #selector (self.onRewardsViewTapped(sender:)))
@@ -215,7 +208,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             newViewController.whenLblText = whenLblText
             newViewController.whereLblText = whereLblText
             newViewController.basicStr = basicStr
+            newViewController.basicReward1 = basicReward1
+            newViewController.basicReward2 = basicReward2
             newViewController.intStr = intStr
+            newViewController.intReward1 = intReward1
+            newViewController.intReward2 = intReward2
             newViewController.advStr = advStr
             newViewController.currentText = currentText
 
@@ -234,7 +231,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             newViewController.whenLblText = whenLblText
             newViewController.whereLblText = whereLblText
             newViewController.basicStr = basicStr
+            newViewController.basicReward1 = basicReward1
+            newViewController.basicReward2 = basicReward2
             newViewController.intStr = intStr
+            newViewController.intReward1 = intReward1
+            newViewController.intReward2 = intReward2
             newViewController.advStr = advStr
             newViewController.currentText = currentText
             
@@ -245,8 +246,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
             let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "whereAddPopup") as! whereAddPopupVC
-            
-
+        
             newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
         
             newViewController.whyLblText = whyLblText
@@ -254,35 +254,86 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             newViewController.whenLblText = whenLblText
             newViewController.whereLblText = whereLblText
             newViewController.basicStr = basicStr
+            newViewController.basicReward1 = basicReward1
+            newViewController.basicReward2 = basicReward2
             newViewController.intStr = intStr
+            newViewController.intReward1 = intReward1
+            newViewController.intReward2 = intReward2
             newViewController.advStr = advStr
             newViewController.currentText = currentText
-        
             self.present(newViewController, animated: true, completion: nil)
-
     }
     
-    
-    
-    @IBAction func editRewardsBtn(_ sender: Any) {
-
+    @objc func basicViewTapped(sender: UITapGestureRecognizer){
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "rewardsPopupVC") as! rewardsPopupVC
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "basicRewardPopup") as! basicRewardPopupVC
         
         
-        newViewController.habitName =  list2[habitRow].lowercased() + "?"
+        newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
+        
         newViewController.whyLblText = whyLblText
         newViewController.weekArray = weekArray
         newViewController.whenLblText = whenLblText
         newViewController.whereLblText = whereLblText
         newViewController.basicStr = basicStr
+        newViewController.basicReward1 = basicReward1
+        newViewController.basicReward2 = basicReward2
         newViewController.intStr = intStr
+        newViewController.intReward1 = intReward1
+        newViewController.intReward2 = intReward2
         newViewController.advStr = advStr
         newViewController.currentText = currentText
         
         self.present(newViewController, animated: true, completion: nil)
     }
     
+    @objc func intViewTapped(sender: UITapGestureRecognizer){
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "intRewardPopup") as! intRewardsPopupVC
+        
+        
+        newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
+        
+        newViewController.whyLblText = whyLblText
+        newViewController.weekArray = weekArray
+        newViewController.whenLblText = whenLblText
+        newViewController.whereLblText = whereLblText
+        newViewController.basicStr = basicStr
+        newViewController.basicReward1 = basicReward1
+        newViewController.basicReward2 = basicReward2
+        newViewController.intStr = intStr
+        newViewController.intReward1 = intReward1
+        newViewController.intReward2 = intReward2
+        newViewController.advStr = advStr
+        newViewController.currentText = currentText
+        
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    @objc func advViewTapped(sender: UITapGestureRecognizer){
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "advRewardPopup") as! advRewardsPopup
+        
+        newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
+
+        newViewController.whyLblText = whyLblText
+        newViewController.weekArray = weekArray
+        newViewController.whenLblText = whenLblText
+        newViewController.whereLblText = whereLblText
+        newViewController.basicStr = basicStr
+        newViewController.basicReward1 = basicReward1
+        newViewController.basicReward2 = basicReward2
+        newViewController.intStr = intStr
+        newViewController.intReward1 = intReward1
+        newViewController.intReward2 = intReward2
+        newViewController.advStr = advStr
+        newViewController.currentText = currentText
+        
+        self.present(newViewController, animated: true, completion: nil)
+    }
     
     @IBAction func addHabit(_ sender: Any) {
         if Auth.auth().currentUser?.uid != nil {
@@ -312,7 +363,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
 
                 DataService.ds.REF_HABITS.child(uid).child(habitRefKey).setValue(["Why": whyLbl.text,"When":whenLbl.text,"Where":whereLbl.text,"name":currentText,"freq":weekArray])
                 //Adding rewards to habit
-                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["Basic":basicLbl.text,"Int":intLbl.text,"Adv":advLbl.text, "Success": 0])
+                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["basicReward1":basicReward1,"basicReward2":basicReward2,"intReward1":intReward1,"intReward2":intReward2,"Adv":advLbl.text, "Success": 0])
                 
                 //Segue
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -331,39 +382,46 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func validateTextFeilds() -> Bool{
         if (whyLbl.text == "Tap to Edit") {
             //handel the errors properly
-            upAlert(messages: "Please fill out Why.")
+            print("error")
             return false
         }
-        if (whenLbl.text == "Tap to Edit"){
-            upAlert(messages: "Please fill out When.")
+        else if (whenLbl.text == "Tap to Edit"){
+            print("error")
+            //upAlert(messages: "Please fill out When.")
             return false
         }
-        if (whereLbl.text == "Tap to Edit"){
-            upAlert(messages: "Please fill out Where.")
+        else if (whereLbl.text == "Tap to Edit"){
+            print("error")
+            //upAlert(messages: "Please fill out Where.")
             return false
         }
-
-        if (habitName == ""){
-            upAlert(messages: "Please pick a Habit")
+        else if (habitName == ""){
+            print("error")
+            //upAlert(messages: "Please pick a Habit")
             return false
         }
-        if (basicStr == "Tap Edit Rewards" || basicStr == ""){
-            upAlert(messages: "Please enter Basic Rewards")
+        else if (basicStr == "Tap Edit Rewards" || basicStr == ""){
+            print("error")
+            //upAlert(messages: "Please enter Basic Rewards")
             return false
         }
-        if (intStr == "Tap Edit Rewards" || intStr == ""){
-            upAlert(messages: "Please enter Intermediate Rewards")
+        else if (intStr == "Tap Edit Rewards" || intStr == ""){
+            print("error")
+            //upAlert(messages: "Please enter Intermediate Rewards")
             return false
         }
-        if (advStr == "Tap Edit Rewards" || advStr == ""){
-            upAlert(messages: "Please enter an Advanced Reward")
+        else if (advStr == "Tap Edit Rewards" || advStr == ""){
+            print("error")
+            //upAlert(messages: "Please enter an Advanced Reward")
             return false
         }
-        if textBox.text == "Pick your habit below"{
-            upAlert(messages: "Please pick a Habit")
+        else if textBox.text == "Pick your habit below"{
+            print("error")
+            //upAlert(messages: "Please pick a Habit")
             return false
+        }else {
+            print("GOOD")
         }
-        
         return true
     }
     
@@ -379,8 +437,45 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func startAnimation()
     {
         DispatchQueue.main.async(execute: {
-            self.scrollView.setContentOffset(CGPoint(x: 0,y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height - 13), animated: true)
+            self.scrollView.setContentOffset(CGPoint(x: 0,y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height - 50), animated: true)
         })
+    }
+    
+    func setupScreen(){
+        textBox.textColor = maroonColor
+        
+        habitPic.layer.borderColor = maroonColor.cgColor
+        habitPic.layer.borderWidth = 1.0
+        
+        
+        viewInScroll.backgroundColor = seaFoamColor
+        
+
+        
+        //Puts the list in alphabetical order
+        list.sort()
+        list2.sort()
+        
+        //Starts the screen with the habit pic being hidden
+        habitPic.isHidden = true
+        
+        self.textBox.text = "Pick your habit below"
+        
+        //getting values from pop up
+        whyLbl.text = whyLblText
+        whenLbl.text = whenLblText
+        whereLbl.text = whereLblText
+        basicLbl.text = basicStr
+        intLbl.text = intStr
+        advLbl.text = advStr
+        
+        if currentText != ""{
+            habitName = currentText
+            self.habitPic.image = UIImage(named: currentText);
+            self.habitPic.isHidden = false;
+            self.dropDown.isHidden = true;
+            self.textBox.text = currentText;
+        }
     }
 }
 

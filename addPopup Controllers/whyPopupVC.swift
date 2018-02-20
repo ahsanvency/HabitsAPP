@@ -11,6 +11,8 @@ import UIKit
 class whyPopupVC: UIViewController {
     
     
+    
+    
     var habitRow: Int?
     var habitName: String?
     var whyLblText: String?
@@ -18,13 +20,18 @@ class whyPopupVC: UIViewController {
     var whenLblText:String?
     var whereLblText:String?
     var currentText:String?
-    var intrinsicStatement: String?
-    
     
     var basicStr: String?
     var intStr: String?
     var advStr: String?
     
+    var basicReward1: String?
+    var basicReward2: String?
+    
+    var intReward1: String?
+    var intReward2: String?
+    
+    var intrinsicStatement: String?
     
     @IBOutlet weak var whyText: UITextField!
     @IBOutlet weak var nameOfhabit: UILabel!
@@ -60,13 +67,16 @@ class whyPopupVC: UIViewController {
             whyInfo.whenLblText = whenLblText!
             whyInfo.whereLblText = whereLblText!
             whyInfo.basicStr = basicStr!
+            whyInfo.basicReward1 = basicReward1!
+            whyInfo.basicReward2 = basicReward2!
             whyInfo.intStr = intStr!
+            whyInfo.intReward1 = intReward1!
+            whyInfo.intReward2 = intReward2!
             whyInfo.advStr = advStr!
             whyInfo.currentText = currentText!
             whyInfo.editButtonPressed = 0
             self.present(whyInfo,animated: true, completion: nil)
         }
-        
     }
     
     func validateTextFeilds() -> Bool{
@@ -87,7 +97,11 @@ class whyPopupVC: UIViewController {
             whyInfo.whenLblText = self.whenLblText!
             whyInfo.whereLblText = self.whereLblText!
             whyInfo.basicStr = self.basicStr!
+            whyInfo.basicReward1 = self.basicReward1!
+            whyInfo.basicReward2 = self.basicReward2!
             whyInfo.intStr = self.intStr!
+            whyInfo.intReward1 = self.intReward1!
+            whyInfo.intReward2 = self.intReward2!
             whyInfo.advStr = self.advStr!
             whyInfo.currentText = self.currentText!
             whyInfo.editButtonPressed = 0
