@@ -33,8 +33,8 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var intField2: fancyField!
     @IBOutlet weak var intPicker2: UIPickerView!
     
-    var listOfIntRewards1 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers"]
-    var listOfIntRewards2 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers"]
+    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
+    var listOfIntRewards2 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
     
     
     override func viewDidLoad() {

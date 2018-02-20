@@ -34,7 +34,7 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var advRewardField: fancyField!
     @IBOutlet weak var advRewardPicker: UIPickerView!
     
-    var listOfAdvRewards = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers"]
+    var listOfAdvRewards = ["New Tatto or Piercing", "Pedicure", "Take a Day Off", "Go Shopping", "Party", "Go Camping", "Weekend Trip"]
     
     
     
