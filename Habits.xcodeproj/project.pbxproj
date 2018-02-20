@@ -134,6 +134,7 @@
 				3AA5A3BE1FFB18750035A16E /* Model */,
 				3AA5A3BD1FFB18710035A16E /* View */,
 				3AA5A3BC1FFB18690035A16E /* Main Controllers */,
+				3A918EDE203993B000490104 /* Main.storyboard */,
 				3ADE3D3B20146FF7003A114B /* addPopup Controllers */,
 				3A0F89B6201480FE0062B55C /* addPopups.storyboard */,
 				3A0F89B820148C980062B55C /* editPopup Controllers */,
@@ -175,7 +176,6 @@
 				3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */,
 				3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */,
 				3AEFBE922023EB2D00E03455 /* rewardsVC.swift */,
-				3A918EDE203993B000490104 /* Main.storyboard */,
 			);
 			path = "Main Controllers";
 			sourceTree = "<group>";

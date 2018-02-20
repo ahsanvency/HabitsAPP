@@ -29,8 +29,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRa-mv-HBh" customClass="titleViewLogin" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkx-gh-gga" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="0.0" width="365" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Habit Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jkx-gh-gga" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="0.0" width="355" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="8tD-iZ-1VZ"/>
                                         </constraints>
@@ -41,12 +41,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.08235294118" green="0.2666666667" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Jkx-gh-gga" firstAttribute="top" secondItem="CRa-mv-HBh" secondAttribute="top" id="3zT-Tr-xuS">
-                                        <variation key="heightClass=regular" constant="0.0"/>
-                                    </constraint>
-                                    <constraint firstItem="Jkx-gh-gga" firstAttribute="leading" secondItem="CRa-mv-HBh" secondAttribute="leading" constant="5" id="5Kf-bo-bfe"/>
+                                    <constraint firstItem="Jkx-gh-gga" firstAttribute="centerY" secondItem="CRa-mv-HBh" secondAttribute="centerY" id="EsS-xj-kDr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jkx-gh-gga" secondAttribute="trailing" constant="10" id="HWK-Ps-KdB"/>
+                                    <constraint firstItem="Jkx-gh-gga" firstAttribute="leading" secondItem="CRa-mv-HBh" secondAttribute="leading" constant="10" id="Ul2-sW-8pG"/>
                                     <constraint firstAttribute="height" constant="50" id="c3j-wv-QN8"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jkx-gh-gga" secondAttribute="trailing" constant="5" id="w4c-Kr-G55"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="HD logo" translatesAutoresizingMaskIntoConstraints="NO" id="O19-B9-h8m" customClass="logoView" customModule="Habits" customModuleProvider="target">
@@ -152,11 +150,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-dH-FSA" userLabel="Top View" customClass="titleViewLogin" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qff-Da-Ace">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Habit Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qff-Da-Ace">
                                         <rect key="frame" x="62.5" y="5" width="250" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="1YK-Vj-6BY"/>
-                                            <constraint firstAttribute="width" constant="250" id="775-Xg-nFl"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
                                         <color key="textColor" red="0.96862745100000003" green="0.94117647059999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -179,11 +176,12 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.27450980390000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="qff-Da-Ace" firstAttribute="centerX" secondItem="XFW-dH-FSA" secondAttribute="centerX" id="Btk-FI-Zuc"/>
+                                    <constraint firstAttribute="trailing" secondItem="qff-Da-Ace" secondAttribute="trailing" constant="62.5" id="0wZ-fq-Hxa"/>
                                     <constraint firstItem="qff-Da-Ace" firstAttribute="centerY" secondItem="XFW-dH-FSA" secondAttribute="centerY" id="HRJ-9E-trv"/>
                                     <constraint firstAttribute="height" constant="50" id="OPE-e5-73C"/>
                                     <constraint firstItem="DDW-zn-MIE" firstAttribute="leading" secondItem="XFW-dH-FSA" secondAttribute="leading" constant="5" id="fI9-Z8-Nse"/>
-                                    <constraint firstItem="DDW-zn-MIE" firstAttribute="centerY" secondItem="XFW-dH-FSA" secondAttribute="centerY" id="lvy-Bq-geW"/>
+                                    <constraint firstItem="DDW-zn-MIE" firstAttribute="centerY" secondItem="qff-Da-Ace" secondAttribute="centerY" id="rmZ-n8-zgb"/>
+                                    <constraint firstItem="qff-Da-Ace" firstAttribute="leading" secondItem="DDW-zn-MIE" secondAttribute="trailing" constant="12.5" id="y4g-S3-wBS"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="HD logo" translatesAutoresizingMaskIntoConstraints="NO" id="E3Z-Kq-Yeu" customClass="logoView" customModule="Habits" customModuleProvider="target">
@@ -331,10 +329,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9P-yq-qbl" customClass="titleViewLogin" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECT-TL-Hu9" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Habit Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECT-TL-Hu9" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
                                         <rect key="frame" x="62.5" y="5" width="250" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="0c4-NM-bZF"/>
                                             <constraint firstAttribute="height" constant="40" id="BHt-IE-x6u"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
@@ -361,8 +358,9 @@
                                     <constraint firstAttribute="height" constant="50" id="3Ip-oq-wge"/>
                                     <constraint firstItem="hiK-tY-06N" firstAttribute="centerY" secondItem="ECT-TL-Hu9" secondAttribute="centerY" id="MPp-MJ-Nro"/>
                                     <constraint firstItem="ECT-TL-Hu9" firstAttribute="centerY" secondItem="d9P-yq-qbl" secondAttribute="centerY" id="RFl-NX-68R"/>
+                                    <constraint firstAttribute="trailing" secondItem="ECT-TL-Hu9" secondAttribute="trailing" constant="62.5" id="bvn-Xz-2zj"/>
                                     <constraint firstItem="hiK-tY-06N" firstAttribute="leading" secondItem="d9P-yq-qbl" secondAttribute="leading" constant="5" id="fEh-MS-wbO"/>
-                                    <constraint firstItem="ECT-TL-Hu9" firstAttribute="centerX" secondItem="d9P-yq-qbl" secondAttribute="centerX" id="qp6-Xd-9pG"/>
+                                    <constraint firstItem="ECT-TL-Hu9" firstAttribute="leading" secondItem="hiK-tY-06N" secondAttribute="trailing" constant="12.5" id="tJc-VD-JBa"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HD logo" translatesAutoresizingMaskIntoConstraints="NO" id="cGl-sX-4Qg" customClass="logoView" customModule="Habits" customModuleProvider="target">
@@ -1123,8 +1121,8 @@
                                     <constraint firstAttribute="trailing" secondItem="KVy-Cy-PsV" secondAttribute="trailing" id="th0-wk-v9f"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lt-sR-Ebh" customClass="satinButton" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="5" y="20" width="46" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lt-sR-Ebh" customClass="satinButton" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="5" y="19" width="46" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="20i-89-an1"/>
                                     <constraint firstAttribute="width" constant="46" id="dyy-BD-tok"/>
@@ -1170,6 +1168,7 @@
                         <outlet property="habitPic" destination="38r-pY-cSR" id="MYd-Vp-3T9"/>
                         <outlet property="intLbl" destination="6It-c1-ytt" id="q3Y-x5-QzZ"/>
                         <outlet property="intView" destination="BaA-qE-UnV" id="eID-bG-Mtz"/>
+                        <outlet property="logoutBtn" destination="5Lt-sR-Ebh" id="In0-pL-78s"/>
                         <outlet property="scrollView" destination="QWk-H6-Z61" id="sSB-ek-T77"/>
                         <outlet property="textBox" destination="Oj3-Ff-elO" id="FVx-Kx-Tcu"/>
                         <outlet property="viewInScroll" destination="KVy-Cy-PsV" id="Awg-L9-uJV"/>
@@ -1526,6 +1525,6 @@
         <image name="loginactual" width="287" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="47N-rc-6Fl"/>
+        <segue reference="4WS-j3-O85"/>
     </inferredMetricsTieBreakers>
 </document>

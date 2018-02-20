@@ -246,7 +246,8 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.present(myAlert, animated: true, completion: nil)
                 }
                 
-                alert(messages: "You need to get to 30 days before adding a new habit. You currently have \(Int(successesInt)) days.")
+                alert(messages: "It's best to do one habit at a time. Add a new habit once the progress bar is full!")
+                    //You need to get to 30 days before adding a new habit. You currently have \(Int(successesInt)) days.")
             }
         }) { (error) in
             print(error.localizedDescription)

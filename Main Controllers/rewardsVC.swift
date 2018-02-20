@@ -587,7 +587,7 @@ class rewardsVC: UIViewController {
     func winner(){
         spinBtnLbl.text = "WINNER"
         //spinBtn.setTitle("WINNER", for: UIControlState.normal)
-        spinBtn.backgroundColor = UIColor.green
+        spinBtn.backgroundColor = UIColor(r: 133, g: 187, b: 101)
         startBlinking()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
             self.timerGetReadyForNextSpin = Timer.scheduledTimer(timeInterval: 3.0, target:self, selector: #selector(self.getReadyForNextSpin), userInfo: nil, repeats: false)
@@ -596,7 +596,7 @@ class rewardsVC: UIViewController {
     
     func upAlert (messages: String) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-            let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
+            let myAlert = UIAlertController(title: "Winner", message: messages, preferredStyle: UIAlertControllerStyle.alert)
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
             myAlert.addAction(okAction)
             self.present(myAlert, animated: true, completion: nil)

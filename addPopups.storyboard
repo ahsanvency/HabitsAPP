@@ -434,7 +434,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOV-HH-fan" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="21" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-sR-aHO">
                                         <rect key="frame" x="81.5" y="3.5" width="212" height="44"/>
@@ -468,7 +468,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic rewards are simple and easy to access." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6v-qE-P0F" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="110" width="355" height="70"/>
+                                <rect key="frame" x="10" y="111" width="355" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="KhF-WH-sj7"/>
                                 </constraints>
@@ -477,7 +477,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are some basic rewards you enjoy?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKp-ov-OLf" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="210" width="355" height="25"/>
+                                <rect key="frame" x="10" y="211" width="355" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="qPH-KJ-oDq"/>
                                 </constraints>
@@ -486,7 +486,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jf7-13-3IV" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="245" width="275" height="35"/>
+                                <rect key="frame" x="50" y="246" width="275" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Ky0-EK-vxN"/>
                                 </constraints>
@@ -498,7 +498,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onc-4q-vUf">
-                                <rect key="frame" x="50" y="280" width="275" height="150"/>
+                                <rect key="frame" x="50" y="281" width="275" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="7ci-B3-AKO"/>
@@ -509,7 +509,7 @@
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3tj-fJ-emc" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="320" width="275" height="35"/>
+                                <rect key="frame" x="50" y="321" width="275" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="nmV-dZ-sHX"/>
                                 </constraints>
@@ -521,7 +521,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-37-BQq">
-                                <rect key="frame" x="50" y="355" width="275" height="150"/>
+                                <rect key="frame" x="50" y="356" width="275" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="1tC-o1-w4B"/>
@@ -532,7 +532,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXg-1Q-RiX">
-                                <rect key="frame" x="125" y="520" width="125" height="125"/>
+                                <rect key="frame" x="125" y="521" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="2Ve-62-ljx"/>
                                     <constraint firstAttribute="width" constant="125" id="p2J-9l-EaB"/>
@@ -544,7 +544,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-tf-o1U" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="570.5" width="54" height="24"/>
+                                <rect key="frame" x="160.5" y="571.5" width="54" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="FIg-9L-LPU"/>
                                     <constraint firstAttribute="height" constant="24" id="zpx-tn-Fe9"/>
@@ -557,9 +557,9 @@
                         <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pXH-e6-Mge" firstAttribute="trailing" secondItem="lKp-ov-OLf" secondAttribute="trailing" constant="10" id="0nE-Uh-vX7"/>
+                            <constraint firstItem="3tj-fJ-emc" firstAttribute="centerY" secondItem="ED1-Gn-6MX" secondAttribute="centerY" constant="5" id="5nx-F4-uX3"/>
                             <constraint firstItem="Onc-4q-vUf" firstAttribute="leading" secondItem="pXH-e6-Mge" secondAttribute="leading" constant="50" id="8gy-Im-o9d"/>
                             <constraint firstItem="3tj-fJ-emc" firstAttribute="top" secondItem="Jf7-13-3IV" secondAttribute="bottom" constant="40" id="8iP-Xz-tyK"/>
-                            <constraint firstItem="cOV-HH-fan" firstAttribute="top" secondItem="pXH-e6-Mge" secondAttribute="top" id="9EZ-In-Q61"/>
                             <constraint firstItem="pXH-e6-Mge" firstAttribute="trailing" secondItem="bXg-1Q-RiX" secondAttribute="trailing" constant="125" id="B1g-0k-1lM"/>
                             <constraint firstItem="lKp-ov-OLf" firstAttribute="top" secondItem="p6v-qE-P0F" secondAttribute="bottom" constant="30" id="CJL-3L-56R"/>
                             <constraint firstItem="Onc-4q-vUf" firstAttribute="top" secondItem="Jf7-13-3IV" secondAttribute="bottom" id="Ehy-3c-mNo"/>
@@ -605,7 +605,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1y-5b-tId" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="21" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APb-Qq-TzR">
                                         <rect key="frame" x="60" y="3.5" width="255" height="44"/>
@@ -637,7 +637,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate rewards are more fun and enjoyable." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2h-Kg-Yha" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="110" width="355" height="70"/>
+                                <rect key="frame" x="10" y="111" width="355" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="M4r-ZU-uSL"/>
                                 </constraints>
@@ -646,7 +646,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are some Intermediate rewards you enjoy?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-Ii-fCd" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="210" width="355" height="25"/>
+                                <rect key="frame" x="10" y="211" width="355" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="LLl-pM-hGS"/>
                                 </constraints>
@@ -655,7 +655,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjB-un-m5J">
-                                <rect key="frame" x="125" y="520" width="125" height="125"/>
+                                <rect key="frame" x="125" y="521" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="ZoY-Fi-6Oh"/>
                                     <constraint firstAttribute="height" constant="125" id="rJE-XY-xzQ"/>
@@ -667,7 +667,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXb-zb-ZoP" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="570.5" width="54" height="24"/>
+                                <rect key="frame" x="160.5" y="571.5" width="54" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="Vyg-NK-hAS"/>
                                     <constraint firstAttribute="height" constant="24" id="yP5-YC-uuM"/>
@@ -677,7 +677,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLW-FK-FWb" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="245" width="275" height="35"/>
+                                <rect key="frame" x="50" y="246" width="275" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="pWI-pZ-2K4"/>
                                 </constraints>
@@ -689,7 +689,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVB-jL-4mo">
-                                <rect key="frame" x="50" y="280" width="275" height="150"/>
+                                <rect key="frame" x="50" y="281" width="275" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="2TF-JT-Ahd"/>
@@ -700,7 +700,7 @@
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ErD-sL-tnD" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="320" width="275" height="35"/>
+                                <rect key="frame" x="50" y="321" width="275" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="OjW-AA-AD4"/>
                                 </constraints>
@@ -712,7 +712,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-9d-Z1M">
-                                <rect key="frame" x="50" y="355" width="275" height="150"/>
+                                <rect key="frame" x="50" y="356" width="275" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="vwt-se-Edx"/>
@@ -730,7 +730,7 @@
                             <constraint firstItem="WgW-Ii-fCd" firstAttribute="top" secondItem="B2h-Kg-Yha" secondAttribute="bottom" constant="30" id="3gY-qT-KLe"/>
                             <constraint firstItem="XoN-6q-PVG" firstAttribute="trailing" secondItem="WgW-Ii-fCd" secondAttribute="trailing" constant="10" id="Cla-iL-9Yb"/>
                             <constraint firstItem="I3t-9d-Z1M" firstAttribute="top" secondItem="ErD-sL-tnD" secondAttribute="bottom" id="DAI-15-9yf"/>
-                            <constraint firstItem="O1y-5b-tId" firstAttribute="top" secondItem="XoN-6q-PVG" secondAttribute="top" id="MKP-4R-cWP"/>
+                            <constraint firstItem="ErD-sL-tnD" firstAttribute="centerY" secondItem="WyB-je-TXI" secondAttribute="centerY" constant="5" id="MaS-fT-q16"/>
                             <constraint firstItem="bVB-jL-4mo" firstAttribute="leading" secondItem="XoN-6q-PVG" secondAttribute="leading" constant="50" id="Nyu-cW-y3n"/>
                             <constraint firstItem="XoN-6q-PVG" firstAttribute="trailing" secondItem="UjB-un-m5J" secondAttribute="trailing" constant="125" id="RYq-pz-uKm"/>
                             <constraint firstItem="B2h-Kg-Yha" firstAttribute="leading" secondItem="WyB-je-TXI" secondAttribute="leading" constant="10" id="VgX-aL-2kA"/>
@@ -774,7 +774,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mm-YY-Kkh" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="61" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Jj-MV-fHY">
                                         <rect key="frame" x="60" y="3.5" width="255" height="44"/>
@@ -806,7 +806,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced rewards are your favorite way to celebrate." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2p-Sb-ExP" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="110" width="355" height="70"/>
+                                <rect key="frame" x="10" y="151" width="355" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="oaN-4F-DAI"/>
                                 </constraints>
@@ -815,7 +815,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your favorite way to celebrate?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8j-Sg-wwN" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="210" width="355" height="25"/>
+                                <rect key="frame" x="10" y="251" width="355" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="8w4-ym-TpO"/>
                                 </constraints>
@@ -824,7 +824,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nir-i2-mTR" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="245" width="275" height="35"/>
+                                <rect key="frame" x="50" y="286" width="275" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="1qN-Vw-opg"/>
                                 </constraints>
@@ -836,7 +836,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4f-N4-SOk">
-                                <rect key="frame" x="50" y="280" width="275" height="150"/>
+                                <rect key="frame" x="50" y="321" width="275" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="h3P-Ie-E59"/>
@@ -847,7 +847,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EI-Gd-mly">
-                                <rect key="frame" x="125" y="480" width="125" height="125"/>
+                                <rect key="frame" x="125" y="501" width="125" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="AXS-oP-vLA"/>
                                     <constraint firstAttribute="height" constant="125" id="ah2-MK-tnB"/>
@@ -859,7 +859,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTO-tF-J0j" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="530.5" width="54" height="24"/>
+                                <rect key="frame" x="160.5" y="551.5" width="54" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="8zS-pm-Tv1"/>
                                     <constraint firstAttribute="height" constant="24" id="9gE-kI-I70"/>
@@ -879,13 +879,13 @@
                             <constraint firstItem="6EI-Gd-mly" firstAttribute="centerX" secondItem="GTO-tF-J0j" secondAttribute="centerX" id="JAZ-qL-ztl"/>
                             <constraint firstAttribute="trailing" secondItem="X2p-Sb-ExP" secondAttribute="trailing" constant="10" id="K1l-qa-bj3"/>
                             <constraint firstItem="GTO-tF-J0j" firstAttribute="centerY" secondItem="6EI-Gd-mly" secondAttribute="centerY" id="QvW-1H-YX4"/>
-                            <constraint firstItem="1mm-YY-Kkh" firstAttribute="top" secondItem="keC-Nr-btF" secondAttribute="top" id="Uhm-sM-GSL"/>
                             <constraint firstItem="6EI-Gd-mly" firstAttribute="leading" secondItem="keC-Nr-btF" secondAttribute="leading" constant="125" id="VcU-pw-GZm"/>
                             <constraint firstItem="V4f-N4-SOk" firstAttribute="top" secondItem="nir-i2-mTR" secondAttribute="bottom" id="X9h-zd-X06"/>
-                            <constraint firstItem="6EI-Gd-mly" firstAttribute="top" secondItem="V4f-N4-SOk" secondAttribute="bottom" constant="50" id="bDK-5V-qyF"/>
+                            <constraint firstItem="6EI-Gd-mly" firstAttribute="top" secondItem="V4f-N4-SOk" secondAttribute="bottom" constant="30" id="bDK-5V-qyF"/>
                             <constraint firstItem="X2p-Sb-ExP" firstAttribute="leading" secondItem="Qyd-eo-Svh" secondAttribute="leading" constant="10" id="bce-N1-QNV"/>
                             <constraint firstItem="nir-i2-mTR" firstAttribute="leading" secondItem="keC-Nr-btF" secondAttribute="leading" constant="50" id="crU-sR-KBr"/>
                             <constraint firstItem="keC-Nr-btF" firstAttribute="trailing" secondItem="nir-i2-mTR" secondAttribute="trailing" constant="50" id="fsx-6j-j5x"/>
+                            <constraint firstItem="nir-i2-mTR" firstAttribute="centerY" secondItem="Qyd-eo-Svh" secondAttribute="centerY" constant="-30" id="njg-qW-J6D"/>
                             <constraint firstItem="keC-Nr-btF" firstAttribute="trailing" secondItem="U8j-Sg-wwN" secondAttribute="trailing" constant="10" id="r9l-2V-b9C"/>
                             <constraint firstItem="keC-Nr-btF" firstAttribute="trailing" secondItem="1mm-YY-Kkh" secondAttribute="trailing" id="rui-li-PK2"/>
                             <constraint firstItem="1mm-YY-Kkh" firstAttribute="leading" secondItem="keC-Nr-btF" secondAttribute="leading" id="tei-cI-Tit"/>

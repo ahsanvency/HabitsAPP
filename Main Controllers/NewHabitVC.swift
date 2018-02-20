@@ -25,9 +25,9 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     var whereLblText:String = "Tap to Edit"
     var currentText:String = ""
     
-    var basicStr: String = "Tap Edit Rewards"
-    var intStr: String = "Tap Edit Rewards"
-    var advStr: String = "Tap Edit Rewards"
+    var basicStr: String = "Tap To Edit Rewards"
+    var intStr: String = "Tap To Edit Rewards"
+    var advStr: String = "Tap To Edit Rewards"
     
     var basicReward1: String = ""
     var basicReward2: String = ""
@@ -53,7 +53,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
     @IBOutlet weak var habitPic: UIImageView!
-    
+    @IBOutlet weak var logoutBtn: satinButton!
     
     
     
@@ -430,17 +430,17 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             //upAlert(messages: "Please pick a Habit")
             return false
         }
-        else if (basicStr == "Tap Edit Rewards" || basicStr == ""){
+        else if (basicStr == "Tap To Edit Rewards" || basicStr == ""){
             print("error")
             //upAlert(messages: "Please enter Basic Rewards")
             return false
         }
-        else if (intStr == "Tap Edit Rewards" || intStr == ""){
+        else if (intStr == "Tap To Edit Rewards" || intStr == ""){
             print("error")
             //upAlert(messages: "Please enter Intermediate Rewards")
             return false
         }
-        else if (advStr == "Tap Edit Rewards" || advStr == ""){
+        else if (advStr == "Tap To Edit Rewards" || advStr == ""){
             print("error")
             //upAlert(messages: "Please enter an Advanced Reward")
             return false
@@ -472,6 +472,9 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     func setupScreen(){
+        logoutBtn.layer.borderColor = maroonColor.cgColor
+        logoutBtn.setTitleColor(maroonColor, for: .normal)
+        
         textBox.textColor = maroonColor
         
         habitPic.layer.borderColor = maroonColor.cgColor
