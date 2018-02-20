@@ -23,53 +23,26 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var intrinsicQuestions = [String]()
     var randomPopupNumber = 7
     var firstTimeLoaded = 0
+    let userDefault = UserDefaults.standard
     
     override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.async {
+        
+        
+        
+                DispatchQueue.main.async {
             //HabitCell().reload()
             self.tableView.reloadData()
             //self.notif()
 
         }
-        
-        if firstTimeLoaded == 0{
-            self.animationLabel.isHidden = false
-            UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-                self.tableView.frame.origin.x -= 75
-                self.fakeView.frame.origin.x -= 75
-            }, completion: { _ in
-                UIView.animate(withDuration: 0.75, delay: 0.3, options: [], animations: {
-                    self.tableView.frame.origin.x += 75
-                    self.fakeView.frame.origin.x += 75
-                }, completion: { _ in
-//                    UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-//                        self.tableView.frame.origin.x -= 75
-//                        self.fakeView.frame.origin.x -= 75
-//                    }, completion: { _ in
-//                        UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-//                            self.tableView.frame.origin.x += 75
-//                            self.fakeView.frame.origin.x += 75
-//                        }, completion: { _ in
-//                        })
-//                    })
-                })
-            })
-            UIView.animate(withDuration: 0.75, delay: 1.05, options: [], animations: {
-                self.animationLabel.alpha = 0
-            }, completion: { _ in
-                self.animationLabel.isHidden = true
-            })
-            self.firstTimeLoaded = 0
-        }else {
-            self.animationLabel.isHidden = true
-        }
-        
+
+        runAnimation()
+
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
         }
         
@@ -96,8 +69,44 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 self.present(newViewController, animated: true, completion: nil)
                 return }
             })
+        
+        
     }
-    
+    func runAnimation(){
+        let animationDone = userDefault.bool(forKey: "animationDone")
+        if (animationDone == false) {
+            self.animationLabel.isHidden = false
+            UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
+                self.tableView.frame.origin.x -= 75
+                self.fakeView.frame.origin.x -= 75
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.75, delay: 0.3, options: [], animations: {
+                    self.tableView.frame.origin.x += 75
+                    self.fakeView.frame.origin.x += 75
+                }, completion: { _ in
+                    //                    UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
+                    //                        self.tableView.frame.origin.x -= 75
+                    //                        self.fakeView.frame.origin.x -= 75
+                    //                    }, completion: { _ in
+                    //                        UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
+                    //                            self.tableView.frame.origin.x += 75
+                    //                            self.fakeView.frame.origin.x += 75
+                    //                        }, completion: { _ in
+                    //                        })
+                    //                    })
+                })
+            })
+            UIView.animate(withDuration: 0.75, delay: 1.05, options: [], animations: {
+                self.animationLabel.alpha = 0
+            }, completion: { _ in
+                self.animationLabel.isHidden = true
+            })
+            userDefault.set(true, forKey: "animationDone")
+            
+        }else {
+            self.animationLabel.isHidden = true
+        }
+    }
     //To start there will only be one habit
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
