@@ -196,7 +196,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     }
     
     @objc func onWhyViewTapped(sender: UITapGestureRecognizer){
-        
+        if currentText != ""{
             let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "whyPopup") as! whyPopupVC
             
@@ -216,12 +216,14 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             newViewController.advStr = advStr
             newViewController.currentText = currentText
 
-            self.present(newViewController, animated: true, completion: nil)
+            self.present(newViewController, animated: true, completion: nil)} else {
+            upAlert(messages: "Please select habit first")
+        }
 
     }
     
     @objc func onWhenViewTapped(sender: UITapGestureRecognizer){
-        
+        if currentText != ""{
             let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "whenAddPopup") as! whenAddPopupVC
             
@@ -239,11 +241,13 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             newViewController.advStr = advStr
             newViewController.currentText = currentText
             
-            self.present(newViewController, animated: true, completion: nil)
+            self.present(newViewController, animated: true, completion: nil)} else {
+            upAlert(messages: "Please select habit first")
+        }
     }
     
     @objc func onWhereViewTapped(sender: UITapGestureRecognizer){
-        
+        if currentText != ""{
             let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "whereAddPopup") as! whereAddPopupVC
         
@@ -261,11 +265,13 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             newViewController.intReward2 = intReward2
             newViewController.advStr = advStr
             newViewController.currentText = currentText
-            self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: true, completion: nil)} else {
+    upAlert(messages: "Please select habit first")
+    }
     }
     
     @objc func basicViewTapped(sender: UITapGestureRecognizer){
-        
+        if currentText != ""{
         let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "basicRewardPopup") as! basicRewardPopupVC
         
@@ -285,11 +291,14 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         newViewController.advStr = advStr
         newViewController.currentText = currentText
         
-        self.present(newViewController, animated: true, completion: nil)
+            self.present(newViewController, animated: true, completion: nil) } else {
+            upAlert(messages: "Please select habit first")
+        }
+
     }
     
     @objc func intViewTapped(sender: UITapGestureRecognizer){
-        
+        if currentText != ""{
         let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "intRewardPopup") as! intRewardsPopupVC
         
@@ -309,11 +318,14 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         newViewController.advStr = advStr
         newViewController.currentText = currentText
         
-        self.present(newViewController, animated: true, completion: nil)
+        self.present(newViewController, animated: true, completion: nil)} else {
+    upAlert(messages: "Please select habit first")
+    }
+
     }
     
     @objc func advViewTapped(sender: UITapGestureRecognizer){
-        
+        if currentText != ""{
         let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "advRewardPopup") as! advRewardsPopup
         
@@ -332,7 +344,9 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         newViewController.advStr = advStr
         newViewController.currentText = currentText
         
-        self.present(newViewController, animated: true, completion: nil)
+            self.present(newViewController, animated: true, completion: nil)} else {
+            upAlert(messages: "Please select habit first")
+        }
     }
     
     @IBAction func addHabit(_ sender: Any) {
