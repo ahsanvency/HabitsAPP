@@ -24,7 +24,7 @@ class whenAddPopupVC: UIViewController{
     var basicStr: String?
     var intStr: String?
     var advStr: String?
-    
+
     var basicReward1: String?
     var basicReward2: String?
     
@@ -89,6 +89,7 @@ class whenAddPopupVC: UIViewController{
             daysOfWeekStr += daysOfWeekList[x] + " "
         }
         var timeStr = ""
+        //handles formatting time
         if hour > 11 {
             if hour > 12{
                 timeStr += String(hour - 12) + ":"

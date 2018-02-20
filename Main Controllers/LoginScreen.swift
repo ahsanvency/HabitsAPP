@@ -62,9 +62,10 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     
     @IBAction func facebookBtn(_ sender: Any) {
         let facebookLogin = FBSDKLoginManager()
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+        facebookLogin.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) in
             if error == nil {
                 self.loginSuccess(messages: "Logged In");
+                print(result)
             }
             let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
             self.firebaseAuth(credential)

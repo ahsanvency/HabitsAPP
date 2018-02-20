@@ -80,7 +80,11 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView == basicPicker1{
+            self.basicField1.endEditing(true)
             basicReward1 = self.listOfBasicRewards1[row]
+            if basicReward1 == "Other"{
+                self.basicField1.becomeFirstResponder()
+            }
             self.basicField1.text = basicReward1!
             self.basicPicker1.isHidden = true
             self.basicField2.isHidden = false
@@ -88,6 +92,9 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             
         }else if pickerView == basicPicker2{
             basicReward2 = self.listOfBasicRewards2[row]
+            if basicReward2 == "Other"{
+                self.basicField2.becomeFirstResponder()
+            }
             self.basicField2.text = basicReward2
             self.basicPicker2.isHidden = true
             self.basicField1.isEnabled = true
@@ -99,13 +106,36 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             self.basicPicker1.isHidden = false
             self.basicField2.isHidden = true
             basicField2.isEnabled = false
-            textField.endEditing(true)
+            if basicReward1 == "Other"{
+                
+            } else {
+                textField.endEditing(true)
+            }
+            
         }
         if textField == self.basicField2{
             self.basicPicker2.isHidden = false
             textField.endEditing(true)
             basicField1.isEnabled = false
+            if basicReward2 == "Other"{
+                
+            } else {
+                textField.endEditing(true)
+            }
         }
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.basicField1 {
+            basicReward1 = textField.text
+        }
+        if textField == self.basicField2{
+            basicReward2 = textField.text
+        }
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.basicField1.endEditing(true)
+        self.basicField2.endEditing(true)
     }
     
     

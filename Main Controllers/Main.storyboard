@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RYe-QU-wGA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -778,7 +778,7 @@
                                     <outlet property="delegate" destination="aWf-MG-rFl" id="5H2-wB-RaW"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Left When Habit Completed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZu-Dj-ENM" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Left When Habit Completed" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZu-Dj-ENM" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="205" y="397" width="160" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="F8u-09-ogD"/>
@@ -1526,6 +1526,6 @@
         <image name="loginactual" width="287" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4WS-j3-O85"/>
+        <segue reference="47N-rc-6Fl"/>
     </inferredMetricsTieBreakers>
 </document>

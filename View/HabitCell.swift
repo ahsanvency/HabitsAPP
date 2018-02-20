@@ -66,7 +66,7 @@ class HabitCell: UITableViewCell {
                 
                 
                 //updating when feild
-                let daysDict: Dictionary = [1:"Sun",2:"Mon",3:"Tue",4:"Wed",5:"Thu",6:"Fri",7:"Sat"]
+                let daysDict: Dictionary = [0:"Sat",1:"Sun",2:"Mon",3:"Tue",4:"Wed",5:"Thu",6:"Fri"]
                 
                 func getDayOfWeek()->Int {
                     let time = Date()
@@ -187,6 +187,7 @@ class HabitCell: UITableViewCell {
                             gotWorkOut = true
                             
                         } else if lowerDays.count != 0 {
+                            print(lowerDays)
                             self.whenLbl.text = daysDict[lowerDays[0]]! + " " + fbNewTime
                             gotWorkOut = true
                             
