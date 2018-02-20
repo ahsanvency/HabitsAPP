@@ -32,7 +32,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 DispatchQueue.main.async {
             //HabitCell().reload()
             self.tableView.reloadData()
-            //self.notif()
+            self.notif()
 
         }
 
@@ -43,11 +43,12 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
+            
         }
-        
-        
-        
+
+        //title
         let myGradient = UIImage(named: "textMainScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
@@ -56,8 +57,6 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             return
         }
         let uid = user.uid
-//        var ref: DatabaseReference!
-//        ref = Database.database().reference()
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
@@ -67,10 +66,10 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
                 self.present(newViewController, animated: true, completion: nil)
-                return }
-            })
-        
-        
+                return
+            }
+        })
+
     }
     func runAnimation(){
         let animationDone = userDefault.bool(forKey: "animationDone")
@@ -255,21 +254,67 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func notif(){
+        guard let user = Auth.auth().currentUser else {
+            print("User not found")
+            return
+        }
+        let uid = user.uid
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        
+        DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            
+            //getting habit key
+            guard let firstKey = value?.allKeys[0] else {
+                print("n")
+                return }
+            //using habit key to get dict
+            let firstDict = value![firstKey] as! Dictionary<String,Any>
+            let fbTime  =  firstDict["When"] as? String
+            let fbParseTime = fbTime?.split(separator: " ")//
+            let fbLength = fbParseTime?.count
+            let fbTimeVal = fbParseTime![fbLength! - 2 ..< fbLength! ]
+            var fbTimeArray = [String]()
+            var fbNewTime = ""
+            for x in fbTimeVal {
+                fbTimeArray.append(String(x))
+                fbNewTime += x + " "
+            }
+            //fb values
+            guard let currentHabitTimeMin =  Int(fbTimeArray[0].split(separator: ":")[1]) else {
+                print("error")
+                return
+            }
+            guard let  currentHabitTimeHours = Int(fbTimeArray[0].split(separator: ":")[0]) else {
+                print("error")
+                return
+            }
+            
+            print(currentHabitTimeMin)
+            print(currentHabitTimeHours)
         //Creates the notification
         let content = UNMutableNotificationContent()
-        content.title = "The 5 seconds are up!"
-        content.subtitle = "They are up now"
-        content.body = "The 5 seconds are really up!!!!"
+        content.title = "Reminder"
+//        content.subtitle = "They are up now"
+        content.body = "Your habit starts in one hour"
         //App icon for the badge
         content.badge = 1
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+        var date = DateComponents()
+        date.hour = currentHabitTimeHours
+        date.minute = currentHabitTimeMin
+        let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
         //Adds to the notification center which has the job of displaying it
         
         UNUserNotificationCenter.current().add(request) { (error) in
         }
+            
+            })
     }
 }
+
 
 class CustomProgressView: UIProgressView {
     
