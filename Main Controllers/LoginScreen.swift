@@ -61,16 +61,9 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func facebookBtn(_ sender: Any) {
-//        let facebookLogin = FBSDKLoginManager()
-//        facebookLogin.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) in
-//            if error == nil {
-//                self.loginSuccess(messages: "Logged In");
-//                print(result)
-//                print("result")
-//            }
-//        }
+
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) -> Void in
+        fbLoginManager.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) -> Void in
             if (error == nil){
                 let fbloginresult : FBSDKLoginManagerLoginResult = result!
                 if(fbloginresult.grantedPermissions.contains("email"))
@@ -82,18 +75,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         }
     }
     func getFBUserData(){
-//        if((FBSDKAccessToken.current()) != nil){
-//            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email"]).start(completionHandler: { (connection, result, error) -> Void in
-//                if (error == nil){
-//                    //everything works print the user data
-//                    print(result)
-//                    let data: [String:AnyObject] = (result as? [String : AnyObject])!
-//                    print(data)
-//                    let email: String = data["email"]! as! String
-//                    print(email)
-//                }
-//            })
-//        }
+
         let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"first_name,email, picture.type(large)"])
         
         graphRequest.start(completionHandler: { (connection, result, error) -> Void in
@@ -113,6 +95,8 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
             }
         })
     }
+    
+    
     func firebaseAuth(_ credential: AuthCredential){
         Auth.auth().signIn(with: credential) { (user, error) in
             if let user = user {

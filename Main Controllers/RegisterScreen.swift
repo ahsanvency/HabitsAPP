@@ -68,16 +68,42 @@ class RegisterScreen: UIViewController {
     
     //Facebook login button
     @IBAction func facebookLogin(_ sender: Any) {
-        let facebookLogin = FBSDKLoginManager()
-        
-        facebookLogin.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
-            self.loginSuccess(messages: "Logged In")
-            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            self.firebaseAuth(credential)
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) -> Void in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result!
+                if(fbloginresult.grantedPermissions.contains("email"))
+                {
+                    self.getFBUserData()
+                    
+                }
+            }
         }
     }
     
 
+    func getFBUserData(){
+        
+        let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"first_name,email, picture.type(large)"])
+        
+        graphRequest.start(completionHandler: { (connection, result, error) -> Void in
+            
+            if ((error) != nil)
+            {
+                print("Error: \(error)")
+            }
+            else
+            {
+                let data:[String:AnyObject] = result as! [String : AnyObject]
+                print(data)
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                self.firebaseAuth(credential)
+                
+                self.loginSuccess(messages: "Logged In");
+            }
+        })
+    }
+    
     
     //Currently dont know how to get the email of the user when they login with facebook, instead of uploading the provider its better to upload the email and name
     func firebaseAuth(_ credential: AuthCredential){
@@ -86,8 +112,9 @@ class RegisterScreen: UIViewController {
                 
                 //How we get the name of the person from facebook
                 FBSDKProfile.loadCurrentProfile(completion: {(profile, error) -> Void in
+                    
                     if let name = profile?.name{
-                        let userData = ["name" : name, "provider" : credential.provider]
+                        let userData = ["name" : name, "id" : profile?.userID]
                         self.completeSignIn(id: user.uid, userData: userData as Dictionary<String, AnyObject>)
                     }
                 })
