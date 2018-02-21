@@ -82,7 +82,7 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         if pickerView == basicPicker1{
 
             basicReward1 = self.listOfBasicRewards1[row]
-            
+    
             if basicReward1 == "Other"{
                 self.basicField1.becomeFirstResponder()
             }
