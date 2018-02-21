@@ -83,7 +83,7 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             //            self.basicField1.endEditing(true)
             basicReward1 = self.listOfBasicRewards1[row]
             if basicReward1 == "Other"{
-                self.basicField1.becomeFirstResponder()
+//                self.basicField1.becomeFirstResponder()
             }
             self.basicField1.text = basicReward1
             
@@ -106,14 +106,16 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.basicField1{
-            //            self.basicPicker1.isHidden = false
-            //            self.basicField2.isHidden = true
-            //            basicField2.isEnabled = false
-            
+                        self.basicPicker1.isHidden = false
+                        self.basicField2.isHidden = true
+//            self.basicField2.endEditing(true)
+//                        basicField2.isEnabled = false
+            textField.resignFirstResponder()
+
             if basicReward1 == "Other"{
                 
             } else {
-                //                textField.endEditing(true)
+                                textField.endEditing(true)
             }
             
         }
