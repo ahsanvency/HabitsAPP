@@ -22,7 +22,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var intrinsicQuestions = [String]()
     var randomPopupNumber = 7
-    var firstTimeLoaded = 0
+    var firstTimeLoaded: Int?
     let userDefault = UserDefaults.standard
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,7 +73,8 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     func runAnimation(){
         let animationDone = userDefault.bool(forKey: "animationDone")
-        if (animationDone == false) {
+//        if (animationDone == false) {
+        if firstTimeLoaded == 1{
             self.animationLabel.isHidden = false
             UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
                 self.tableView.frame.origin.x -= 75

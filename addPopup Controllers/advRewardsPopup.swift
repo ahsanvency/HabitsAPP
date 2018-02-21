@@ -34,16 +34,17 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var advRewardField: fancyField!
     @IBOutlet weak var advRewardPicker: UIPickerView!
     
-    var listOfAdvRewards = ["New Tatto or Piercing", "Pedicure", "Take a Day Off", "Go Shopping", "Party", "Go Camping", "Weekend Trip","Other"]
+    var listOfAdvRewards = ["New Tatto or Piercing", "Pedicure", "Take a Day Off", "Go Shopping", "Party", "Go Camping", "Weekend Trip"]
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        advRewardField.text = "Pick your advanced reward below."
+        advRewardField.text = "Tap to pick an advanced reward."
         advRewardField.textColor = maroonColor
         listOfAdvRewards.sort()
+        listOfAdvRewards.append("Enter Custom Reward Above")
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
@@ -71,7 +72,7 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         advReward = self.listOfAdvRewards[row]
-        if advReward == "Other"{
+        if advReward == "Enter Custom Reward Above"{
             self.advRewardField.becomeFirstResponder()
         }
         self.advRewardField.text = advReward!
@@ -105,7 +106,8 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     
     @IBAction func saveButton(_ sender: Any) {
-        if advRewardField.text != "" {
+        if advRewardField.text != "Tap to pick an advanced reward." && advRewardField.text != "Enter Custom Reward Above"{
+            advStr = advRewardField.text
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let advRewardInfo = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
             advRewardInfo.whyLblText = whyLblText!
@@ -122,12 +124,21 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
             advRewardInfo.currentText = currentText!
             advRewardInfo.editButtonPressed = 1
             self.present(advRewardInfo,animated: true, completion: nil)
+        }else{
+            self.upAlert(messages: "Please enter a reward.")
         }
     }
     
     
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func upAlert (messages: String) {
+        let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
 }

@@ -35,9 +35,9 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var basicPicker2: UIPickerView!
     
     
-    var listOfBasicRewards1 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers", "Other", "Light Candles"]
+    var listOfBasicRewards1 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers", "Light Candles"]
     
-    var listOfBasicRewards2 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers", "Other", "Light Candles"]
+    var listOfBasicRewards2 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers", "Light Candles"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,7 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
             basicReward1 = self.listOfBasicRewards1[row]
     
-            if basicReward1 == "Other"{
+            if basicReward1 == "Enter Custom Reward Above"{
                 self.basicField1.becomeFirstResponder()
             }
             self.basicField1.text = basicReward1
@@ -94,9 +94,9 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         }
         else if pickerView == basicPicker2{
             
-            basicReward2 = listOfBasicRewards2[row]
+            basicReward2 = self.listOfBasicRewards2[row]
             
-            if basicReward2 == "Other"{
+            if basicReward2 == "Enter Custom Reward Above"{
                 self.basicField2.becomeFirstResponder()
             }
             self.basicField2.text = basicReward2
@@ -110,7 +110,7 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             self.basicField2.isHidden = true
             basicField2.isEnabled = false
 
-            if basicReward1 != "Other"{
+            if basicReward1 != "Enter Custom Reward Above"{
                 self.basicPicker1.isHidden = false
                 textField.endEditing(true)
             }
@@ -120,7 +120,7 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             
             basicField1.isEnabled = true
             
-            if basicReward2 != "Other" {
+            if basicReward2 != "Enter Custom Reward Above" {
                 self.basicPicker2.isHidden = false
                 textField.endEditing(true)
             }
@@ -142,7 +142,9 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     
     @IBAction func saveButton(_ sender: Any) {
-        if basicField1.text != "Pick your basic reward below." && basicField2.text != "Pick your basic reward below."{
+        if basicField1.text != "Tap to pick a basic reward." && basicField2.text != "Tap to pick a basic reward." && basicField1.text != "Enter Custom Reward Above" && basicField2.text != "Enter Custom Reward Above"{
+            basicReward1 = basicField1.text
+            basicReward2 = basicField2.text
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let basicRewardInfo = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
             basicRewardInfo.whyLblText = whyLblText!
@@ -158,6 +160,8 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             basicRewardInfo.advStr = advStr!
             basicRewardInfo.currentText = currentText!
             self.present(basicRewardInfo,animated: true, completion: nil)
+        }else{
+            self.upAlert(messages: "Please enter both rewards.")
         }
     }
     
@@ -166,12 +170,21 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     func setupScreen(){
-        basicField1.text = "Pick your basic reward below."
-        basicField2.text = "Pick your basic reward below."
+        basicField1.text = "Tap to pick a basic reward."
+        basicField2.text = "Tap to pick a basic reward."
         basicField1.textColor = maroonColor
         basicField2.textColor = maroonColor
         listOfBasicRewards1.sort()
         listOfBasicRewards2.sort()
+        listOfBasicRewards1.append("Enter Custom Reward Above")
+        listOfBasicRewards2.append("Enter Custom Reward Above")
+    }
+    
+    func upAlert (messages: String) {
+        let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
 }

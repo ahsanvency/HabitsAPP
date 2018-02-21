@@ -417,42 +417,42 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func validateTextFeilds() -> Bool{
         if (whyLbl.text == "Tap to Edit") {
             //handel the errors properly
-            print("error")
+            self.upAlert(messages: "Please fill out Why.")
             return false
         }
         else if (whenLbl.text == "Tap to Edit"){
-            print("error")
-            //upAlert(messages: "Please fill out When.")
+            
+            self.upAlert(messages: "Please fill out When.")
             return false
         }
         else if (whereLbl.text == "Tap to Edit"){
-            print("error")
-            //upAlert(messages: "Please fill out Where.")
+            
+            self.upAlert(messages: "Please fill out Where.")
             return false
         }
         else if (habitName == ""){
-            print("error")
-            //upAlert(messages: "Please pick a Habit")
+            
+            self.upAlert(messages: "Please pick a Habit")
             return false
         }
         else if (basicStr == "Tap To Edit Rewards" || basicStr == ""){
-            print("error")
-            //upAlert(messages: "Please enter Basic Rewards")
+            
+            self.upAlert(messages: "Please enter Basic Rewards")
             return false
         }
         else if (intStr == "Tap To Edit Rewards" || intStr == ""){
-            print("error")
-            //upAlert(messages: "Please enter Intermediate Rewards")
+            
+            self.upAlert(messages: "Please enter Intermediate Rewards")
             return false
         }
         else if (advStr == "Tap To Edit Rewards" || advStr == ""){
-            print("error")
-            //upAlert(messages: "Please enter an Advanced Reward")
+            
+            self.upAlert(messages: "Please enter an Advanced Reward")
             return false
         }
         else if textBox.text == "Pick your habit below"{
-            print("error")
-            //upAlert(messages: "Please pick a Habit")
+            
+            self.upAlert(messages: "Please pick a Habit")
             return false
         }else {
             print("GOOD")

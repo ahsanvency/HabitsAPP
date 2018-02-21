@@ -21,6 +21,8 @@ class rewardsVC: UIViewController {
     var isSpinning = false
     var stoppedLeft: Int?
     
+    var firstTimeLoaded: Int?
+    
     struct slotComp{
         var image: UIImage!
         var reward: String!

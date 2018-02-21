@@ -33,8 +33,8 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var intField2: fancyField!
     @IBOutlet weak var intPicker2: UIPickerView!
     
-    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book","Other"]
-    var listOfIntRewards2 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book","Other"]
+    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
+    var listOfIntRewards2 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
     
     
     override func viewDidLoad() {
@@ -81,7 +81,7 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         if pickerView == intPicker1{
             intReward1 = self.listOfIntRewards1[row]
             
-            if intReward1 == "Other"{
+            if intReward1 == "Enter Custom Reward Above"{
                 self.intField1.becomeFirstResponder()
             }
             self.intField1.text = intReward1!
@@ -91,7 +91,7 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             
         }else if pickerView == intPicker2{
             intReward2 = self.listOfIntRewards2[row]
-            if intReward2 == "Other"{
+            if intReward2 == "Enter Custom Reward Above"{
                 self.intField2.becomeFirstResponder()
             }
             self.intField2.text = intReward2
@@ -105,14 +105,14 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             self.intPicker1.isHidden = false
             self.intField2.isHidden = true
             
-            if intReward1 != "Other"{
+            if intReward1 != "Enter Custom Reward Above"{
             intField2.isEnabled = false
                 textField.endEditing(true)}
             
         }
         if textField == self.intField2{
             self.intPicker2.isHidden = false
-            if intReward2 != "Other"{
+            if intReward2 != "Enter Custom Reward Above"{
             textField.endEditing(true)
                 intField1.isEnabled = false}
         }
@@ -132,7 +132,9 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     @IBAction func saveButton(_ sender: Any) {
-        if intField1.text != "Pick your intermediate reward below." && intField2.text != "Pick your intermediate reward below."{
+        if intField1.text != "Tap to pick an intermediate reward." && intField2.text != "Tap to pick an intermediate reward." && intField1.text != "Enter Custom Reward Above" && intField2.text != "Enter Custom Reward Above"{
+            intReward1 = intField1.text
+            intReward2 = intField2.text
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let intRewardInfo = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
             intRewardInfo.whyLblText = whyLblText!
@@ -148,6 +150,8 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             intRewardInfo.advStr = advStr!
             intRewardInfo.currentText = currentText!
             self.present(intRewardInfo,animated: true, completion: nil)
+        }else{
+            self.upAlert(messages: "Please enter both rewards.")
         }
     }
     
@@ -156,11 +160,20 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     func setupScreen(){
-        intField1.text = "Pick your intermediate reward below."
-        intField2.text = "Pick your intermediate reward below."
+        intField1.text = "Tap to pick an intermediate reward."
+        intField2.text = "Tap to pick an intermediate reward."
         intField1.textColor = maroonColor
         intField2.textColor = maroonColor
         listOfIntRewards1.sort()
         listOfIntRewards2.sort()
+        listOfIntRewards1.append("Enter Custom Reward Above")
+        listOfIntRewards2.append("Enter Custom Reward Above")
+    }
+    
+    func upAlert (messages: String) {
+        let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
 }
