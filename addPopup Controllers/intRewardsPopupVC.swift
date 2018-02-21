@@ -33,8 +33,8 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet weak var intField2: fancyField!
     @IBOutlet weak var intPicker2: UIPickerView!
     
-    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
-    var listOfIntRewards2 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
+    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book","Other"]
+    var listOfIntRewards2 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book","Other"]
     
     
     override func viewDidLoad() {
@@ -80,6 +80,10 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
         if pickerView == intPicker1{
             intReward1 = self.listOfIntRewards1[row]
+            
+            if intReward1 == "Other"{
+                self.intField1.becomeFirstResponder()
+            }
             self.intField1.text = intReward1!
             self.intPicker1.isHidden = true
             self.intField2.isHidden = false
@@ -87,6 +91,9 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             
         }else if pickerView == intPicker2{
             intReward2 = self.listOfIntRewards2[row]
+            if intReward2 == "Other"{
+                self.intField2.becomeFirstResponder()
+            }
             self.intField2.text = intReward2
             self.intPicker2.isHidden = true
             self.intField1.isEnabled = true
@@ -97,16 +104,32 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         if textField == self.intField1{
             self.intPicker1.isHidden = false
             self.intField2.isHidden = true
+            
+            if intReward1 != "Other"{
             intField2.isEnabled = false
-            textField.endEditing(true)
+                textField.endEditing(true)}
+            
         }
         if textField == self.intField2{
             self.intPicker2.isHidden = false
+            if intReward2 != "Other"{
             textField.endEditing(true)
-            intField1.isEnabled = false
+                intField1.isEnabled = false}
         }
     }
-    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.intField1 {
+            intReward1 = textField.text
+        }
+        if textField == self.intField2{
+            intReward2 = textField.text
+        }
+        
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.intField2.endEditing(true)
+        self.intField1.endEditing(true)
+    }
     
     @IBAction func saveButton(_ sender: Any) {
         if intField1.text != "Pick your intermediate reward below." && intField2.text != "Pick your intermediate reward below."{

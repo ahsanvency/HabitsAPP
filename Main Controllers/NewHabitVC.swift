@@ -218,7 +218,12 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             
             newViewController.whyLblText = whyLblText
             newViewController.habitName = habitName.lowercased() + "?"
-            newViewController.intrinsicStatement = intrinsicDict[habitName.lowercased()]!
+            if let  intrinDictVal = intrinsicDict[habitName.lowercased()]{
+                newViewController.intrinsicStatement = intrinDictVal
+            } else {
+                 newViewController.intrinsicStatement = habitName
+            }
+            
             newViewController.habitRow = habitRow
             newViewController.weekArray = weekArray
             newViewController.whenLblText = whenLblText

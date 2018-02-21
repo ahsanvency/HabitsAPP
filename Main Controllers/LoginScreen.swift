@@ -61,16 +61,42 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func facebookBtn(_ sender: Any) {
-        let facebookLogin = FBSDKLoginManager()
-        facebookLogin.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) in
-            if error == nil {
-                self.loginSuccess(messages: "Logged In");
-                print(result)
+
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) -> Void in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result!
+                if(fbloginresult.grantedPermissions.contains("email"))
+                {
+                    self.getFBUserData()
+                    
+                }
             }
-            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-            self.firebaseAuth(credential)
         }
     }
+    func getFBUserData(){
+
+        let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"first_name,email, picture.type(large)"])
+        
+        graphRequest.start(completionHandler: { (connection, result, error) -> Void in
+            
+            if ((error) != nil)
+            {
+                print("Error: \(error)")
+            }
+            else
+            {
+                let data:[String:AnyObject] = result as! [String : AnyObject]
+                print(data)
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                self.firebaseAuth(credential)
+
+                self.loginSuccess(messages: "Logged In");
+            }
+        })
+    }
+    
+    
     func firebaseAuth(_ credential: AuthCredential){
         Auth.auth().signIn(with: credential) { (user, error) in
             if let user = user {

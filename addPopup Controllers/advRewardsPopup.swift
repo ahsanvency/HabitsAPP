@@ -34,7 +34,7 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     @IBOutlet weak var advRewardField: fancyField!
     @IBOutlet weak var advRewardPicker: UIPickerView!
     
-    var listOfAdvRewards = ["New Tatto or Piercing", "Pedicure", "Take a Day Off", "Go Shopping", "Party", "Go Camping", "Weekend Trip"]
+    var listOfAdvRewards = ["New Tatto or Piercing", "Pedicure", "Take a Day Off", "Go Shopping", "Party", "Go Camping", "Weekend Trip","Other"]
     
     
     
@@ -71,6 +71,9 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         advReward = self.listOfAdvRewards[row]
+        if advReward == "Other"{
+            self.advRewardField.becomeFirstResponder()
+        }
         self.advRewardField.text = advReward!
         advStr = advReward
         self.advRewardPicker.isHidden = true
@@ -78,10 +81,28 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.advRewardField {
-            self.advRewardPicker.isHidden = false
-            textField.endEditing(true)
+            
+
+            if advReward != "Other"{
+                self.advRewardPicker.isHidden = false
+                textField.endEditing(true)
+            } 
+
         }
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+            advReward = textField.text
+
+
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.advRewardField.endEditing(true)
+
+    }
+    
     
     @IBAction func saveButton(_ sender: Any) {
         if advRewardField.text != "" {
