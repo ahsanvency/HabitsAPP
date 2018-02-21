@@ -68,8 +68,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
 //                print(result)
 //                print("result")
 //            }
-//            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-//            self.firebaseAuth(credential)
 //        }
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["email"], from: self) { (result, error) -> Void in
@@ -78,6 +76,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
                 if(fbloginresult.grantedPermissions.contains("email"))
                 {
                     self.getFBUserData()
+                    
                 }
             }
         }
@@ -107,7 +106,10 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
             {
                 let data:[String:AnyObject] = result as! [String : AnyObject]
                 print(data)
-                
+                let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                self.firebaseAuth(credential)
+
+                self.loginSuccess(messages: "Logged In");
             }
         })
     }
