@@ -83,13 +83,13 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             //            self.basicField1.endEditing(true)
             basicReward1 = self.listOfBasicRewards1[row]
             if basicReward1 == "Other"{
-//                self.basicField1.becomeFirstResponder()
+                self.basicField1.becomeFirstResponder()
             }
             self.basicField1.text = basicReward1
             
-            //            self.basicPicker1.isHidden = true
-            //            self.basicField2.isHidden = false
-            //            self.basicField2.isEnabled = true
+                        self.basicPicker1.isHidden = true
+                        self.basicField2.isHidden = false
+                        self.basicField2.isEnabled = true
             
         }else if pickerView == basicPicker2{
             basicReward2 = listOfBasicRewards2[row]
@@ -106,26 +106,22 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.basicField1{
-                        self.basicPicker1.isHidden = false
-                        self.basicField2.isHidden = true
-//            self.basicField2.endEditing(true)
-//                        basicField2.isEnabled = false
-            textField.resignFirstResponder()
+            
+            self.basicField2.isHidden = true
+            basicField2.isEnabled = false
 
-            if basicReward1 == "Other"{
-                
-            } else {
-                                textField.endEditing(true)
+            if basicReward1 != "Other"{
+                self.basicPicker1.isHidden = false
+                textField.endEditing(true)
             }
             
         }
         if textField == self.basicField2{
-            self.basicPicker2.isHidden = false
             
-            //            basicField1.isEnabled = false
-            if basicReward2 == "Other"{
-                
-            } else {
+            basicField1.isEnabled = true
+            
+            if basicReward2 != "Other" {
+                self.basicPicker2.isHidden = false
                 textField.endEditing(true)
             }
         }
