@@ -80,27 +80,27 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView == basicPicker1{
-            //            self.basicField1.endEditing(true)
+
             basicReward1 = self.listOfBasicRewards1[row]
+            
             if basicReward1 == "Other"{
                 self.basicField1.becomeFirstResponder()
             }
             self.basicField1.text = basicReward1
+            self.basicPicker1.isHidden = true
+            self.basicField2.isHidden = false
+            self.basicField2.isEnabled = true
             
-                        self.basicPicker1.isHidden = true
-                        self.basicField2.isHidden = false
-                        self.basicField2.isEnabled = true
+        }
+        else if pickerView == basicPicker2{
             
-        }else if pickerView == basicPicker2{
             basicReward2 = listOfBasicRewards2[row]
+            
             if basicReward2 == "Other"{
-                //                self.resignFirstResponder()
                 self.basicField2.becomeFirstResponder()
             }
             self.basicField2.text = basicReward2
-            
             self.basicPicker2.isHidden = true
-            //            self.basicField1.isEnabled = true
         }
     }
     
