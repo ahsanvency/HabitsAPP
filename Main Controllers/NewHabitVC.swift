@@ -271,8 +271,13 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         if currentText != ""{
             let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "whereAddPopup") as! whereAddPopupVC
-        
-            newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
+
+            if let dicVal = listDict[habitName.lowercased()] {
+                newViewController.habitName = dicVal + "?"
+            } else {
+                newViewController.habitName = habitName
+            }
+            
         
             newViewController.whyLblText = whyLblText
             newViewController.weekArray = weekArray
@@ -297,7 +302,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "basicRewardPopup") as! basicRewardPopupVC
         
         
-        newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
+            if let dicVal = listDict[habitName.lowercased()] {
+                newViewController.habitName = dicVal + "?"
+            } else {
+                newViewController.habitName = habitName
+            }
         
         newViewController.whyLblText = whyLblText
         newViewController.weekArray = weekArray
@@ -324,7 +333,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "intRewardPopup") as! intRewardsPopupVC
         
         
-        newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
+            if let dicVal = listDict[habitName.lowercased()] {
+                newViewController.habitName = dicVal + "?"
+            } else {
+                newViewController.habitName = habitName
+            }
         
         newViewController.whyLblText = whyLblText
         newViewController.weekArray = weekArray
@@ -350,7 +363,11 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let storyBoard: UIStoryboard = UIStoryboard(name: "addPopups", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "advRewardPopup") as! advRewardsPopup
         
-        newViewController.habitName =  listDict[habitName.lowercased()]! + "?"
+            if let dicVal = listDict[habitName.lowercased()] {
+                newViewController.habitName = dicVal + "?"
+            } else {
+                newViewController.habitName = habitName
+            }
 
         newViewController.whyLblText = whyLblText
         newViewController.weekArray = weekArray
