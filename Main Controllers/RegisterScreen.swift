@@ -14,8 +14,6 @@ import SwiftKeychainWrapper
 
 class RegisterScreen: UIViewController {
     
-    
-    
     //Outlets
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var backBtn: UIButton!
