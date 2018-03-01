@@ -168,6 +168,24 @@ class RegisterScreen: UIViewController {
         emailField.layer.borderWidth = 0
         passwordField.layer.borderWidth = 0
         confirmPasswordField.layer.borderWidth = 0
+        nameField.backgroundColor = seaFoamColor
+        emailField.backgroundColor = seaFoamColor
+        passwordField.backgroundColor = seaFoamColor
+        confirmPasswordField.backgroundColor = seaFoamColor
+        nameField.textColor = satinColor
+        emailField.textColor = satinColor
+        passwordField.textColor = satinColor
+        confirmPasswordField.textColor = satinColor
+        
+        
+        nameField.attributedPlaceholder = NSAttributedString(string: "Name",
+                                                              attributes: [NSAttributedStringKey.foregroundColor: satinColor])
+        emailField.attributedPlaceholder = NSAttributedString(string: "Email",
+                                                              attributes: [NSAttributedStringKey.foregroundColor: satinColor])
+        passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                              attributes: [NSAttributedStringKey.foregroundColor: satinColor])
+        confirmPasswordField.attributedPlaceholder = NSAttributedString(string: "Confirm Password",
+                                                              attributes: [NSAttributedStringKey.foregroundColor: satinColor])
         passwordField.isSecureTextEntry = true
         confirmPasswordField.isSecureTextEntry = true
         nameField.autocorrectionType = .no
