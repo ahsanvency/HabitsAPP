@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A05E5702047728600FDB31C /* hollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E56F2047728600FDB31C /* hollowButton.swift */; };
 		3A0F89B7201480FE0062B55C /* addPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F89B6201480FE0062B55C /* addPopups.storyboard */; };
 		3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */; };
 		3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */; };
 		3A13731220052FEB000BDD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13731120052FEB000BDD6F /* DataService.swift */; };
+		3A1FEB2620479C0600E360CE /* newLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1FEB2520479C0600E360CE /* newLoginVC.swift */; };
 		3A2BB1D0201FDF8A00E39CEB /* RewardsPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */; };
 		3A3DA57F1FFB2EF5004C1143 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */; };
 		3A3DA5811FFB2F14004C1143 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5801FFB2F14004C1143 /* RegisterScreen.swift */; };
@@ -51,10 +53,12 @@
 
 /* Begin PBXFileReference section */
 		2123263985D85DAAB042486F /* Pods-Habits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habits.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habits/Pods-Habits.debug.xcconfig"; sourceTree = "<group>"; };
+		3A05E56F2047728600FDB31C /* hollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hollowButton.swift; sourceTree = "<group>"; };
 		3A0F89B6201480FE0062B55C /* addPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addPopups.storyboard; sourceTree = "<group>"; };
 		3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenEditPopupVC.swift; sourceTree = "<group>"; };
 		3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereEditPopupVC.swift; sourceTree = "<group>"; };
 		3A13731120052FEB000BDD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3A1FEB2520479C0600E360CE /* newLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newLoginVC.swift; sourceTree = "<group>"; };
 		3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsPopupVC.swift; sourceTree = "<group>"; };
 		3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		3A3DA5801FFB2F14004C1143 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA5A3AC1FFB08CE0035A16E /* MainLogin.swift */,
+				3A1FEB2520479C0600E360CE /* newLoginVC.swift */,
 				3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */,
 				3A3DA5801FFB2F14004C1143 /* RegisterScreen.swift */,
 				3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */,
@@ -186,6 +191,7 @@
 				3A9A955C1FFF8E4F00502707 /* HabitCell.swift */,
 				3A918ED82039669C00490104 /* blueButton.swift */,
 				3AF646D02015674B002F86B8 /* fancyButton.swift */,
+				3A05E56F2047728600FDB31C /* hollowButton.swift */,
 				3A918EDA2039671400490104 /* satinButton.swift */,
 				3A918ED020395B9700490104 /* normalLabel.swift */,
 				3A918ECC20395AD500490104 /* coloredLabel.swift */,
@@ -408,6 +414,8 @@
 			files = (
 				3AF47FD62007F50B00F00F42 /* User.swift in Sources */,
 				3A918ED520395DC500490104 /* normalView.swift in Sources */,
+				3A05E5702047728600FDB31C /* hollowButton.swift in Sources */,
+				3A1FEB2620479C0600E360CE /* newLoginVC.swift in Sources */,
 				3A521438203B621E006232FC /* intRewardsPopupVC.swift in Sources */,
 				3A52143A203B6284006232FC /* advRewardsPopup.swift in Sources */,
 				3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */,

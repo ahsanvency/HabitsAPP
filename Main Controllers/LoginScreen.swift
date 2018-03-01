@@ -132,8 +132,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     }
     
     func setupScreen(){
-        loginBtn.layer.borderColor = blueColor.cgColor
-        loginBtn.layer.borderWidth = 2.0
+
         emailField.layer.borderWidth = 0
         passwordField.layer.borderWidth = 0
         passwordField.isSecureTextEntry = true

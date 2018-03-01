@@ -164,8 +164,6 @@ class RegisterScreen: UIViewController {
     }
     
     func setupScreen(){
-        newUserButton.layer.borderColor = blueColor.cgColor
-        newUserButton.layer.borderWidth = 2.0
         nameField.layer.borderWidth = 0
         emailField.layer.borderWidth = 0
         passwordField.layer.borderWidth = 0
