@@ -51,7 +51,7 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = listOfBasicRewards1[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:maroonColor])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:blueColor])
         return myTitle
     }
     
@@ -172,8 +172,6 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     func setupScreen(){
         basicField1.text = "Tap to pick a basic reward."
         basicField2.text = "Tap to pick a basic reward."
-        basicField1.textColor = maroonColor
-        basicField2.textColor = maroonColor
         listOfBasicRewards1.sort()
         listOfBasicRewards2.sort()
         listOfBasicRewards1.append("Enter Custom Reward Above")

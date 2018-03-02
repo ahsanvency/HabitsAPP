@@ -13,12 +13,12 @@ class fancyField: UITextField {
         super.awakeFromNib()
         
         //layer.borderColor = UIColor(red: SHADOW_GRAY, green: SHADOW_GRAY, blue: SHADOW_GRAY, alpha: 0.2).cgColor
-        layer.borderColor = maroonColor.cgColor
-        layer.borderWidth = 1.0
+        layer.borderWidth = 2.0
+        layer.borderColor = satinColor.cgColor
         layer.cornerRadius = 5.0;
         layer.masksToBounds = true;
-        backgroundColor = satinColor
-        textColor = blueColor
+        backgroundColor = seaFoamColor
+        textColor = satinColor
     }
 
 }

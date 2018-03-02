@@ -189,7 +189,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200;
+        return 400;
     }
     
     //This is the menu button thats treated as a logout

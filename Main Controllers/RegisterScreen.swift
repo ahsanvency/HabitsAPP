@@ -25,7 +25,7 @@ class RegisterScreen: UIViewController {
 
     @IBOutlet weak var passwordField: fancyField!
     @IBOutlet weak var confirmPasswordField: fancyField!
-    @IBOutlet weak var newUserButton: fancyButton!
+
     
     
     override func viewDidLoad() {

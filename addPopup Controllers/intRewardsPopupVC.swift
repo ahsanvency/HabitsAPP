@@ -50,7 +50,7 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = listOfIntRewards1[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:maroonColor])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:blueColor])
         return myTitle
     }
     
@@ -162,8 +162,6 @@ class intRewardsPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     func setupScreen(){
         intField1.text = "Tap to pick an intermediate reward."
         intField2.text = "Tap to pick an intermediate reward."
-        intField1.textColor = maroonColor
-        intField2.textColor = maroonColor
         listOfIntRewards1.sort()
         listOfIntRewards2.sort()
         listOfIntRewards1.append("Enter Custom Reward Above")

@@ -42,7 +42,6 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         super.viewDidLoad()
 
         advRewardField.text = "Tap to pick an advanced reward."
-        advRewardField.textColor = maroonColor
         listOfAdvRewards.sort()
         listOfAdvRewards.append("Enter Custom Reward Above")
     }
@@ -57,7 +56,7 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = listOfAdvRewards[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:maroonColor])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:blueColor])
         return myTitle
     }
     

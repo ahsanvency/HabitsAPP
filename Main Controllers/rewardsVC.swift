@@ -112,8 +112,7 @@ class rewardsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        spinBtn.layer.borderWidth = 2.0
-        spinBtn.layer.borderColor = satinColor.cgColor
+        setupScreen()
         
         let myGradient = UIImage(named: "textRewardsScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
@@ -678,6 +677,13 @@ class rewardsVC: UIViewController {
         timerLeft = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateLeft), userInfo: nil, repeats: true)
         timerMiddle = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateMiddle), userInfo: nil, repeats: true)
         timerRight = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateRight), userInfo: nil, repeats: true)
+    }
+    
+    func setupScreen(){
+        spinBtn.backgroundColor = blueColor
+        spinBtn.layer.borderWidth = 2.0
+        spinBtn.layer.borderColor = satinColor.cgColor
+        spinBtn.layer.cornerRadius = 5.0 
     }
 }
 

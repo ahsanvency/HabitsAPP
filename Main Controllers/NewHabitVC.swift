@@ -53,7 +53,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var textBox: UITextField!
     @IBOutlet weak var dropDown: UIPickerView!
     @IBOutlet weak var habitPic: UIImageView!
-    @IBOutlet weak var logoutBtn: satinButton!
+    @IBOutlet weak var logoutBtn: UIButton!
     
     
     
@@ -101,7 +101,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
 
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = list[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:maroonColor])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:satinColor])
         return myTitle
     }
     
@@ -497,10 +497,9 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         logoutBtn.layer.borderColor = maroonColor.cgColor
         logoutBtn.setTitleColor(maroonColor, for: .normal)
         
-        textBox.textColor = maroonColor
-        
-        habitPic.layer.borderColor = maroonColor.cgColor
-        habitPic.layer.borderWidth = 1.0
+        textBox.textColor = satinColor
+        textBox.backgroundColor = seaFoamColor
+        textBox.layer.borderColor = satinColor.cgColor
         
         
         viewInScroll.backgroundColor = seaFoamColor

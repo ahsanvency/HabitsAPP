@@ -11,6 +11,9 @@
 		3A0F89B7201480FE0062B55C /* addPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F89B6201480FE0062B55C /* addPopups.storyboard */; };
 		3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */; };
 		3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */; };
+		3A1290662048D1F300006CD0 /* satinLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1290652048D1F300006CD0 /* satinLineView.swift */; };
+		3A1290682048D44400006CD0 /* fancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1290672048D44400006CD0 /* fancyButton.swift */; };
+		3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1290692048D57E00006CD0 /* Old.storyboard */; };
 		3A13731220052FEB000BDD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13731120052FEB000BDD6F /* DataService.swift */; };
 		3A1FEB2620479C0600E360CE /* newLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1FEB2520479C0600E360CE /* newLoginVC.swift */; };
 		3A2BB1D0201FDF8A00E39CEB /* RewardsPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */; };
@@ -23,13 +26,13 @@
 		3A52143A203B6284006232FC /* advRewardsPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A521439203B6284006232FC /* advRewardsPopup.swift */; };
 		3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */; };
 		3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */; };
-		3A918ECD20395AD500490104 /* coloredLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ECC20395AD500490104 /* coloredLabel.swift */; };
+		3A7CF1092048B548009531B7 /* lineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CF1082048B548009531B7 /* lineView.swift */; };
+		3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CF10A2048BF69009531B7 /* circlePic.swift */; };
 		3A918ED120395B9700490104 /* normalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED020395B9700490104 /* normalLabel.swift */; };
 		3A918ED320395C6800490104 /* titleViewLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED220395C6800490104 /* titleViewLogin.swift */; };
 		3A918ED520395DC500490104 /* normalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED420395DC500490104 /* normalView.swift */; };
 		3A918ED72039601800490104 /* titleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED62039601800490104 /* titleView.swift */; };
 		3A918ED92039669C00490104 /* blueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED82039669C00490104 /* blueButton.swift */; };
-		3A918EDB2039671400490104 /* satinButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918EDA2039671400490104 /* satinButton.swift */; };
 		3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918EDC20396DEA00490104 /* backgroundView.swift */; };
 		3A918EDF203993B000490104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A918EDE203993B000490104 /* Main.storyboard */; };
 		3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A95581FFF8A5C00502707 /* Habit.swift */; };
@@ -46,7 +49,6 @@
 		3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFBE922023EB2D00E03455 /* rewardsVC.swift */; };
 		3AF47FD62007F50B00F00F42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF47FD52007F50B00F00F42 /* User.swift */; };
 		3AF646CF2015663A002F86B8 /* fancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646CE2015663A002F86B8 /* fancyField.swift */; };
-		3AF646D12015674B002F86B8 /* fancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646D02015674B002F86B8 /* fancyButton.swift */; };
 		3AF646D320156C73002F86B8 /* fancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646D220156C73002F86B8 /* fancyView.swift */; };
 		6D8C05CEDA409F1774698B25 /* Pods_Habits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED90BB69D51A410BC14CA8A2 /* Pods_Habits.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,9 @@
 		3A0F89B6201480FE0062B55C /* addPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addPopups.storyboard; sourceTree = "<group>"; };
 		3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenEditPopupVC.swift; sourceTree = "<group>"; };
 		3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereEditPopupVC.swift; sourceTree = "<group>"; };
+		3A1290652048D1F300006CD0 /* satinLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = satinLineView.swift; sourceTree = "<group>"; };
+		3A1290672048D44400006CD0 /* fancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyButton.swift; sourceTree = "<group>"; };
+		3A1290692048D57E00006CD0 /* Old.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Old.storyboard; sourceTree = "<group>"; };
 		3A13731120052FEB000BDD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3A1FEB2520479C0600E360CE /* newLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newLoginVC.swift; sourceTree = "<group>"; };
 		3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsPopupVC.swift; sourceTree = "<group>"; };
@@ -70,13 +75,13 @@
 		3A521439203B6284006232FC /* advRewardsPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advRewardsPopup.swift; sourceTree = "<group>"; };
 		3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitVC.swift; sourceTree = "<group>"; };
 		3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewC.swift; sourceTree = "<group>"; wrapsLines = 0; };
-		3A918ECC20395AD500490104 /* coloredLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coloredLabel.swift; sourceTree = "<group>"; };
+		3A7CF1082048B548009531B7 /* lineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineView.swift; sourceTree = "<group>"; };
+		3A7CF10A2048BF69009531B7 /* circlePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circlePic.swift; sourceTree = "<group>"; };
 		3A918ED020395B9700490104 /* normalLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalLabel.swift; sourceTree = "<group>"; };
 		3A918ED220395C6800490104 /* titleViewLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleViewLogin.swift; sourceTree = "<group>"; };
 		3A918ED420395DC500490104 /* normalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalView.swift; sourceTree = "<group>"; };
 		3A918ED62039601800490104 /* titleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleView.swift; sourceTree = "<group>"; };
 		3A918ED82039669C00490104 /* blueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blueButton.swift; sourceTree = "<group>"; };
-		3A918EDA2039671400490104 /* satinButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = satinButton.swift; sourceTree = "<group>"; };
 		3A918EDC20396DEA00490104 /* backgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
 		3A918EDE203993B000490104 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A9A95581FFF8A5C00502707 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
@@ -95,7 +100,6 @@
 		3AEFBE922023EB2D00E03455 /* rewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardsVC.swift; sourceTree = "<group>"; };
 		3AF47FD52007F50B00F00F42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3AF646CE2015663A002F86B8 /* fancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyField.swift; sourceTree = "<group>"; };
-		3AF646D02015674B002F86B8 /* fancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyButton.swift; sourceTree = "<group>"; };
 		3AF646D220156C73002F86B8 /* fancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyView.swift; sourceTree = "<group>"; };
 		ED90BB69D51A410BC14CA8A2 /* Pods_Habits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F225DEF61B686E99849B70AD /* Pods-Habits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habits.release.xcconfig"; path = "Pods/Target Support Files/Pods-Habits/Pods-Habits.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				3A0F89B6201480FE0062B55C /* addPopups.storyboard */,
 				3A0F89B820148C980062B55C /* editPopup Controllers */,
 				3AD55F5E201493E5001B9A23 /* editPopups.storyboard */,
+				3A1290692048D57E00006CD0 /* Old.storyboard */,
 				3AA5A3A91FFB08CE0035A16E /* Habits */,
 				3AA5A3A81FFB08CE0035A16E /* Products */,
 				B34DEA8953E8C746003CC10B /* Pods */,
@@ -190,16 +195,17 @@
 			children = (
 				3A9A955C1FFF8E4F00502707 /* HabitCell.swift */,
 				3A918ED82039669C00490104 /* blueButton.swift */,
-				3AF646D02015674B002F86B8 /* fancyButton.swift */,
 				3A05E56F2047728600FDB31C /* hollowButton.swift */,
-				3A918EDA2039671400490104 /* satinButton.swift */,
+				3A1290672048D44400006CD0 /* fancyButton.swift */,
 				3A918ED020395B9700490104 /* normalLabel.swift */,
-				3A918ECC20395AD500490104 /* coloredLabel.swift */,
+				3A7CF1082048B548009531B7 /* lineView.swift */,
+				3A1290652048D1F300006CD0 /* satinLineView.swift */,
 				3AF646CE2015663A002F86B8 /* fancyField.swift */,
 				3A918EDC20396DEA00490104 /* backgroundView.swift */,
 				3AD55F6020153F5F001B9A23 /* logoView.swift */,
 				3AF646D220156C73002F86B8 /* fancyView.swift */,
 				3A918ED420395DC500490104 /* normalView.swift */,
+				3A7CF10A2048BF69009531B7 /* circlePic.swift */,
 				3A918ED62039601800490104 /* titleView.swift */,
 				3A918ED220395C6800490104 /* titleViewLogin.swift */,
 			);
@@ -326,6 +332,7 @@
 			files = (
 				3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */,
 				3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */,
+				3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */,
 				3A0F89B7201480FE0062B55C /* addPopups.storyboard in Resources */,
 				3A918EDF203993B000490104 /* Main.storyboard in Resources */,
 				3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */,
@@ -413,9 +420,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF47FD62007F50B00F00F42 /* User.swift in Sources */,
+				3A1290682048D44400006CD0 /* fancyButton.swift in Sources */,
 				3A918ED520395DC500490104 /* normalView.swift in Sources */,
 				3A05E5702047728600FDB31C /* hollowButton.swift in Sources */,
 				3A1FEB2620479C0600E360CE /* newLoginVC.swift in Sources */,
+				3A7CF1092048B548009531B7 /* lineView.swift in Sources */,
 				3A521438203B621E006232FC /* intRewardsPopupVC.swift in Sources */,
 				3A52143A203B6284006232FC /* advRewardsPopup.swift in Sources */,
 				3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */,
@@ -423,7 +432,9 @@
 				3A3DA5811FFB2F14004C1143 /* RegisterScreen.swift in Sources */,
 				3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */,
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
+				3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
+				3A1290662048D1F300006CD0 /* satinLineView.swift in Sources */,
 				3AD55F6120153F5F001B9A23 /* logoView.swift in Sources */,
 				3A918ED72039601800490104 /* titleView.swift in Sources */,
 				3A2BB1D0201FDF8A00E39CEB /* RewardsPopupVC.swift in Sources */,
@@ -438,14 +449,11 @@
 				3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */,
 				3AF646D320156C73002F86B8 /* fancyView.swift in Sources */,
 				3ADE3D3F2014794B003A114B /* whenAddPopupVC.swift in Sources */,
-				3A918EDB2039671400490104 /* satinButton.swift in Sources */,
-				3A918ECD20395AD500490104 /* coloredLabel.swift in Sources */,
 				3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */,
 				3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */,
 				3A521436203B5AB6006232FC /* basicRewardPopupVC.swift in Sources */,
 				3A3DA57F1FFB2EF5004C1143 /* LoginScreen.swift in Sources */,
 				3A918ED120395B9700490104 /* normalLabel.swift in Sources */,
-				3AF646D12015674B002F86B8 /* fancyButton.swift in Sources */,
 				3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

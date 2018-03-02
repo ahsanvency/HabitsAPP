@@ -1,19 +1,20 @@
 //
-//  coloredTextLabel.swift
+//  satinLineView.swift
 //  Habits
 //
-//  Created by Ahsan Vency on 2/18/18.
+//  Created by Ahsan Vency on 3/1/18.
 //  Copyright © 2018 ahsan vency. All rights reserved.
 //
 
 import UIKit
 
 
-class coloredLabel: UILabel {
+class satinLineView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        textColor = maroonColor
+        backgroundColor = satinColor
     }
     
 }
+
