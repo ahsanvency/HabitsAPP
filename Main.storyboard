@@ -1592,10 +1592,25 @@
                                                         <constraint firstAttribute="height" constant="135" id="YMK-Qd-mDr"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGu-93-24U" customClass="lineView" customModule="Habits" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="2"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="Ahf-RW-hd7"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKa-RX-4qW" customClass="lineView" customModule="Habits" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="178" width="375" height="2"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="NBr-HD-NvV"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="raP-4p-ek2" secondAttribute="trailing" constant="105" id="0Fh-zu-WwL"/>
                                                 <constraint firstItem="raP-4p-ek2" firstAttribute="leading" secondItem="fId-iE-dgx" secondAttribute="leadingMargin" constant="105" id="6aD-ve-41Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="gGu-93-24U" secondAttribute="trailing" id="7Mw-y7-6MB"/>
                                                 <constraint firstAttribute="trailing" secondItem="Oii-JZ-TPx" secondAttribute="trailing" constant="10" id="8Yk-qd-Mhy"/>
                                                 <constraint firstItem="Itr-YK-XbT" firstAttribute="leading" secondItem="raP-4p-ek2" secondAttribute="leading" id="DFv-wR-7cD"/>
                                                 <constraint firstItem="Oii-JZ-TPx" firstAttribute="top" secondItem="Vgc-Sl-v2D" secondAttribute="bottom" constant="10" id="Dcg-iq-KF9"/>
@@ -1603,8 +1618,10 @@
                                                 <constraint firstItem="gHX-ju-25R" firstAttribute="leading" secondItem="Oii-JZ-TPx" secondAttribute="leading" id="Gj7-HA-gwx"/>
                                                 <constraint firstItem="Vgc-Sl-v2D" firstAttribute="leading" secondItem="fId-iE-dgx" secondAttribute="leading" constant="10" id="JP5-98-pwk"/>
                                                 <constraint firstItem="raP-4p-ek2" firstAttribute="top" secondItem="Itr-YK-XbT" secondAttribute="bottom" constant="-5" id="KqU-va-C86"/>
+                                                <constraint firstItem="gGu-93-24U" firstAttribute="top" secondItem="fId-iE-dgx" secondAttribute="top" id="LiF-tM-cpU"/>
                                                 <constraint firstAttribute="trailing" secondItem="HjG-NK-9Se" secondAttribute="trailing" id="OUH-Rj-lyS"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gHX-ju-25R" secondAttribute="trailing" constant="-5" id="RgY-64-eso"/>
+                                                <constraint firstItem="MKa-RX-4qW" firstAttribute="top" secondItem="raP-4p-ek2" secondAttribute="bottom" constant="4" id="SL0-7K-Prw"/>
                                                 <constraint firstItem="Vgc-Sl-v2D" firstAttribute="top" secondItem="raP-4p-ek2" secondAttribute="bottom" constant="10" id="UkR-Jw-285"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="HjG-NK-9Se" secondAttribute="bottom" constant="-1" id="Xk4-1H-QrT"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Oii-JZ-TPx" secondAttribute="trailing" constant="-5" id="dKf-ie-JYh"/>
@@ -1612,9 +1629,12 @@
                                                 <constraint firstItem="HjG-NK-9Se" firstAttribute="top" secondItem="gHX-ju-25R" secondAttribute="bottom" constant="24" id="eyX-eo-EvK"/>
                                                 <constraint firstAttribute="trailing" secondItem="Vgc-Sl-v2D" secondAttribute="trailing" constant="10" id="gPK-JN-h8v"/>
                                                 <constraint firstItem="HjG-NK-9Se" firstAttribute="leading" secondItem="fId-iE-dgx" secondAttribute="leading" id="gai-hT-DN3"/>
+                                                <constraint firstItem="gGu-93-24U" firstAttribute="leading" secondItem="fId-iE-dgx" secondAttribute="leading" id="j0h-Zi-khv"/>
+                                                <constraint firstItem="MKa-RX-4qW" firstAttribute="leading" secondItem="fId-iE-dgx" secondAttribute="leading" id="kk0-It-fZm"/>
                                                 <constraint firstAttribute="trailing" secondItem="gHX-ju-25R" secondAttribute="trailing" constant="10" id="r7V-Nc-Aja"/>
                                                 <constraint firstItem="Itr-YK-XbT" firstAttribute="trailing" secondItem="raP-4p-ek2" secondAttribute="trailing" id="vuJ-PB-ou2"/>
                                                 <constraint firstItem="gHX-ju-25R" firstAttribute="top" secondItem="Oii-JZ-TPx" secondAttribute="bottom" constant="10" id="wDX-dk-GrY"/>
+                                                <constraint firstAttribute="trailing" secondItem="MKa-RX-4qW" secondAttribute="trailing" id="wrD-ZL-ptH"/>
                                                 <constraint firstItem="gHX-ju-25R" firstAttribute="trailing" secondItem="Oii-JZ-TPx" secondAttribute="trailing" id="zTy-1y-uFB"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -1674,7 +1694,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="334" y="-1325"/>
+            <point key="canvasLocation" x="333.60000000000002" y="-1325.4872563718143"/>
         </scene>
     </scenes>
     <resources>
