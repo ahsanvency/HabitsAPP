@@ -43,7 +43,6 @@ class whyPopupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        whyText.textColor = maroonColor
         nameOfhabit.text = habitName
         whyQuestion.text = "Did you know intrinsic reasons like \(intrinsicStatement!) are more likely to help you succeed!"
         let myGradient = UIImage(named: "textWhyPopup.png")

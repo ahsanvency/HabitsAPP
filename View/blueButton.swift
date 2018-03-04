@@ -12,7 +12,9 @@ class blueButton: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        setImage(UIImage(named: "BackBlue.png"), for: .normal)
+        setImage(UIImage(named: "BackButton.png"), for: .normal)
+        frame.size.width = 40
+        frame.size.height = 40
     }
     
 }

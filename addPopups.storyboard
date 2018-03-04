@@ -628,6 +628,7 @@
                         <outlet property="basicField2" destination="3tj-fJ-emc" id="4QB-zh-A5y"/>
                         <outlet property="basicPicker1" destination="Onc-4q-vUf" id="2d8-tT-gR0"/>
                         <outlet property="basicPicker2" destination="0hK-37-BQq" id="SZZ-3w-GUe"/>
+                        <outlet property="screenTitle" destination="ugK-sR-aHO" id="QPD-zF-o7M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pee-wu-Ucd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -806,6 +807,7 @@
                         <outlet property="intField2" destination="ErD-sL-tnD" id="Cxm-zx-cg8"/>
                         <outlet property="intPicker1" destination="bVB-jL-4mo" id="JU0-f6-ogQ"/>
                         <outlet property="intPicker2" destination="I3t-9d-Z1M" id="rZs-Yv-c36"/>
+                        <outlet property="screenTitle" destination="APb-Qq-TzR" id="Q7d-pj-nde"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fH3-Lu-2Pj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -953,6 +955,7 @@
                     <connections>
                         <outlet property="advRewardField" destination="nir-i2-mTR" id="9qo-Kl-hzW"/>
                         <outlet property="advRewardPicker" destination="V4f-N4-SOk" id="erq-pG-Ksi"/>
+                        <outlet property="screenTitle" destination="2Jj-MV-fHY" id="yPZ-nF-8oc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8do-Tw-Zz6" userLabel="First Responder" sceneMemberID="firstResponder"/>

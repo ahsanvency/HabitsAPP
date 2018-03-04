@@ -31,6 +31,9 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     var advReward: String?
     
+    
+    
+    @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var advRewardField: fancyField!
     @IBOutlet weak var advRewardPicker: UIPickerView!
     
@@ -44,6 +47,8 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         advRewardField.text = "Tap to pick an advanced reward."
         listOfAdvRewards.sort()
         listOfAdvRewards.append("Enter Custom Reward Above")
+        let myGradient = UIImage(named: "textRewards.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{

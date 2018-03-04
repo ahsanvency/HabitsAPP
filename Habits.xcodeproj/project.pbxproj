@@ -11,7 +11,6 @@
 		3A0F89B7201480FE0062B55C /* addPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F89B6201480FE0062B55C /* addPopups.storyboard */; };
 		3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */; };
 		3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */; };
-		3A1290662048D1F300006CD0 /* satinLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1290652048D1F300006CD0 /* satinLineView.swift */; };
 		3A1290682048D44400006CD0 /* fancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1290672048D44400006CD0 /* fancyButton.swift */; };
 		3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1290692048D57E00006CD0 /* Old.storyboard */; };
 		3A13731220052FEB000BDD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13731120052FEB000BDD6F /* DataService.swift */; };
@@ -29,7 +28,6 @@
 		3A7CF1092048B548009531B7 /* lineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CF1082048B548009531B7 /* lineView.swift */; };
 		3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CF10A2048BF69009531B7 /* circlePic.swift */; };
 		3A918ED120395B9700490104 /* normalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED020395B9700490104 /* normalLabel.swift */; };
-		3A918ED320395C6800490104 /* titleViewLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED220395C6800490104 /* titleViewLogin.swift */; };
 		3A918ED520395DC500490104 /* normalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED420395DC500490104 /* normalView.swift */; };
 		3A918ED72039601800490104 /* titleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED62039601800490104 /* titleView.swift */; };
 		3A918ED92039669C00490104 /* blueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED82039669C00490104 /* blueButton.swift */; };
@@ -59,7 +57,6 @@
 		3A0F89B6201480FE0062B55C /* addPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addPopups.storyboard; sourceTree = "<group>"; };
 		3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenEditPopupVC.swift; sourceTree = "<group>"; };
 		3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereEditPopupVC.swift; sourceTree = "<group>"; };
-		3A1290652048D1F300006CD0 /* satinLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = satinLineView.swift; sourceTree = "<group>"; };
 		3A1290672048D44400006CD0 /* fancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyButton.swift; sourceTree = "<group>"; };
 		3A1290692048D57E00006CD0 /* Old.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Old.storyboard; sourceTree = "<group>"; };
 		3A13731120052FEB000BDD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -78,7 +75,6 @@
 		3A7CF1082048B548009531B7 /* lineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineView.swift; sourceTree = "<group>"; };
 		3A7CF10A2048BF69009531B7 /* circlePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circlePic.swift; sourceTree = "<group>"; };
 		3A918ED020395B9700490104 /* normalLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalLabel.swift; sourceTree = "<group>"; };
-		3A918ED220395C6800490104 /* titleViewLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleViewLogin.swift; sourceTree = "<group>"; };
 		3A918ED420395DC500490104 /* normalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalView.swift; sourceTree = "<group>"; };
 		3A918ED62039601800490104 /* titleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleView.swift; sourceTree = "<group>"; };
 		3A918ED82039669C00490104 /* blueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blueButton.swift; sourceTree = "<group>"; };
@@ -199,7 +195,6 @@
 				3A1290672048D44400006CD0 /* fancyButton.swift */,
 				3A918ED020395B9700490104 /* normalLabel.swift */,
 				3A7CF1082048B548009531B7 /* lineView.swift */,
-				3A1290652048D1F300006CD0 /* satinLineView.swift */,
 				3AF646CE2015663A002F86B8 /* fancyField.swift */,
 				3A918EDC20396DEA00490104 /* backgroundView.swift */,
 				3AD55F6020153F5F001B9A23 /* logoView.swift */,
@@ -207,7 +202,6 @@
 				3A918ED420395DC500490104 /* normalView.swift */,
 				3A7CF10A2048BF69009531B7 /* circlePic.swift */,
 				3A918ED62039601800490104 /* titleView.swift */,
-				3A918ED220395C6800490104 /* titleViewLogin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,7 +428,6 @@
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
 				3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
-				3A1290662048D1F300006CD0 /* satinLineView.swift in Sources */,
 				3AD55F6120153F5F001B9A23 /* logoView.swift in Sources */,
 				3A918ED72039601800490104 /* titleView.swift in Sources */,
 				3A2BB1D0201FDF8A00E39CEB /* RewardsPopupVC.swift in Sources */,
@@ -443,7 +436,6 @@
 				3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */,
 				3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */,
 				3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */,
-				3A918ED320395C6800490104 /* titleViewLogin.swift in Sources */,
 				3ADE3D3D2014701C003A114B /* whyPopupVC.swift in Sources */,
 				3AF646CF2015663A002F86B8 /* fancyField.swift in Sources */,
 				3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */,

@@ -489,7 +489,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func startAnimation()
     {
         DispatchQueue.main.async(execute: {
-            self.scrollView.setContentOffset(CGPoint(x: 0,y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height - 50), animated: true)
+            self.scrollView.setContentOffset(CGPoint(x: 0,y: self.scrollView.contentSize.height - self.scrollView.bounds.size.height), animated: true)
         })
     }
     

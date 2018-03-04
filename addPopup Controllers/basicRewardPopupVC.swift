@@ -29,6 +29,7 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     var intReward2: String?
     
     
+    @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var basicField1: fancyField!
     @IBOutlet weak var basicPicker1: UIPickerView!
     @IBOutlet weak var basicField2: fancyField!
@@ -176,6 +177,8 @@ class basicRewardPopupVC: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         listOfBasicRewards2.sort()
         listOfBasicRewards1.append("Enter Custom Reward Above")
         listOfBasicRewards2.append("Enter Custom Reward Above")
+        let myGradient = UIImage(named: "textBasicRewards.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
     }
     
     func upAlert (messages: String) {

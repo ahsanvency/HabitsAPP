@@ -29,7 +29,7 @@ class HabitCell: UITableViewCell {
         habitPic.layer.borderWidth = 1.0
         
         // Initialization code
-        progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 20);
+        progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 15);
         progressBar.tintColor = blueColor
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {

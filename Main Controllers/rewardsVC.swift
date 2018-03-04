@@ -433,7 +433,7 @@ class rewardsVC: UIViewController {
                 self.winner()
                 self.upAlert(messages: intMessage)
             }
-            else if (leftCheck == "Intermediate" && middleCheck == "Intermediate") || (leftCheck == "Intermediate" && rightCheck == "Intermediate") && (middleCheck == "Intermediate" && rightCheck == "Intermediate") && (leftCheck == "Advanced" || middleCheck == "Advanced" || rightCheck == "Advanced"){
+            else if ((leftCheck == "Intermediate" && middleCheck == "Intermediate") || (leftCheck == "Intermediate" && rightCheck == "Intermediate") || (middleCheck == "Intermediate" && rightCheck == "Intermediate")) && (leftCheck == "Advanced" || middleCheck == "Advanced" || rightCheck == "Advanced"){
                 self.winner()
                 self.upAlert(messages: intMessage)
             }
@@ -588,7 +588,7 @@ class rewardsVC: UIViewController {
     func winner(){
         spinBtnLbl.text = "WINNER"
         //spinBtn.setTitle("WINNER", for: UIControlState.normal)
-        spinBtn.backgroundColor = UIColor(r: 133, g: 187, b: 101)
+        spinBtn.backgroundColor = UIColor.green
         startBlinking()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
             self.timerGetReadyForNextSpin = Timer.scheduledTimer(timeInterval: 3.0, target:self, selector: #selector(self.getReadyForNextSpin), userInfo: nil, repeats: false)

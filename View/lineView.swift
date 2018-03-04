@@ -14,6 +14,7 @@ class lineView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         backgroundColor = blueColor
+        frame.size.height = 2
     }
     
 }

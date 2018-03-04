@@ -35,7 +35,7 @@ class whereAddPopupVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        whereText.textColor = maroonColor
+
         let myGradient = UIImage(named: "textWherePopup.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         

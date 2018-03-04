@@ -13,7 +13,6 @@ class normalLabel: UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         textColor = satinColor
     }
     

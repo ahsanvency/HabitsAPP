@@ -15,11 +15,9 @@ import SwiftKeychainWrapper
 class RegisterScreen: UIViewController {
     
     //Outlets
-    @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var logoPic: logoView!
-    @IBOutlet weak var sloganLbl: UILabel!
     @IBOutlet weak var nameField: fancyField!
     @IBOutlet weak var emailField: fancyField!
 
@@ -164,6 +162,9 @@ class RegisterScreen: UIViewController {
     }
     
     func setupScreen(){
+        let myGradient = UIImage(named: "textNewUser.png")
+        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
+        
         nameField.layer.borderWidth = 0
         emailField.layer.borderWidth = 0
         passwordField.layer.borderWidth = 0
