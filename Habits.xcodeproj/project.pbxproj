@@ -133,6 +133,7 @@
 		3A568764204CDC9700E8F6F7 /* Old VC's */ = {
 			isa = PBXGroup;
 			children = (
+				3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */,
 				3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */,
 				3AA5A3AC1FFB08CE0035A16E /* MainLogin.swift */,
 			);
@@ -229,7 +230,6 @@
 				3ADE3D3C2014701C003A114B /* whyPopupVC.swift */,
 				3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */,
 				3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */,
-				3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */,
 				3A521435203B5AB6006232FC /* basicRewardPopupVC.swift */,
 				3A521437203B621E006232FC /* intRewardsPopupVC.swift */,
 				3A521439203B6284006232FC /* advRewardsPopup.swift */,

@@ -161,8 +161,8 @@ class rewardsVC: UIViewController {
             
             if let prevSpunDay = rewardsDict!["SpunDay"] as? Int{
                 
-                //if prevSpunDay == day {
-                if day - 1 == day{
+                if prevSpunDay == day {
+//                if day - 1 == day{
                     //alert
                     let spinAlert = UIAlertController(title: "Alert", message: "Can only play once a day", preferredStyle: UIAlertControllerStyle.alert)
                     let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in})
