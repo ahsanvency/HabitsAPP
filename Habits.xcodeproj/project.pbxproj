@@ -130,6 +130,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		3A568764204CDC9700E8F6F7 /* Old VC's */ = {
+			isa = PBXGroup;
+			children = (
+				3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */,
+				3AA5A3AC1FFB08CE0035A16E /* MainLogin.swift */,
+			);
+			path = "Old VC's";
+			sourceTree = "<group>";
+		};
 		3AA5A39E1FFB08CE0035A16E = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +152,7 @@
 				3A0F89B6201480FE0062B55C /* addPopups.storyboard */,
 				3A0F89B820148C980062B55C /* editPopup Controllers */,
 				3AD55F5E201493E5001B9A23 /* editPopups.storyboard */,
+				3A568764204CDC9700E8F6F7 /* Old VC's */,
 				3A1290692048D57E00006CD0 /* Old.storyboard */,
 				3AA5A3A91FFB08CE0035A16E /* Habits */,
 				3AA5A3A81FFB08CE0035A16E /* Products */,
@@ -175,9 +185,7 @@
 		3AA5A3BC1FFB18690035A16E /* Main Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3AA5A3AC1FFB08CE0035A16E /* MainLogin.swift */,
 				3A1FEB2520479C0600E360CE /* newLoginVC.swift */,
-				3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */,
 				3A3DA5801FFB2F14004C1143 /* RegisterScreen.swift */,
 				3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */,
 				3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */,

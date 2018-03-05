@@ -46,7 +46,7 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
 
         advRewardField.text = "Tap to pick an advanced reward."
         listOfAdvRewards.sort()
-        listOfAdvRewards.append("Enter Custom Reward Above")
+        listOfAdvRewards.append("Enter Custom Reward Above.")
         let myGradient = UIImage(named: "textRewards.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
     }
@@ -55,14 +55,15 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         return 1
     }
     
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        return listOfAdvRewards.count
-    }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let titleData = listOfAdvRewards[row]
         let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Avenir Next", size: 15.0)!,NSAttributedStringKey.foregroundColor:blueColor])
         return myTitle
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
+        return listOfAdvRewards.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -75,8 +76,10 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
+        self.advRewardField.endEditing(true)
         advReward = self.listOfAdvRewards[row]
-        if advReward == "Enter Custom Reward Above"{
+        
+        if advReward == "Enter Custom Reward Above."{
             self.advRewardField.becomeFirstResponder()
         }
         self.advRewardField.text = advReward!
@@ -86,9 +89,8 @@ class advRewardsPopup: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == self.advRewardField {
-            
 
-            if advReward != "Other"{
+            if advReward != "Enter Custom Reward Above."{
                 self.advRewardPicker.isHidden = false
                 textField.endEditing(true)
             } 
