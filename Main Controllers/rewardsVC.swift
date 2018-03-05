@@ -340,7 +340,6 @@ class rewardsVC: UIViewController {
             imageBottom3 = left3Bottom
         }
         
-        
         var index1Top = index - 3
         if index1Top == -3{
             index1Top = 31
@@ -536,28 +535,33 @@ class rewardsVC: UIViewController {
         
         switch rand {
         case x1..<x2:
-            if (success! < 16 && success! > 9) || (success! > 19 && success! < 26){
-                stop = 7
-            }else if (success! > 15 && success! < 21) || (success! > 25 && success! < 31){
-                stop = 12
+            if (success! < 16 && success! > 10) || (success! > 25 && success! < 31){
+                stop = 4
+            }else if (success! < 26 && success! > 20) || (success! > 5 && success! < 11){
+                stop = 6
             }else{
                 stop = 0
             }
         case x2..<x3:
             stop = 1
         case x3..<x4:
-            stop = 3
+            stop = 2
         case x4..<x5:
             stop = 3
         case x5..<x6:
             stop = 4
         case x6..<x7:
+            if (success! < 26 && success! > 20) || (success! > 5 && success! < 11){
+                stop = 6
+            }else{
+                stop = 5
+            }
             stop = 5
         case x7..<x8:
             stop = 6
         case x8..<x9:
-            if success! > 10 && success! < 16{
-                stop = 7
+            if (success! < 16 && success! > 10) || (success! > 25 && success! < 31){
+                stop = 4
             }else{
                 stop = 7
             }
@@ -566,13 +570,23 @@ class rewardsVC: UIViewController {
         case x10..<x11:
             stop = 9
         case x11..<x12:
-            stop = 10
+            if (success! < 16 && success! > 10) || (success! > 25 && success! < 31){
+                stop = 4
+            }else if (success! < 26 && success! > 20) || (success! > 5 && success! < 11){
+                stop = 6
+            }else{
+                stop = 10
+            }
         case x12..<x13:
             stop = 11
         case x13..<x14:
             stop = 12
         case x14..<x15:
-            stop = 13
+            if (success! < 16 && success! > 10) || (success! > 25 && success! < 31){
+                stop = 11
+            }else{
+                stop = 13
+            }
         case x15..<x16:
             stop = 14
         case x16..<x17:
