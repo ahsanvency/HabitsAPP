@@ -198,7 +198,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         try! Auth.auth().signOut()
 //        dismiss(animated: true, completion: nil)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainLoginID") as! MainLogin
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! newLoginVC
         self.present(newViewController, animated: true, completion: nil)
     }
     

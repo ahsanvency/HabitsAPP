@@ -61,7 +61,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func facebookBtn(_ sender: Any) {
-
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) -> Void in
             if (error == nil){
@@ -74,8 +73,8 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
     func getFBUserData(){
-
         let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"first_name,email, picture.type(large)"])
         
         graphRequest.start(completionHandler: { (connection, result, error) -> Void in
@@ -127,7 +126,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     }
     
     func completeSignIn(id: String){
-
         KeychainWrapper.standard.set(id, forKey: KEY_UID);
     }
     
