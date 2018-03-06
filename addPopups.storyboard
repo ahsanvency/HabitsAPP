@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,14 +21,14 @@
             <objects>
                 <viewController storyboardIdentifier="whyPopup" id="bX5-dv-QxU" customClass="whyPopupVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qW8-nc-VrS" customClass="backgroundView" customModule="Habits" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoC-Og-KwT" userLabel="Screen Title" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="63.5" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLb-5Q-IPX">
-                                        <rect key="frame" x="149.5" y="3" width="76" height="44"/>
+                                        <rect key="frame" x="169" y="3" width="76" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="76" id="T3c-FM-lkj"/>
                                         </constraints>
@@ -62,7 +62,7 @@
                                 <viewLayoutGuide key="safeArea" id="AwR-4l-6kY"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know intrinsic reasons are more likely to help you succeed?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1B-NV-sm5" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="133.5" width="315" height="200"/>
+                                <rect key="frame" x="30" y="168" width="354" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="csS-SE-R7k"/>
                                 </constraints>
@@ -71,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write Short Intrinsic Reward.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bW4-e1-d7a" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="424.5" width="315" height="40"/>
+                                <rect key="frame" x="30" y="459" width="354" height="40"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="wCa-df-RWr"/>
@@ -81,7 +81,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5v-5R-eYE">
-                                <rect key="frame" x="125" y="500" width="125" height="125"/>
+                                <rect key="frame" x="144.66666666666666" y="534.66666666666663" width="124.99999999999997" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="O4p-Vz-CJE"/>
                                     <constraint firstAttribute="height" constant="125" id="bSX-YP-7xg"/>
@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFi-uS-eCF" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="546" width="54" height="33"/>
+                                <rect key="frame" x="180" y="580.66666666666663" width="54" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="RqO-Y4-98v"/>
                                     <constraint firstAttribute="width" constant="54" id="fVn-GO-UkM"/>
@@ -102,7 +102,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name of habit)?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4c-Cy-ojv" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="384.5" width="315" height="30"/>
+                                <rect key="frame" x="30" y="419" width="354" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eya-sk-WPl"/>
                                 </constraints>
@@ -111,7 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why do you want to start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh8-MI-Fty" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="353.5" width="315" height="30"/>
+                                <rect key="frame" x="30" y="388" width="354" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ij6-n6-JiT"/>
                                 </constraints>
@@ -120,7 +120,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1v-kA-axo" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="113.5" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="YwE-IY-Xvy"/>
@@ -171,14 +171,14 @@
             <objects>
                 <viewController storyboardIdentifier="whenAddPopup" id="dgE-aU-RRy" customClass="whenAddPopupVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zzw-uc-WtV" customClass="backgroundView" customModule="Habits" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlA-55-NIM" userLabel="Screen Title" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28.5" width="375" height="49"/>
+                                <rect key="frame" x="0.0" y="63" width="414" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLN-wH-Nj0">
-                                        <rect key="frame" x="138" y="3" width="100.5" height="44"/>
+                                        <rect key="frame" x="157.66666666666666" y="3" width="100.33333333333334" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100.5" id="Gxk-OO-apF"/>
                                         </constraints>
@@ -209,7 +209,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When can you consistently" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ect-Rv-Ed9" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="227.5" width="315" height="66"/>
+                                <rect key="frame" x="30" y="262" width="354" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="XVW-N0-1jn"/>
                                 </constraints>
@@ -218,7 +218,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kmc-47-INR">
-                                <rect key="frame" x="40" y="303.5" width="295" height="150"/>
+                                <rect key="frame" x="40" y="338" width="334" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="XKI-Ye-NKA"/>
@@ -228,7 +228,7 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7K-G1-McG">
-                                <rect key="frame" x="125" y="517" width="125" height="125"/>
+                                <rect key="frame" x="144.66666666666666" y="551.66666666666663" width="124.99999999999997" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="F0H-vE-spR"/>
                                     <constraint firstAttribute="width" constant="125" id="aOO-eA-ghi"/>
@@ -239,7 +239,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="QbV-2T-pfz" customClass="MultiSelectSegmentedControl">
-                                <rect key="frame" x="16" y="469" width="343" height="29"/>
+                                <rect key="frame" x="16" y="503.66666666666674" width="382" height="29"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Sat"/>
@@ -256,7 +256,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know, having a consistent time is key to developing lasting habits!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvl-kK-J4L" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="107.5" width="315" height="100"/>
+                                <rect key="frame" x="30" y="142" width="354" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="C9m-sz-f8E"/>
                                 </constraints>
@@ -265,7 +265,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cy7-Pj-PTi" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="563" width="54" height="33"/>
+                                <rect key="frame" x="180" y="597.66666666666663" width="54" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="Ii9-Xd-4KE"/>
                                     <constraint firstAttribute="height" constant="33" id="znt-pL-UOh"/>
@@ -275,7 +275,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyg-sW-ORW" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="77.5" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="112" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="b8B-QN-pCh"/>
@@ -326,14 +326,14 @@
             <objects>
                 <viewController storyboardIdentifier="whereAddPopup" id="How-5o-Ud8" customClass="whereAddPopupVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K7q-qq-J2l" customClass="backgroundView" customModule="Habits" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5z7-qR-2Ew" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="71" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="105.66666666666669" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ga-D1-Hdt">
-                                        <rect key="frame" x="130" y="3" width="115" height="44"/>
+                                        <rect key="frame" x="149.66666666666666" y="3" width="114.99999999999997" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="115" id="OKy-Ke-RfH"/>
                                         </constraints>
@@ -364,7 +364,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know, picking a consistent location helps you act on the habit!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQe-bR-lrE" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="151" width="315" height="100"/>
+                                <rect key="frame" x="30" y="185.66666666666666" width="354" height="99.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="2Vr-y2-veL"/>
                                 </constraints>
@@ -373,7 +373,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVQ-Vo-TA2">
-                                <rect key="frame" x="125" y="426" width="125" height="125"/>
+                                <rect key="frame" x="144.66666666666666" y="460.66666666666674" width="124.99999999999997" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="JQl-Cd-Yym"/>
                                     <constraint firstAttribute="height" constant="125" id="xRw-FO-lvt"/>
@@ -384,7 +384,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is a consistent location you can (name of habit)?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Koj-Ba-YRL" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="301" width="315" height="65"/>
+                                <rect key="frame" x="30" y="335.66666666666669" width="354" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="c6Y-Z1-wak"/>
                                 </constraints>
@@ -393,7 +393,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9tC-It-QfT" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="366" width="315" height="40"/>
+                                <rect key="frame" x="30" y="400.66666666666669" width="354" height="40"/>
                                 <color key="backgroundColor" red="0.95294117649999999" green="0.92156862750000001" blue="0.85490196080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="GdL-TT-4Nl"/>
@@ -403,7 +403,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGB-lg-6gY" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="161" y="472" width="54" height="33"/>
+                                <rect key="frame" x="180.66666666666666" y="506.66666666666674" width="54" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="PjW-WP-7i5"/>
                                     <constraint firstAttribute="height" constant="33" id="T20-8C-9UG"/>
@@ -413,7 +413,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWl-Ks-Pnv" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="121" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="155.66666666666666" width="414" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Dv1-FT-MWY"/>
@@ -459,14 +459,14 @@
             <objects>
                 <viewController storyboardIdentifier="basicRewardPopup" id="Rgf-H5-lCc" customClass="basicRewardPopupVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ED1-Gn-6MX" customClass="backgroundView" customModule="Habits" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOV-HH-fan" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="21" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="55.666666666666657" width="714" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugK-sR-aHO">
-                                        <rect key="frame" x="81.5" y="3.5" width="212" height="44"/>
+                                        <rect key="frame" x="251" y="3.3333333333333357" width="212" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="212" id="OFA-3O-FIP"/>
                                         </constraints>
@@ -496,7 +496,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic rewards are simple and easy to access." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6v-qE-P0F" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="111" width="355" height="70"/>
+                                <rect key="frame" x="10" y="145.66666666666666" width="694" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="KhF-WH-sj7"/>
                                 </constraints>
@@ -505,7 +505,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are some basic rewards you enjoy?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKp-ov-OLf" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="211" width="355" height="25"/>
+                                <rect key="frame" x="10" y="245.66666666666663" width="694" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="qPH-KJ-oDq"/>
                                 </constraints>
@@ -514,7 +514,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jf7-13-3IV" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="246" width="275" height="35"/>
+                                <rect key="frame" x="50" y="280.66666666666669" width="614" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Ky0-EK-vxN"/>
                                 </constraints>
@@ -526,7 +526,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onc-4q-vUf">
-                                <rect key="frame" x="50" y="281" width="275" height="150"/>
+                                <rect key="frame" x="50" y="315.66666666666669" width="614" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="7ci-B3-AKO"/>
@@ -537,7 +537,7 @@
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3tj-fJ-emc" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="321" width="275" height="35"/>
+                                <rect key="frame" x="50" y="355.66666666666669" width="614" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="nmV-dZ-sHX"/>
                                 </constraints>
@@ -549,7 +549,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-37-BQq">
-                                <rect key="frame" x="50" y="356" width="275" height="150"/>
+                                <rect key="frame" x="50" y="390.66666666666669" width="614" height="150.00000000000006"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="1tC-o1-w4B"/>
@@ -560,7 +560,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXg-1Q-RiX">
-                                <rect key="frame" x="125" y="521" width="125" height="125"/>
+                                <rect key="frame" x="125" y="555.66666666666663" width="464" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="2Ve-62-ljx"/>
                                     <constraint firstAttribute="width" constant="125" id="p2J-9l-EaB"/>
@@ -572,7 +572,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-tf-o1U" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="571.5" width="54" height="24"/>
+                                <rect key="frame" x="330" y="606" width="54" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="FIg-9L-LPU"/>
                                     <constraint firstAttribute="height" constant="24" id="zpx-tn-Fe9"/>
@@ -582,7 +582,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HE1-0q-tOV" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="71" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="105.66666666666667" width="714" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="3bd-kM-PyJ"/>
@@ -640,14 +640,14 @@
             <objects>
                 <viewController storyboardIdentifier="intRewardPopup" id="wWU-MG-Q1P" customClass="intRewardsPopupVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WyB-je-TXI" customClass="backgroundView" customModule="Habits" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1y-5b-tId" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="21" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="55.666666666666657" width="714.66666666666663" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="APb-Qq-TzR">
-                                        <rect key="frame" x="60" y="3.5" width="255" height="44"/>
+                                        <rect key="frame" x="60" y="3.3333333333333357" width="594.66666666666663" height="44"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
                                         <color key="textColor" red="0.08235294118" green="0.2666666667" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -675,7 +675,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate rewards are more fun and enjoyable." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2h-Kg-Yha" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="111" width="355" height="70"/>
+                                <rect key="frame" x="10" y="145.66666666666666" width="694.66666666666663" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="M4r-ZU-uSL"/>
                                 </constraints>
@@ -684,7 +684,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are some Intermediate rewards you enjoy?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-Ii-fCd" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="211" width="355" height="25"/>
+                                <rect key="frame" x="10" y="245.66666666666663" width="694.66666666666663" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="LLl-pM-hGS"/>
                                 </constraints>
@@ -693,7 +693,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjB-un-m5J">
-                                <rect key="frame" x="125" y="521" width="125" height="125"/>
+                                <rect key="frame" x="125.00000000000003" y="555.66666666666663" width="464.66666666666674" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="ZoY-Fi-6Oh"/>
                                     <constraint firstAttribute="height" constant="125" id="rJE-XY-xzQ"/>
@@ -705,7 +705,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXb-zb-ZoP" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="571.5" width="54" height="24"/>
+                                <rect key="frame" x="330.33333333333337" y="606" width="54" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="Vyg-NK-hAS"/>
                                     <constraint firstAttribute="height" constant="24" id="yP5-YC-uuM"/>
@@ -715,7 +715,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLW-FK-FWb" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="246" width="275" height="35"/>
+                                <rect key="frame" x="50" y="280.66666666666669" width="614.66666666666663" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="pWI-pZ-2K4"/>
                                 </constraints>
@@ -727,7 +727,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVB-jL-4mo">
-                                <rect key="frame" x="50" y="281" width="275" height="150"/>
+                                <rect key="frame" x="50" y="315.66666666666669" width="614.66666666666663" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="2TF-JT-Ahd"/>
@@ -738,7 +738,7 @@
                                 </connections>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ErD-sL-tnD" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="321" width="275" height="35"/>
+                                <rect key="frame" x="50" y="355.66666666666669" width="614.66666666666663" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="OjW-AA-AD4"/>
                                 </constraints>
@@ -750,7 +750,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-9d-Z1M">
-                                <rect key="frame" x="50" y="356" width="275" height="150"/>
+                                <rect key="frame" x="50" y="390.66666666666669" width="614.66666666666663" height="150.00000000000006"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="vwt-se-Edx"/>
@@ -761,7 +761,7 @@
                                 </connections>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9o7-hB-zk0" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="71" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="105.66666666666667" width="714.66666666666663" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="je3-pg-JMe"/>
@@ -819,14 +819,14 @@
             <objects>
                 <viewController storyboardIdentifier="advRewardPopup" id="Vrg-fG-xuP" customClass="advRewardsPopup" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qyd-eo-Svh" customClass="backgroundView" customModule="Habits" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mm-YY-Kkh" customClass="titleView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="61" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="95.666666666666671" width="761.33333333333337" height="50.000000000000014"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Jj-MV-fHY">
-                                        <rect key="frame" x="60" y="3.5" width="255" height="44"/>
+                                        <rect key="frame" x="60" y="3.3333333333333286" width="641.33333333333337" height="44"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
                                         <color key="textColor" red="0.08235294118" green="0.2666666667" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -854,7 +854,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced rewards are your favorite way to celebrate." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2p-Sb-ExP" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="151" width="355" height="70"/>
+                                <rect key="frame" x="10" y="185.66666666666666" width="741.33333333333337" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="oaN-4F-DAI"/>
                                 </constraints>
@@ -863,7 +863,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your favorite way to celebrate?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8j-Sg-wwN" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="10" y="251" width="355" height="25"/>
+                                <rect key="frame" x="10" y="285.66666666666669" width="741.33333333333337" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="8w4-ym-TpO"/>
                                 </constraints>
@@ -872,7 +872,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nir-i2-mTR" customClass="fancyField" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="50" y="286" width="275" height="35"/>
+                                <rect key="frame" x="50" y="320.66666666666669" width="661.33333333333337" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="1qN-Vw-opg"/>
                                 </constraints>
@@ -884,7 +884,7 @@
                                 </connections>
                             </textField>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4f-N4-SOk">
-                                <rect key="frame" x="50" y="321" width="275" height="150"/>
+                                <rect key="frame" x="50" y="355.66666666666669" width="661.33333333333337" height="150"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="h3P-Ie-E59"/>
@@ -895,7 +895,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EI-Gd-mly">
-                                <rect key="frame" x="125" y="501" width="125" height="125"/>
+                                <rect key="frame" x="124.99999999999997" y="535.66666666666663" width="511.33333333333326" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="AXS-oP-vLA"/>
                                     <constraint firstAttribute="height" constant="125" id="ah2-MK-tnB"/>
@@ -907,7 +907,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTO-tF-J0j" customClass="normalLabel" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="160.5" y="551.5" width="54" height="24"/>
+                                <rect key="frame" x="353.66666666666663" y="586" width="54" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="8zS-pm-Tv1"/>
                                     <constraint firstAttribute="height" constant="24" id="9gE-kI-I70"/>
@@ -917,7 +917,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZ5-zI-R5P" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="111" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="145.66666666666666" width="761.33333333333337" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="R0Q-fy-Bwu"/>
