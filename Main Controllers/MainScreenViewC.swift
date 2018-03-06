@@ -247,7 +247,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.present(myAlert, animated: true, completion: nil)
                 }
                 
-                alert(messages: "It's best to do one habit at a time. Add a new habit once the progress bar is full!")
+                alert(messages: "It's best to do one keystone habit at a time. Add a new habit once this habit is fully developed!")
                     //You need to get to 30 days before adding a new habit. You currently have \(Int(successesInt)) days.")
             }
         }) { (error) in
