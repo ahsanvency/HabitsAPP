@@ -482,7 +482,7 @@ class NewHabitVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         try! Auth.auth().signOut()
         //        dismiss(animated: true, completion: nil)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! newLoginVC
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
         self.present(newViewController, animated: true, completion: nil)
     }
     

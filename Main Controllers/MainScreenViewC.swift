@@ -198,7 +198,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         try! Auth.auth().signOut()
 //        dismiss(animated: true, completion: nil)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! newLoginVC
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
         self.present(newViewController, animated: true, completion: nil)
     }
     
@@ -231,29 +231,29 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 return
             }
             
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
-            self.present(newViewController, animated: true, completion: nil)
+//            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+//            self.present(newViewController, animated: true, completion: nil)
             
-//            if successesInt >= 30 {
-//
-//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
-//                self.present(newViewController, animated: true, completion: nil)
-//
-//
-//            } else  {
-//                func alert (messages: String) {
-//                    let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
-//                    let okAction = UIAlertAction(title: "OK", style: .default, handler: { (alertAction: UIAlertAction) in
-//                    })
-//                    myAlert.addAction(okAction)
-//                    self.present(myAlert, animated: true, completion: nil)
-//                }
-//
-//                alert(messages: "It's best to do one keystone habit at a time. Add a new habit once this habit is fully developed!")
-//                    //You need to get to 30 days before adding a new habit. You currently have \(Int(successesInt)) days.")
-//            }
+            if successesInt >= 30 {
+
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+                self.present(newViewController, animated: true, completion: nil)
+
+
+            } else  {
+                func alert (messages: String) {
+                    let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: { (alertAction: UIAlertAction) in
+                    })
+                    myAlert.addAction(okAction)
+                    self.present(myAlert, animated: true, completion: nil)
+                }
+
+                alert(messages: "It's best to do one keystone habit at a time.")
+                    //You need to get to 30 days before adding a new habit. You currently have \(Int(successesInt)) days.")
+            }
         }) { (error) in
             print(error.localizedDescription)
         }

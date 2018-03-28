@@ -14,10 +14,6 @@
 		3A1290682048D44400006CD0 /* fancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1290672048D44400006CD0 /* fancyButton.swift */; };
 		3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1290692048D57E00006CD0 /* Old.storyboard */; };
 		3A13731220052FEB000BDD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13731120052FEB000BDD6F /* DataService.swift */; };
-		3A1FEB2620479C0600E360CE /* newLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1FEB2520479C0600E360CE /* newLoginVC.swift */; };
-		3A2BB1D0201FDF8A00E39CEB /* RewardsPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */; };
-		3A3DA57F1FFB2EF5004C1143 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */; };
-		3A3DA5811FFB2F14004C1143 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5801FFB2F14004C1143 /* RegisterScreen.swift */; };
 		3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */; };
 		3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */; };
 		3A521436203B5AB6006232FC /* basicRewardPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A521435203B5AB6006232FC /* basicRewardPopupVC.swift */; };
@@ -36,15 +32,24 @@
 		3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A95581FFF8A5C00502707 /* Habit.swift */; };
 		3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A955C1FFF8E4F00502707 /* HabitCell.swift */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
-		3AA5A3AD1FFB08CE0035A16E /* MainLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AC1FFB08CE0035A16E /* MainLogin.swift */; };
 		3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */; };
 		3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B31FFB08CE0035A16E /* LaunchScreen.storyboard */; };
+		3AB14B1A206C1E1F00D071ED /* newUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB14B19206C1E1F00D071ED /* newUserVC.swift */; };
 		3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD55F5E201493E5001B9A23 /* editPopups.storyboard */; };
 		3AD55F6120153F5F001B9A23 /* logoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD55F6020153F5F001B9A23 /* logoView.swift */; };
 		3ADE3D3D2014701C003A114B /* whyPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D3C2014701C003A114B /* whyPopupVC.swift */; };
 		3ADE3D3F2014794B003A114B /* whenAddPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */; };
 		3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */; };
 		3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFBE922023EB2D00E03455 /* rewardsVC.swift */; };
+		3AEFD884206C08520076E8BE /* D-DIN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD881206C074F0076E8BE /* D-DIN.otf */; };
+		3AEFD885206C08950076E8BE /* D-DINCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD87E206C074F0076E8BE /* D-DINCondensed.otf */; };
+		3AEFD886206C089B0076E8BE /* D-DINExp.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD880206C074F0076E8BE /* D-DINExp.otf */; };
+		3AEFD887206C14E00076E8BE /* D-DIN-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD87C206C074E0076E8BE /* D-DIN-Bold.otf */; };
+		3AEFD888206C14E00076E8BE /* D-DIN-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD87D206C074F0076E8BE /* D-DIN-Italic.otf */; };
+		3AEFD889206C14E00076E8BE /* D-DINCondensed-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD87F206C074F0076E8BE /* D-DINCondensed-Bold.otf */; };
+		3AEFD88A206C14E00076E8BE /* D-DINExp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD882206C074F0076E8BE /* D-DINExp-Bold.otf */; };
+		3AEFD88B206C14E00076E8BE /* D-DINExp-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD87B206C074E0076E8BE /* D-DINExp-Italic.otf */; };
+		3AEFD88F206C15C50076E8BE /* loginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFD88E206C15C50076E8BE /* loginVC.swift */; };
 		3AF47FD62007F50B00F00F42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF47FD52007F50B00F00F42 /* User.swift */; };
 		3AF646CF2015663A002F86B8 /* fancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646CE2015663A002F86B8 /* fancyField.swift */; };
 		3AF646D320156C73002F86B8 /* fancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646D220156C73002F86B8 /* fancyView.swift */; };
@@ -60,10 +65,6 @@
 		3A1290672048D44400006CD0 /* fancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyButton.swift; sourceTree = "<group>"; };
 		3A1290692048D57E00006CD0 /* Old.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Old.storyboard; sourceTree = "<group>"; };
 		3A13731120052FEB000BDD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		3A1FEB2520479C0600E360CE /* newLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newLoginVC.swift; sourceTree = "<group>"; };
-		3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsPopupVC.swift; sourceTree = "<group>"; };
-		3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
-		3A3DA5801FFB2F14004C1143 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		3A3DA5841FFB7537004C1143 /* Habits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Habits.entitlements; sourceTree = "<group>"; };
 		3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
 		3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -84,16 +85,25 @@
 		3A9A955C1FFF8E4F00502707 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3AA5A3AC1FFB08CE0035A16E /* MainLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogin.swift; sourceTree = "<group>"; };
 		3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA5A3B41FFB08CE0035A16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AA5A3B61FFB08CE0035A16E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB14B19206C1E1F00D071ED /* newUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserVC.swift; sourceTree = "<group>"; };
 		3AD55F5E201493E5001B9A23 /* editPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = editPopups.storyboard; sourceTree = "<group>"; };
 		3AD55F6020153F5F001B9A23 /* logoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoView.swift; sourceTree = "<group>"; };
 		3ADE3D3C2014701C003A114B /* whyPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyPopupVC.swift; sourceTree = "<group>"; };
 		3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenAddPopupVC.swift; sourceTree = "<group>"; };
 		3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereAddPopupVC.swift; sourceTree = "<group>"; };
 		3AEFBE922023EB2D00E03455 /* rewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardsVC.swift; sourceTree = "<group>"; };
+		3AEFD87B206C074E0076E8BE /* D-DINExp-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp-Italic.otf"; sourceTree = "<group>"; };
+		3AEFD87C206C074E0076E8BE /* D-DIN-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN-Bold.otf"; sourceTree = "<group>"; };
+		3AEFD87D206C074F0076E8BE /* D-DIN-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN-Italic.otf"; sourceTree = "<group>"; };
+		3AEFD87E206C074F0076E8BE /* D-DINCondensed.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINCondensed.otf"; sourceTree = "<group>"; };
+		3AEFD87F206C074F0076E8BE /* D-DINCondensed-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINCondensed-Bold.otf"; sourceTree = "<group>"; };
+		3AEFD880206C074F0076E8BE /* D-DINExp.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp.otf"; sourceTree = "<group>"; };
+		3AEFD881206C074F0076E8BE /* D-DIN.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN.otf"; sourceTree = "<group>"; };
+		3AEFD882206C074F0076E8BE /* D-DINExp-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp-Bold.otf"; sourceTree = "<group>"; };
+		3AEFD88E206C15C50076E8BE /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 		3AF47FD52007F50B00F00F42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3AF646CE2015663A002F86B8 /* fancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyField.swift; sourceTree = "<group>"; };
 		3AF646D220156C73002F86B8 /* fancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyView.swift; sourceTree = "<group>"; };
@@ -133,9 +143,6 @@
 		3A568764204CDC9700E8F6F7 /* Old VC's */ = {
 			isa = PBXGroup;
 			children = (
-				3A2BB1CF201FDF8A00E39CEB /* RewardsPopupVC.swift */,
-				3A3DA57E1FFB2EF5004C1143 /* LoginScreen.swift */,
-				3AA5A3AC1FFB08CE0035A16E /* MainLogin.swift */,
 			);
 			path = "Old VC's";
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 		3AA5A3A91FFB08CE0035A16E /* Habits */ = {
 			isa = PBXGroup;
 			children = (
+				3AEFD87A206C06E80076E8BE /* Fonts */,
 				3A3DA5841FFB7537004C1143 /* Habits.entitlements */,
 				3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */,
 				3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */,
@@ -186,8 +194,8 @@
 		3AA5A3BC1FFB18690035A16E /* Main Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A1FEB2520479C0600E360CE /* newLoginVC.swift */,
-				3A3DA5801FFB2F14004C1143 /* RegisterScreen.swift */,
+				3AEFD88E206C15C50076E8BE /* loginVC.swift */,
+				3AB14B19206C1E1F00D071ED /* newUserVC.swift */,
 				3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */,
 				3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */,
 				3AEFBE922023EB2D00E03455 /* rewardsVC.swift */,
@@ -235,6 +243,21 @@
 				3A521439203B6284006232FC /* advRewardsPopup.swift */,
 			);
 			path = "addPopup Controllers";
+			sourceTree = "<group>";
+		};
+		3AEFD87A206C06E80076E8BE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3AEFD87C206C074E0076E8BE /* D-DIN-Bold.otf */,
+				3AEFD87D206C074F0076E8BE /* D-DIN-Italic.otf */,
+				3AEFD881206C074F0076E8BE /* D-DIN.otf */,
+				3AEFD87F206C074F0076E8BE /* D-DINCondensed-Bold.otf */,
+				3AEFD87E206C074F0076E8BE /* D-DINCondensed.otf */,
+				3AEFD882206C074F0076E8BE /* D-DINExp-Bold.otf */,
+				3AEFD87B206C074E0076E8BE /* D-DINExp-Italic.otf */,
+				3AEFD880206C074F0076E8BE /* D-DINExp.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		3AF47FD72007FE0D00F00F42 /* RandomFunctionsAndVariables */ = {
@@ -332,6 +355,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AEFD887206C14E00076E8BE /* D-DIN-Bold.otf in Resources */,
+				3AEFD888206C14E00076E8BE /* D-DIN-Italic.otf in Resources */,
+				3AEFD889206C14E00076E8BE /* D-DINCondensed-Bold.otf in Resources */,
+				3AEFD88A206C14E00076E8BE /* D-DINExp-Bold.otf in Resources */,
+				3AEFD88B206C14E00076E8BE /* D-DINExp-Italic.otf in Resources */,
+				3AEFD886206C089B0076E8BE /* D-DINExp.otf in Resources */,
+				3AEFD885206C08950076E8BE /* D-DINCondensed.otf in Resources */,
+				3AEFD884206C08520076E8BE /* D-DIN.otf in Resources */,
 				3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */,
 				3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */,
 				3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */,
@@ -425,22 +456,19 @@
 				3A1290682048D44400006CD0 /* fancyButton.swift in Sources */,
 				3A918ED520395DC500490104 /* normalView.swift in Sources */,
 				3A05E5702047728600FDB31C /* hollowButton.swift in Sources */,
-				3A1FEB2620479C0600E360CE /* newLoginVC.swift in Sources */,
 				3A7CF1092048B548009531B7 /* lineView.swift in Sources */,
 				3A521438203B621E006232FC /* intRewardsPopupVC.swift in Sources */,
 				3A52143A203B6284006232FC /* advRewardsPopup.swift in Sources */,
 				3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */,
 				3A918ED92039669C00490104 /* blueButton.swift in Sources */,
-				3A3DA5811FFB2F14004C1143 /* RegisterScreen.swift in Sources */,
 				3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */,
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
 				3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
 				3AD55F6120153F5F001B9A23 /* logoView.swift in Sources */,
 				3A918ED72039601800490104 /* titleView.swift in Sources */,
-				3A2BB1D0201FDF8A00E39CEB /* RewardsPopupVC.swift in Sources */,
 				3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */,
-				3AA5A3AD1FFB08CE0035A16E /* MainLogin.swift in Sources */,
+				3AB14B1A206C1E1F00D071ED /* newUserVC.swift in Sources */,
 				3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */,
 				3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */,
 				3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */,
@@ -452,7 +480,7 @@
 				3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */,
 				3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */,
 				3A521436203B5AB6006232FC /* basicRewardPopupVC.swift in Sources */,
-				3A3DA57F1FFB2EF5004C1143 /* LoginScreen.swift in Sources */,
+				3AEFD88F206C15C50076E8BE /* loginVC.swift in Sources */,
 				3A918ED120395B9700490104 /* normalLabel.swift in Sources */,
 				3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */,
 			);
