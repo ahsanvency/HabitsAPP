@@ -62,7 +62,7 @@ class HabitCell: UITableViewCell {
                 self.nameLbl.text = firstDict["name"] as? String
                 self.whyLbl.text = firstDict["Why"] as? String
                 self.whereLbl.text =  firstDict["Where"] as? String
-                self.habitPic.image = UIImage(named: "\(self.nameLbl.text!)2" )
+                self.habitPic.image = UIImage(named: "\(self.nameLbl.text!)" )
                 
                 
                 //updating when feild

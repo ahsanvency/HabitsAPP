@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cKD-mN-d3k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Omn-E4-WBC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,11 +16,17 @@
             <string>AvenirNext-DemiBold</string>
             <string>AvenirNext-Regular</string>
         </array>
+        <array key="D-DIN-Bold.otf">
+            <string>D-DIN-Bold</string>
+        </array>
         <array key="D-DIN-Italic.otf">
             <string>D-DIN-Italic</string>
         </array>
         <array key="D-DIN.otf">
             <string>D-DIN</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
         </array>
     </customFonts>
     <scenes>
@@ -480,7 +486,7 @@
                                     <outlet property="delegate" destination="RYe-QU-wGA" id="Kz1-4g-3fI"/>
                                 </connections>
                             </pickerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Habit Pic" translatesAutoresizingMaskIntoConstraints="NO" id="38r-pY-cSR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="38r-pY-cSR">
                                 <rect key="frame" x="97.5" y="72" width="180" height="180"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-H6-Z61">
@@ -805,7 +811,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezM-NZ-fs1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-586" y="-171"/>
+            <point key="canvasLocation" x="-586" y="-143"/>
         </scene>
         <!--UIViewController-44y-D1-48f-->
         <scene sceneID="ZVS-YL-y2F">
@@ -1152,6 +1158,86 @@
             </objects>
             <point key="canvasLocation" x="698" y="-914"/>
         </scene>
+        <!--Pick HabitVC-->
+        <scene sceneID="BwR-Zk-NC4">
+            <objects>
+                <viewController id="Omn-E4-WBC" customClass="pickHabitVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rth-yX-1ku" customClass="backgroundGradient" customModule="Habits" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Your Desired" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYf-8w-3MY">
+                                <rect key="frame" x="77.5" y="70" width="221" height="30"/>
+                                <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0z-Je-lRG">
+                                <rect key="frame" x="155.5" y="101" width="66.5" height="30"/>
+                                <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHt-r2-6ss">
+                                <rect key="frame" x="158" y="585" width="58" height="42"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Next">
+                                            <attributes>
+                                                <color key="NSColor" red="0.050980392156862744" green="0.29803921568627451" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="30" name="D-DIN-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nP-w4-o2e">
+                                <rect key="frame" x="30" y="530" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IxR-G1-1ij"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNF-2T-zbi">
+                                <rect key="frame" x="0.0" y="221" width="375" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="e6B-5c-7Jb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Omn-E4-WBC" id="Ouf-iL-lh5"/>
+                                    <outlet property="delegate" destination="Omn-E4-WBC" id="r6e-34-Aew"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CYf-8w-3MY" firstAttribute="top" secondItem="uBf-kM-2gN" secondAttribute="top" constant="50" id="1h2-PD-xwL"/>
+                            <constraint firstItem="I0z-Je-lRG" firstAttribute="top" secondItem="CYf-8w-3MY" secondAttribute="bottom" constant="1" id="Awy-OR-rs1"/>
+                            <constraint firstItem="uBf-kM-2gN" firstAttribute="trailing" secondItem="1nP-w4-o2e" secondAttribute="trailing" constant="30" id="E7G-Tg-hmc"/>
+                            <constraint firstItem="CYf-8w-3MY" firstAttribute="centerX" secondItem="Rth-yX-1ku" secondAttribute="centerX" id="GKT-B6-aik"/>
+                            <constraint firstItem="uBf-kM-2gN" firstAttribute="bottom" secondItem="RHt-r2-6ss" secondAttribute="bottom" constant="40" id="OgV-GP-F02"/>
+                            <constraint firstItem="RHt-r2-6ss" firstAttribute="centerX" secondItem="Rth-yX-1ku" secondAttribute="centerX" id="QsR-rM-IIe"/>
+                            <constraint firstItem="I0z-Je-lRG" firstAttribute="centerX" secondItem="CYf-8w-3MY" secondAttribute="centerX" id="SUU-PY-Ysd"/>
+                            <constraint firstItem="RHt-r2-6ss" firstAttribute="top" secondItem="1nP-w4-o2e" secondAttribute="bottom" constant="15" id="buK-fT-iOa"/>
+                            <constraint firstItem="BNF-2T-zbi" firstAttribute="leading" secondItem="uBf-kM-2gN" secondAttribute="leading" id="dh5-Ho-Hnb"/>
+                            <constraint firstItem="BNF-2T-zbi" firstAttribute="trailing" secondItem="uBf-kM-2gN" secondAttribute="trailing" id="gLf-3s-bEO"/>
+                            <constraint firstItem="BNF-2T-zbi" firstAttribute="centerY" secondItem="Rth-yX-1ku" secondAttribute="centerY" id="hYt-9Q-uwE"/>
+                            <constraint firstItem="1nP-w4-o2e" firstAttribute="leading" secondItem="uBf-kM-2gN" secondAttribute="leading" constant="30" id="tZg-ay-ETy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uBf-kM-2gN"/>
+                    </view>
+                    <connections>
+                        <outlet property="habitPicker" destination="BNF-2T-zbi" id="FI0-08-t4r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07d-iS-8KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693.60000000000002" y="-254.12293853073464"/>
+        </scene>
         <!--Main Screen ViewC-->
         <scene sceneID="ee0-tT-F5s">
             <objects>
@@ -1254,7 +1340,7 @@
                                     <constraint firstAttribute="height" constant="350" id="OY5-SK-JFP"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HabitCell" rowHeight="350" id="FJr-6w-gRR" userLabel="Habit Cell" customClass="HabitCell" customModule="Habits" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HabitCell" rowHeight="350" id="FJr-6w-gRR" userLabel="Habit Cell" customClass="HabitCell" customModule="Habits" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FJr-6w-gRR" id="fId-iE-dgx">
@@ -1509,7 +1595,6 @@
         <image name="Confirm Password Image" width="97" height="101"/>
         <image name="Create Account Button" width="315" height="50"/>
         <image name="HD" width="205" height="138"/>
-        <image name="Habit Pic" width="200" height="200"/>
         <image name="Key" width="58" height="65"/>
         <image name="Login Button" width="315" height="50"/>
         <image name="Mail" width="110" height="76"/>

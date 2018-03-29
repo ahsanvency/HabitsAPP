@@ -27,6 +27,8 @@ let satinColor : UIColor = UIColor(r: 247, g: 239, b: 208)
 let maroonColor : UIColor = UIColor(r: 186, g: 7, b: 29)
 let seaFoamColor : UIColor = UIColor(r: 9, g: 42, b: 48)
 
+let habitList = ["Running","Meditating","Waking Up Early","Coding","Journaling", "Eating Healthy", "Praying", "Reading", "Act of Kindness", "Lifting", "Sleeping on Time"]
+
 extension UIColor {
     
     //This is extending the function and making it easier to use

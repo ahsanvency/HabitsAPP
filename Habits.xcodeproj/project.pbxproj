@@ -36,7 +36,7 @@
 		3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B31FFB08CE0035A16E /* LaunchScreen.storyboard */; };
 		3AB14B1A206C1E1F00D071ED /* newUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB14B19206C1E1F00D071ED /* newUserVC.swift */; };
 		3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD55F5E201493E5001B9A23 /* editPopups.storyboard */; };
-		3AD55F6120153F5F001B9A23 /* logoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD55F6020153F5F001B9A23 /* logoView.swift */; };
+		3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */; };
 		3ADE3D3D2014701C003A114B /* whyPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D3C2014701C003A114B /* whyPopupVC.swift */; };
 		3ADE3D3F2014794B003A114B /* whenAddPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */; };
 		3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */; };
@@ -53,6 +53,8 @@
 		3AF47FD62007F50B00F00F42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF47FD52007F50B00F00F42 /* User.swift */; };
 		3AF646CF2015663A002F86B8 /* fancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646CE2015663A002F86B8 /* fancyField.swift */; };
 		3AF646D320156C73002F86B8 /* fancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646D220156C73002F86B8 /* fancyView.swift */; };
+		3AFBF06F206CB2AA00F8396A /* pickHabitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */; };
+		3AFBF071206CB31100F8396A /* habitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBF070206CB31100F8396A /* habitPicker.swift */; };
 		6D8C05CEDA409F1774698B25 /* Pods_Habits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED90BB69D51A410BC14CA8A2 /* Pods_Habits.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,7 +92,7 @@
 		3AA5A3B61FFB08CE0035A16E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AB14B19206C1E1F00D071ED /* newUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserVC.swift; sourceTree = "<group>"; };
 		3AD55F5E201493E5001B9A23 /* editPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = editPopups.storyboard; sourceTree = "<group>"; };
-		3AD55F6020153F5F001B9A23 /* logoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoView.swift; sourceTree = "<group>"; };
+		3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundGradient.swift; sourceTree = "<group>"; };
 		3ADE3D3C2014701C003A114B /* whyPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyPopupVC.swift; sourceTree = "<group>"; };
 		3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenAddPopupVC.swift; sourceTree = "<group>"; };
 		3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereAddPopupVC.swift; sourceTree = "<group>"; };
@@ -107,6 +109,8 @@
 		3AF47FD52007F50B00F00F42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3AF646CE2015663A002F86B8 /* fancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyField.swift; sourceTree = "<group>"; };
 		3AF646D220156C73002F86B8 /* fancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyView.swift; sourceTree = "<group>"; };
+		3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickHabitVC.swift; sourceTree = "<group>"; };
+		3AFBF070206CB31100F8396A /* habitPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitPicker.swift; sourceTree = "<group>"; };
 		ED90BB69D51A410BC14CA8A2 /* Pods_Habits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F225DEF61B686E99849B70AD /* Pods-Habits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habits.release.xcconfig"; path = "Pods/Target Support Files/Pods-Habits/Pods-Habits.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +202,7 @@
 				3AB14B19206C1E1F00D071ED /* newUserVC.swift */,
 				3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */,
 				3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */,
+				3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */,
 				3AEFBE922023EB2D00E03455 /* rewardsVC.swift */,
 			);
 			path = "Main Controllers";
@@ -207,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9A955C1FFF8E4F00502707 /* HabitCell.swift */,
+				3AFBF070206CB31100F8396A /* habitPicker.swift */,
 				3A918ED82039669C00490104 /* blueButton.swift */,
 				3A05E56F2047728600FDB31C /* hollowButton.swift */,
 				3A1290672048D44400006CD0 /* fancyButton.swift */,
@@ -214,7 +220,7 @@
 				3A7CF1082048B548009531B7 /* lineView.swift */,
 				3AF646CE2015663A002F86B8 /* fancyField.swift */,
 				3A918EDC20396DEA00490104 /* backgroundView.swift */,
-				3AD55F6020153F5F001B9A23 /* logoView.swift */,
+				3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */,
 				3AF646D220156C73002F86B8 /* fancyView.swift */,
 				3A918ED420395DC500490104 /* normalView.swift */,
 				3A7CF10A2048BF69009531B7 /* circlePic.swift */,
@@ -453,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF47FD62007F50B00F00F42 /* User.swift in Sources */,
+				3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */,
 				3A1290682048D44400006CD0 /* fancyButton.swift in Sources */,
 				3A918ED520395DC500490104 /* normalView.swift in Sources */,
 				3A05E5702047728600FDB31C /* hollowButton.swift in Sources */,
@@ -465,7 +472,8 @@
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
 				3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
-				3AD55F6120153F5F001B9A23 /* logoView.swift in Sources */,
+				3AFBF071206CB31100F8396A /* habitPicker.swift in Sources */,
+				3AFBF06F206CB2AA00F8396A /* pickHabitVC.swift in Sources */,
 				3A918ED72039601800490104 /* titleView.swift in Sources */,
 				3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */,
 				3AB14B1A206C1E1F00D071ED /* newUserVC.swift in Sources */,
