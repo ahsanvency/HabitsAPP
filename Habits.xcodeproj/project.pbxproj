@@ -29,6 +29,7 @@
 		3A918ED92039669C00490104 /* blueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED82039669C00490104 /* blueButton.swift */; };
 		3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918EDC20396DEA00490104 /* backgroundView.swift */; };
 		3A918EDF203993B000490104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A918EDE203993B000490104 /* Main.storyboard */; };
+		3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9381DC206D63ED009BA411 /* habitModel.swift */; };
 		3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A95581FFF8A5C00502707 /* Habit.swift */; };
 		3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A955C1FFF8E4F00502707 /* HabitCell.swift */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
@@ -54,7 +55,7 @@
 		3AF646CF2015663A002F86B8 /* fancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646CE2015663A002F86B8 /* fancyField.swift */; };
 		3AF646D320156C73002F86B8 /* fancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF646D220156C73002F86B8 /* fancyView.swift */; };
 		3AFBF06F206CB2AA00F8396A /* pickHabitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */; };
-		3AFBF071206CB31100F8396A /* habitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBF070206CB31100F8396A /* habitPicker.swift */; };
+		3AFBF071206CB31100F8396A /* habitSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFBF070206CB31100F8396A /* habitSelector.swift */; };
 		6D8C05CEDA409F1774698B25 /* Pods_Habits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED90BB69D51A410BC14CA8A2 /* Pods_Habits.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		3A918ED82039669C00490104 /* blueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blueButton.swift; sourceTree = "<group>"; };
 		3A918EDC20396DEA00490104 /* backgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
 		3A918EDE203993B000490104 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3A9381DC206D63ED009BA411 /* habitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitModel.swift; sourceTree = "<group>"; };
 		3A9A95581FFF8A5C00502707 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		3A9A955C1FFF8E4F00502707 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +112,7 @@
 		3AF646CE2015663A002F86B8 /* fancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyField.swift; sourceTree = "<group>"; };
 		3AF646D220156C73002F86B8 /* fancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyView.swift; sourceTree = "<group>"; };
 		3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickHabitVC.swift; sourceTree = "<group>"; };
-		3AFBF070206CB31100F8396A /* habitPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitPicker.swift; sourceTree = "<group>"; };
+		3AFBF070206CB31100F8396A /* habitSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitSelector.swift; sourceTree = "<group>"; };
 		ED90BB69D51A410BC14CA8A2 /* Pods_Habits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Habits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F225DEF61B686E99849B70AD /* Pods-Habits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habits.release.xcconfig"; path = "Pods/Target Support Files/Pods-Habits/Pods-Habits.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,25 @@
 			children = (
 			);
 			path = "Old VC's";
+			sourceTree = "<group>";
+		};
+		3A9381DE206D6962009BA411 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				3A918ED82039669C00490104 /* blueButton.swift */,
+				3A05E56F2047728600FDB31C /* hollowButton.swift */,
+				3A1290672048D44400006CD0 /* fancyButton.swift */,
+				3A918ED020395B9700490104 /* normalLabel.swift */,
+				3A7CF1082048B548009531B7 /* lineView.swift */,
+				3AF646CE2015663A002F86B8 /* fancyField.swift */,
+				3A918EDC20396DEA00490104 /* backgroundView.swift */,
+				3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */,
+				3AF646D220156C73002F86B8 /* fancyView.swift */,
+				3A918ED420395DC500490104 /* normalView.swift */,
+				3A7CF10A2048BF69009531B7 /* circlePic.swift */,
+				3A918ED62039601800490104 /* titleView.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		3AA5A39E1FFB08CE0035A16E = {
@@ -212,19 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				3A9A955C1FFF8E4F00502707 /* HabitCell.swift */,
-				3AFBF070206CB31100F8396A /* habitPicker.swift */,
-				3A918ED82039669C00490104 /* blueButton.swift */,
-				3A05E56F2047728600FDB31C /* hollowButton.swift */,
-				3A1290672048D44400006CD0 /* fancyButton.swift */,
-				3A918ED020395B9700490104 /* normalLabel.swift */,
-				3A7CF1082048B548009531B7 /* lineView.swift */,
-				3AF646CE2015663A002F86B8 /* fancyField.swift */,
-				3A918EDC20396DEA00490104 /* backgroundView.swift */,
-				3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */,
-				3AF646D220156C73002F86B8 /* fancyView.swift */,
-				3A918ED420395DC500490104 /* normalView.swift */,
-				3A7CF10A2048BF69009531B7 /* circlePic.swift */,
-				3A918ED62039601800490104 /* titleView.swift */,
+				3AFBF070206CB31100F8396A /* habitSelector.swift */,
+				3A9381DE206D6962009BA411 /* New Group */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9A95581FFF8A5C00502707 /* Habit.swift */,
+				3A9381DC206D63ED009BA411 /* habitModel.swift */,
 				3AF47FD52007F50B00F00F42 /* User.swift */,
 			);
 			path = Model;
@@ -462,6 +473,7 @@
 				3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */,
 				3A1290682048D44400006CD0 /* fancyButton.swift in Sources */,
 				3A918ED520395DC500490104 /* normalView.swift in Sources */,
+				3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */,
 				3A05E5702047728600FDB31C /* hollowButton.swift in Sources */,
 				3A7CF1092048B548009531B7 /* lineView.swift in Sources */,
 				3A521438203B621E006232FC /* intRewardsPopupVC.swift in Sources */,
@@ -472,7 +484,7 @@
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
 				3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
-				3AFBF071206CB31100F8396A /* habitPicker.swift in Sources */,
+				3AFBF071206CB31100F8396A /* habitSelector.swift in Sources */,
 				3AFBF06F206CB2AA00F8396A /* pickHabitVC.swift in Sources */,
 				3A918ED72039601800490104 /* titleView.swift in Sources */,
 				3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */,

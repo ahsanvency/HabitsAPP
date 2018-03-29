@@ -1179,7 +1179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHt-r2-6ss">
-                                <rect key="frame" x="158" y="585" width="58" height="42"/>
+                                <rect key="frame" x="158" y="600" width="58" height="42"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Next">
@@ -1194,7 +1194,7 @@
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nP-w4-o2e">
-                                <rect key="frame" x="30" y="530" width="315" height="40"/>
+                                <rect key="frame" x="30" y="545" width="315" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="IxR-G1-1ij"/>
                                 </constraints>
@@ -1203,14 +1203,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNF-2T-zbi">
-                                <rect key="frame" x="0.0" y="221" width="375" height="225"/>
+                                <rect key="frame" x="0.0" y="133.5" width="375" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="225" id="e6B-5c-7Jb"/>
+                                    <constraint firstAttribute="height" constant="400" id="e6B-5c-7Jb"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="Omn-E4-WBC" id="Ouf-iL-lh5"/>
-                                    <outlet property="delegate" destination="Omn-E4-WBC" id="r6e-34-Aew"/>
-                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1219,7 +1215,7 @@
                             <constraint firstItem="I0z-Je-lRG" firstAttribute="top" secondItem="CYf-8w-3MY" secondAttribute="bottom" constant="1" id="Awy-OR-rs1"/>
                             <constraint firstItem="uBf-kM-2gN" firstAttribute="trailing" secondItem="1nP-w4-o2e" secondAttribute="trailing" constant="30" id="E7G-Tg-hmc"/>
                             <constraint firstItem="CYf-8w-3MY" firstAttribute="centerX" secondItem="Rth-yX-1ku" secondAttribute="centerX" id="GKT-B6-aik"/>
-                            <constraint firstItem="uBf-kM-2gN" firstAttribute="bottom" secondItem="RHt-r2-6ss" secondAttribute="bottom" constant="40" id="OgV-GP-F02"/>
+                            <constraint firstItem="uBf-kM-2gN" firstAttribute="bottom" secondItem="RHt-r2-6ss" secondAttribute="bottom" constant="25" id="OgV-GP-F02"/>
                             <constraint firstItem="RHt-r2-6ss" firstAttribute="centerX" secondItem="Rth-yX-1ku" secondAttribute="centerX" id="QsR-rM-IIe"/>
                             <constraint firstItem="I0z-Je-lRG" firstAttribute="centerX" secondItem="CYf-8w-3MY" secondAttribute="centerX" id="SUU-PY-Ysd"/>
                             <constraint firstItem="RHt-r2-6ss" firstAttribute="top" secondItem="1nP-w4-o2e" secondAttribute="bottom" constant="15" id="buK-fT-iOa"/>

@@ -7,26 +7,48 @@
 //
 
 import Foundation
+import UIKit
 
 class Habit{
-    private var _name: String!
+    private var _habitName: String!
+    private var _habitPic: UIImage!
     private var _why: String!
     private var _when: String!
     private var _whhere: String!
     
-    init(name: String, why: String, when: String, whhere: String) {
-        _name = name;
+    
+    init(habitName: String) {
+        _habitName = habitName;
+    }
+    
+    init(habitName: String, habitPic: UIImage) {
+        _habitName = habitName;
+        _habitPic = habitPic;
+    }
+    
+    init(habitName: String, habitPic: UIImage, why: String, when: String, whhere: String) {
+        _habitName = habitName;
+        _habitPic = habitPic;
         _why = why;
         _when = when;
         _whhere = whhere;
     }
     
-    var name: String{
+    var habitName: String{
         get{
-            return _name;
+            return _habitName;
         }
         set{
-            _name = newValue;
+            _habitName = newValue;
+        }
+    }
+    
+    var habitPic: UIImage{
+        get{
+            return _habitPic;
+        }
+        set{
+            _habitPic = newValue;
         }
     }
     
@@ -56,8 +78,6 @@ class Habit{
             _whhere = newValue;
         }
     }
-    
-
     
 }
 
