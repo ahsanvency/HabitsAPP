@@ -10,9 +10,6 @@ import UIKit
 
 class whyPopupVC: UIViewController {
     
-    
-    
-    
     var habitRow: Int?
     var habitName: String?
     var whyLblText: String?

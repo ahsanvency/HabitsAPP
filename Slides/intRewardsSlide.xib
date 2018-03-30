@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="D-DIN-Bold.otf">
+            <string>D-DIN-Bold</string>
+        </array>
+        <array key="D-DIN.otf">
+            <string>D-DIN</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="SvA-Nc-Ant" customClass="intRewardsSlide" customModule="Habits" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaL-iO-RN8">
+                    <rect key="frame" x="42" y="15" width="241" height="26"/>
+                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate rewards are more fun and enjoyable." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cap-Np-ZxH">
+                    <rect key="frame" x="20" y="61" width="285" height="38"/>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are Intermediate Rewards you enjoy?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sva-5k-lr2">
+                    <rect key="frame" x="10" y="109" width="305" height="20"/>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gg7-1X-eiy">
+                    <rect key="frame" x="10" y="139" width="305" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szk-C5-EdQ">
+                    <rect key="frame" x="10" y="194" width="305" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8y-AA-Pfr">
+                    <rect key="frame" x="10" y="224" width="305" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="xKu-31-Ga6"/>
+                    </constraints>
+                </pickerView>
+                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B47-WP-TbQ">
+                    <rect key="frame" x="10" y="169" width="305" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="vl5-qR-93P"/>
+                    </constraints>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="aaL-iO-RN8" firstAttribute="centerX" secondItem="SvA-Nc-Ant" secondAttribute="centerX" id="5QM-Xb-5Z0"/>
+                <constraint firstItem="B47-WP-TbQ" firstAttribute="trailing" secondItem="Gg7-1X-eiy" secondAttribute="trailing" id="8Oc-Qt-LKD"/>
+                <constraint firstItem="Cap-Np-ZxH" firstAttribute="leading" secondItem="SvA-Nc-Ant" secondAttribute="leading" constant="20" id="Aah-nt-0pu"/>
+                <constraint firstItem="PYj-zu-oWj" firstAttribute="trailing" secondItem="szk-C5-EdQ" secondAttribute="trailing" constant="10" id="DTW-Mz-ceK"/>
+                <constraint firstItem="szk-C5-EdQ" firstAttribute="top" secondItem="Gg7-1X-eiy" secondAttribute="bottom" constant="25" id="Q4u-iW-EGZ"/>
+                <constraint firstItem="PYj-zu-oWj" firstAttribute="trailing" secondItem="sva-5k-lr2" secondAttribute="trailing" constant="10" id="Sm5-Wf-lwG"/>
+                <constraint firstItem="aaL-iO-RN8" firstAttribute="top" secondItem="PYj-zu-oWj" secondAttribute="top" constant="15" id="U1W-Bu-Ict"/>
+                <constraint firstItem="Cap-Np-ZxH" firstAttribute="top" secondItem="aaL-iO-RN8" secondAttribute="bottom" constant="20" id="Xl9-bP-vLf"/>
+                <constraint firstItem="Gg7-1X-eiy" firstAttribute="leading" secondItem="PYj-zu-oWj" secondAttribute="leading" constant="10" id="aZr-gQ-zdE"/>
+                <constraint firstItem="B47-WP-TbQ" firstAttribute="leading" secondItem="Gg7-1X-eiy" secondAttribute="leading" id="bfB-FM-bnj"/>
+                <constraint firstItem="PYj-zu-oWj" firstAttribute="trailing" secondItem="Gg7-1X-eiy" secondAttribute="trailing" constant="10" id="iqH-Mt-uTS"/>
+                <constraint firstItem="sva-5k-lr2" firstAttribute="leading" secondItem="PYj-zu-oWj" secondAttribute="leading" constant="10" id="ngI-e7-RPh"/>
+                <constraint firstItem="sva-5k-lr2" firstAttribute="top" secondItem="Cap-Np-ZxH" secondAttribute="bottom" constant="10" id="p0e-FI-bXs"/>
+                <constraint firstItem="H8y-AA-Pfr" firstAttribute="top" secondItem="szk-C5-EdQ" secondAttribute="bottom" id="qV3-Sq-zoT"/>
+                <constraint firstItem="H8y-AA-Pfr" firstAttribute="leading" secondItem="Gg7-1X-eiy" secondAttribute="leading" id="spa-5c-tUM"/>
+                <constraint firstItem="B47-WP-TbQ" firstAttribute="top" secondItem="Gg7-1X-eiy" secondAttribute="bottom" id="u1l-Rs-AWn"/>
+                <constraint firstItem="Gg7-1X-eiy" firstAttribute="top" secondItem="sva-5k-lr2" secondAttribute="bottom" constant="10" id="uWR-P9-LTc"/>
+                <constraint firstItem="H8y-AA-Pfr" firstAttribute="trailing" secondItem="Gg7-1X-eiy" secondAttribute="trailing" id="xNI-O1-n0L"/>
+                <constraint firstAttribute="trailing" secondItem="Cap-Np-ZxH" secondAttribute="trailing" constant="20" id="yAG-tL-ggy"/>
+                <constraint firstItem="szk-C5-EdQ" firstAttribute="leading" secondItem="PYj-zu-oWj" secondAttribute="leading" constant="10" id="ypj-xT-16D"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="PYj-zu-oWj"/>
+            <point key="canvasLocation" x="-5" y="159"/>
+        </view>
+    </objects>
+</document>

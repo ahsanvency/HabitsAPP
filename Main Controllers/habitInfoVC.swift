@@ -15,30 +15,43 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollInfo: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    var habitName: String?
+    var chosenHabit: Habit!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        habitPic.image = UIImage(named: habitName!)
+        //Change this line of code
+        habitPic.image = UIImage(named: chosenHabit.habitName)
+        //habitPic.image = UIImage(named: "Running")
         scrollInfo.delegate = self
-        let Slides:[Slide] = createSlides()
+        let Slides:[UIView] = createSlides()
         setupscrollInfo(Slides: Slides)
         pageControl.numberOfPages = Slides.count
         pageControl.currentPage = 0
         view.bringSubview(toFront: pageControl)
-    }
-    
-    func createSlides() -> [Slide]{
-        let Slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)!.first as! Slide
         
-        let Slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)!.first as! Slide
-        Slide2.label.text = "Slide2"
-        let Slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)!.first as! Slide
-        Slide3.label.text = "Slide3"
-        return [Slide1,Slide2,Slide3]
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
-    func setupscrollInfo(Slides:[Slide]){
+    func createSlides() -> [UIView]{
+        let whySlide:whySlide = Bundle.main.loadNibNamed("whySlide", owner: self, options: nil)!.first as! whySlide
+        whySlide.intrinsicLabel.text = "Did you know intrinsic reasons like \(chosenHabit.intrinsicReason) help you succeed?"
+        whySlide.questionLabel.text = "Why do you want to start \(chosenHabit.habitName)?"
+
+        let whereSlide:whereSlide = Bundle.main.loadNibNamed("whereSlide", owner: self, options: nil)!.first as! whereSlide
+        whereSlide.questionLabel.text = "Where is a consistent location you can \(chosenHabit.habitVerb)?"
+        let whenSlide:whenSlide = Bundle.main.loadNibNamed("whenSlide", owner: self, options: nil)!.first as! whenSlide
+        whenSlide.questionLabel.text = "When can you consistently \(chosenHabit.habitVerb)?"
+        let basicRewardsSlide:basicRewardsSlide = Bundle.main.loadNibNamed("basicRewardsSlide", owner: self, options: nil)!.first as! basicRewardsSlide
+        let intRewardsSlide:intRewardsSlide = Bundle.main.loadNibNamed("intRewardsSlide", owner: self, options: nil)!.first as! intRewardsSlide
+        let advRewardsSlide:advRewardsSlide = Bundle.main.loadNibNamed("advRewardsSlide", owner: self, options: nil)!.first as! advRewardsSlide
+        
+        return [whySlide, whereSlide, whenSlide, basicRewardsSlide, intRewardsSlide, advRewardsSlide]
+    }
+    
+    func setupscrollInfo(Slides:[UIView]){
         scrollInfo.frame = CGRect(x: 0, y: 0, width: scrollInfo.frame.width, height: view.frame.height)
         scrollInfo.contentSize = CGSize(width: scrollInfo.frame.width * CGFloat(Slides.count), height: view.frame.height)
         scrollInfo.isPagingEnabled = true
@@ -56,6 +69,24 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= (keyboardSize.height - 125)
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += (keyboardSize.height - 125)
+            }
+        }
     }
     
 }

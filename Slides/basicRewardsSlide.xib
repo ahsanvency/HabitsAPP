@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="D-DIN-Bold.otf">
+            <string>D-DIN-Bold</string>
+        </array>
+        <array key="D-DIN.otf">
+            <string>D-DIN</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="U8v-XY-Xz3" customClass="basicRewardsSlide" customModule="Habits" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Rewards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRU-d1-NlN">
+                    <rect key="frame" x="82.5" y="15" width="160" height="26"/>
+                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Rewards are simple and easy to access." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRn-sg-21u">
+                    <rect key="frame" x="20" y="61" width="285" height="38"/>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are Basic Rewards you enjoy?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVb-Sq-r4S">
+                    <rect key="frame" x="10" y="109" width="305" height="20"/>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPZ-gv-0lr">
+                    <rect key="frame" x="10" y="139" width="305" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMQ-0d-4d6">
+                    <rect key="frame" x="10" y="194" width="305" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyC-kW-sf0">
+                    <rect key="frame" x="10" y="224" width="305" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="ebm-Nf-osi"/>
+                    </constraints>
+                </pickerView>
+                <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMt-IV-5BS">
+                    <rect key="frame" x="10" y="169" width="305" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="dlu-se-FIl"/>
+                    </constraints>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="hRU-d1-NlN" firstAttribute="top" secondItem="LZv-5U-9LN" secondAttribute="top" constant="15" id="34k-6p-w1z"/>
+                <constraint firstItem="yPZ-gv-0lr" firstAttribute="leading" secondItem="LZv-5U-9LN" secondAttribute="leading" constant="10" id="EGI-J7-ELM"/>
+                <constraint firstItem="rMt-IV-5BS" firstAttribute="trailing" secondItem="yPZ-gv-0lr" secondAttribute="trailing" id="JWI-9H-yny"/>
+                <constraint firstItem="LZv-5U-9LN" firstAttribute="trailing" secondItem="yPZ-gv-0lr" secondAttribute="trailing" constant="10" id="MSe-tD-uTo"/>
+                <constraint firstItem="qRn-sg-21u" firstAttribute="top" secondItem="hRU-d1-NlN" secondAttribute="bottom" constant="20" id="OhG-3x-nM5"/>
+                <constraint firstItem="VVb-Sq-r4S" firstAttribute="top" secondItem="qRn-sg-21u" secondAttribute="bottom" constant="10" id="RjW-xj-Rdd"/>
+                <constraint firstItem="rMt-IV-5BS" firstAttribute="top" secondItem="yPZ-gv-0lr" secondAttribute="bottom" id="Suu-nR-L0p"/>
+                <constraint firstItem="rMt-IV-5BS" firstAttribute="leading" secondItem="yPZ-gv-0lr" secondAttribute="leading" id="TaY-Xq-ELa"/>
+                <constraint firstItem="KMQ-0d-4d6" firstAttribute="top" secondItem="yPZ-gv-0lr" secondAttribute="bottom" constant="25" id="X2J-63-soB"/>
+                <constraint firstItem="LZv-5U-9LN" firstAttribute="trailing" secondItem="KMQ-0d-4d6" secondAttribute="trailing" constant="10" id="YOK-1U-Ejh"/>
+                <constraint firstItem="VVb-Sq-r4S" firstAttribute="leading" secondItem="LZv-5U-9LN" secondAttribute="leading" constant="10" id="h1n-5v-2MO"/>
+                <constraint firstItem="hyC-kW-sf0" firstAttribute="trailing" secondItem="yPZ-gv-0lr" secondAttribute="trailing" id="jEj-4O-Pjc"/>
+                <constraint firstItem="hRU-d1-NlN" firstAttribute="centerX" secondItem="U8v-XY-Xz3" secondAttribute="centerX" id="kqk-eH-z02"/>
+                <constraint firstItem="LZv-5U-9LN" firstAttribute="trailing" secondItem="VVb-Sq-r4S" secondAttribute="trailing" constant="10" id="laM-Vg-1Go"/>
+                <constraint firstItem="hyC-kW-sf0" firstAttribute="leading" secondItem="yPZ-gv-0lr" secondAttribute="leading" id="lgn-fd-hh5"/>
+                <constraint firstItem="KMQ-0d-4d6" firstAttribute="leading" secondItem="LZv-5U-9LN" secondAttribute="leading" constant="10" id="nhH-qz-Jz6"/>
+                <constraint firstItem="qRn-sg-21u" firstAttribute="leading" secondItem="U8v-XY-Xz3" secondAttribute="leading" constant="20" id="prz-Cr-g3c"/>
+                <constraint firstItem="yPZ-gv-0lr" firstAttribute="top" secondItem="VVb-Sq-r4S" secondAttribute="bottom" constant="10" id="w1l-xt-4lA"/>
+                <constraint firstItem="hyC-kW-sf0" firstAttribute="top" secondItem="KMQ-0d-4d6" secondAttribute="bottom" id="wCg-O4-2KM"/>
+                <constraint firstAttribute="trailing" secondItem="qRn-sg-21u" secondAttribute="trailing" constant="20" id="whe-8o-sx8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="LZv-5U-9LN"/>
+            <point key="canvasLocation" x="-5" y="159"/>
+        </view>
+    </objects>
+</document>

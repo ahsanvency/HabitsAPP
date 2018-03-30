@@ -31,8 +31,18 @@
 		3A918EDF203993B000490104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A918EDE203993B000490104 /* Main.storyboard */; };
 		3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9381DC206D63ED009BA411 /* habitModel.swift */; };
 		3A9381E0206D84D2009BA411 /* habitInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9381DF206D84D2009BA411 /* habitInfoVC.swift */; };
-		3A938206206DB082009BA411 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A938205206DB082009BA411 /* Slide.xib */; };
-		3A938208206DB08E009BA411 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938207206DB08E009BA411 /* Slide.swift */; };
+		3A938206206DB082009BA411 /* whySlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A938205206DB082009BA411 /* whySlide.xib */; };
+		3A938208206DB08E009BA411 /* whySlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938207206DB08E009BA411 /* whySlide.swift */; };
+		3A93820A206DED96009BA411 /* whereSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938209206DED96009BA411 /* whereSlide.swift */; };
+		3A93820C206DEEBB009BA411 /* whereSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A93820B206DEEBB009BA411 /* whereSlide.xib */; };
+		3A93820E206DEFA7009BA411 /* whenSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A93820D206DEFA7009BA411 /* whenSlide.xib */; };
+		3A938210206DF0C0009BA411 /* whenSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A93820F206DF0C0009BA411 /* whenSlide.swift */; };
+		3A938212206DF469009BA411 /* basicRewardsSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A938211206DF469009BA411 /* basicRewardsSlide.xib */; };
+		3A938214206DF532009BA411 /* basicRewards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938213206DF532009BA411 /* basicRewards.swift */; };
+		3A938216206DF605009BA411 /* intRewardsSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A938215206DF605009BA411 /* intRewardsSlide.xib */; };
+		3A938218206DF643009BA411 /* intRewardsSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938217206DF643009BA411 /* intRewardsSlide.swift */; };
+		3A93821A206DF69F009BA411 /* advRewardsSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938219206DF69F009BA411 /* advRewardsSlide.swift */; };
+		3A93821C206DF6AE009BA411 /* advRewardsSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A93821B206DF6AE009BA411 /* advRewardsSlide.xib */; };
 		3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A95581FFF8A5C00502707 /* Habit.swift */; };
 		3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A955C1FFF8E4F00502707 /* HabitCell.swift */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
@@ -89,8 +99,18 @@
 		3A918EDE203993B000490104 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A9381DC206D63ED009BA411 /* habitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitModel.swift; sourceTree = "<group>"; };
 		3A9381DF206D84D2009BA411 /* habitInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitInfoVC.swift; sourceTree = "<group>"; };
-		3A938205206DB082009BA411 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
-		3A938207206DB08E009BA411 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		3A938205206DB082009BA411 /* whySlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = whySlide.xib; sourceTree = "<group>"; };
+		3A938207206DB08E009BA411 /* whySlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whySlide.swift; sourceTree = "<group>"; };
+		3A938209206DED96009BA411 /* whereSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereSlide.swift; sourceTree = "<group>"; };
+		3A93820B206DEEBB009BA411 /* whereSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = whereSlide.xib; sourceTree = "<group>"; };
+		3A93820D206DEFA7009BA411 /* whenSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = whenSlide.xib; sourceTree = "<group>"; };
+		3A93820F206DF0C0009BA411 /* whenSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenSlide.swift; sourceTree = "<group>"; };
+		3A938211206DF469009BA411 /* basicRewardsSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = basicRewardsSlide.xib; sourceTree = "<group>"; };
+		3A938213206DF532009BA411 /* basicRewards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicRewards.swift; sourceTree = "<group>"; };
+		3A938215206DF605009BA411 /* intRewardsSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = intRewardsSlide.xib; sourceTree = "<group>"; };
+		3A938217206DF643009BA411 /* intRewardsSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intRewardsSlide.swift; sourceTree = "<group>"; };
+		3A938219206DF69F009BA411 /* advRewardsSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advRewardsSlide.swift; sourceTree = "<group>"; };
+		3A93821B206DF6AE009BA411 /* advRewardsSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = advRewardsSlide.xib; sourceTree = "<group>"; };
 		3A9A95581FFF8A5C00502707 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		3A9A955C1FFF8E4F00502707 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,8 +201,18 @@
 		3A938204206DB074009BA411 /* Slides */ = {
 			isa = PBXGroup;
 			children = (
-				3A938205206DB082009BA411 /* Slide.xib */,
-				3A938207206DB08E009BA411 /* Slide.swift */,
+				3A938205206DB082009BA411 /* whySlide.xib */,
+				3A93820B206DEEBB009BA411 /* whereSlide.xib */,
+				3A93820D206DEFA7009BA411 /* whenSlide.xib */,
+				3A938211206DF469009BA411 /* basicRewardsSlide.xib */,
+				3A938215206DF605009BA411 /* intRewardsSlide.xib */,
+				3A93821B206DF6AE009BA411 /* advRewardsSlide.xib */,
+				3A938207206DB08E009BA411 /* whySlide.swift */,
+				3A938209206DED96009BA411 /* whereSlide.swift */,
+				3A93820F206DF0C0009BA411 /* whenSlide.swift */,
+				3A938213206DF532009BA411 /* basicRewards.swift */,
+				3A938217206DF643009BA411 /* intRewardsSlide.swift */,
+				3A938219206DF69F009BA411 /* advRewardsSlide.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -394,17 +424,22 @@
 				3AEFD889206C14E00076E8BE /* D-DINCondensed-Bold.otf in Resources */,
 				3AEFD88A206C14E00076E8BE /* D-DINExp-Bold.otf in Resources */,
 				3AEFD88B206C14E00076E8BE /* D-DINExp-Italic.otf in Resources */,
+				3A93820E206DEFA7009BA411 /* whenSlide.xib in Resources */,
 				3AEFD886206C089B0076E8BE /* D-DINExp.otf in Resources */,
 				3AEFD885206C08950076E8BE /* D-DINCondensed.otf in Resources */,
 				3AEFD884206C08520076E8BE /* D-DIN.otf in Resources */,
+				3A938212206DF469009BA411 /* basicRewardsSlide.xib in Resources */,
 				3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */,
 				3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */,
 				3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */,
-				3A938206206DB082009BA411 /* Slide.xib in Resources */,
+				3A938206206DB082009BA411 /* whySlide.xib in Resources */,
+				3A93820C206DEEBB009BA411 /* whereSlide.xib in Resources */,
 				3A0F89B7201480FE0062B55C /* addPopups.storyboard in Resources */,
+				3A938216206DF605009BA411 /* intRewardsSlide.xib in Resources */,
 				3A918EDF203993B000490104 /* Main.storyboard in Resources */,
 				3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */,
 				3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */,
+				3A93821C206DF6AE009BA411 /* advRewardsSlide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,14 +537,17 @@
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
 				3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
-				3A938208206DB08E009BA411 /* Slide.swift in Sources */,
+				3A93820A206DED96009BA411 /* whereSlide.swift in Sources */,
+				3A938208206DB08E009BA411 /* whySlide.swift in Sources */,
 				3AFBF071206CB31100F8396A /* habitSelector.swift in Sources */,
 				3AFBF06F206CB2AA00F8396A /* pickHabitVC.swift in Sources */,
+				3A938210206DF0C0009BA411 /* whenSlide.swift in Sources */,
 				3A918ED72039601800490104 /* titleView.swift in Sources */,
 				3A9381E0206D84D2009BA411 /* habitInfoVC.swift in Sources */,
 				3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */,
 				3AB14B1A206C1E1F00D071ED /* newUserVC.swift in Sources */,
 				3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */,
+				3A938214206DF532009BA411 /* basicRewards.swift in Sources */,
 				3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */,
 				3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */,
 				3ADE3D3D2014701C003A114B /* whyPopupVC.swift in Sources */,
@@ -520,6 +558,8 @@
 				3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */,
 				3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */,
 				3A521436203B5AB6006232FC /* basicRewardPopupVC.swift in Sources */,
+				3A938218206DF643009BA411 /* intRewardsSlide.swift in Sources */,
+				3A93821A206DF69F009BA411 /* advRewardsSlide.swift in Sources */,
 				3AEFD88F206C15C50076E8BE /* loginVC.swift in Sources */,
 				3A918ED120395B9700490104 /* normalLabel.swift in Sources */,
 				3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */,

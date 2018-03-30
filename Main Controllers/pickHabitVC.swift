@@ -17,10 +17,6 @@ class pickHabitVC: UIViewController{
     let width: CGFloat = 100
     let height: CGFloat = 100
     
-    let habitList = ["Running","Meditating","Waking Up Early","Coding","Journaling", "Eating Healthy", "Praying", "Reading", "Act of Kindness", "Lifting", "Sleeping on Time"]
-    
-    
-    
     //Creating the variable
     var habitsPicker: habitSelector!
     
@@ -45,11 +41,11 @@ class pickHabitVC: UIViewController{
     
     
     @IBAction func next(_ sender: Any) {
-        let selectedHabit = habitPicker.selectedRow(inComponent: 0)
-        let habitName = habitsPicker.habits[selectedHabit].habitName
+        let selectedHabit = habitsPicker.habits[habitPicker.selectedRow(inComponent: 0)]
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let habitInfo = storyBoard.instantiateViewController(withIdentifier: "habitInfoVCID") as! habitInfoVC
-        habitInfo.habitName = habitName
+
+        habitInfo.chosenHabit = selectedHabit
         self.present(habitInfo, animated: true, completion: nil)
     }
     

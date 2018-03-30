@@ -8,14 +8,10 @@
 
 import UIKit
 
-class Slide: UIView {
-    
-    
-    @IBOutlet weak var label: UILabel!
+class intRewardsSlide: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //backgroundColor = seaFoamColor
         
         let layer : CAGradientLayer = CAGradientLayer()
         layer.frame.size = self.frame.size
@@ -27,5 +23,10 @@ class Slide: UIView {
         let color4 = UIColor(red:247/255, green:240/255, blue: 215/255, alpha:100).cgColor
         layer.colors = [color0,color1,color2,color3,color4]
         self.layer.insertSublayer(layer, at: 0)
+        
+        layer.cornerRadius = 5.0
     }
 }
+
+
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="D-DIN-Bold.otf">
+            <string>D-DIN-Bold</string>
+        </array>
+        <array key="D-DIN.otf">
+            <string>D-DIN</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="v6E-oU-1cn" customClass="whenSlide" customModule="Habits" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHEN?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6d-f3-ahi">
+                    <rect key="frame" x="123" y="15" width="80" height="26"/>
+                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When can you consistently code?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V11-UC-vgY">
+                    <rect key="frame" x="20" y="61" width="285" height="19"/>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ihp-1n-HyI">
+                    <rect key="frame" x="20" y="90" width="285" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="9Ab-Km-CeI"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="544075831.20050502">
+                        <!--2018-03-30 04:10:31 +0000-->
+                    </date>
+                </datePicker>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-Hm-YEY" customClass="MultiSelectSegmentedControl">
+                    <rect key="frame" x="10" y="250" width="305" height="29"/>
+                    <segments>
+                        <segment title="Sat"/>
+                        <segment title="Sun"/>
+                        <segment title="Mon"/>
+                        <segment title="Tue"/>
+                        <segment title="Wed"/>
+                        <segment title="Thur"/>
+                        <segment title="Fri"/>
+                    </segments>
+                    <color key="tintColor" red="0.050980392156862744" green="0.29803921568627451" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ihp-1n-HyI" firstAttribute="leading" secondItem="0yZ-EF-vGg" secondAttribute="leading" constant="20" id="3fD-pe-W8R"/>
+                <constraint firstItem="m6d-f3-ahi" firstAttribute="top" secondItem="0yZ-EF-vGg" secondAttribute="top" constant="15" id="Kah-Nh-Py9"/>
+                <constraint firstItem="dBo-Hm-YEY" firstAttribute="leading" secondItem="v6E-oU-1cn" secondAttribute="leading" constant="10" id="MvZ-nf-H15"/>
+                <constraint firstItem="V11-UC-vgY" firstAttribute="leading" secondItem="v6E-oU-1cn" secondAttribute="leading" constant="20" id="RKL-vS-32S"/>
+                <constraint firstItem="V11-UC-vgY" firstAttribute="top" secondItem="m6d-f3-ahi" secondAttribute="bottom" constant="20" id="Xzp-QZ-1Lq"/>
+                <constraint firstAttribute="trailing" secondItem="ihp-1n-HyI" secondAttribute="trailing" constant="20" id="cIR-hQ-Zem"/>
+                <constraint firstItem="m6d-f3-ahi" firstAttribute="centerX" secondItem="v6E-oU-1cn" secondAttribute="centerX" id="nuW-wF-pWb"/>
+                <constraint firstAttribute="trailing" secondItem="dBo-Hm-YEY" secondAttribute="trailing" constant="10" id="snN-8L-Lsz"/>
+                <constraint firstItem="ihp-1n-HyI" firstAttribute="top" secondItem="V11-UC-vgY" secondAttribute="bottom" constant="10" id="tXr-mB-UkK"/>
+                <constraint firstItem="dBo-Hm-YEY" firstAttribute="top" secondItem="ihp-1n-HyI" secondAttribute="bottom" constant="10" id="vUM-Q4-X7G"/>
+                <constraint firstAttribute="trailing" secondItem="V11-UC-vgY" secondAttribute="trailing" constant="20" id="vqh-tc-LzI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="0yZ-EF-vGg"/>
+            <connections>
+                <outlet property="questionLabel" destination="V11-UC-vgY" id="E4m-PB-4S4"/>
+            </connections>
+            <point key="canvasLocation" x="-5" y="159"/>
+        </view>
+    </objects>
+</document>

@@ -17,9 +17,6 @@ import SwiftKeychainWrapper
 class newUserVC: UIViewController {
     
     //Outlets
-
-
-
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!

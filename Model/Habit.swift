@@ -12,27 +12,32 @@ import UIKit
 class Habit{
     private var _habitName: String!
     private var _habitPic: UIImage!
+    private var _intrinsicReason: String!
+    private var _habitVerb: String!
+    
     private var _why: String!
     private var _when: String!
     private var _whhere: String!
     
     
-    init(habitName: String) {
-        _habitName = habitName;
-    }
+//    init(habitName: String) {
+//        _habitName = habitName;
+//    }
     
-    init(habitName: String, habitPic: UIImage) {
+    init(habitName: String, habitPic: UIImage, intrinsicReason: String, habitVerb: String) {
         _habitName = habitName;
         _habitPic = habitPic;
+        _intrinsicReason = intrinsicReason;
+        _habitVerb = habitVerb
     }
     
-    init(habitName: String, habitPic: UIImage, why: String, when: String, whhere: String) {
-        _habitName = habitName;
-        _habitPic = habitPic;
-        _why = why;
-        _when = when;
-        _whhere = whhere;
-    }
+//    init(habitName: String, habitPic: UIImage, why: String, when: String, whhere: String) {
+//        _habitName = habitName;
+//        _habitPic = habitPic;
+//        _why = why;
+//        _when = when;
+//        _whhere = whhere;
+//    }
     
     var habitName: String{
         get{
@@ -51,6 +56,25 @@ class Habit{
             _habitPic = newValue;
         }
     }
+    
+    var intrinsicReason: String{
+        get{
+            return _intrinsicReason;
+        }
+        set{
+            _intrinsicReason = newValue;
+        }
+    }
+    
+    var habitVerb: String{
+        get{
+            return _habitVerb;
+        }
+        set{
+            _habitVerb = newValue;
+        }
+    }
+    
     
     var why: String {
         get{

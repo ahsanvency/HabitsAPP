@@ -1258,18 +1258,33 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FC4-Df-xow">
-                                <rect key="frame" x="74.5" y="40" width="225" height="200"/>
+                                <rect key="frame" x="87" y="45" width="200" height="175"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="225" id="a5g-TY-BTA"/>
-                                    <constraint firstAttribute="height" constant="200" id="yju-ku-3nK"/>
+                                    <constraint firstAttribute="width" constant="200" id="a5g-TY-BTA"/>
+                                    <constraint firstAttribute="height" constant="175" id="yju-ku-3nK"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZI-ZS-5tm">
-                                <rect key="frame" x="25" y="265" width="325" height="352"/>
+                                <rect key="frame" x="25" y="245" width="325" height="347"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="V2d-9r-EYx">
-                                <rect key="frame" x="80" y="555" width="215" height="37"/>
+                                <rect key="frame" x="80" y="550" width="215" height="37"/>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6nO-Pw-bMF">
+                                <rect key="frame" x="131" y="610" width="112" height="37"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Save Habit">
+                                            <attributes>
+                                                <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="25" name="D-DIN-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.035294117647058823" green="0.16470588235294117" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1277,12 +1292,14 @@
                             <constraint firstItem="dZI-ZS-5tm" firstAttribute="centerX" secondItem="no9-aC-VEg" secondAttribute="centerX" id="0wX-ma-ckx"/>
                             <constraint firstItem="aCm-6P-YuK" firstAttribute="trailing" secondItem="V2d-9r-EYx" secondAttribute="trailing" constant="80" id="1nM-Kh-hhT"/>
                             <constraint firstItem="dZI-ZS-5tm" firstAttribute="leading" secondItem="aCm-6P-YuK" secondAttribute="leading" constant="25" id="2yB-yI-2kF"/>
-                            <constraint firstItem="aCm-6P-YuK" firstAttribute="bottom" secondItem="V2d-9r-EYx" secondAttribute="bottom" constant="75" id="O5D-Tg-aaD"/>
+                            <constraint firstItem="6nO-Pw-bMF" firstAttribute="centerX" secondItem="no9-aC-VEg" secondAttribute="centerX" id="3S0-hd-3P0"/>
+                            <constraint firstItem="aCm-6P-YuK" firstAttribute="bottom" secondItem="V2d-9r-EYx" secondAttribute="bottom" constant="80" id="O5D-Tg-aaD"/>
                             <constraint firstItem="4jI-MM-9do" firstAttribute="leading" secondItem="aCm-6P-YuK" secondAttribute="leading" constant="16" id="Sli-ez-e1O"/>
                             <constraint firstItem="V2d-9r-EYx" firstAttribute="leading" secondItem="aCm-6P-YuK" secondAttribute="leading" constant="80" id="Vme-kP-8iR"/>
                             <constraint firstItem="dZI-ZS-5tm" firstAttribute="top" secondItem="FC4-Df-xow" secondAttribute="bottom" constant="25" id="XWM-N3-cNk"/>
-                            <constraint firstItem="aCm-6P-YuK" firstAttribute="bottom" secondItem="dZI-ZS-5tm" secondAttribute="bottom" constant="50" id="Y95-ye-avO"/>
-                            <constraint firstItem="FC4-Df-xow" firstAttribute="top" secondItem="aCm-6P-YuK" secondAttribute="top" constant="20" id="jkW-ei-a4z"/>
+                            <constraint firstItem="aCm-6P-YuK" firstAttribute="bottom" secondItem="dZI-ZS-5tm" secondAttribute="bottom" constant="75" id="Y95-ye-avO"/>
+                            <constraint firstItem="aCm-6P-YuK" firstAttribute="bottom" secondItem="6nO-Pw-bMF" secondAttribute="bottom" constant="20" id="Yay-Be-Hpm"/>
+                            <constraint firstItem="FC4-Df-xow" firstAttribute="top" secondItem="aCm-6P-YuK" secondAttribute="top" constant="25" id="jkW-ei-a4z"/>
                             <constraint firstItem="4jI-MM-9do" firstAttribute="top" secondItem="aCm-6P-YuK" secondAttribute="top" id="mHz-zD-Ugw"/>
                             <constraint firstItem="aCm-6P-YuK" firstAttribute="trailing" secondItem="dZI-ZS-5tm" secondAttribute="trailing" constant="25" id="opQ-qB-jTg"/>
                         </constraints>
