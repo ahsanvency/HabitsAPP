@@ -238,7 +238,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             if successesInt >= 30 {
 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "pickHabitVCID") as! pickHabitVC
                 self.present(newViewController, animated: true, completion: nil)
 
 
