@@ -57,6 +57,9 @@
                         <segment title="Fri"/>
                     </segments>
                     <color key="tintColor" red="0.050980392156862744" green="0.29803921568627451" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="segmentSelected:" destination="v6E-oU-1cn" eventType="valueChanged" id="UrF-EL-4kb"/>
+                    </connections>
                 </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,6 +80,7 @@
             <viewLayoutGuide key="safeArea" id="0yZ-EF-vGg"/>
             <connections>
                 <outlet property="questionLabel" destination="V11-UC-vgY" id="E4m-PB-4S4"/>
+                <outlet property="segmentedControl" destination="dBo-Hm-YEY" id="7Ev-Z0-R4R"/>
                 <outlet property="timePicker" destination="ihp-1n-HyI" id="y2Z-2o-0qx"/>
             </connections>
             <point key="canvasLocation" x="-5" y="159"/>

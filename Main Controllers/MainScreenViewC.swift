@@ -64,7 +64,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             //getting habit key
             guard let firstKey = value?.allKeys[0] else {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "pickHabitVCID") as! pickHabitVC
                 self.present(newViewController, animated: true, completion: nil)
                 return
             }

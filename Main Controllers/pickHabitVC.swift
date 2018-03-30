@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SwiftKeychainWrapper
 
 class pickHabitVC: UIViewController{
 
@@ -49,5 +51,13 @@ class pickHabitVC: UIViewController{
         self.present(habitInfo, animated: true, completion: nil)
     }
     
+    @IBAction func Logout(_ sender: Any) {
+        let keychainResult = KeychainWrapper.standard.remove(key: KEY_UID)
+        try! Auth.auth().signOut()
+        //        dismiss(animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
+        self.present(newViewController, animated: true, completion: nil)
+    }
 
 }

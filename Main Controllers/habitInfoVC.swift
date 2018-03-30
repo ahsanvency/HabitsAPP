@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SwiftKeychainWrapper
 
 class habitInfoVC: UIViewController, UIScrollViewDelegate {
 
@@ -41,6 +43,13 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         self.hideKeyboardWhenTappedAround()
     }
     
+    func upAlert (messages: String) {
+        let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
     func createSlides() -> [UIView]{
         whySlide = Bundle.main.loadNibNamed("whySlide", owner: self, options: nil)!.first as! whySlide
         whySlide.intrinsicLabel.text = "Did you know intrinsic reasons like \(chosenHabit.intrinsicReason) help you succeed?"
@@ -62,12 +71,12 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
     func setupscrollInfo(Slides:[UIView]){
-        scrollInfo.frame = CGRect(x: 0, y: 0, width: scrollInfo.frame.width, height: view.frame.height)
-        scrollInfo.contentSize = CGSize(width: scrollInfo.frame.width * CGFloat(Slides.count), height: view.frame.height)
+        scrollInfo.frame = CGRect(x: 0, y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
+        scrollInfo.contentSize = CGSize(width: scrollInfo.frame.width * CGFloat(Slides.count), height: scrollInfo.frame.height)
         scrollInfo.isPagingEnabled = true
         
         for i in 0..<Slides.count{
-            Slides[i].frame = CGRect(x: scrollInfo.frame.width * CGFloat(i) , y: 0, width: scrollInfo.frame.width, height: view.frame.height)
+            Slides[i].frame = CGRect(x: scrollInfo.frame.width * CGFloat(i) , y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
             scrollInfo.addSubview(Slides[i])
         }
     }
@@ -79,11 +88,86 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     
     
     @IBAction func saveHabit(_ sender: Any){
-        print(whySlide.whyField.text!)
-        print(whereSlide.whereField.text!)
+        whenSlide.save()
         
+        if Auth.auth().currentUser?.uid != nil {
+            
+            //checks to see if txtFeilds are empty
+            let valid = validateTextFeilds()
+            if valid == true{
+                
+                //database instance
+                var ref: DatabaseReference!
+                ref = Database.database().reference()
+                
+                //current user
+                guard let user = Auth.auth().currentUser else {
+                    return
+                }
+                let uid = user.uid
+                
+                //getting key of habits list
+                let habitRefKey = ref.child("Users").child(uid).child("Habits").childByAutoId().key
+                //Values to add to Habits list
+                let childUpdates = ["/Users/\(uid)/Habits/\(habitRefKey)": chosenHabit.habitName]
+                ref.updateChildValues(childUpdates)
+                //Adding Habit to Habits node
+                //This is where the information on the label needs to be changed
+                DataService.ds.REF_HABITS.child(uid).removeValue()
+                
+                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).setValue(["Why": whySlide.whyField.text,"When":"\(whenSlide.daysOfWeekStr) \(whenSlide.timeStr)","Where":whereSlide.whereField.text,"name":chosenHabit.habitName,"freq":whenSlide.weekArray])
+                //Adding rewards to habit
+                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["basicReward1":basicRewardsSlide.basicField1.text,"basicReward2":basicRewardsSlide.basicField2.text,"intReward1":intRewardsSlide.intField1.text,"intReward2":intRewardsSlide.intField2.text,"Adv":advRewardsSlide.advField.text, "Success": 0])
+                
+                //Segue
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+                newViewController.firstTimeLoaded = 1;
+                self.present(newViewController, animated: true){
+                }
+            } else {
+                print("error")
+            }
+        }
     }
     
+    
+    func validateTextFeilds() -> Bool{
+        if (whySlide.whyField.text == "") {
+            //handel the errors properly
+            self.upAlert(messages: "Please fill out Why.")
+            return false
+        }
+        else if (whereSlide.whereField.text == ""){
+            
+            self.upAlert(messages: "Please fill out Where.")
+            return false
+        }
+        else if (whenSlide.daysOfWeekStr == "" || whenSlide.timeStr == ""){
+            
+            self.upAlert(messages: "Please fill out When.")
+            return false
+        }
+        else if (basicRewardsSlide.basicField1.text == "Tap to pick a basic reward." || basicRewardsSlide.basicField1.text == "" || basicRewardsSlide.basicField1.text == "Enter Custom Reward Above" || basicRewardsSlide.basicField2.text == "Tap to pick a basic reward." || basicRewardsSlide.basicField2.text == "" || basicRewardsSlide.basicField2.text == "Enter Custom Reward Above"){
+            
+            self.upAlert(messages: "Please enter Basic Rewards")
+            return false
+        }
+        else if (intRewardsSlide.intField1.text == "Tap to pick an intermediate reward." || intRewardsSlide.intField1.text == "" || intRewardsSlide.intField1.text == "Enter Custom Reward Above" || intRewardsSlide.intField2.text == "Tap to pick an intermediate reward." || intRewardsSlide.intField2.text == "" || intRewardsSlide.intField2.text == "Enter Custom Reward Above"){
+            
+            self.upAlert(messages: "Please enter Intermediate Rewards")
+            return false
+        }
+        else if (advRewardsSlide.advField.text == "Tap to pick an advanced reward." || advRewardsSlide.advField.text == "" || advRewardsSlide.advField.text == "Enter Custom Rewards Above"){
+            
+            self.upAlert(messages: "Please enter an Advanced Reward")
+            return false
+        }
+        else {
+            print("GOOD")
+        }
+        return true
+    }
     
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)

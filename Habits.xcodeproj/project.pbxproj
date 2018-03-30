@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A05E5702047728600FDB31C /* hollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A05E56F2047728600FDB31C /* hollowButton.swift */; };
-		3A0F89B7201480FE0062B55C /* addPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0F89B6201480FE0062B55C /* addPopups.storyboard */; };
 		3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */; };
 		3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */; };
 		3A1290682048D44400006CD0 /* fancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1290672048D44400006CD0 /* fancyButton.swift */; };
@@ -16,9 +15,6 @@
 		3A13731220052FEB000BDD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13731120052FEB000BDD6F /* DataService.swift */; };
 		3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */; };
 		3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */; };
-		3A521436203B5AB6006232FC /* basicRewardPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A521435203B5AB6006232FC /* basicRewardPopupVC.swift */; };
-		3A521438203B621E006232FC /* intRewardsPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A521437203B621E006232FC /* intRewardsPopupVC.swift */; };
-		3A52143A203B6284006232FC /* advRewardsPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A521439203B6284006232FC /* advRewardsPopup.swift */; };
 		3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */; };
 		3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */; };
 		3A7CF1092048B548009531B7 /* lineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CF1082048B548009531B7 /* lineView.swift */; };
@@ -48,12 +44,8 @@
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
 		3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */; };
 		3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B31FFB08CE0035A16E /* LaunchScreen.storyboard */; };
-		3AB14B1A206C1E1F00D071ED /* newUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB14B19206C1E1F00D071ED /* newUserVC.swift */; };
 		3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD55F5E201493E5001B9A23 /* editPopups.storyboard */; };
 		3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */; };
-		3ADE3D3D2014701C003A114B /* whyPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D3C2014701C003A114B /* whyPopupVC.swift */; };
-		3ADE3D3F2014794B003A114B /* whenAddPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */; };
-		3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */; };
 		3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFBE922023EB2D00E03455 /* rewardsVC.swift */; };
 		3AEFD884206C08520076E8BE /* D-DIN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD881206C074F0076E8BE /* D-DIN.otf */; };
 		3AEFD885206C08950076E8BE /* D-DINCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD87E206C074F0076E8BE /* D-DINCondensed.otf */; };
@@ -75,7 +67,6 @@
 /* Begin PBXFileReference section */
 		2123263985D85DAAB042486F /* Pods-Habits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habits.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habits/Pods-Habits.debug.xcconfig"; sourceTree = "<group>"; };
 		3A05E56F2047728600FDB31C /* hollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hollowButton.swift; sourceTree = "<group>"; };
-		3A0F89B6201480FE0062B55C /* addPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = addPopups.storyboard; sourceTree = "<group>"; };
 		3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenEditPopupVC.swift; sourceTree = "<group>"; };
 		3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereEditPopupVC.swift; sourceTree = "<group>"; };
 		3A1290672048D44400006CD0 /* fancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyButton.swift; sourceTree = "<group>"; };
@@ -84,9 +75,6 @@
 		3A3DA5841FFB7537004C1143 /* Habits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Habits.entitlements; sourceTree = "<group>"; };
 		3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
 		3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3A521435203B5AB6006232FC /* basicRewardPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basicRewardPopupVC.swift; sourceTree = "<group>"; };
-		3A521437203B621E006232FC /* intRewardsPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intRewardsPopupVC.swift; sourceTree = "<group>"; };
-		3A521439203B6284006232FC /* advRewardsPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = advRewardsPopup.swift; sourceTree = "<group>"; };
 		3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitVC.swift; sourceTree = "<group>"; };
 		3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		3A7CF1082048B548009531B7 /* lineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineView.swift; sourceTree = "<group>"; };
@@ -118,12 +106,8 @@
 		3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA5A3B41FFB08CE0035A16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AA5A3B61FFB08CE0035A16E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AB14B19206C1E1F00D071ED /* newUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserVC.swift; sourceTree = "<group>"; };
 		3AD55F5E201493E5001B9A23 /* editPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = editPopups.storyboard; sourceTree = "<group>"; };
 		3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundGradient.swift; sourceTree = "<group>"; };
-		3ADE3D3C2014701C003A114B /* whyPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whyPopupVC.swift; sourceTree = "<group>"; };
-		3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenAddPopupVC.swift; sourceTree = "<group>"; };
-		3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereAddPopupVC.swift; sourceTree = "<group>"; };
 		3AEFBE922023EB2D00E03455 /* rewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardsVC.swift; sourceTree = "<group>"; };
 		3AEFD87B206C074E0076E8BE /* D-DINExp-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp-Italic.otf"; sourceTree = "<group>"; };
 		3AEFD87C206C074E0076E8BE /* D-DIN-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN-Bold.otf"; sourceTree = "<group>"; };
@@ -227,8 +211,6 @@
 				3AA5A3BD1FFB18710035A16E /* View */,
 				3AA5A3BC1FFB18690035A16E /* Main Controllers */,
 				3A918EDE203993B000490104 /* Main.storyboard */,
-				3ADE3D3B20146FF7003A114B /* addPopup Controllers */,
-				3A0F89B6201480FE0062B55C /* addPopups.storyboard */,
 				3A0F89B820148C980062B55C /* editPopup Controllers */,
 				3AD55F5E201493E5001B9A23 /* editPopups.storyboard */,
 				3A568764204CDC9700E8F6F7 /* Old VC's */,
@@ -266,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				3AEFD88E206C15C50076E8BE /* loginVC.swift */,
-				3AB14B19206C1E1F00D071ED /* newUserVC.swift */,
 				3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */,
 				3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */,
 				3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */,
@@ -294,19 +275,6 @@
 				3AF47FD52007F50B00F00F42 /* User.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		3ADE3D3B20146FF7003A114B /* addPopup Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				3ADE3D3C2014701C003A114B /* whyPopupVC.swift */,
-				3ADE3D3E2014794B003A114B /* whenAddPopupVC.swift */,
-				3ADE3D4020147AF9003A114B /* whereAddPopupVC.swift */,
-				3A521435203B5AB6006232FC /* basicRewardPopupVC.swift */,
-				3A521437203B621E006232FC /* intRewardsPopupVC.swift */,
-				3A521439203B6284006232FC /* advRewardsPopup.swift */,
-			);
-			path = "addPopup Controllers";
 			sourceTree = "<group>";
 		};
 		3AEFD87A206C06E80076E8BE /* Fonts */ = {
@@ -434,7 +402,6 @@
 				3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */,
 				3A938206206DB082009BA411 /* whySlide.xib in Resources */,
 				3A93820C206DEEBB009BA411 /* whereSlide.xib in Resources */,
-				3A0F89B7201480FE0062B55C /* addPopups.storyboard in Resources */,
 				3A938216206DF605009BA411 /* intRewardsSlide.xib in Resources */,
 				3A918EDF203993B000490104 /* Main.storyboard in Resources */,
 				3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */,
@@ -529,9 +496,6 @@
 				3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */,
 				3A05E5702047728600FDB31C /* hollowButton.swift in Sources */,
 				3A7CF1092048B548009531B7 /* lineView.swift in Sources */,
-				3A521438203B621E006232FC /* intRewardsPopupVC.swift in Sources */,
-				3A52143A203B6284006232FC /* advRewardsPopup.swift in Sources */,
-				3ADE3D4120147AF9003A114B /* whereAddPopupVC.swift in Sources */,
 				3A918ED92039669C00490104 /* blueButton.swift in Sources */,
 				3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */,
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
@@ -545,19 +509,15 @@
 				3A918ED72039601800490104 /* titleView.swift in Sources */,
 				3A9381E0206D84D2009BA411 /* habitInfoVC.swift in Sources */,
 				3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */,
-				3AB14B1A206C1E1F00D071ED /* newUserVC.swift in Sources */,
 				3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */,
 				3A938214206DF532009BA411 /* basicRewards.swift in Sources */,
 				3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */,
 				3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */,
-				3ADE3D3D2014701C003A114B /* whyPopupVC.swift in Sources */,
 				3AF646CF2015663A002F86B8 /* fancyField.swift in Sources */,
 				3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */,
 				3AF646D320156C73002F86B8 /* fancyView.swift in Sources */,
-				3ADE3D3F2014794B003A114B /* whenAddPopupVC.swift in Sources */,
 				3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */,
 				3A54591A1FFE5F6D0068E6A7 /* NewHabitVC.swift in Sources */,
-				3A521436203B5AB6006232FC /* basicRewardPopupVC.swift in Sources */,
 				3A938218206DF643009BA411 /* intRewardsSlide.swift in Sources */,
 				3A93821A206DF69F009BA411 /* advRewardsSlide.swift in Sources */,
 				3AEFD88F206C15C50076E8BE /* loginVC.swift in Sources */,
