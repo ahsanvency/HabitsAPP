@@ -10,7 +10,9 @@ import UIKit
 
 class whenSlide: UIView {
     
+    
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var timePicker: UIDatePicker!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -71,6 +71,7 @@
             <viewLayoutGuide key="safeArea" id="Orl-tS-QDE"/>
             <connections>
                 <outlet property="questionLabel" destination="Cpr-hd-7ZV" id="Snq-Em-n0j"/>
+                <outlet property="whereField" destination="1I6-9V-jJd" id="U2Y-cU-MjF"/>
             </connections>
             <point key="canvasLocation" x="-279" y="234"/>
         </view>

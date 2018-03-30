@@ -77,6 +77,7 @@
             <viewLayoutGuide key="safeArea" id="0yZ-EF-vGg"/>
             <connections>
                 <outlet property="questionLabel" destination="V11-UC-vgY" id="E4m-PB-4S4"/>
+                <outlet property="timePicker" destination="ihp-1n-HyI" id="y2Z-2o-0qx"/>
             </connections>
             <point key="canvasLocation" x="-5" y="159"/>
         </view>

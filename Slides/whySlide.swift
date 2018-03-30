@@ -14,14 +14,13 @@ class whySlide: UIView {
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var whyField: UITextField!
-    @IBOutlet weak var whyTextView: UITextView!
+
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         whyField.isEnabled = true
-        whyTextView.isEditable = true
         
         let layer : CAGradientLayer = CAGradientLayer()
         layer.frame.size = self.frame.size
