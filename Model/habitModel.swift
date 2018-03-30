@@ -28,7 +28,7 @@ class habitModel{
         habits.append(Habit(habitName: "Lifting", habitPic: UIImage(named: "Lifting")!))
         habits.append(Habit(habitName: "Sleeping On Time", habitPic: UIImage(named: "Sleeping On Time")!))
         
-        
         return habits 
     }
+    
 }

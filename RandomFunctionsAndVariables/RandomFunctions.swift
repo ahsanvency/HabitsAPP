@@ -65,3 +65,7 @@ extension UIViewController {
         })
     }
 }
+
+extension Notification.Name {
+    static let habitChanged = NSNotification.Name("habitChanged")
+}

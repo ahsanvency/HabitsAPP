@@ -30,6 +30,9 @@
 		3A918EDD20396DEA00490104 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918EDC20396DEA00490104 /* backgroundView.swift */; };
 		3A918EDF203993B000490104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A918EDE203993B000490104 /* Main.storyboard */; };
 		3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9381DC206D63ED009BA411 /* habitModel.swift */; };
+		3A9381E0206D84D2009BA411 /* habitInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9381DF206D84D2009BA411 /* habitInfoVC.swift */; };
+		3A938206206DB082009BA411 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A938205206DB082009BA411 /* Slide.xib */; };
+		3A938208206DB08E009BA411 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A938207206DB08E009BA411 /* Slide.swift */; };
 		3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A95581FFF8A5C00502707 /* Habit.swift */; };
 		3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A955C1FFF8E4F00502707 /* HabitCell.swift */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
@@ -85,6 +88,9 @@
 		3A918EDC20396DEA00490104 /* backgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
 		3A918EDE203993B000490104 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3A9381DC206D63ED009BA411 /* habitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitModel.swift; sourceTree = "<group>"; };
+		3A9381DF206D84D2009BA411 /* habitInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitInfoVC.swift; sourceTree = "<group>"; };
+		3A938205206DB082009BA411 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		3A938207206DB08E009BA411 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		3A9A95581FFF8A5C00502707 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		3A9A955C1FFF8E4F00502707 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +159,7 @@
 			path = "Old VC's";
 			sourceTree = "<group>";
 		};
-		3A9381DE206D6962009BA411 /* New Group */ = {
+		3A9381DE206D6962009BA411 /* RandomViews */ = {
 			isa = PBXGroup;
 			children = (
 				3A918ED82039669C00490104 /* blueButton.swift */,
@@ -169,12 +175,22 @@
 				3A7CF10A2048BF69009531B7 /* circlePic.swift */,
 				3A918ED62039601800490104 /* titleView.swift */,
 			);
-			path = "New Group";
+			path = RandomViews;
+			sourceTree = "<group>";
+		};
+		3A938204206DB074009BA411 /* Slides */ = {
+			isa = PBXGroup;
+			children = (
+				3A938205206DB082009BA411 /* Slide.xib */,
+				3A938207206DB08E009BA411 /* Slide.swift */,
+			);
+			path = Slides;
 			sourceTree = "<group>";
 		};
 		3AA5A39E1FFB08CE0035A16E = {
 			isa = PBXGroup;
 			children = (
+				3A938204206DB074009BA411 /* Slides */,
 				3AF47FD72007FE0D00F00F42 /* RandomFunctionsAndVariables */,
 				3A13731020052FD2000BDD6F /* Services */,
 				3AA5A3BE1FFB18750035A16E /* Model */,
@@ -224,6 +240,7 @@
 				3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */,
 				3A5459191FFE5F6D0068E6A7 /* NewHabitVC.swift */,
 				3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */,
+				3A9381DF206D84D2009BA411 /* habitInfoVC.swift */,
 				3AEFBE922023EB2D00E03455 /* rewardsVC.swift */,
 			);
 			path = "Main Controllers";
@@ -234,7 +251,7 @@
 			children = (
 				3A9A955C1FFF8E4F00502707 /* HabitCell.swift */,
 				3AFBF070206CB31100F8396A /* habitSelector.swift */,
-				3A9381DE206D6962009BA411 /* New Group */,
+				3A9381DE206D6962009BA411 /* RandomViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,6 +400,7 @@
 				3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */,
 				3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */,
 				3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */,
+				3A938206206DB082009BA411 /* Slide.xib in Resources */,
 				3A0F89B7201480FE0062B55C /* addPopups.storyboard in Resources */,
 				3A918EDF203993B000490104 /* Main.storyboard in Resources */,
 				3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */,
@@ -484,9 +502,11 @@
 				3A9A955D1FFF8E4F00502707 /* HabitCell.swift in Sources */,
 				3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
+				3A938208206DB08E009BA411 /* Slide.swift in Sources */,
 				3AFBF071206CB31100F8396A /* habitSelector.swift in Sources */,
 				3AFBF06F206CB2AA00F8396A /* pickHabitVC.swift in Sources */,
 				3A918ED72039601800490104 /* titleView.swift in Sources */,
+				3A9381E0206D84D2009BA411 /* habitInfoVC.swift in Sources */,
 				3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */,
 				3AB14B1A206C1E1F00D071ED /* newUserVC.swift in Sources */,
 				3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */,

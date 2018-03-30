@@ -44,5 +44,14 @@ class pickHabitVC: UIViewController{
     }
     
     
+    @IBAction func next(_ sender: Any) {
+        let selectedHabit = habitPicker.selectedRow(inComponent: 0)
+        let habitName = habitsPicker.habits[selectedHabit].habitName
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let habitInfo = storyBoard.instantiateViewController(withIdentifier: "habitInfoVCID") as! habitInfoVC
+        habitInfo.habitName = habitName
+        self.present(habitInfo, animated: true, completion: nil)
+    }
+    
 
 }
