@@ -47,23 +47,23 @@
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMQ-0d-4d6">
                     <rect key="frame" x="10" y="194" width="305" height="30"/>
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" red="0.050980392156862744" green="0.29803921568627451" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyC-kW-sf0">
-                    <rect key="frame" x="10" y="224" width="305" height="125"/>
+                    <rect key="frame" x="10" y="214" width="305" height="125"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="ebm-Nf-osi"/>
                     </constraints>
                 </pickerView>
                 <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMt-IV-5BS">
-                    <rect key="frame" x="10" y="169" width="305" height="125"/>
+                    <rect key="frame" x="10" y="159" width="305" height="125"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="dlu-se-FIl"/>
                     </constraints>
@@ -77,7 +77,7 @@
                 <constraint firstItem="LZv-5U-9LN" firstAttribute="trailing" secondItem="yPZ-gv-0lr" secondAttribute="trailing" constant="10" id="MSe-tD-uTo"/>
                 <constraint firstItem="qRn-sg-21u" firstAttribute="top" secondItem="hRU-d1-NlN" secondAttribute="bottom" constant="20" id="OhG-3x-nM5"/>
                 <constraint firstItem="VVb-Sq-r4S" firstAttribute="top" secondItem="qRn-sg-21u" secondAttribute="bottom" constant="10" id="RjW-xj-Rdd"/>
-                <constraint firstItem="rMt-IV-5BS" firstAttribute="top" secondItem="yPZ-gv-0lr" secondAttribute="bottom" id="Suu-nR-L0p"/>
+                <constraint firstItem="rMt-IV-5BS" firstAttribute="top" secondItem="yPZ-gv-0lr" secondAttribute="bottom" constant="-10" id="Suu-nR-L0p"/>
                 <constraint firstItem="rMt-IV-5BS" firstAttribute="leading" secondItem="yPZ-gv-0lr" secondAttribute="leading" id="TaY-Xq-ELa"/>
                 <constraint firstItem="KMQ-0d-4d6" firstAttribute="top" secondItem="yPZ-gv-0lr" secondAttribute="bottom" constant="25" id="X2J-63-soB"/>
                 <constraint firstItem="LZv-5U-9LN" firstAttribute="trailing" secondItem="KMQ-0d-4d6" secondAttribute="trailing" constant="10" id="YOK-1U-Ejh"/>
@@ -89,7 +89,7 @@
                 <constraint firstItem="KMQ-0d-4d6" firstAttribute="leading" secondItem="LZv-5U-9LN" secondAttribute="leading" constant="10" id="nhH-qz-Jz6"/>
                 <constraint firstItem="qRn-sg-21u" firstAttribute="leading" secondItem="U8v-XY-Xz3" secondAttribute="leading" constant="20" id="prz-Cr-g3c"/>
                 <constraint firstItem="yPZ-gv-0lr" firstAttribute="top" secondItem="VVb-Sq-r4S" secondAttribute="bottom" constant="10" id="w1l-xt-4lA"/>
-                <constraint firstItem="hyC-kW-sf0" firstAttribute="top" secondItem="KMQ-0d-4d6" secondAttribute="bottom" id="wCg-O4-2KM"/>
+                <constraint firstItem="hyC-kW-sf0" firstAttribute="top" secondItem="KMQ-0d-4d6" secondAttribute="bottom" constant="-10" id="wCg-O4-2KM"/>
                 <constraint firstAttribute="trailing" secondItem="qRn-sg-21u" secondAttribute="trailing" constant="20" id="whe-8o-sx8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -100,7 +100,7 @@
                 <outlet property="basicPicker1" destination="rMt-IV-5BS" id="kGr-ta-EJJ"/>
                 <outlet property="basicPicker2" destination="hyC-kW-sf0" id="eLL-wR-Fsj"/>
             </connections>
-            <point key="canvasLocation" x="-5" y="159"/>
+            <point key="canvasLocation" x="-5.5" y="158.5"/>
         </view>
     </objects>
 </document>

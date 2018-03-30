@@ -83,7 +83,7 @@
                 <outlet property="segmentedControl" destination="dBo-Hm-YEY" id="7Ev-Z0-R4R"/>
                 <outlet property="timePicker" destination="ihp-1n-HyI" id="y2Z-2o-0qx"/>
             </connections>
-            <point key="canvasLocation" x="-5" y="159"/>
+            <point key="canvasLocation" x="-5.5" y="158.5"/>
         </view>
     </objects>
 </document>

@@ -47,10 +47,10 @@
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gf-75-Wal">
-                    <rect key="frame" x="10" y="189" width="305" height="125"/>
+                    <rect key="frame" x="10" y="179" width="305" height="125"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="vau-Lc-xzu"/>
                     </constraints>
@@ -59,7 +59,7 @@
             <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="7Gf-75-Wal" firstAttribute="trailing" secondItem="HVO-mJ-iEt" secondAttribute="trailing" id="1Xc-T8-KvK"/>
-                <constraint firstItem="7Gf-75-Wal" firstAttribute="top" secondItem="HVO-mJ-iEt" secondAttribute="bottom" id="Dr7-vG-vuI"/>
+                <constraint firstItem="7Gf-75-Wal" firstAttribute="top" secondItem="HVO-mJ-iEt" secondAttribute="bottom" constant="-10" id="Dr7-vG-vuI"/>
                 <constraint firstItem="RkP-3u-DmS" firstAttribute="leading" secondItem="mGN-G8-TyM" secondAttribute="leading" constant="20" id="EIV-0T-BZa"/>
                 <constraint firstItem="Fwy-cn-f3V" firstAttribute="top" secondItem="0IN-HR-nKa" secondAttribute="top" constant="15" id="Jha-e6-ISP"/>
                 <constraint firstItem="0IN-HR-nKa" firstAttribute="trailing" secondItem="HVO-mJ-iEt" secondAttribute="trailing" constant="10" id="K4I-Zd-oiO"/>
@@ -79,7 +79,7 @@
                 <outlet property="advField" destination="HVO-mJ-iEt" id="VM0-Bz-iXt"/>
                 <outlet property="advPicker" destination="7Gf-75-Wal" id="ymv-qW-A8w"/>
             </connections>
-            <point key="canvasLocation" x="-5" y="159"/>
+            <point key="canvasLocation" x="-5.5" y="158.5"/>
         </view>
     </objects>
 </document>

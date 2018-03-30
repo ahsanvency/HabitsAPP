@@ -40,15 +40,6 @@ class loginVC: UIViewController, UITextFieldDelegate {
         self.present(myAlert, animated: true, completion: nil)
     }
     
-    func loginSuccess (messages: String) {
-        let myAlert = UIAlertController(title: "Alert", message: "Logged In", preferredStyle: UIAlertControllerStyle.alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: { (alertAction: UIAlertAction) in
-            self.performSegue(withIdentifier: "toMain", sender: nil)
-        })
-        myAlert.addAction(okAction)
-        self.present(myAlert, animated: true, completion: nil)
-    }
-    
     
     @IBAction func facebookLogin(_ sender: Any) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
@@ -80,8 +71,6 @@ class loginVC: UIViewController, UITextFieldDelegate {
                 print(data)
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
-                
-                self.loginSuccess(messages: "Logged In");
             }
         })
     }
@@ -109,7 +98,6 @@ class loginVC: UIViewController, UITextFieldDelegate {
                         if let user = user {
                             self.completeSignIn(id: user.uid)
                         }
-                        self.loginSuccess(messages: "Logged In")
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                         let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
                         self.present(newViewController, animated: true, completion: nil)

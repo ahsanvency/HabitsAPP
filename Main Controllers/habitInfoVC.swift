@@ -14,6 +14,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var habitPic: UIImageView!
     
+    @IBOutlet weak var habitNameLbl: UILabel!
     @IBOutlet weak var scrollInfo: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -27,20 +28,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Change this line of code
-        habitPic.image = UIImage(named: chosenHabit.habitName)
-        //habitPic.image = UIImage(named: "Running")
-        scrollInfo.delegate = self
-        let Slides:[UIView] = createSlides()
-        setupscrollInfo(Slides: Slides)
-        pageControl.numberOfPages = Slides.count
-        pageControl.currentPage = 0
-        view.bringSubview(toFront: pageControl)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        self.hideKeyboardWhenTappedAround()
+        setupScreen()
     }
     
     func upAlert (messages: String) {
@@ -131,7 +119,6 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    
     func validateTextFeilds() -> Bool{
         if (whySlide.whyField.text == "") {
             //handel the errors properly
@@ -174,7 +161,6 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
                 self.view.frame.origin.y -= (keyboardSize.height - 125)
@@ -183,12 +169,30 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
                 self.view.frame.origin.y += (keyboardSize.height - 125)
             }
         }
+    }
+    
+    func setupScreen(){
+        habitPic.image = UIImage(named: "\(chosenHabit.habitName) Blue")
+        habitNameLbl.text = chosenHabit.habitName
+        //habitPic.image = UIImage(named: "Running")
+        scrollInfo.delegate = self
+        let Slides:[UIView] = createSlides()
+        setupscrollInfo(Slides: Slides)
+        pageControl.numberOfPages = Slides.count
+        pageControl.currentPage = 0
+        pageControl.tintColor = blueColor
+        scrollInfo.layer.cornerRadius = 10.0
+        view.bringSubview(toFront: pageControl)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
 }

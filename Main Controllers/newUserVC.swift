@@ -49,17 +49,6 @@ class newUserVC: UIViewController {
         self.present(myAlert, animated: true, completion: nil)
     }
     
-    //This will be the alert for when the user registers successfully, you can change this to be a verification
-    func loginSuccess (messages: String) {
-        let myAlert = UIAlertController(title: "Alert", message: "Registered", preferredStyle: UIAlertControllerStyle.alert);
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: { (alertAction: UIAlertAction) in
-            self.performSegue(withIdentifier: "toAdd", sender: nil)
-        })
-        myAlert.addAction(okAction)
-        self.present(myAlert, animated: true, completion: nil)
-    }
-    
-    
     //Facebook login button
     @IBAction func facebookLogin(_ sender: Any) {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
@@ -92,8 +81,6 @@ class newUserVC: UIViewController {
                 print(data)
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
-                
-                self.loginSuccess(messages: "Logged In");
             }
         })
     }
@@ -136,7 +123,6 @@ class newUserVC: UIViewController {
                 Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
                     //If there are no errors it will register the user
                     if error == nil {
-                        self.loginSuccess(messages: "Registered")
                         if let user = user {
                             let userData = [ "name": name, "email" : email]
                             self.completeSignIn(id: user.uid, userData: userData as Dictionary<String, AnyObject>);
@@ -183,7 +169,7 @@ class newUserVC: UIViewController {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 120)
+                self.view.frame.origin.y -= (keyboardSize.height - 100)
             }
         }
     }
@@ -192,7 +178,7 @@ class newUserVC: UIViewController {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 120)
+                self.view.frame.origin.y += (keyboardSize.height - 100)
             }
         }
     }

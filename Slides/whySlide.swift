@@ -14,7 +14,8 @@ class whySlide: UIView {
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var whyField: UITextField!
-
+    
+    @IBOutlet weak var gradientBackground: UIImageView!
     
     
     override func awakeFromNib() {
@@ -33,7 +34,6 @@ class whySlide: UIView {
         layer.colors = [color0,color1,color2,color3,color4]
         self.layer.insertSublayer(layer, at: 0)
         
-        layer.cornerRadius = 5.0
     }
 }
 

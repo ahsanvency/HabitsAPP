@@ -26,6 +26,8 @@ class whenSlide: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        timePicker.setValue(blueColor, forKeyPath: "textColor")
+        
         let indexSet = NSMutableIndexSet()
         weekArray.forEach(indexSet.add)
         segmentedControl.selectedSegmentIndexes = indexSet as IndexSet!

@@ -47,23 +47,23 @@
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szk-C5-EdQ">
                     <rect key="frame" x="10" y="194" width="305" height="30"/>
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8y-AA-Pfr">
-                    <rect key="frame" x="10" y="224" width="305" height="125"/>
+                    <rect key="frame" x="10" y="214" width="305" height="125"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="xKu-31-Ga6"/>
                     </constraints>
                 </pickerView>
                 <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B47-WP-TbQ">
-                    <rect key="frame" x="10" y="169" width="305" height="125"/>
+                    <rect key="frame" x="10" y="159" width="305" height="125"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="vl5-qR-93P"/>
                     </constraints>
@@ -84,9 +84,9 @@
                 <constraint firstItem="PYj-zu-oWj" firstAttribute="trailing" secondItem="Gg7-1X-eiy" secondAttribute="trailing" constant="10" id="iqH-Mt-uTS"/>
                 <constraint firstItem="sva-5k-lr2" firstAttribute="leading" secondItem="PYj-zu-oWj" secondAttribute="leading" constant="10" id="ngI-e7-RPh"/>
                 <constraint firstItem="sva-5k-lr2" firstAttribute="top" secondItem="Cap-Np-ZxH" secondAttribute="bottom" constant="10" id="p0e-FI-bXs"/>
-                <constraint firstItem="H8y-AA-Pfr" firstAttribute="top" secondItem="szk-C5-EdQ" secondAttribute="bottom" id="qV3-Sq-zoT"/>
+                <constraint firstItem="H8y-AA-Pfr" firstAttribute="top" secondItem="szk-C5-EdQ" secondAttribute="bottom" constant="-10" id="qV3-Sq-zoT"/>
                 <constraint firstItem="H8y-AA-Pfr" firstAttribute="leading" secondItem="Gg7-1X-eiy" secondAttribute="leading" id="spa-5c-tUM"/>
-                <constraint firstItem="B47-WP-TbQ" firstAttribute="top" secondItem="Gg7-1X-eiy" secondAttribute="bottom" id="u1l-Rs-AWn"/>
+                <constraint firstItem="B47-WP-TbQ" firstAttribute="top" secondItem="Gg7-1X-eiy" secondAttribute="bottom" constant="-10" id="u1l-Rs-AWn"/>
                 <constraint firstItem="Gg7-1X-eiy" firstAttribute="top" secondItem="sva-5k-lr2" secondAttribute="bottom" constant="10" id="uWR-P9-LTc"/>
                 <constraint firstItem="H8y-AA-Pfr" firstAttribute="trailing" secondItem="Gg7-1X-eiy" secondAttribute="trailing" id="xNI-O1-n0L"/>
                 <constraint firstAttribute="trailing" secondItem="Cap-Np-ZxH" secondAttribute="trailing" constant="20" id="yAG-tL-ggy"/>
@@ -100,7 +100,7 @@
                 <outlet property="intPicker1" destination="B47-WP-TbQ" id="krh-nY-CQa"/>
                 <outlet property="intPicker2" destination="H8y-AA-Pfr" id="xxZ-4S-HlL"/>
             </connections>
-            <point key="canvasLocation" x="-5" y="159"/>
+            <point key="canvasLocation" x="-5.5" y="158.5"/>
         </view>
     </objects>
 </document>
