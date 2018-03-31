@@ -56,15 +56,31 @@ extension habitSelector: UIPickerViewDelegate{
         habitNameLabel.minimumScaleFactor = 0.2
         view.addSubview(habitNameLabel)
         
-//        let topLabel = UILabel(frame: CGRect(x: 0, y: 10, width: customWidth, height: 15))
-//        topLabel.text = habits[row].habitName
-//        topLabel.textColor = .white
-//        topLabel.textAlignment = .center
-//        topLabel.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.thin)
-//        view.addSubview(topLabel)
-        
         view.transform = CGAffineTransform(rotationAngle: (90 * (.pi/180)))
         return view
     }
     
 }
+
+//        rotationAngle = -90 * (.pi/180)
+//
+//        var y = habitPicker.frame.origin.y
+//
+//        habitPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
+//        habitPicker.frame = CGRect(x: -50, y: y, width: view.frame.width + 100, height: 100)
+//
+//        //Object to give the data to the connected picker
+//        habitsPicker = habitSelector()
+//        habitsPicker.habits = habitModel.getHabit()
+//
+//        habitPicker.delegate = habitsPicker
+//        habitPicker.dataSource = habitsPicker
+
+
+
+//        let selectedHabit = habitsPicker.habits[habitPicker.selectedRow(inComponent: 0)]
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let habitInfo = storyBoard.instantiateViewController(withIdentifier: "habitInfoVCID") as! habitInfoVC
+//
+//        habitInfo.chosenHabit = selectedHabit
+//        self.present(habitInfo, animated: true, completion: nil)

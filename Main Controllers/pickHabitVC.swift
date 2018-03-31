@@ -12,8 +12,13 @@ import SwiftKeychainWrapper
 
 class pickHabitVC: UIViewController{
 
+    @IBOutlet weak var habitCarousel: iCarousel!
+    var habits = habitModel.getHabit()
+    let customWidth:CGFloat = 200
+    let customHeight:CGFloat = 200
     
-    @IBOutlet weak var habitPicker: UIPickerView!
+    
+    var habitsCarouselPicker: habitCarouselSelector!
     
     var rotationAngle: CGFloat!
     let width: CGFloat = 100
@@ -25,30 +30,25 @@ class pickHabitVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        habitsCarouselPicker = habitCarouselSelector()
+        habitsCarouselPicker.habits = habitModel.getHabit()
         
-        rotationAngle = -90 * (.pi/180)
+        habitCarousel.delegate = habitsCarouselPicker
+        habitCarousel.dataSource = habitsCarouselPicker
         
-        var y = habitPicker.frame.origin.y
-        
-        habitPicker.transform = CGAffineTransform(rotationAngle: rotationAngle)
-        habitPicker.frame = CGRect(x: -50, y: y, width: view.frame.width + 100, height: 100)
-        
-        //Object to give the data to the connected picker
-        habitsPicker = habitSelector()
-        habitsPicker.habits = habitModel.getHabit()
-        
-        habitPicker.delegate = habitsPicker
-        habitPicker.dataSource = habitsPicker
+        habitCarousel.reloadData()
+        habitCarousel.type = .linear
+        habitCarousel.centerItemWhenSelected = true
     }
     
     
     @IBAction func next(_ sender: Any) {
-        let selectedHabit = habitsPicker.habits[habitPicker.selectedRow(inComponent: 0)]
+        let selectedHabit = habitsCarouselPicker.habits[habitCarousel.currentItemIndex]
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let habitInfo = storyBoard.instantiateViewController(withIdentifier: "habitInfoVCID") as! habitInfoVC
-
         habitInfo.chosenHabit = selectedHabit
         self.present(habitInfo, animated: true, completion: nil)
+        
     }
     
     @IBAction func Logout(_ sender: Any) {
