@@ -13,10 +13,14 @@ import SwiftKeychainWrapper
 class habitInfoVC: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var habitPic: UIImageView!
-    
     @IBOutlet weak var habitNameLbl: UILabel!
     @IBOutlet weak var scrollInfo: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    
+    @IBOutlet var whySlideXib: whySlide!
+    @IBOutlet var whereSlideXib: whereSlide!
+    @IBOutlet var whenSlideXib: whenSlide!
     
     var chosenHabit: Habit!
     var whySlide: whySlide!
@@ -26,6 +30,8 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     var intRewardsSlide: intRewardsSlide!
     var advRewardsSlide: advRewardsSlide!
     var confirmSlide: confirmSlide!
+    
+    var whyXibView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +49,13 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         whySlide = Bundle.main.loadNibNamed("whySlide", owner: self, options: nil)!.first as! whySlide
         whySlide.intrinsicLabel.text = "Did you know intrinsic reasons like \(chosenHabit.intrinsicReason) help you succeed?"
         whySlide.questionLabel.text = "Why do you want to start \(chosenHabit.habitName)?"
-        
         whereSlide = Bundle.main.loadNibNamed("whereSlide", owner: self, options: nil)!.first as! whereSlide
         whereSlide.questionLabel.text = "Where is a consistent location you can \(chosenHabit.habitVerb)?"
-        
         whenSlide = Bundle.main.loadNibNamed("whenSlide", owner: self, options: nil)!.first as! whenSlide
         whenSlide.questionLabel.text = "When can you consistently \(chosenHabit.habitVerb)?"
-        
         basicRewardsSlide = Bundle.main.loadNibNamed("basicRewardsSlide", owner: self, options: nil)!.first as! basicRewardsSlide
-        
         intRewardsSlide = Bundle.main.loadNibNamed("intRewardsSlide", owner: self, options: nil)!.first as! intRewardsSlide
-        
         advRewardsSlide = Bundle.main.loadNibNamed("advRewardsSlide", owner: self, options: nil)!.first as! advRewardsSlide
-        
         confirmSlide = Bundle.main.loadNibNamed("confirmSlide", owner: self, options: nil)!.first as! confirmSlide
         
         return [whySlide, whereSlide, whenSlide, basicRewardsSlide, intRewardsSlide, advRewardsSlide, confirmSlide]
@@ -63,7 +63,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     
     func setupscrollInfo(Slides:[UIView]){
         scrollInfo.frame = CGRect(x: 0, y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
-        scrollInfo.contentSize = CGSize(width: scrollInfo.frame.width * CGFloat(Slides.count), height: scrollInfo.frame.height)
+        scrollInfo.contentSize = CGSize(width: CGFloat(scrollInfo.frame.width) * CGFloat(Slides.count), height: scrollInfo.frame.height)
         scrollInfo.isPagingEnabled = true
         
         for i in 0..<Slides.count{
@@ -122,6 +122,32 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    
+    
+    func setupScreen(){
+        habitPic.image = UIImage(named: "\(chosenHabit.habitName) Blue")
+        habitNameLbl.text = chosenHabit.habitName
+        //habitPic.image = UIImage(named: "Running")
+        scrollInfo.delegate = self
+        let Slides:[UIView] = createSlides()
+        setupscrollInfo(Slides: Slides)
+        pageControl.numberOfPages = Slides.count
+        pageControl.currentPage = 0
+        pageControl.tintColor = blueColor
+        scrollInfo.layer.cornerRadius = 10.0
+        view.bringSubview(toFront: pageControl)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        
+//        whySlideXib.frame = CGRect(x: 0,y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
+//        whenSlideXib.frame = CGRect(x: 0,y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
+//       whereSlideXib.frame = CGRect(x: 0,y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
+        
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     func validateTextFeilds() -> Bool{
         if (whySlide.whyField.text == "") {
             //handel the errors properly
@@ -178,24 +204,4 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
             }
         }
     }
-    
-    func setupScreen(){
-        habitPic.image = UIImage(named: "\(chosenHabit.habitName) Blue")
-        habitNameLbl.text = chosenHabit.habitName
-        //habitPic.image = UIImage(named: "Running")
-        scrollInfo.delegate = self
-        let Slides:[UIView] = createSlides()
-        setupscrollInfo(Slides: Slides)
-        pageControl.numberOfPages = Slides.count
-        pageControl.currentPage = 0
-        pageControl.tintColor = blueColor
-        scrollInfo.layer.cornerRadius = 10.0
-        view.bringSubview(toFront: pageControl)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        self.hideKeyboardWhenTappedAround()
-    }
-    
 }

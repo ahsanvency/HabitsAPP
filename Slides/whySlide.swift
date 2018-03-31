@@ -15,13 +15,12 @@ class whySlide: UIView {
     
     @IBOutlet weak var whyField: UITextField!
     
-    @IBOutlet weak var gradientBackground: UIImageView!
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         whyField.isEnabled = true
+        
         
         let layer : CAGradientLayer = CAGradientLayer()
         layer.frame.size = self.frame.size
