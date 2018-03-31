@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Omn-E4-WBC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cKD-mN-d3k">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -820,7 +820,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0z-Je-lRG">
-                                <rect key="frame" x="155.5" y="106" width="66.5" height="30"/>
+                                <rect key="frame" x="155" y="106" width="66.5" height="30"/>
                                 <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -935,24 +935,6 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="V2d-9r-EYx">
                                 <rect key="frame" x="80" y="550" width="215" height="37"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6nO-Pw-bMF">
-                                <rect key="frame" x="131" y="610" width="112" height="37"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Save Habit">
-                                            <attributes>
-                                                <color key="NSColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="25" name="D-DIN-Bold"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                <integer key="NSUnderline" value="1"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="saveHabit:" destination="DgZ-ic-iY8" eventType="touchUpInside" id="QvU-e5-Ivh"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onK-yf-CTi">
                                 <rect key="frame" x="87" y="205" width="200" height="21"/>
                                 <constraints>
@@ -969,7 +951,6 @@
                             <constraint firstItem="dZI-ZS-5tm" firstAttribute="centerX" secondItem="no9-aC-VEg" secondAttribute="centerX" id="0wX-ma-ckx"/>
                             <constraint firstItem="aCm-6P-YuK" firstAttribute="trailing" secondItem="V2d-9r-EYx" secondAttribute="trailing" constant="80" id="1nM-Kh-hhT"/>
                             <constraint firstItem="dZI-ZS-5tm" firstAttribute="leading" secondItem="aCm-6P-YuK" secondAttribute="leading" constant="25" id="2yB-yI-2kF"/>
-                            <constraint firstItem="6nO-Pw-bMF" firstAttribute="centerX" secondItem="no9-aC-VEg" secondAttribute="centerX" id="3S0-hd-3P0"/>
                             <constraint firstItem="onK-yf-CTi" firstAttribute="trailing" secondItem="FC4-Df-xow" secondAttribute="trailing" id="6bQ-FM-VeT"/>
                             <constraint firstItem="onK-yf-CTi" firstAttribute="leading" secondItem="FC4-Df-xow" secondAttribute="leading" id="7bw-cG-eyH"/>
                             <constraint firstItem="aCm-6P-YuK" firstAttribute="bottom" secondItem="V2d-9r-EYx" secondAttribute="bottom" constant="80" id="O5D-Tg-aaD"/>
@@ -977,7 +958,6 @@
                             <constraint firstItem="onK-yf-CTi" firstAttribute="top" secondItem="FC4-Df-xow" secondAttribute="bottom" constant="10" id="TlQ-dM-h7I"/>
                             <constraint firstItem="V2d-9r-EYx" firstAttribute="leading" secondItem="aCm-6P-YuK" secondAttribute="leading" constant="80" id="Vme-kP-8iR"/>
                             <constraint firstItem="aCm-6P-YuK" firstAttribute="bottom" secondItem="dZI-ZS-5tm" secondAttribute="bottom" constant="75" id="Y95-ye-avO"/>
-                            <constraint firstItem="aCm-6P-YuK" firstAttribute="bottom" secondItem="6nO-Pw-bMF" secondAttribute="bottom" constant="20" id="Yay-Be-Hpm"/>
                             <constraint firstItem="dZI-ZS-5tm" firstAttribute="top" secondItem="onK-yf-CTi" secondAttribute="bottom" constant="20" id="j57-rj-sV1"/>
                             <constraint firstItem="FC4-Df-xow" firstAttribute="top" secondItem="aCm-6P-YuK" secondAttribute="top" constant="25" id="jkW-ei-a4z"/>
                             <constraint firstItem="4jI-MM-9do" firstAttribute="top" secondItem="aCm-6P-YuK" secondAttribute="top" id="mHz-zD-Ugw"/>

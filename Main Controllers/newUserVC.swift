@@ -81,6 +81,7 @@ class newUserVC: UIViewController {
                 print(data)
                 let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                 self.firebaseAuth(credential)
+                self.performSegue(withIdentifier: "toAdd", sender: nil)
             }
         })
     }
@@ -126,6 +127,7 @@ class newUserVC: UIViewController {
                         if let user = user {
                             let userData = [ "name": name, "email" : email]
                             self.completeSignIn(id: user.uid, userData: userData as Dictionary<String, AnyObject>);
+                            self.performSegue(withIdentifier: "toAdd", sender: nil)
                         }
                         
                     } else {//If the password was too short

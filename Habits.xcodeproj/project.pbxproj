@@ -19,6 +19,8 @@
 		3A729663206E3444002D1C9E /* newUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A729662206E3444002D1C9E /* newUserVC.swift */; };
 		3A7CF1092048B548009531B7 /* lineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CF1082048B548009531B7 /* lineView.swift */; };
 		3A7CF10B2048BF69009531B7 /* circlePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CF10A2048BF69009531B7 /* circlePic.swift */; };
+		3A8D8451206ECF7200A3E28A /* confirmSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D8450206ECF7200A3E28A /* confirmSlide.xib */; };
+		3A8D8453206ED07600A3E28A /* confirmSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D8452206ED07600A3E28A /* confirmSlide.swift */; };
 		3A918ED120395B9700490104 /* normalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED020395B9700490104 /* normalLabel.swift */; };
 		3A918ED520395DC500490104 /* normalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED420395DC500490104 /* normalView.swift */; };
 		3A918ED72039601800490104 /* titleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A918ED62039601800490104 /* titleView.swift */; };
@@ -79,6 +81,8 @@
 		3A729662206E3444002D1C9E /* newUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newUserVC.swift; sourceTree = "<group>"; };
 		3A7CF1082048B548009531B7 /* lineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lineView.swift; sourceTree = "<group>"; };
 		3A7CF10A2048BF69009531B7 /* circlePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circlePic.swift; sourceTree = "<group>"; };
+		3A8D8450206ECF7200A3E28A /* confirmSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = confirmSlide.xib; sourceTree = "<group>"; };
+		3A8D8452206ED07600A3E28A /* confirmSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmSlide.swift; sourceTree = "<group>"; };
 		3A918ED020395B9700490104 /* normalLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalLabel.swift; sourceTree = "<group>"; };
 		3A918ED420395DC500490104 /* normalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normalView.swift; sourceTree = "<group>"; };
 		3A918ED62039601800490104 /* titleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleView.swift; sourceTree = "<group>"; };
@@ -191,12 +195,14 @@
 				3A938211206DF469009BA411 /* basicRewardsSlide.xib */,
 				3A938215206DF605009BA411 /* intRewardsSlide.xib */,
 				3A93821B206DF6AE009BA411 /* advRewardsSlide.xib */,
+				3A8D8450206ECF7200A3E28A /* confirmSlide.xib */,
 				3A938207206DB08E009BA411 /* whySlide.swift */,
 				3A938209206DED96009BA411 /* whereSlide.swift */,
 				3A93820F206DF0C0009BA411 /* whenSlide.swift */,
 				3A938213206DF532009BA411 /* basicRewards.swift */,
 				3A938217206DF643009BA411 /* intRewardsSlide.swift */,
 				3A938219206DF69F009BA411 /* advRewardsSlide.swift */,
+				3A8D8452206ED07600A3E28A /* confirmSlide.swift */,
 			);
 			path = Slides;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */,
 				3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */,
 				3A938206206DB082009BA411 /* whySlide.xib in Resources */,
+				3A8D8451206ECF7200A3E28A /* confirmSlide.xib in Resources */,
 				3A93820C206DEEBB009BA411 /* whereSlide.xib in Resources */,
 				3A938216206DF605009BA411 /* intRewardsSlide.xib in Resources */,
 				3A918EDF203993B000490104 /* Main.storyboard in Resources */,
@@ -494,6 +501,7 @@
 				3A1290682048D44400006CD0 /* fancyButton.swift in Sources */,
 				3A918ED520395DC500490104 /* normalView.swift in Sources */,
 				3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */,
+				3A8D8453206ED07600A3E28A /* confirmSlide.swift in Sources */,
 				3A05E5702047728600FDB31C /* hollowButton.swift in Sources */,
 				3A7CF1092048B548009531B7 /* lineView.swift in Sources */,
 				3A918ED92039669C00490104 /* blueButton.swift in Sources */,

@@ -26,7 +26,7 @@ class whenSlide: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        timePicker.setValue(blueColor, forKeyPath: "textColor")
+        timePicker.setValue(UIColor.white, forKeyPath: "textColor")
         
         let indexSet = NSMutableIndexSet()
         weekArray.forEach(indexSet.add)
