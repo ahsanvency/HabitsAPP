@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3A0F89BA20148CD10062B55C /* whenEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */; };
 		3A0F89BC20148CE80062B55C /* whereEditPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */; };
-		3A1290682048D44400006CD0 /* fancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1290672048D44400006CD0 /* fancyButton.swift */; };
+		3A1290682048D44400006CD0 /* roundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1290672048D44400006CD0 /* roundedButton.swift */; };
 		3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1290692048D57E00006CD0 /* Old.storyboard */; };
 		3A13731220052FEB000BDD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A13731120052FEB000BDD6F /* DataService.swift */; };
 		3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */; };
@@ -65,7 +65,7 @@
 		2123263985D85DAAB042486F /* Pods-Habits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Habits.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Habits/Pods-Habits.debug.xcconfig"; sourceTree = "<group>"; };
 		3A0F89B920148CD10062B55C /* whenEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whenEditPopupVC.swift; sourceTree = "<group>"; };
 		3A0F89BB20148CE80062B55C /* whereEditPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereEditPopupVC.swift; sourceTree = "<group>"; };
-		3A1290672048D44400006CD0 /* fancyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fancyButton.swift; sourceTree = "<group>"; };
+		3A1290672048D44400006CD0 /* roundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundedButton.swift; sourceTree = "<group>"; };
 		3A1290692048D57E00006CD0 /* Old.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Old.storyboard; sourceTree = "<group>"; };
 		3A13731120052FEB000BDD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3A3DA5841FFB7537004C1143 /* Habits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Habits.entitlements; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */,
-				3A1290672048D44400006CD0 /* fancyButton.swift */,
+				3A1290672048D44400006CD0 /* roundedButton.swift */,
 				3AF646CE2015663A002F86B8 /* fancyField.swift */,
 				3A7CC1612072149D0003F071 /* normalLabel.swift */,
 				3A7CC16320722E260003F071 /* backgroundView.swift */,
@@ -506,7 +506,7 @@
 				3A7CC16420722E270003F071 /* backgroundView.swift in Sources */,
 				3AF47FD62007F50B00F00F42 /* User.swift in Sources */,
 				3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */,
-				3A1290682048D44400006CD0 /* fancyButton.swift in Sources */,
+				3A1290682048D44400006CD0 /* roundedButton.swift in Sources */,
 				3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */,
 				3A8D8453206ED07600A3E28A /* confirmSlide.swift in Sources */,
 				3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */,
