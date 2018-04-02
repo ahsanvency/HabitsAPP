@@ -1,24 +1,19 @@
 //
-//  Slide.swift
+//  backgroundView.swift
 //  Habits
 //
-//  Created by Ahsan Vency on 3/29/18.
+//  Created by Ahsan Vency on 2/18/18.
 //  Copyright © 2018 ahsan vency. All rights reserved.
 //
 
 import UIKit
 
-class whereSlide: UIView {
-    
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var whereField: UITextField!
-    
+class scrollViewBackground: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         let layer : CAGradientLayer = CAGradientLayer()
-//        layer.frame.size = self.frame.size
+        layer.frame.size = self.frame.size
         
         let color0 = UIColor(red:13/255, green:76/255, blue:153/255, alpha:0.85).cgColor
         let color1 = UIColor(red:99/255, green:42/255, blue: 91/255, alpha:0.76).cgColor
@@ -28,8 +23,6 @@ class whereSlide: UIView {
         layer.colors = [color0,color1,color2,color3,color4]
         self.layer.insertSublayer(layer, at: 0)
         
+        layer.cornerRadius = 5.0
     }
 }
-
-
-

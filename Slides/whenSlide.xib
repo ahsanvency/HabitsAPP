@@ -28,29 +28,38 @@
             <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Izx-5D-BTW">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHEN?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6d-f3-ahi">
-                    <rect key="frame" x="122.5" y="15" width="80" height="26"/>
+                    <rect key="frame" x="122.5" y="20" width="80" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="KOF-t7-hFy"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="26"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When can you consistently code?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V11-UC-vgY">
-                    <rect key="frame" x="20" y="61" width="285" height="19"/>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="19"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When can you consistently code?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V11-UC-vgY">
+                    <rect key="frame" x="20" y="68" width="285" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="pjs-wD-aM5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="23"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ihp-1n-HyI">
-                    <rect key="frame" x="20" y="90" width="285" height="150"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="150" id="9Ab-Km-CeI"/>
-                    </constraints>
+                    <rect key="frame" x="20" y="104" width="285" height="148"/>
                     <date key="date" timeIntervalSinceReferenceDate="544075831.20050502">
                         <!--2018-03-30 04:10:31 +0000-->
                     </date>
                 </datePicker>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-Hm-YEY" customClass="MultiSelectSegmentedControl">
-                    <rect key="frame" x="10" y="250" width="305" height="29"/>
+                    <rect key="frame" x="10" y="267" width="305" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="IQy-OU-O8z"/>
+                    </constraints>
                     <segments>
                         <segment title="Sat"/>
                         <segment title="Sun"/>
@@ -69,16 +78,21 @@
             <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="ihp-1n-HyI" firstAttribute="leading" secondItem="0yZ-EF-vGg" secondAttribute="leading" constant="20" id="3fD-pe-W8R"/>
-                <constraint firstItem="m6d-f3-ahi" firstAttribute="top" secondItem="0yZ-EF-vGg" secondAttribute="top" constant="15" id="Kah-Nh-Py9"/>
+                <constraint firstItem="Izx-5D-BTW" firstAttribute="leading" secondItem="0yZ-EF-vGg" secondAttribute="leading" id="3zT-Fl-kP2"/>
+                <constraint firstItem="Izx-5D-BTW" firstAttribute="bottom" secondItem="0yZ-EF-vGg" secondAttribute="bottom" id="8p4-F9-Sc5"/>
+                <constraint firstItem="m6d-f3-ahi" firstAttribute="top" secondItem="0yZ-EF-vGg" secondAttribute="top" constant="20" id="Kah-Nh-Py9"/>
+                <constraint firstItem="Izx-5D-BTW" firstAttribute="trailing" secondItem="0yZ-EF-vGg" secondAttribute="trailing" id="Ksy-w4-uDu"/>
                 <constraint firstItem="dBo-Hm-YEY" firstAttribute="leading" secondItem="v6E-oU-1cn" secondAttribute="leading" constant="10" id="MvZ-nf-H15"/>
                 <constraint firstItem="V11-UC-vgY" firstAttribute="leading" secondItem="v6E-oU-1cn" secondAttribute="leading" constant="20" id="RKL-vS-32S"/>
                 <constraint firstItem="V11-UC-vgY" firstAttribute="top" secondItem="m6d-f3-ahi" secondAttribute="bottom" constant="20" id="Xzp-QZ-1Lq"/>
+                <constraint firstItem="0yZ-EF-vGg" firstAttribute="bottom" secondItem="dBo-Hm-YEY" secondAttribute="bottom" constant="50" id="YSh-3E-kQs"/>
                 <constraint firstAttribute="trailing" secondItem="ihp-1n-HyI" secondAttribute="trailing" constant="20" id="cIR-hQ-Zem"/>
+                <constraint firstItem="dBo-Hm-YEY" firstAttribute="top" secondItem="ihp-1n-HyI" secondAttribute="bottom" constant="15" id="ceM-Iz-m0N"/>
                 <constraint firstItem="m6d-f3-ahi" firstAttribute="centerX" secondItem="v6E-oU-1cn" secondAttribute="centerX" id="nuW-wF-pWb"/>
                 <constraint firstAttribute="trailing" secondItem="dBo-Hm-YEY" secondAttribute="trailing" constant="10" id="snN-8L-Lsz"/>
                 <constraint firstItem="ihp-1n-HyI" firstAttribute="top" secondItem="V11-UC-vgY" secondAttribute="bottom" constant="10" id="tXr-mB-UkK"/>
-                <constraint firstItem="dBo-Hm-YEY" firstAttribute="top" secondItem="ihp-1n-HyI" secondAttribute="bottom" constant="10" id="vUM-Q4-X7G"/>
                 <constraint firstAttribute="trailing" secondItem="V11-UC-vgY" secondAttribute="trailing" constant="20" id="vqh-tc-LzI"/>
+                <constraint firstItem="Izx-5D-BTW" firstAttribute="top" secondItem="0yZ-EF-vGg" secondAttribute="top" id="xxo-kg-dZy"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="0yZ-EF-vGg"/>
@@ -90,4 +104,7 @@
             <point key="canvasLocation" x="-5.5" y="158.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="1875" height="3335"/>
+    </resources>
 </document>

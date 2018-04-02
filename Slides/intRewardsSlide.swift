@@ -45,7 +45,7 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
         listOfIntRewards2.append("Enter Custom Reward Above")
         
         let layer : CAGradientLayer = CAGradientLayer()
-        layer.frame.size = self.frame.size
+    //    layer.frame.size = self.frame.size
         
         let color0 = UIColor(red:13/255, green:76/255, blue:153/255, alpha:0.85).cgColor
         let color1 = UIColor(red:99/255, green:42/255, blue: 91/255, alpha:0.76).cgColor

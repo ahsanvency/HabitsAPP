@@ -25,7 +25,6 @@ class pickHabitVC: UIViewController{
     let height: CGFloat = 100
     
     //Creating the variable
-    var habitsPicker: habitSelector!
     
     override func viewDidLoad() {
         super.viewDidLoad()

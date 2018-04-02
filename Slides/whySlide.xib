@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,30 +24,44 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="whySlide" customModule="Habits" customModuleProvider="target">
+        <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="whySlide" customModule="Habits" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0tT-li-piw">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="380.33333333333331"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHY?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XJ-il-d6n">
-                    <rect key="frame" x="131" y="15" width="63" height="26"/>
-                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="26"/>
+                    <rect key="frame" x="129" y="20.333333333333336" width="68" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="yA2-R6-uPT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="28"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know intrinsic reasons are more likely to help you succeed? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TtI-P4-XI7">
-                    <rect key="frame" x="30" y="66" width="265" height="66"/>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Did you know intrinsic reasons are more likely to help you succeed? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TtI-P4-XI7">
+                    <rect key="frame" x="30" y="70.333333333333314" width="265" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="81h-lw-QnP"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="HF8-0k-5Sl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why do you want to start being kind?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1g-La-PhZ">
-                    <rect key="frame" x="30" y="157" width="265" height="44"/>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Why do you want to start being kind?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="R1g-La-PhZ">
+                    <rect key="frame" x="30" y="215.33333333333331" width="265" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="PNh-c2-t24"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="oUa-Tv-H0h"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write Short Intrinsic Reward" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f00-kt-jc8">
-                    <rect key="frame" x="30" y="226" width="265" height="40"/>
+                    <rect key="frame" x="30" y="290.33333333333337" width="265" height="40"/>
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="pvP-F2-gXi"/>
@@ -62,14 +76,19 @@
                 <constraint firstItem="R1g-La-PhZ" firstAttribute="top" secondItem="TtI-P4-XI7" secondAttribute="bottom" constant="25" id="3R3-4t-zfs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f00-kt-jc8" secondAttribute="trailing" constant="30" id="4fh-mK-P4c"/>
                 <constraint firstItem="f00-kt-jc8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="4om-KE-icj"/>
+                <constraint firstItem="0tT-li-piw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9NV-RF-2wl"/>
                 <constraint firstItem="R1g-La-PhZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="GXC-Vq-UKi"/>
                 <constraint firstItem="1XJ-il-d6n" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IxY-KQ-q7O"/>
-                <constraint firstItem="f00-kt-jc8" firstAttribute="top" secondItem="R1g-La-PhZ" secondAttribute="bottom" constant="25" id="MhT-Q8-bU8"/>
+                <constraint firstItem="f00-kt-jc8" firstAttribute="top" secondItem="R1g-La-PhZ" secondAttribute="bottom" constant="15" id="MhT-Q8-bU8"/>
+                <constraint firstItem="0tT-li-piw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="deW-ca-nZM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="f00-kt-jc8" secondAttribute="bottom" constant="50" id="kTD-i1-gn6"/>
                 <constraint firstAttribute="trailing" secondItem="R1g-La-PhZ" secondAttribute="trailing" constant="30" id="kjU-zA-zgi"/>
                 <constraint firstAttribute="trailing" secondItem="TtI-P4-XI7" secondAttribute="trailing" constant="30" id="lca-q8-GDA"/>
                 <constraint firstItem="TtI-P4-XI7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="mpx-v0-8Nt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0tT-li-piw" secondAttribute="trailing" id="no0-qY-vhg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0tT-li-piw" secondAttribute="bottom" id="nqR-by-RHW"/>
                 <constraint firstItem="TtI-P4-XI7" firstAttribute="top" secondItem="1XJ-il-d6n" secondAttribute="bottom" constant="25" id="t5F-5t-e18"/>
-                <constraint firstItem="1XJ-il-d6n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="teV-Vp-5u3"/>
+                <constraint firstItem="1XJ-il-d6n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="teV-Vp-5u3"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -81,4 +100,7 @@
             <point key="canvasLocation" x="413" y="226"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="1875" height="3335"/>
+    </resources>
 </document>

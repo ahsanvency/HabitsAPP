@@ -47,9 +47,33 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     
     func createSlides() -> [UIView]{
         whySlide = Bundle.main.loadNibNamed("whySlide", owner: self, options: nil)!.first as! whySlide
+        
+        
+        scrollInfo.addSubview(whySlide)
+
+        whySlide.translatesAutoresizingMaskIntoConstraints = false
+
+        scrollInfo.addConstraint(NSLayoutConstraint(item: whySlide, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: scrollInfo, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+        scrollInfo.addConstraint(NSLayoutConstraint(item: whySlide, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: scrollInfo, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
+        scrollInfo.addConstraint(NSLayoutConstraint(item: whySlide, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: scrollInfo, attribute: NSLayoutAttribute.height, multiplier: 1, constant: 0))
+        scrollInfo.addConstraint(NSLayoutConstraint(item: whySlide, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: scrollInfo, attribute: NSLayoutAttribute.width, multiplier: 1, constant: 0))
+        
+        scrollInfo.addConstraint(NSLayoutConstraint(item: whySlide, attribute: .leading, relatedBy: .equal, toItem: scrollInfo, attribute: .leading, multiplier: 1, constant: 0))
+        
+        
+//        tempView.addConstraint(NSLayoutConstraint(item: whySlide, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 0, constant: scrollInfo.frame.height))
+        
+        
         whySlide.intrinsicLabel.text = "Did you know intrinsic reasons like \(chosenHabit.intrinsicReason) help you succeed?"
         whySlide.questionLabel.text = "Why do you want to start \(chosenHabit.habitName)?"
         whereSlide = Bundle.main.loadNibNamed("whereSlide", owner: self, options: nil)!.first as! whereSlide
+        
+//        view.addSubview(whereSlide)
+        //whereSlide.translatesAutoresizingMaskIntoConstraints = false
+
+//        view.addConstraint(NSLayoutConstraint(item: whereSlide, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0))
+//        view.addConstraint(NSLayoutConstraint(item: whereSlide, attribute: .leading, relatedBy: .equal, toItem: view, attribute: .leading, multiplier: 1, constant: 0))
+        
         whereSlide.questionLabel.text = "Where is a consistent location you can \(chosenHabit.habitVerb)?"
         whenSlide = Bundle.main.loadNibNamed("whenSlide", owner: self, options: nil)!.first as! whenSlide
         whenSlide.questionLabel.text = "When can you consistently \(chosenHabit.habitVerb)?"
@@ -66,8 +90,10 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         scrollInfo.contentSize = CGSize(width: CGFloat(scrollInfo.frame.width) * CGFloat(Slides.count), height: scrollInfo.frame.height)
         scrollInfo.isPagingEnabled = true
         
+        let tempView = UIView(frame: CGRect(x: 0, y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height))
+        
         for i in 0..<Slides.count{
-            Slides[i].frame = CGRect(x: scrollInfo.frame.width * CGFloat(i) , y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
+            Slides[i].frame = CGRect(x: (scrollInfo.frame.width) * CGFloat(i), y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
             scrollInfo.addSubview(Slides[i])
         }
     }
@@ -141,9 +167,6 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         
-//        whySlideXib.frame = CGRect(x: 0,y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
-//        whenSlideXib.frame = CGRect(x: 0,y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
-//       whereSlideXib.frame = CGRect(x: 0,y: 0, width: scrollInfo.frame.width, height: scrollInfo.frame.height)
         
         self.hideKeyboardWhenTappedAround()
     }

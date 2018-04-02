@@ -24,27 +24,44 @@
             <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM REASONS AND REWARDS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-MB-ZDo">
-                    <rect key="frame" x="25" y="25" width="275" height="52"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="V71-SP-Qlg">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIRM REASONS AND REWARDS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-MB-ZDo">
+                    <rect key="frame" x="25" y="20" width="275" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="vJJ-bd-xDI"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="26"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Satisfied with the reasons and rewards you entered?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O24-GV-yXJ">
-                    <rect key="frame" x="30" y="102" width="265" height="44"/>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Satisfied with the reasons and rewards you entered?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O24-GV-yXJ">
+                    <rect key="frame" x="30" y="92" width="265" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="UCO-x1-5nV"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="aWl-Iw-gXN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="27"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great! Click the button below to start developing a good habit!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSB-5R-ce4">
-                    <rect key="frame" x="30" y="171" width="265" height="66"/>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Great! Click the button below to start developing a good habit!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DSB-5R-ce4">
+                    <rect key="frame" x="30" y="166" width="265" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="Hi5-p7-V8t"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="kSr-K7-DAv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PG8-Qf-Eq3">
-                    <rect key="frame" x="30" y="262" width="265" height="32"/>
+                    <rect key="frame" x="30" y="257" width="265" height="40"/>
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ufx-jo-f84"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="20"/>
                     <state key="normal" title="CONFIRM">
                         <color key="titleColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,22 +73,30 @@
             </subviews>
             <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="V71-SP-Qlg" firstAttribute="leading" secondItem="bQ2-tp-HSI" secondAttribute="leading" id="19N-QV-4zl"/>
                 <constraint firstAttribute="trailing" secondItem="hdV-MB-ZDo" secondAttribute="trailing" constant="25" id="3rL-Ec-iGW"/>
                 <constraint firstItem="O24-GV-yXJ" firstAttribute="leading" secondItem="z46-rz-ngs" secondAttribute="leading" constant="30" id="5YI-Un-rRv"/>
                 <constraint firstItem="hdV-MB-ZDo" firstAttribute="leading" secondItem="z46-rz-ngs" secondAttribute="leading" constant="25" id="CIb-PQ-ijj"/>
-                <constraint firstItem="DSB-5R-ce4" firstAttribute="top" secondItem="O24-GV-yXJ" secondAttribute="bottom" constant="25" id="EbQ-2m-zyM"/>
+                <constraint firstItem="V71-SP-Qlg" firstAttribute="trailing" secondItem="bQ2-tp-HSI" secondAttribute="trailing" id="Dx0-66-dac"/>
+                <constraint firstItem="DSB-5R-ce4" firstAttribute="top" secondItem="O24-GV-yXJ" secondAttribute="bottom" constant="20" id="EbQ-2m-zyM"/>
                 <constraint firstItem="PG8-Qf-Eq3" firstAttribute="leading" secondItem="DSB-5R-ce4" secondAttribute="leading" id="FP7-Tl-j6B"/>
-                <constraint firstItem="O24-GV-yXJ" firstAttribute="top" secondItem="hdV-MB-ZDo" secondAttribute="bottom" constant="25" id="KOb-SB-9Dj"/>
-                <constraint firstItem="hdV-MB-ZDo" firstAttribute="top" secondItem="bQ2-tp-HSI" secondAttribute="top" constant="25" id="OWH-Vr-n6o"/>
+                <constraint firstItem="O24-GV-yXJ" firstAttribute="top" secondItem="hdV-MB-ZDo" secondAttribute="bottom" constant="20" id="KOb-SB-9Dj"/>
+                <constraint firstItem="V71-SP-Qlg" firstAttribute="top" secondItem="bQ2-tp-HSI" secondAttribute="top" id="OK7-wc-XGv"/>
+                <constraint firstItem="hdV-MB-ZDo" firstAttribute="top" secondItem="bQ2-tp-HSI" secondAttribute="top" constant="20" id="OWH-Vr-n6o"/>
                 <constraint firstItem="PG8-Qf-Eq3" firstAttribute="top" secondItem="DSB-5R-ce4" secondAttribute="bottom" constant="25" id="PMN-bi-6yz"/>
                 <constraint firstAttribute="trailing" secondItem="DSB-5R-ce4" secondAttribute="trailing" constant="30" id="RkK-cy-cr1"/>
+                <constraint firstItem="bQ2-tp-HSI" firstAttribute="bottom" secondItem="PG8-Qf-Eq3" secondAttribute="bottom" constant="50" id="VB0-u4-6UH"/>
                 <constraint firstAttribute="trailing" secondItem="O24-GV-yXJ" secondAttribute="trailing" constant="30" id="fzQ-LE-Ye9"/>
+                <constraint firstItem="V71-SP-Qlg" firstAttribute="bottom" secondItem="bQ2-tp-HSI" secondAttribute="bottom" id="hxW-dg-R08"/>
                 <constraint firstItem="PG8-Qf-Eq3" firstAttribute="trailing" secondItem="DSB-5R-ce4" secondAttribute="trailing" id="w7b-Zy-6RN"/>
                 <constraint firstItem="DSB-5R-ce4" firstAttribute="leading" secondItem="z46-rz-ngs" secondAttribute="leading" constant="30" id="zTr-ad-SEZ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="bQ2-tp-HSI"/>
-            <point key="canvasLocation" x="-643" y="166"/>
+            <point key="canvasLocation" x="-643.5" y="165.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="1875" height="3335"/>
+    </resources>
 </document>

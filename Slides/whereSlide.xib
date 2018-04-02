@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -28,26 +28,40 @@
             <rect key="frame" x="0.0" y="0.0" width="325" height="347"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-gR-h8v">
+                    <rect key="frame" x="0.0" y="0.0" width="325" height="3335"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGx-hz-JOL">
-                    <rect key="frame" x="116.5" y="15" width="92.5" height="26"/>
+                    <rect key="frame" x="109.33333333333331" y="20.666666666666742" width="107" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="mpz-12-q4A"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="26"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know being consistent with time and place helps you develop the habit?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEX-vh-Jdx">
-                    <rect key="frame" x="30" y="66" width="265" height="88"/>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Did you know being consistent with time and place helps you develop the habit?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rEX-vh-Jdx">
+                    <rect key="frame" x="30" y="70.333333333333258" width="265" height="3074.666666666667"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="D4N-kZ-tbA"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="QgK-S0-dGC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is a consistent location you can code?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpr-hd-7ZV">
-                    <rect key="frame" x="30" y="174" width="265" height="44"/>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="22"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Where is a consistent location you can code?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpr-hd-7ZV">
+                    <rect key="frame" x="30" y="3165" width="265" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7md-uT-ewc"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="AA5-2W-yAm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="30"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1I6-9V-jJd">
-                    <rect key="frame" x="30" y="238" width="265" height="40"/>
+                    <rect key="frame" x="30" y="3245" width="265" height="40"/>
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="8Zn-Qn-Qaq"/>
@@ -66,9 +80,14 @@
                 <constraint firstItem="1I6-9V-jJd" firstAttribute="leading" secondItem="Orl-tS-QDE" secondAttribute="leading" constant="30" id="C1f-UZ-OcE"/>
                 <constraint firstItem="rEX-vh-Jdx" firstAttribute="leading" secondItem="kfI-fx-HU2" secondAttribute="leading" constant="30" id="FWR-sN-EVi"/>
                 <constraint firstItem="OGx-hz-JOL" firstAttribute="centerX" secondItem="kfI-fx-HU2" secondAttribute="centerX" id="GHH-vt-5Jt"/>
+                <constraint firstItem="Orl-tS-QDE" firstAttribute="bottom" secondItem="J7q-gR-h8v" secondAttribute="bottom" id="J89-3y-OcC"/>
+                <constraint firstItem="J7q-gR-h8v" firstAttribute="leading" secondItem="Orl-tS-QDE" secondAttribute="leading" id="TKH-ms-7Vj"/>
                 <constraint firstAttribute="trailing" secondItem="Cpr-hd-7ZV" secondAttribute="trailing" constant="30" id="XqF-kq-b5v"/>
+                <constraint firstItem="J7q-gR-h8v" firstAttribute="trailing" secondItem="Orl-tS-QDE" secondAttribute="trailing" id="a5u-D6-FsU"/>
                 <constraint firstItem="1I6-9V-jJd" firstAttribute="top" secondItem="Cpr-hd-7ZV" secondAttribute="bottom" constant="20" id="cBR-Az-fkI"/>
-                <constraint firstItem="OGx-hz-JOL" firstAttribute="top" secondItem="Orl-tS-QDE" secondAttribute="top" constant="15" id="sJ1-0Z-bwx"/>
+                <constraint firstItem="J7q-gR-h8v" firstAttribute="top" secondItem="Orl-tS-QDE" secondAttribute="top" id="g9H-L4-RAY"/>
+                <constraint firstItem="Orl-tS-QDE" firstAttribute="bottom" secondItem="1I6-9V-jJd" secondAttribute="bottom" constant="50" id="omi-z3-rav"/>
+                <constraint firstItem="OGx-hz-JOL" firstAttribute="top" secondItem="Orl-tS-QDE" secondAttribute="top" constant="20" id="sJ1-0Z-bwx"/>
                 <constraint firstItem="rEX-vh-Jdx" firstAttribute="top" secondItem="OGx-hz-JOL" secondAttribute="bottom" constant="25" id="snL-OM-c7w"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -80,4 +99,7 @@
             <point key="canvasLocation" x="-279.5" y="233.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="1875" height="3335"/>
+    </resources>
 </document>
