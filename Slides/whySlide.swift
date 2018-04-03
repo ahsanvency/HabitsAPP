@@ -19,7 +19,9 @@ class whySlide: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        whyField.isEnabled = true
+        whyField.attributedPlaceholder = NSAttributedString(string: "Tap To Enter An Intrinsic Reason",
+                                                            attributes: [NSAttributedStringKey.foregroundColor: blueColor])
+        
         
     }
 }

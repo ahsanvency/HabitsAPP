@@ -40,20 +40,23 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your favorite way to celebrate?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EoX-wT-vAM">
-                    <rect key="frame" x="10" y="124" width="305" height="20"/>
+                    <rect key="frame" x="15" y="124" width="295" height="20"/>
                     <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HVO-mJ-iEt">
-                    <rect key="frame" x="10" y="164" width="305" height="30"/>
+                    <rect key="frame" x="20" y="164" width="285" height="30"/>
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="LgQ-He-yKr"/>
+                    </constraints>
                     <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gf-75-Wal">
-                    <rect key="frame" x="10" y="184" width="305" height="125"/>
+                    <rect key="frame" x="20" y="184" width="285" height="125"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="125" id="vau-Lc-xzu"/>
                     </constraints>
@@ -66,15 +69,15 @@
                 <constraint firstItem="7Gf-75-Wal" firstAttribute="top" secondItem="HVO-mJ-iEt" secondAttribute="bottom" constant="-10" id="Dr7-vG-vuI"/>
                 <constraint firstItem="RkP-3u-DmS" firstAttribute="leading" secondItem="mGN-G8-TyM" secondAttribute="leading" constant="20" id="EIV-0T-BZa"/>
                 <constraint firstItem="Fwy-cn-f3V" firstAttribute="top" secondItem="0IN-HR-nKa" secondAttribute="top" constant="20" id="Jha-e6-ISP"/>
-                <constraint firstItem="0IN-HR-nKa" firstAttribute="trailing" secondItem="HVO-mJ-iEt" secondAttribute="trailing" constant="10" id="K4I-Zd-oiO"/>
+                <constraint firstItem="0IN-HR-nKa" firstAttribute="trailing" secondItem="HVO-mJ-iEt" secondAttribute="trailing" constant="20" id="K4I-Zd-oiO"/>
                 <constraint firstItem="kpJ-fb-tPB" firstAttribute="bottom" secondItem="0IN-HR-nKa" secondAttribute="bottom" id="PbY-Lf-xtX"/>
-                <constraint firstItem="EoX-wT-vAM" firstAttribute="leading" secondItem="0IN-HR-nKa" secondAttribute="leading" constant="10" id="RfJ-dk-xqa"/>
-                <constraint firstItem="HVO-mJ-iEt" firstAttribute="leading" secondItem="0IN-HR-nKa" secondAttribute="leading" constant="10" id="Vwh-EI-gJI"/>
+                <constraint firstItem="EoX-wT-vAM" firstAttribute="leading" secondItem="0IN-HR-nKa" secondAttribute="leading" constant="15" id="RfJ-dk-xqa"/>
+                <constraint firstItem="HVO-mJ-iEt" firstAttribute="leading" secondItem="0IN-HR-nKa" secondAttribute="leading" constant="20" id="Vwh-EI-gJI"/>
                 <constraint firstItem="EoX-wT-vAM" firstAttribute="top" secondItem="RkP-3u-DmS" secondAttribute="bottom" constant="20" id="Xcn-hs-OY8"/>
                 <constraint firstItem="RkP-3u-DmS" firstAttribute="top" secondItem="Fwy-cn-f3V" secondAttribute="bottom" constant="20" id="YwD-cX-nv7"/>
                 <constraint firstItem="kpJ-fb-tPB" firstAttribute="leading" secondItem="0IN-HR-nKa" secondAttribute="leading" id="dd8-Xn-zAw"/>
                 <constraint firstItem="kpJ-fb-tPB" firstAttribute="top" secondItem="0IN-HR-nKa" secondAttribute="top" id="iOR-Vv-JMj"/>
-                <constraint firstItem="0IN-HR-nKa" firstAttribute="trailing" secondItem="EoX-wT-vAM" secondAttribute="trailing" constant="10" id="mhr-kZ-lqB"/>
+                <constraint firstItem="0IN-HR-nKa" firstAttribute="trailing" secondItem="EoX-wT-vAM" secondAttribute="trailing" constant="15" id="mhr-kZ-lqB"/>
                 <constraint firstAttribute="trailing" secondItem="RkP-3u-DmS" secondAttribute="trailing" constant="20" id="oaN-Lp-nsP"/>
                 <constraint firstItem="7Gf-75-Wal" firstAttribute="leading" secondItem="HVO-mJ-iEt" secondAttribute="leading" id="qWT-38-rKH"/>
                 <constraint firstItem="HVO-mJ-iEt" firstAttribute="top" secondItem="EoX-wT-vAM" secondAttribute="bottom" constant="20" id="sdZ-yO-67v"/>

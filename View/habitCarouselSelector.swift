@@ -11,7 +11,7 @@ import UIKit
 class habitCarouselSelector: iCarousel {
 
     let customWidth:CGFloat = 200
-    let customHeight:CGFloat = 200
+    let customHeight:CGFloat = 225
     var habits: [Habit]!
 
 }
@@ -32,11 +32,11 @@ extension habitCarouselSelector: iCarouselDelegate{
         view.addSubview(habitImageView)
         
         let habitNameLabel = UILabel()
-        habitNameLabel.frame = CGRect(x: 12.5, y: 210, width: 175, height: 30)
+        habitNameLabel.frame = CGRect(x: 12.5, y: 220, width: 175, height: 30)
         habitNameLabel.text = habits[index].habitName
         habitNameLabel.textColor = .white
         habitNameLabel.textAlignment = .center
-        habitNameLabel.font = UIFont(name: "D-DIN-Bold", size: 24)
+        habitNameLabel.font = UIFont(name: "D-DIN-Bold", size: 26)
         habitNameLabel.adjustsFontSizeToFitWidth = true
         habitNameLabel.minimumScaleFactor = 0.2
         view.addSubview(habitNameLabel)
@@ -46,5 +46,6 @@ extension habitCarouselSelector: iCarouselDelegate{
     
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
         return value * 1.1
+        
     }
 }
