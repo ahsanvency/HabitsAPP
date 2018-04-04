@@ -137,6 +137,40 @@ extension UIViewController {
     }
 }
 
-extension Notification.Name {
-    static let habitChanged = NSNotification.Name("habitChanged")
+func applyBlur(to view: UIView?, with style: UIBlurEffectStyle) -> UIView? {
+    //only apply the blur if the user hasn't disabled transparency effects
+    if !UIAccessibilityIsReduceTransparencyEnabled() {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view?.bounds ?? CGRect.zero
+        blurEffectView.alpha = 0.4
+        view?.addSubview(blurEffectView)
+    } else {
+        view?.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+    }
+    return view
 }
+
+extension UIImageView
+{
+    func makeBlurImage(targetImageView:UIImageView?, with style: UIBlurEffectStyle)
+    {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = targetImageView!.bounds
+        blurEffectView.alpha = 0.6
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        targetImageView?.addSubview(blurEffectView)
+    }
+    
+    func bigBlurImage(targetImageView:UIImageView?, with style: UIBlurEffectStyle)
+    {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = targetImageView!.bounds
+        blurEffectView.alpha = 0.3
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        targetImageView?.addSubview(blurEffectView)
+    }
+}
+

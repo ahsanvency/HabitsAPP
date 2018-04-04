@@ -118,8 +118,6 @@ class HabitCell: UITableViewCell {
                     for x in workDaysArray{
 
                         var check = x as! Int
-                        
-                      
                     }
                     
                     //check 2

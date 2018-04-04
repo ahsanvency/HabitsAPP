@@ -16,6 +16,8 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var habitNameLbl: UILabel!
     @IBOutlet weak var scrollInfo: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+
+
     
     
     @IBOutlet var whySlideXib: whySlide!
@@ -127,30 +129,6 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     
     
     
-    func setupScreen(){
-        habitPic.image = UIImage(named: "\(chosenHabit.habitName) Blue")
-        habitNameLbl.text = chosenHabit.habitName
-        //habitPic.image = UIImage(named: "Running")
-        scrollInfo.delegate = self
-        let Slides:[UIView] = createSlides()
-        setupscrollInfo(Slides: Slides)
-        pageControl.numberOfPages = Slides.count
-        pageControl.currentPage = 0
-        pageControl.tintColor = blueColor
-        scrollInfo.layer.cornerRadius = 10.0
-        view.bringSubview(toFront: pageControl)
-        
-        if habitPic.frame.height > 175 {
-            habitPic.frame = CGRect(x: habitPic.frame.origin.x, y: habitPic.frame.origin.y, width: habitPic.frame.width + 25, height: habitPic.frame.height)
-        }
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        
-        
-        self.hideKeyboardWhenTappedAround()
-    }
     
     func validateTextFeilds() -> Bool{
         if (whySlide.whyField.text == "") {
@@ -209,4 +187,24 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
             }
         }
     }
+    
+    func setupScreen(){
+        habitPic.image = UIImage(named: "\(chosenHabit.habitName) Blue")
+        habitNameLbl.text = chosenHabit.habitName
+        //habitPic.image = UIImage(named: "Running")
+        scrollInfo.delegate = self
+        let Slides:[UIView] = createSlides()
+        setupscrollInfo(Slides: Slides)
+        pageControl.numberOfPages = Slides.count
+        pageControl.currentPage = 0
+        pageControl.tintColor = blueColor
+        scrollInfo.layer.cornerRadius = 10.0
+        view.bringSubview(toFront: pageControl)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    
+        self.hideKeyboardWhenTappedAround()
+    }
+
 }

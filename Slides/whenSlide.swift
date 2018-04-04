@@ -15,7 +15,7 @@ class whenSlide: UIView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var segmentedControl: MultiSelectSegmentedControl!
-    
+    @IBOutlet weak var backgroundImg: UIImageView!
     
     var timeDict:Dictionary = [String:Int]()
     var weekArray = [Int]()
@@ -31,6 +31,7 @@ class whenSlide: UIView {
         let indexSet = NSMutableIndexSet()
         weekArray.forEach(indexSet.add)
         segmentedControl.selectedSegmentIndexes = indexSet as IndexSet!
+        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
         
 
     }

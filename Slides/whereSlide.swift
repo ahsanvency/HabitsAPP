@@ -13,12 +13,15 @@ class whereSlide: UIView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var whereField: UITextField!
     
+    @IBOutlet weak var backgroundImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         whereField.attributedPlaceholder = NSAttributedString(string: "Tap To Enter A Location",
                                                               attributes: [NSAttributedStringKey.foregroundColor: blueColor])
+        
+        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
         
     }
 }

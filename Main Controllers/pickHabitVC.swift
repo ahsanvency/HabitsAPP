@@ -13,6 +13,8 @@ import SwiftKeychainWrapper
 class pickHabitVC: UIViewController{
 
     @IBOutlet weak var habitCarousel: iCarousel!
+    @IBOutlet weak var backgroundImg: UIImageView!
+    
     var habits = habitModel.getHabit()
     let customWidth:CGFloat = 200
     let customHeight:CGFloat = 200
@@ -28,6 +30,8 @@ class pickHabitVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        backgroundImg.bigBlurImage(targetImageView: backgroundImg, with: .light)
         
         habitsCarouselPicker = habitCarouselSelector()
         habitsCarouselPicker.habits = habitModel.getHabit()

@@ -15,7 +15,7 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     @IBOutlet weak var intPicker1: UIPickerView!
     @IBOutlet weak var intField2: UITextField!
     @IBOutlet weak var intPicker2: UIPickerView!
-    
+    @IBOutlet weak var backgroundImg: UIImageView!
     
     
     var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
@@ -27,6 +27,7 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
         
         intField1.delegate = self
         intField2.delegate = self
@@ -43,19 +44,6 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
         listOfIntRewards2.sort()
         listOfIntRewards1.append("Enter Custom Reward Above")
         listOfIntRewards2.append("Enter Custom Reward Above")
-        
-        let layer : CAGradientLayer = CAGradientLayer()
-    //    layer.frame.size = self.frame.size
-        
-        let color0 = UIColor(red:13/255, green:76/255, blue:153/255, alpha:0.85).cgColor
-        let color1 = UIColor(red:99/255, green:42/255, blue: 91/255, alpha:0.76).cgColor
-        let color2 = UIColor(red:186/255, green:7/255, blue: 29/255, alpha:0.71).cgColor
-        let color3 = UIColor(red:218/255, green:128/255, blue:125/255, alpha:0.86).cgColor
-        let color4 = UIColor(red:247/255, green:240/255, blue: 215/255, alpha:100).cgColor
-        layer.colors = [color0,color1,color2,color3,color4]
-        self.layer.insertSublayer(layer, at: 0)
-        
-        layer.cornerRadius = 5.0
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
