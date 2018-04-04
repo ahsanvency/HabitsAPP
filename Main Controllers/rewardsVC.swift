@@ -622,22 +622,14 @@ class rewardsVC: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mainView = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
         mainView.firstTimeLoaded = 0
-        self.present(mainView,animated: true, completion: nil)
+        view.window?.layer.add(leftTransition(), forKey: nil)
+        self.present(mainView,animated: false, completion: nil)
     }
     
     func shadowlayer(){
-        let spinBtnLayer: CALayer = CALayer()
-        spinBtnLayer.backgroundColor = seaFoamColor.cgColor
-        spinBtnLayer.position = CGPoint(x: spinBtn.bounds.width/2, y: spinBtn.bounds.height)
         
-        spinBtnLayer.bounds = CGRect(x: 0, y: 0, width: spinBtn.bounds.width, height: 2)
-        spinBtnLayer.shadowColor = seaFoamColor.cgColor
-        spinBtnLayer.shadowOffset = CGSize(width: 0,height: 8)
-        spinBtnLayer.shadowOpacity = 1
-        spinBtnLayer.shadowRadius = 8
         let degrees = 180.0
         let radians = CGFloat(degrees * Double.pi / 180)
-        spinBtnLayer.transform = CATransform3DMakeRotation(radians, 0.0, 0.0, 1.0)
         
         
         let layerTop: CALayer = CALayer()

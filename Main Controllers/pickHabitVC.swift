@@ -46,7 +46,9 @@ class pickHabitVC: UIViewController{
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let habitInfo = storyBoard.instantiateViewController(withIdentifier: "habitInfoVCID") as! habitInfoVC
         habitInfo.chosenHabit = selectedHabit
-        self.present(habitInfo, animated: true, completion: nil)
+        
+        view.window?.layer.add(rightTransition(), forKey: nil)
+        self.present(habitInfo, animated: false, completion: nil)
         
     }
     

@@ -160,13 +160,6 @@
 			path = "Old VC's";
 			sourceTree = "<group>";
 		};
-		3A7CC146207213C80003F071 /* Old Popups */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Old Popups";
-			sourceTree = "<group>";
-		};
 		3A7CC16520722EA80003F071 /* Other Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,10 +206,9 @@
 		3AA5A39E1FFB08CE0035A16E = {
 			isa = PBXGroup;
 			children = (
-				3A7CC146207213C80003F071 /* Old Popups */,
+				3AF47FD72007FE0D00F00F42 /* RandomFunctionsAndVariables */,
 				3A9FD258206F2E2E00AC0FCF /* iCarousel */,
 				3A938204206DB074009BA411 /* Slides */,
-				3AF47FD72007FE0D00F00F42 /* RandomFunctionsAndVariables */,
 				3A13731020052FD2000BDD6F /* Services */,
 				3AA5A3BE1FFB18750035A16E /* Model */,
 				3AA5A3BD1FFB18710035A16E /* View */,

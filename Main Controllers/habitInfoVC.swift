@@ -140,6 +140,10 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         scrollInfo.layer.cornerRadius = 10.0
         view.bringSubview(toFront: pageControl)
         
+        if habitPic.frame.height > 175 {
+            habitPic.frame = CGRect(x: habitPic.frame.origin.x, y: habitPic.frame.origin.y, width: habitPic.frame.width + 25, height: habitPic.frame.height)
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
@@ -186,7 +190,8 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        view.window?.layer.add(leftTransition(), forKey: nil)
+        dismiss(animated: false, completion: nil)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
