@@ -53,7 +53,8 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         whySlide.questionLabel.text = "Why do you want to start \(chosenHabit.habitName)?"
         
         whereSlide = Bundle.main.loadNibNamed("whereSlide", owner: self, options: nil)!.first as! whereSlide
-        whereSlide.questionLabel.text = "Where is a consistent location you can \(chosenHabit.habitVerb)?"
+        whereSlide.consistencyLabel.text = "Did you know being consistent with time and places helps you develop the habit of \(chosenHabit.habitName)?"
+        whereSlide.questionLabel.text = "Where can you consistently \(chosenHabit.habitVerb)?"
         
         
         whenSlide = Bundle.main.loadNibNamed("whenSlide", owner: self, options: nil)!.first as! whenSlide
@@ -127,9 +128,6 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    
-    
-    
     func validateTextFeilds() -> Bool{
         if (whySlide.whyField.text == "") {
             //handel the errors properly
@@ -168,7 +166,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func back(_ sender: Any) {
-        view.window?.layer.add(leftTransition(), forKey: nil)
+        view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
         dismiss(animated: false, completion: nil)
     }
     

@@ -24,10 +24,9 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var randomPopupNumber = 7
     var firstTimeLoaded: Int?
     let userDefault = UserDefaults.standard
+    var habitName: String?
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        
         
                 DispatchQueue.main.async {
             //HabitCell().reload()
@@ -71,6 +70,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         })
 
     }
+    
     func runAnimation(){
         let animationDone = userDefault.bool(forKey: "animationDone")
 //        if (animationDone == false) {
@@ -155,12 +155,12 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.randomPopupNumber = 10;
                     break;
                 }
-                let habitName = firstDict["name"] as? String
+                self.habitName = firstDict["name"] as! String
                 
-                self.intrinsicQuestions = ["How are you progressing with \(habitName!)?",
-                    "Why do you want to continue \(habitName!)?",
-                    "How does \(habitName!) relate to your values?",
-                    "What do you gain by \(habitName!)?"]
+                self.intrinsicQuestions = ["How are you progressing with \(self.habitName!)?",
+                    "Why do you want to cself.ontinue \(self.habitName!)?",
+                    "How does \(self.habitName!) relate to your values?",
+                    "What do you gain by \(self.habitName!)?"]
                 
                 let test = Int(arc4random_uniform(UInt32(self.randomPopupNumber)))
                 if test == 0 {
@@ -199,7 +199,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
 //        dismiss(animated: true, completion: nil)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
-        view.window?.layer.add(bottomTransition(), forKey: nil)
+        view.window?.layer.add(bottomTransition(duration: 0.5), forKey: nil)
         self.present(newViewController, animated: false, completion: nil)
     }
     
@@ -305,7 +305,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let content = UNMutableNotificationContent()
         content.title = "Reminder"
 //        content.subtitle = "They are up now"
-        content.body = "Your habit starts in one hour"
+        content.body = "In one hour its time to \(self.habitName)."
         //App icon for the badge
         content.badge = 1
         var date = DateComponents()

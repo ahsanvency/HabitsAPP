@@ -36,54 +36,54 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate Rewards are simple and easy to access." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KO9-F1-MMv">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intermediate Rewards are simple and easy to access." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KO9-F1-MMv">
                     <rect key="frame" x="20" y="61" width="305" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Qxk-Ot-DCi"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="25"/>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are Intermediate Rewards you enjoy?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-tb-au7">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your Intermediate Rewards below." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXt-tb-au7">
                     <rect key="frame" x="15" y="121" width="315" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="a8K-zs-nou"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="22"/>
+                    <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oZP-si-RiJ">
-                    <rect key="frame" x="20" y="156" width="305" height="30"/>
+                    <rect key="frame" x="20" y="156" width="305" height="35"/>
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="T5z-bK-gAa"/>
+                        <constraint firstAttribute="height" constant="35" id="T5z-bK-gAa"/>
                     </constraints>
                     <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HlO-ie-A0E">
-                    <rect key="frame" x="20" y="211" width="305" height="30"/>
+                    <rect key="frame" x="20" y="216" width="305" height="35"/>
                     <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="GT6-m4-r5g"/>
+                        <constraint firstAttribute="height" constant="35" id="GT6-m4-r5g"/>
                     </constraints>
                     <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpR-f6-LOe">
-                    <rect key="frame" x="20" y="231" width="305" height="115"/>
+                    <rect key="frame" x="20" y="241" width="305" height="110"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="115" id="qiZ-Wn-vJy"/>
+                        <constraint firstAttribute="height" constant="110" id="qiZ-Wn-vJy"/>
                     </constraints>
                 </pickerView>
                 <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqD-78-eop">
-                    <rect key="frame" x="20" y="176" width="305" height="115"/>
+                    <rect key="frame" x="20" y="181" width="305" height="110"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="115" id="Vd9-Cd-ovu"/>
+                        <constraint firstAttribute="height" constant="110" id="Vd9-Cd-ovu"/>
                     </constraints>
                 </pickerView>
             </subviews>

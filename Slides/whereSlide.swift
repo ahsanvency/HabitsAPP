@@ -10,6 +10,8 @@ import UIKit
 
 class whereSlide: UIView {
     
+    
+    @IBOutlet weak var consistencyLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var whereField: UITextField!
     

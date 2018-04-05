@@ -38,7 +38,7 @@ class RightToLeftSegue: UIStoryboardSegue {
         src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
         dst.view.transform = CGAffineTransform(translationX: -src.view.frame.size.width, y: 0)
         
-        UIView.animate(withDuration: 0.25,
+        UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: .curveEaseInOut,
                        animations: {
@@ -59,7 +59,7 @@ class LeftToRightSegue: UIStoryboardSegue {
         src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
         dst.view.transform = CGAffineTransform(translationX: src.view.frame.size.width, y: 0)
         
-        UIView.animate(withDuration: 0.25,
+        UIView.animate(withDuration: 0.5,
                        delay: 0.0,
                        options: .curveEaseInOut,
                        animations: {
@@ -72,27 +72,27 @@ class LeftToRightSegue: UIStoryboardSegue {
     }
 }
 
-func bottomTransition() -> CATransition{
+func bottomTransition(duration: Double) -> CATransition{
     let transition = CATransition()
-    transition.duration = 0.3
+    transition.duration = duration
     transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
     transition.type = kCATransitionPush
     transition.subtype = kCATransitionFromBottom
     return transition
 }
 
-func leftTransition() -> CATransition{
+func leftTransition(duration: Double) -> CATransition{
     let transition = CATransition()
-    transition.duration = 0.3
+    transition.duration = duration
     transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
     transition.type = kCATransitionPush
     transition.subtype = kCATransitionFromLeft
     return transition
 }
 
-func rightTransition() -> CATransition{
+func rightTransition(duration: Double) -> CATransition{
     let transition = CATransition()
-    transition.duration = 0.3
+    transition.duration = duration
     transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
     transition.type = kCATransitionPush
     transition.subtype = kCATransitionFromRight
