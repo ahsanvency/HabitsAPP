@@ -16,22 +16,24 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-
     
-    override func viewDidAppear(_ animated: Bool) {
-        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
-            performSegue(withIdentifier: "toMain", sender: nil)
-        }
-    }
+    @IBOutlet var loadingView: UIView!
+    
+    var loadingViewNumber: Int?
+    
+    var mainScreenViewController: MainScreenViewC?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         setupScreen()
         
         self.hideKeyboardWhenTappedAround()
     }
+    
     
     func upAlert (messages: String) {
         let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
@@ -45,11 +47,10 @@ class loginVC: UIViewController, UITextFieldDelegate {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) -> Void in
             if (error == nil){
-                let fbloginresult : FBSDKLoginManagerLoginResult = result!
-                if(fbloginresult.grantedPermissions.contains("email"))
-                {
-                    self.getFBUserData()
-                    
+                if let fbloginresult : FBSDKLoginManagerLoginResult = result {
+                    do {
+                        self.getFBUserData()
+                    }
                 }
             }
         }
@@ -80,6 +81,9 @@ class loginVC: UIViewController, UITextFieldDelegate {
             if let user = user {
                 let userData = ["provider" : credential.provider]
                 self.completeSignIn(id: user.uid);
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+                self.present(newViewController, animated: true, completion: nil)
             }
         }
     }

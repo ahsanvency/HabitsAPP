@@ -31,7 +31,7 @@ class whenSlide: UIView {
         let indexSet = NSMutableIndexSet()
         weekArray.forEach(indexSet.add)
         segmentedControl.selectedSegmentIndexes = indexSet as IndexSet!
-        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
         
 
     }

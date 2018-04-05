@@ -23,7 +23,7 @@ class whereSlide: UIView {
         whereField.attributedPlaceholder = NSAttributedString(string: "Tap To Enter A Location",
                                                               attributes: [NSAttributedStringKey.foregroundColor: blueColor])
         
-        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
         
     }
 }

@@ -21,7 +21,7 @@ class advRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
         
         advField.delegate = self
         

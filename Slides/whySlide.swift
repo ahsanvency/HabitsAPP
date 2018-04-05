@@ -21,7 +21,7 @@ class whySlide: UIView {
         
         whyField.attributedPlaceholder = NSAttributedString(string: "Tap To Enter An Intrinsic Reason",
                                                             attributes: [NSAttributedStringKey.foregroundColor: blueColor])
-        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
     }
     
 }

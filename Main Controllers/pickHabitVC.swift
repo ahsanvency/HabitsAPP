@@ -31,7 +31,7 @@ class pickHabitVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        backgroundImg.bigBlurImage(targetImageView: backgroundImg, with: .light)
+//        backgroundImg.bigBlurImage(targetImageView: backgroundImg, with: .light)
         
         habitsCarouselPicker = habitCarouselSelector()
         habitsCarouselPicker.habits = habitModel.getHabit()

@@ -28,7 +28,7 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
         
         basicField1.delegate = self
         basicField2.delegate = self

@@ -16,6 +16,6 @@ class confirmSlide: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
     }
 }

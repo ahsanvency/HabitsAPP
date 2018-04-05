@@ -18,6 +18,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var animationLabel: UILabel!
     @IBOutlet weak var fakeView: UIView!
     @IBOutlet weak var fakeLabel: UILabel!
+    @IBOutlet var loadingView: UIView!
     
     
     var intrinsicQuestions = [String]()
@@ -27,26 +28,24 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var habitName: String?
     
     override func viewDidAppear(_ animated: Bool) {
-        
-                DispatchQueue.main.async {
-            //HabitCell().reload()
+
+        DispatchQueue.main.async {
             self.tableView.reloadData()
             self.notif()
 
         }
-
         runAnimation()
-
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showLoadingScreen()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
-            
         }
-
+        
+        
         //title
         let myGradient = UIImage(named: "textMainScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
@@ -61,7 +60,8 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             let value = snapshot.value as? NSDictionary
             
             //getting habit key
-            guard let firstKey = value?.allKeys[0] else {
+//            guard let firstKey = value?.allKeys[0] else{
+            guard (value?.allKeys[0]) != nil else {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "pickHabitVCID") as! pickHabitVC
                 self.present(newViewController, animated: true, completion: nil)
@@ -70,9 +70,24 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         })
 
     }
+
+    func showLoadingScreen(){
+        loadingView.bounds.size.width = view.bounds.width
+        loadingView.bounds.size.height = view.bounds.height
+        loadingView.center = view.center
+        loadingView.alpha = 1.0
+        view.addSubview(loadingView)
+        
+        
+        UIView.animate(withDuration: 1, delay: 0.7, options: [], animations: {
+            self.loadingView.alpha = 0
+        }) { (success) in
+            
+        }
+    }
     
     func runAnimation(){
-        let animationDone = userDefault.bool(forKey: "animationDone")
+        userDefault.bool(forKey: "animationDone")
 //        if (animationDone == false) {
         if firstTimeLoaded == 1{
             self.animationLabel.isHidden = false
@@ -84,16 +99,6 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.tableView.frame.origin.x += 75
                     self.fakeView.frame.origin.x += 75
                 }, completion: { _ in
-                    //                    UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-                    //                        self.tableView.frame.origin.x -= 75
-                    //                        self.fakeView.frame.origin.x -= 75
-                    //                    }, completion: { _ in
-                    //                        UIView.animate(withDuration: 0.75, delay: 0, options: [], animations: {
-                    //                            self.tableView.frame.origin.x += 75
-                    //                            self.fakeView.frame.origin.x += 75
-                    //                        }, completion: { _ in
-                    //                        })
-                    //                    })
                 })
             })
             UIView.animate(withDuration: 0.75, delay: 1.05, options: [], animations: {
@@ -102,7 +107,6 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 self.animationLabel.isHidden = true
             })
             userDefault.set(true, forKey: "animationDone")
-            
         }else {
             self.animationLabel.isHidden = true
         }
@@ -155,7 +159,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.randomPopupNumber = 10;
                     break;
                 }
-                self.habitName = firstDict["name"] as! String
+                self.habitName = (firstDict["name"] as! String)
                 
                 self.intrinsicQuestions = ["How are you progressing with \(self.habitName!)?",
                     "Why do you want to cself.ontinue \(self.habitName!)?",
@@ -168,13 +172,12 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
                         if let textField = intrinsicAlert.textFields?[0]{
                             if textField.text == ""{
-//                                let reminderAlert = UIAlertController(title: "Alert", message: "Its important to answer the previous question.", preferredStyle: UIAlertControllerStyle.alert)
-//                                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
-//                                reminderAlert.addAction(okAction)
                                 self.present(intrinsicAlert, animated: true, completion: nil)
+                            } else{
+                                self.performSegue(withIdentifier: "toRewardsScreen", sender: self)
                             }
                         }
-                        self.performSegue(withIdentifier: "toRewardsScreen", sender: self) })
+                         })
                     intrinsicAlert.addAction(okAction)
                     intrinsicAlert.addTextField(configurationHandler: nil)
                     self.present(intrinsicAlert, animated: true, completion: nil)
@@ -194,7 +197,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     //This is the menu button thats treated as a logout
     @IBAction func menuAsLogout(_ sender: Any) {
-        let keychainResult = KeychainWrapper.standard.remove(key: KEY_UID)
+        KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         try! Auth.auth().signOut()
 //        dismiss(animated: true, completion: nil)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -266,8 +269,8 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             return
         }
         let uid = user.uid
-        var ref: DatabaseReference!
-        ref = Database.database().reference()
+//        let ref: DatabaseReference!
+//        ref = Database.database().reference()
         
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -305,7 +308,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let content = UNMutableNotificationContent()
         content.title = "Reminder"
 //        content.subtitle = "They are up now"
-        content.body = "In one hour its time to \(self.habitName)."
+            content.body = "In one hour its time to \(String(describing: self.habitName))."
         //App icon for the badge
         content.badge = 1
         var date = DateComponents()

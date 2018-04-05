@@ -72,6 +72,27 @@ class LeftToRightSegue: UIStoryboardSegue {
     }
 }
 
+class bottomToTop: UIStoryboardSegue {
+    override func perform() {
+        let src = self.source
+        let dst = self.destination
+        
+        src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
+        dst.view.transform = CGAffineTransform(translationX: 0, y: src.view.frame.size.height)
+        
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       options: .curveEaseInOut,
+                       animations: {
+                        dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
+        },
+                       completion: { finished in
+                        src.present(dst, animated: false, completion: nil)
+        }
+        )
+    }
+}
+
 func bottomTransition(duration: Double) -> CATransition{
     let transition = CATransition()
     transition.duration = duration
@@ -143,10 +164,10 @@ func applyBlur(to view: UIView?, with style: UIBlurEffectStyle) -> UIView? {
         let blurEffect = UIBlurEffect(style: style)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view?.bounds ?? CGRect.zero
-        blurEffectView.alpha = 0.4
+        blurEffectView.alpha = 1.0
         view?.addSubview(blurEffectView)
     } else {
-        view?.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        view?.backgroundColor = UIColor.black.withAlphaComponent(0.5)
     }
     return view
 }
@@ -158,7 +179,7 @@ extension UIImageView
         let blurEffect = UIBlurEffect(style: style)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = targetImageView!.bounds
-        blurEffectView.alpha = 0.6
+        blurEffectView.alpha = 0.05
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
         targetImageView?.addSubview(blurEffectView)
     }
@@ -168,7 +189,7 @@ extension UIImageView
         let blurEffect = UIBlurEffect(style: style)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = targetImageView!.bounds
-        blurEffectView.alpha = 0.3
+        blurEffectView.alpha = 0.05
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
         targetImageView?.addSubview(blurEffectView)
     }

@@ -27,7 +27,7 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
         
         intField1.delegate = self
         intField2.delegate = self

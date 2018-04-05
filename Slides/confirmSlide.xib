@@ -66,7 +66,6 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="DSB-5R-ce4" firstAttribute="leading" secondItem="hdV-MB-ZDo" secondAttribute="leading" id="3j0-4f-shZ"/>
                 <constraint firstItem="PG8-Qf-Eq3" firstAttribute="trailing" secondItem="hdV-MB-ZDo" secondAttribute="trailing" id="4WZ-mO-jl6"/>

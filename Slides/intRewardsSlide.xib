@@ -87,7 +87,6 @@
                     </constraints>
                 </pickerView>
             </subviews>
-            <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="ZpR-f6-LOe" firstAttribute="trailing" secondItem="oZP-si-RiJ" secondAttribute="trailing" id="0w9-eX-nuL"/>
                 <constraint firstAttribute="trailing" secondItem="KO9-F1-MMv" secondAttribute="trailing" constant="20" id="95q-pQ-dpT"/>

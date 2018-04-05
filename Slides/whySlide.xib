@@ -40,7 +40,7 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Did you know intrinsic reasons are more likely to help you succeed? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TtI-P4-XI7">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Did you know intrinsic reasons are more likely to help you succeed? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="17" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TtI-P4-XI7">
                     <rect key="frame" x="30" y="65.333333333333329" width="275" height="119.99999999999999"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="HF8-0k-5Sl"/>
@@ -66,7 +66,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.035294117649999998" green="0.1647058824" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="4qF-Dd-1do" firstAttribute="top" secondItem="TtI-P4-XI7" secondAttribute="bottom" constant="20" id="E20-BP-vxH"/>
                 <constraint firstItem="4qF-Dd-1do" firstAttribute="leading" secondItem="TtI-P4-XI7" secondAttribute="leading" id="IX5-W1-P4D"/>
