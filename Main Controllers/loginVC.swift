@@ -47,7 +47,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["email","public_profile"], from: self) { (result, error) -> Void in
             if (error == nil){
-                if let fbloginresult : FBSDKLoginManagerLoginResult = result {
+                if let _ : FBSDKLoginManagerLoginResult = result {
                     do {
                         self.getFBUserData()
                     }
@@ -64,7 +64,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
             
             if ((error) != nil)
             {
-                print("Error: \(error)")
+                print("Error: \(String(describing: error))")
             }
             else
             {
@@ -79,7 +79,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
     func firebaseAuth(_ credential: AuthCredential){
         Auth.auth().signIn(with: credential) { (user, error) in
             if let user = user {
-                let userData = ["provider" : credential.provider]
+                _ = ["provider" : credential.provider]
                 self.completeSignIn(id: user.uid);
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC

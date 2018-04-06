@@ -269,8 +269,6 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             return
         }
         let uid = user.uid
-//        let ref: DatabaseReference!
-//        ref = Database.database().reference()
         
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -312,7 +310,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         //App icon for the badge
         content.badge = 1
         var date = DateComponents()
-        date.hour = currentHabitTimeHours
+        date.hour = currentHabitTimeHours - 1
         date.minute = currentHabitTimeMin
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
@@ -324,7 +322,6 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             })
     }
 }
-
 
 class CustomProgressView: UIProgressView {
     

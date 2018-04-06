@@ -171,12 +171,12 @@ class rewardsVC: UIViewController {
 
                 } else {
                     self.success = self.success! + 1
-                    DataService.ds.REF_HABITS.child(uid).child("\(firstKey)").child("Rewards").updateChildValues(["Success": self.success,"SpunDay":day])
+                    DataService.ds.REF_HABITS.child(uid).child("\(firstKey)").child("Rewards").updateChildValues(["Success": self.success!,"SpunDay":day])
                     self.runSpin()
                 }
             } else {
                 self.success = self.success! + 1
-                DataService.ds.REF_HABITS.child(uid).child("\(firstKey)").child("Rewards").updateChildValues(["Success": self.success,"SpunDay":day])
+                DataService.ds.REF_HABITS.child(uid).child("\(firstKey)").child("Rewards").updateChildValues(["Success": self.success!,"SpunDay":day])
                 self.runSpin()
             }
         })

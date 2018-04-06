@@ -169,7 +169,7 @@ class HabitCell: UITableViewCell {
                         var higherDays = [Int]()
                         
                         for x in workDaysArray{
-                            var value = x as! Int
+                            let value = x as! Int
                             if value < cDay {
                                 lowerDays.append(value)
                             } else if value > cDay {

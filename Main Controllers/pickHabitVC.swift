@@ -57,7 +57,7 @@ class pickHabitVC: UIViewController{
     }
     
     @IBAction func Logout(_ sender: Any) {
-        let keychainResult = KeychainWrapper.standard.remove(key: KEY_UID)
+        KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         try! Auth.auth().signOut()
         //        dismiss(animated: true, completion: nil)
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

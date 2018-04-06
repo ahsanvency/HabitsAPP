@@ -112,9 +112,9 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
                 //This is where the information on the label needs to be changed
                 DataService.ds.REF_HABITS.child(uid).removeValue()
                 
-                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).setValue(["Why": whySlide.whyField.text,"When":"\(whenSlide.daysOfWeekStr)\(whenSlide.timeStr)","Where":whereSlide.whereField.text,"name":chosenHabit.habitName,"freq":whenSlide.weekArray])
+                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).setValue(["Why": whySlide.whyField.text!,"When":"\(whenSlide.daysOfWeekStr)\(whenSlide.timeStr)","Where":whereSlide.whereField.text!,"name":chosenHabit.habitName,"freq":whenSlide.weekArray])
                 //Adding rewards to habit
-                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["basicReward1":basicRewardsSlide.basicField1.text,"basicReward2":basicRewardsSlide.basicField2.text,"intReward1":intRewardsSlide.intField1.text,"intReward2":intRewardsSlide.intField2.text,"Adv":advRewardsSlide.advField.text, "Success": 0])
+                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["basicReward1":basicRewardsSlide.basicField1.text!,"basicReward2":basicRewardsSlide.basicField2.text!,"intReward1":intRewardsSlide.intField1.text!,"intReward2":intRewardsSlide.intField2.text!,"Adv":advRewardsSlide.advField.text!, "Success": 0])
                 
                 //Segue
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

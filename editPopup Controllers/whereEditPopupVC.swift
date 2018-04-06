@@ -76,7 +76,7 @@ class whereEditPopupVC: UIViewController {
                 guard let firstKey = value?.allKeys[0] else {
                     print("n")
                     return }
-                self.ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Where":strToUpdate])
+                self.ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Where":strToUpdate!])
             }) { (error) in
                 print(error.localizedDescription)
             }

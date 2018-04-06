@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func connectToFirebaseMessaging(){
         Messaging.messaging().connect{ (error) in
             if error != nil{
-                print("Unable to connect \(error)")
+                print("Unable to connect \(String(describing: error))")
             }else{
                 print("CONNECTED")
             }
