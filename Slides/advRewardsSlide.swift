@@ -15,7 +15,7 @@ class advRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     @IBOutlet weak var backgroundImg: UIImageView!
     
     
-    var listOfAdvRewards = ["New Tatto or Piercing", "Pedicure", "Take a Day Off", "Go Shopping", "Party", "Go Camping", "Weekend Trip"]
+    var listOfAdvRewards = ["New Tattoo or Piercing", "Pedicure", "Take a Day Off", "Go Shopping", "Party", "Go Camping", "Weekend Trip"]
     
     var advReward: String?
     

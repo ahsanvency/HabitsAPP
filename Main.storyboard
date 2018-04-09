@@ -111,11 +111,11 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="qHE-3c-TBb"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-lY-S8z" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-lY-S8z" customClass="TransitionButton" customModule="TransitionButton">
                                 <rect key="frame" x="30" y="452" width="315" height="50"/>
                                 <state key="normal" image="Login Button"/>
                                 <connections>
-                                    <action selector="loginButton:" destination="cKD-mN-d3k" eventType="touchUpInside" id="3RM-5j-vPV"/>
+                                    <action selector="loginButton:" destination="cKD-mN-d3k" eventType="touchUpInside" id="Liw-1v-YKA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZe-Bu-jiS" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
@@ -1301,12 +1301,12 @@
                         <viewLayoutGuide key="safeArea" id="Yf8-Sz-CvY"/>
                     </view>
                     <connections>
-                        <outlet property="animationLabel" destination="7fA-ul-dvM" id="oAT-jX-ey6"/>
-                        <outlet property="fakeLabel" destination="Wcy-bt-sy3" id="g3t-Cb-u8z"/>
-                        <outlet property="fakeView" destination="S3H-sw-gwm" id="OWn-2M-Jw9"/>
-                        <outlet property="loadingView" destination="oy8-gT-yso" id="UMG-XW-rTu"/>
-                        <outlet property="screenTitle" destination="69f-7s-Y8a" id="ykG-kw-LdH"/>
-                        <outlet property="tableView" destination="SMG-tW-8d1" id="pBu-Tn-trm"/>
+                        <outlet property="animationLabel" destination="7fA-ul-dvM" id="YYf-93-eE1"/>
+                        <outlet property="fakeLabel" destination="Wcy-bt-sy3" id="0ZA-6r-fid"/>
+                        <outlet property="fakeView" destination="S3H-sw-gwm" id="Hyd-Ym-K2r"/>
+                        <outlet property="loadingView" destination="oy8-gT-yso" id="8hP-Xo-EXz"/>
+                        <outlet property="screenTitle" destination="69f-7s-Y8a" id="OXU-9N-Yer"/>
+                        <outlet property="tableView" destination="SMG-tW-8d1" id="44t-VV-OKc"/>
                         <segue destination="ocZ-h0-lAE" kind="show" identifier="toRewardsScreen" customClass="LeftToRightSegue" customModule="Habits" customModuleProvider="target" id="s92-MD-zEj"/>
                     </connections>
                 </viewController>

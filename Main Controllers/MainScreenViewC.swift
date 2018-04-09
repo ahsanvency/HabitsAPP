@@ -6,12 +6,15 @@
 //  Copyright © 2018 ahsan vency. All rights reserved.
 //
 
+import TransitionButton
 import UIKit
 import Firebase
 import SwiftKeychainWrapper
 import UserNotifications
 
+
 class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -20,13 +23,13 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var fakeLabel: UILabel!
     @IBOutlet var loadingView: UIView!
     
-    
+
     var intrinsicQuestions = [String]()
     var randomPopupNumber = 7
     var firstTimeLoaded: Int?
     let userDefault = UserDefaults.standard
     var habitName: String?
-    
+
     override func viewDidAppear(_ animated: Bool) {
 
         DispatchQueue.main.async {
@@ -35,21 +38,19 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
 
         }
         runAnimation()
-        
+
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         showLoadingScreen()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
         }
         
-        
-        //title
         let myGradient = UIImage(named: "textMainScreen.png")
         screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
-        
+
         guard let user = Auth.auth().currentUser else {
             print("User not found")
             return
@@ -58,7 +59,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
-            
+
             //getting habit key
 //            guard let firstKey = value?.allKeys[0] else{
             guard (value?.allKeys[0]) != nil else {
@@ -78,14 +79,13 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         loadingView.alpha = 1.0
         view.addSubview(loadingView)
         
-        
         UIView.animate(withDuration: 1, delay: 0.7, options: [], animations: {
             self.loadingView.alpha = 0
         }) { (success) in
-            
+
         }
     }
-    
+
     func runAnimation(){
         userDefault.bool(forKey: "animationDone")
 //        if (animationDone == false) {
@@ -115,17 +115,17 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    
-    
+
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HabitCell", for: indexPath) as? HabitCell{
             return cell;
         }
-        
+
         return HabitCell();
     }
-    
+
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let rewardsAction = UITableViewRowAction(style: .normal, title: "Rewards") { (action, index) in
             //current user
@@ -133,7 +133,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 return
             }
             let uid = user.uid
-            
+
             //Gets the Habit id
             DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 let value = snapshot.value as? NSDictionary
@@ -147,7 +147,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 var rewardsDict = firstDict["Rewards"] as? Dictionary<String, Any>
                 let success = rewardsDict!["Success"] as? Int
 
-                
+
                 switch (success!){
                 case 5..<10:
                     self.randomPopupNumber = 5;
@@ -160,12 +160,12 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     break;
                 }
                 self.habitName = (firstDict["name"] as! String)
-                
+
                 self.intrinsicQuestions = ["How are you progressing with \(self.habitName!)?",
                     "Why do you want to cself.ontinue \(self.habitName!)?",
                     "How does \(self.habitName!) relate to your values?",
                     "What do you gain by \(self.habitName!)?"]
-                
+
                 let test = Int(arc4random_uniform(UInt32(self.randomPopupNumber)))
                 if test == 0 {
                     let intrinsicAlert = UIAlertController(title: "Intrinsic Reminder", message: self.intrinsicQuestions[Int(arc4random_uniform(UInt32(self.intrinsicQuestions.count)))], preferredStyle: UIAlertControllerStyle.alert)
@@ -185,16 +185,16 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     self.performSegue(withIdentifier: "toRewardsScreen", sender: nil)
                 }
             })
-            
+
         }
         rewardsAction.backgroundColor = blueColor
         return [rewardsAction]
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 350;
     }
-    
+
     //This is the menu button thats treated as a logout
     @IBAction func menuAsLogout(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
@@ -205,11 +205,11 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         view.window?.layer.add(bottomTransition(duration: 0.5), forKey: nil)
         self.present(newViewController, animated: false, completion: nil)
     }
-    
-    
-    
+
+
+
     @IBAction func addNewHabitBtn(_ sender: Any) {
-        
+
         guard let user = Auth.auth().currentUser else {
             print("User not found")
             return
@@ -223,7 +223,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             guard let firstKey = value?.allKeys[0] else {
                 print("n")
                 return }
-            
+
             //using habit key to get dict
             let firstDict = value![firstKey] as! Dictionary<String,Any>
             var rewardsDict = firstDict["Rewards"] as? Dictionary<String, Any>
@@ -234,11 +234,11 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 print("none")
                 return
             }
-            
+
 //            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //            let newViewController = storyBoard.instantiateViewController(withIdentifier: "NewHabitVCID") as! NewHabitVC
 //            self.present(newViewController, animated: true, completion: nil)
-            
+
             if successesInt >= 30 {
 
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -262,18 +262,18 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
             print(error.localizedDescription)
         }
     }
-    
+
     func notif(){
         guard let user = Auth.auth().currentUser else {
             print("User not found")
             return
         }
         let uid = user.uid
-        
+
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
-            
+
             //getting habit key
             guard let firstKey = value?.allKeys[0] else {
                 print("n")
@@ -299,7 +299,7 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 print("error")
                 return
             }
-            
+
             print(currentHabitTimeMin)
             print(currentHabitTimeHours)
         //Creates the notification
@@ -315,21 +315,22 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
         let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
         //Adds to the notification center which has the job of displaying it
-        
+
         UNUserNotificationCenter.current().add(request) { (error) in
         }
-            
+
             })
     }
 }
 
+
 class CustomProgressView: UIProgressView {
-    
+
     var height:CGFloat = 1.0
     // Do not change this default value,
     // this will create a bug where your progressview wont work for the first x amount of pixel.
     // x being the value you put here.
-    
+
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         let size:CGSize = CGSize.init(width: self.frame.size.width, height: height)
         return size

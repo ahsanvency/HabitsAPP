@@ -59,6 +59,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         
         whenSlide = Bundle.main.loadNibNamed("whenSlide", owner: self, options: nil)!.first as! whenSlide
         whenSlide.questionLabel.text = "When can you consistently \(chosenHabit.habitVerb)?"
+        
         basicRewardsSlide = Bundle.main.loadNibNamed("basicRewardsSlide", owner: self, options: nil)!.first as! basicRewardsSlide
         intRewardsSlide = Bundle.main.loadNibNamed("intRewardsSlide", owner: self, options: nil)!.first as! intRewardsSlide
         advRewardsSlide = Bundle.main.loadNibNamed("advRewardsSlide", owner: self, options: nil)!.first as! advRewardsSlide
@@ -139,9 +140,12 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
             self.upAlert(messages: "Please fill out Where.")
             return false
         }
-        else if (whenSlide.daysOfWeekStr == "" || whenSlide.timeStr == ""){
+        else if whenSlide.daysOfWeekStr == "" {
+            self.upAlert(messages: "Please fill out the days you wish to \(chosenHabit.habitVerb)")
+        }
+        else if (whenSlide.timeStr == ""){
             
-            self.upAlert(messages: "Please fill out When.")
+            self.upAlert(messages: "Please fill out a time to \(chosenHabit.habitVerb)")
             return false
         }
         else if (basicRewardsSlide.basicField1.text == "Tap to pick a basic reward." || basicRewardsSlide.basicField1.text == "" || basicRewardsSlide.basicField1.text == "Enter Custom Reward Above" || basicRewardsSlide.basicField2.text == "Tap to pick a basic reward." || basicRewardsSlide.basicField2.text == "" || basicRewardsSlide.basicField2.text == "Enter Custom Reward Above"){
@@ -201,7 +205,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    
+        
         self.hideKeyboardWhenTappedAround()
     }
 

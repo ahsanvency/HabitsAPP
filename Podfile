@@ -15,7 +15,7 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'Firebase/Messaging'
-pod 'IQKeyboardManagerSwift'
+pod "TransitionButton"
 pod 'MultiSelectSegmentedControl'
 pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git', :branch => 'master'
 

@@ -66,21 +66,21 @@ class whenSlide: UIView {
         for x in weekArray{
             daysOfWeekStr += daysOfWeekList[x] + " "
         }
+        
         //handles formatting time
+        if timeStr == ""{
         if hour > 11 {
             if hour > 12{
                 timeStr += String(hour - 12) + ":"
             } else {
                 timeStr += String(hour) + ":"
             }
-            
             if minute < 10{
                 timeStr +=  "0" + String(minute) + " PM"
                 
             } else {
                 timeStr += String(minute) + " PM"
             }
-            
         }else {
             if hour == 0 {
                 timeStr +=  "12" + ":"
@@ -95,6 +95,35 @@ class whenSlide: UIView {
                 timeStr += String(minute) + " AM"
             }
         }
+        }else{
+            timeStr = ""
+            if hour > 11 {
+                if hour > 12{
+                    timeStr += String(hour - 12) + ":"
+                } else {
+                    timeStr += String(hour) + ":"
+                }
+                if minute < 10{
+                    timeStr +=  "0" + String(minute) + " PM"
+                    
+                } else {
+                    timeStr += String(minute) + " PM"
+                }
+            }else {
+                if hour == 0 {
+                    timeStr +=  "12" + ":"
+                } else {
+                    timeStr += String(hour) + ":"
+                }
+                
+                if minute < 10{
+                    timeStr +=  "0" + String(minute) + " PM"
+                    
+                } else {
+                    timeStr += String(minute) + " AM"
+                }
+        }
+    }
     }
 }
 

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C235F77E101E742652CCF98FFDFA5182'
-               BlueprintName = 'IQKeyboardManagerSwift'
+               BlueprintIdentifier = '56E7DD6EA0A7CB148715B68F29F3ABE3'
+               BlueprintName = 'TransitionButton'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'IQKeyboardManagerSwift.framework'>
+               BuildableName = 'TransitionButton.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
