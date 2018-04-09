@@ -23,19 +23,26 @@ class loginVC: UIViewController, UITextFieldDelegate {
     var loadingViewNumber: Int?
     
     
-//    let button = TransitionButton(frame: CGRect(x: 30, y: 452, width: 315, height: 50))
-//
+    let button = TransitionButton(frame: CGRect(x: 30, y: 452, width: 315, height: 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.view.addSubview(button)
-//
-//        button.backgroundColor = blueColor
-//        button.setTitle("Login", for: .normal)
-//        button.cornerRadius = 5.0
-//        button.spinnerColor = .white
-//        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+        self.view.addSubview(button)
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+       button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
+        button.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 20).isActive = true
+        
+
+        button.backgroundColor = .white
+        button.setTitle("Login", for: .normal)
+        button.titleLabel?.font =  UIFont(name: "D-DIN-Bold", size: 20)
+        button.cornerRadius = 8.0
+        button.spinnerColor = .white
+        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+        
+        buttonGradient(button: button)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -44,42 +51,44 @@ class loginVC: UIViewController, UITextFieldDelegate {
         self.hideKeyboardWhenTappedAround()
     }
     
-//    @IBAction func buttonAction(_ button: TransitionButton) {
-//        button.startAnimation() // 2: Then start the animation when the user tap the button
-//        let qualityOfServiceClass = DispatchQoS.QoSClass.background
-//        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
-//        backgroundQueue.async(execute: {
-//
-//            sleep(3); // 3: Do your networking task or background work here.
-//
-//
-//            DispatchQueue.main.async(execute: { () -> Void in
-//
-//                if let email = self.emailField.text, let pwd = self.passwordField.text{
-//                    if (email.isEmpty || pwd.isEmpty){
-//                        self.upAlert(messages: "All Fields must be filled in")
-//
-//                    } else {
-//                        Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
-//                            if error != nil {
-//                                self.upAlert(messages: "User Not Found")
-//
-//                            }else {
-//                                if let user = user {
-//                                    self.completeSignIn(id: user.uid)
-//
-//                                }
-//                            }
-//                        })
-//                    }
-//                }
-//                button.stopAnimation(animationStyle: .expand, completion: {
-//                    let secondVC = MainScreenViewC()
-//                    self.present(secondVC, animated: true, completion: nil)
-//                })
-//            })
-//        })
-//    }
+    @IBAction func buttonAction(_ button: TransitionButton) {
+        button.startAnimation() // 2: Then start the animation when the user tap the button
+        let qualityOfServiceClass = DispatchQoS.QoSClass.background
+        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
+        backgroundQueue.async(execute: {
+
+            sleep(UInt32(2.0)); // 3: Do your networking task or background work here.
+
+
+            DispatchQueue.main.async(execute: { () -> Void in
+
+                if let email = self.emailField.text, let pwd = self.passwordField.text{
+                    if (email.isEmpty || pwd.isEmpty){
+                        self.upAlert(messages: "All Fields must be filled in")
+                        button.stopAnimation()
+
+                    } else {
+                        Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                            if error != nil {
+                                self.upAlert(messages: "Invalid Username or Password")
+                                button.stopAnimation()
+
+                            }else {
+                                if let user = user {
+                                    self.completeSignIn(id: user.uid)
+                                    button.stopAnimation(animationStyle: .expand, completion: {
+                                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+                                        self.present(newViewController, animated: true, completion: nil)
+                                    })
+                                }
+                            }
+                        })
+                    }
+                }
+            })
+        })
+    }
     
     func upAlert (messages: String) {
         let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
@@ -128,14 +137,11 @@ class loginVC: UIViewController, UITextFieldDelegate {
                 _ = ["provider" : credential.provider]
                 self.completeSignIn(id: user.uid);
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! CustomTransitionViewController
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
                 self.present(newViewController, animated: true, completion: nil)
             }
         }
     }
-    
-    
-    
     
     
     @IBAction func loginButton(_ sender: Any) {

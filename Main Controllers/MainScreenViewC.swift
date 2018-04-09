@@ -13,9 +13,8 @@ import SwiftKeychainWrapper
 import UserNotifications
 
 
-class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var animationLabel: UILabel!
@@ -324,15 +323,4 @@ class MainScreenViewC: UIViewController, UITableViewDelegate, UITableViewDataSou
 }
 
 
-class CustomProgressView: UIProgressView {
 
-    var height:CGFloat = 1.0
-    // Do not change this default value,
-    // this will create a bug where your progressview wont work for the first x amount of pixel.
-    // x being the value you put here.
-
-    override func sizeThatFits(_ size: CGSize) -> CGSize {
-        let size:CGSize = CGSize.init(width: self.frame.size.width, height: height)
-        return size
-    }
-}

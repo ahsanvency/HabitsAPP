@@ -111,7 +111,7 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="qHE-3c-TBb"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-lY-S8z" customClass="TransitionButton" customModule="TransitionButton">
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-lY-S8z" customClass="TransitionButton" customModule="TransitionButton">
                                 <rect key="frame" x="30" y="452" width="315" height="50"/>
                                 <state key="normal" image="Login Button"/>
                                 <connections>
@@ -345,7 +345,7 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="LwN-vt-AIq"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xJ-GZ-m02" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xJ-GZ-m02" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="557" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cf9-pV-i2g"/>

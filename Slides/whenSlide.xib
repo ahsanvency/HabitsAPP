@@ -69,7 +69,7 @@
                         <segment title="Thur"/>
                         <segment title="Fri"/>
                     </segments>
-                    <color key="tintColor" red="0.96862745100000003" green="0.92941176469999998" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <action selector="segmentSelected:" destination="v6E-oU-1cn" eventType="valueChanged" id="UrF-EL-4kb"/>
                     </connections>

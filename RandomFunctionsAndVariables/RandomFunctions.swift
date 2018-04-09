@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import TransitionButton
 
 //Functions
 func validateEmail(enteredEmail:String) -> Bool {
@@ -28,6 +29,24 @@ let maroonColor : UIColor = UIColor(r: 186, g: 7, b: 29)
 let seaFoamColor : UIColor = UIColor(r: 9, g: 42, b: 48)
 
 let habitList = ["Running","Meditating","Waking Up Early","Coding","Journaling", "Eating Healthy", "Praying", "Reading", "Act of Kindness", "Lifting", "Sleeping on Time"]
+
+func buttonGradient(button: TransitionButton){
+    
+    
+    let layer : CAGradientLayer = CAGradientLayer()
+    layer.frame.size = button.frame.size
+    
+    let color0 = UIColor(red:13/255, green:76/255, blue:153/255, alpha:0.85).cgColor
+    let color1 = UIColor(red:99/255, green:42/255, blue: 91/255, alpha:0.76).cgColor
+    let color2 = UIColor(red:186/255, green:7/255, blue: 29/255, alpha:0.71).cgColor
+    let color3 = UIColor(red:218/255, green:128/255, blue:125/255, alpha:0.86).cgColor
+    let color4 = UIColor(red:247/255, green:240/255, blue: 215/255, alpha:100).cgColor
+    layer.colors = [color0,color1,color2,color3,color4]
+    
+    layer.startPoint = CGPoint(x: 0.0, y: 0.5)
+    layer.endPoint = CGPoint(x: 1.0, y: 0.5)
+    button.layer.insertSublayer(layer, at: 0)
+}
 
 
 class RightToLeftSegue: UIStoryboardSegue {
@@ -158,40 +177,53 @@ extension UIViewController {
     }
 }
 
-func applyBlur(to view: UIView?, with style: UIBlurEffectStyle) -> UIView? {
-    //only apply the blur if the user hasn't disabled transparency effects
-    if !UIAccessibilityIsReduceTransparencyEnabled() {
-        let blurEffect = UIBlurEffect(style: style)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = view?.bounds ?? CGRect.zero
-        blurEffectView.alpha = 1.0
-        view?.addSubview(blurEffectView)
-    } else {
-        view?.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-    }
-    return view
-}
+//func applyBlur(to view: UIView?, with style: UIBlurEffectStyle) -> UIView? {
+//    //only apply the blur if the user hasn't disabled transparency effects
+//    if !UIAccessibilityIsReduceTransparencyEnabled() {
+//        let blurEffect = UIBlurEffect(style: style)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = view?.bounds ?? CGRect.zero
+//        blurEffectView.alpha = 1.0
+//        view?.addSubview(blurEffectView)
+//    } else {
+//        view?.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+//    }
+//    return view
+//}
+//
+//extension UIImageView
+//{
+//    func makeBlurImage(targetImageView:UIImageView?, with style: UIBlurEffectStyle)
+//    {
+//        let blurEffect = UIBlurEffect(style: style)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = targetImageView!.bounds
+//        blurEffectView.alpha = 0.05
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+//        targetImageView?.addSubview(blurEffectView)
+//    }
+//    
+//    func bigBlurImage(targetImageView:UIImageView?, with style: UIBlurEffectStyle)
+//    {
+//        let blurEffect = UIBlurEffect(style: style)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = targetImageView!.bounds
+//        blurEffectView.alpha = 0.05
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+//        targetImageView?.addSubview(blurEffectView)
+//    }
+//}
 
-extension UIImageView
-{
-    func makeBlurImage(targetImageView:UIImageView?, with style: UIBlurEffectStyle)
-    {
-        let blurEffect = UIBlurEffect(style: style)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = targetImageView!.bounds
-        blurEffectView.alpha = 0.05
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
-        targetImageView?.addSubview(blurEffectView)
-    }
+class CustomProgressView: UIProgressView {
     
-    func bigBlurImage(targetImageView:UIImageView?, with style: UIBlurEffectStyle)
-    {
-        let blurEffect = UIBlurEffect(style: style)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = targetImageView!.bounds
-        blurEffectView.alpha = 0.05
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
-        targetImageView?.addSubview(blurEffectView)
+    var height:CGFloat = 1.0
+    // Do not change this default value,
+    // this will create a bug where your progressview wont work for the first x amount of pixel.
+    // x being the value you put here.
+    
+    override func sizeThatFits(_ size: CGSize) -> CGSize {
+        let size:CGSize = CGSize.init(width: self.frame.size.width, height: height)
+        return size
     }
 }
 

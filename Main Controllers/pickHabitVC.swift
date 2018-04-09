@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 import SwiftKeychainWrapper
+import TransitionButton
 
-class pickHabitVC: UIViewController{
+class pickHabitVC: CustomTransitionViewController{
 
     @IBOutlet weak var habitCarousel: iCarousel!
     @IBOutlet weak var backgroundImg: UIImageView!
@@ -27,6 +28,8 @@ class pickHabitVC: UIViewController{
     let height: CGFloat = 100
     
     //Creating the variable
+    
+    let button = TransitionButton(frame: CGRect(x: 30, y: 452, width: 315, height: 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
