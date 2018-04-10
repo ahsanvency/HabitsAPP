@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - DTTextField (0.3.0)
   - FBSDKCoreKit (4.31.1):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.31.1):
@@ -78,6 +79,7 @@ PODS:
   - TransitionButton (0.4.0)
 
 DEPENDENCIES:
+  - DTTextField
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -102,6 +104,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  DTTextField: c26deead1a51c92156e2a638ac7d2c702c2f345e
   FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
   FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
   FBSDKShareKit: e640c41c9fcd61929eeb3d0c21ad335103e7cb62
@@ -122,6 +125,6 @@ SPEC CHECKSUMS:
   SwiftKeychainWrapper: e353c2d5ac22e72ff7c1dc3b1de1f0e7341ba030
   TransitionButton: d271030914c84a00b54b4d983446944d2875e7ba
 
-PODFILE CHECKSUM: 9834953aecfa4162964ceb62d9d228fad1ace1b9
+PODFILE CHECKSUM: f2c959272f3c27f26238282ca1d45de0b3c0a13f
 
 COCOAPODS: 1.4.0

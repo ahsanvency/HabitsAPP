@@ -17,8 +17,6 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollInfo: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
 
-
-    
     
     @IBOutlet var whySlideXib: whySlide!
     @IBOutlet var whereSlideXib: whereSlide!
