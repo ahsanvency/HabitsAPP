@@ -29,6 +29,7 @@ extension habitCarouselSelector: iCarouselDelegate{
         
         let habitImageView = UIImageView(image: habits[index].habitPic)
         habitImageView.frame = CGRect(x: 12.5, y: 25, width: 175, height: 175)
+        habitImageView.contentMode = .scaleAspectFit
         view.addSubview(habitImageView)
         
         let habitNameLabel = UILabel()
@@ -36,7 +37,7 @@ extension habitCarouselSelector: iCarouselDelegate{
         habitNameLabel.text = habits[index].habitName
         habitNameLabel.textColor = .white
         habitNameLabel.textAlignment = .center
-        habitNameLabel.font = UIFont(name: "D-DIN-Bold", size: 26)
+        habitNameLabel.font = UIFont(name: "D-DIN", size: 26)
         habitNameLabel.adjustsFontSizeToFitWidth = true
         habitNameLabel.minimumScaleFactor = 0.2
         view.addSubview(habitNameLabel)

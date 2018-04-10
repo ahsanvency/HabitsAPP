@@ -17,9 +17,9 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
     
     @IBOutlet weak var backgroundImg: UIImageView!
     
-    var listOfBasicRewards1 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers", "Light Candles"]
+    var listOfBasicRewards1 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Listen to Music", "Light Candles", "Take a Nap", "Use Lottery Ticket"]
     
-    var listOfBasicRewards2 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Cheese and Crackers", "Light Candles"]
+    var listOfBasicRewards2 = [String]()
     
     var basicReward1: String?
     var basicReward2: String?
@@ -28,7 +28,7 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
     override func awakeFromNib() {
         super.awakeFromNib()
         
-//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+        listOfBasicRewards2 = listOfBasicRewards1
         
         basicField1.delegate = self
         basicField2.delegate = self
@@ -83,15 +83,27 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
         
         if pickerView == basicPicker1{
             
-            basicReward1 = self.listOfBasicRewards1[row]
+            
             
             if basicReward1 == "Enter Custom Reward Above"{
                 self.basicField1.becomeFirstResponder()
             }
+            
+            self.basicReward1 = self.listOfBasicRewards1[row]
             self.basicField1.text = basicReward1
             self.basicPicker1.isHidden = true
             self.basicField2.isHidden = false
             self.basicField2.isEnabled = true
+            
+            
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // change
+//                self.basicReward1 = self.listOfBasicRewards1[row]
+//                self.basicPicker1.isHidden = true
+//                self.basicField2.isHidden = false
+//                self.basicField2.isEnabled = true
+////                self.listOfBasicRewards2.remove(at: row)
+//            }
+            
             
         }
         else if pickerView == basicPicker2{
@@ -101,8 +113,14 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
             if basicReward2 == "Enter Custom Reward Above"{
                 self.basicField2.becomeFirstResponder()
             }
-            self.basicField2.text = basicReward2
+            
+            self.basicField2.text = self.basicReward2
             self.basicPicker2.isHidden = true
+            
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+//                self.basicField2.text = self.basicReward2
+//                self.basicPicker2.isHidden = true
+//            }
         }
     }
     

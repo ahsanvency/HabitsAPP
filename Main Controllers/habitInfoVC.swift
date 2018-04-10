@@ -167,6 +167,17 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         return true
     }
     
+    @IBAction func Logout(_ sender: Any) {
+        KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        try! Auth.auth().signOut()
+        //        dismiss(animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
+        view.window?.layer.add(bottomTransition(duration: 0.5), forKey: nil)
+        self.present(newViewController, animated: false, completion: nil)
+    }
+    
+    
     @IBAction func back(_ sender: Any) {
         view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
         dismiss(animated: false, completion: nil)
@@ -175,7 +186,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 50)
+                self.view.frame.origin.y -= (keyboardSize.height - 60)
             }
         }
     }
@@ -183,7 +194,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 50)
+                self.view.frame.origin.y += (keyboardSize.height - 60)
             }
         }
     }

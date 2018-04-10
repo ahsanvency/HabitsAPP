@@ -11,21 +11,32 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 import TransitionButton
+import DTTextField
 
 class newUserVC: UIViewController {
     
     //Outlets
     
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var confirmPasswordField: UITextField!
+    @IBOutlet weak var nameField: DTTextField!
+    @IBOutlet weak var emailField: DTTextField!
+    @IBOutlet weak var passwordField: DTTextField!
+    @IBOutlet weak var confirmPasswordField: DTTextField!
     
+    //    @IBOutlet weak var nameField: UITextField!
+//    @IBOutlet weak var emailField: UITextField!
+//    @IBOutlet weak var passwordField: UITextField!
+//    @IBOutlet weak var confirmPasswordField: UITextField!
     
-    let button = TransitionButton(frame: CGRect(x: 30, y: 557, width: 315, height: 50))
+    @IBOutlet weak var confirmPasswordView: UIView!
+    @IBOutlet weak var signIntoExistingAccount: UIButton!
+    
+    let button = TransitionButton(frame: CGRect(x: 30, y: 562, width: 315, height: 50))
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //button.frame = CGRect(x: self.confirmPasswordView.frame.origin.x, y: self.confirmPasswordView.frame.origin.y + 70, width: self.confirmPasswordView.frame.width, height: 50)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -37,6 +48,10 @@ class newUserVC: UIViewController {
     
     
     @IBAction func buttonAction(_ button: TransitionButton) {
+        guard (validateData())else{
+            return
+        }
+        
         button.startAnimation() // 2: Then start the animation when the user tap the button
         let qualityOfServiceClass = DispatchQoS.QoSClass.background
         let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
@@ -45,46 +60,23 @@ class newUserVC: UIViewController {
             sleep(UInt32(2.0)); // 3: Do your networking task or background work here.
             
             DispatchQueue.main.async(execute: { () -> Void in
-                
-                if let email = self.emailField.text, let pwd = self.passwordField.text, let name = self.nameField.text, let pwd2 = self.confirmPasswordField.text {
-                    if (email.isEmpty || name.isEmpty || pwd.isEmpty || pwd2.isEmpty) {
-                        
-                        self.upAlert(messages: "All fields must be filled in.")
-                        button.stopAnimation()
-                        
-                    } else if pwd != pwd2 {
-                        
-                        self.upAlert(messages: "Please enter the same passwords.")
-                        button.stopAnimation()
-                        
-                    } else if !(validateEmail(enteredEmail: email)){ //If they enter an invalid email based off characters only
-                        self.upAlert(messages: "Please Enter a Valid Email")
-                        button.stopAnimation()
-                    }
-                        //If everything else works the user will be created
-                    else {
-                        Auth.auth().createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                Auth.auth().createUser(withEmail: self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) in
                             //If there are no errors it will register the user
                             if error == nil {
                                 if let user = user {
-                                    let userData = [ "name": name, "email" : email]
+                                    let userData = [ "name": self.nameField.text!, "email" : self.emailField.text!]
                                     self.completeSignIn(id: user.uid, userData: userData as Dictionary<String, AnyObject>);
                                     button.stopAnimation(animationStyle: .expand, completion: {
                                         self.performSegue(withIdentifier: "toAdd", sender: nil)
                                     })
                                 }
                             } else {//If the password was too short
-                                if pwd.count < 6{
-                                    self.upAlert(messages: "Passwords Must Be 6+ Characters");
-                                    button.stopAnimation()
-                                }else {//If the account already exists
                                     self.upAlert(messages: "Account Already Exists");
                                     button.stopAnimation()
-                                }
                             }
                         })
-                    }
-                }
+                    
+                
             })
         })
     }
@@ -111,8 +103,28 @@ class newUserVC: UIViewController {
     }
     
     func setupScreen(){
+        nameField.dtLayer.backgroundColor = UIColor.clear.cgColor
+        nameField.dtLayer.borderWidth = 0
+        nameField.floatPlaceholderActiveColor = .white
+        nameField.placeholderColor = .white
+        
+        emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
+        emailField.dtLayer.borderWidth = 0
+        emailField.floatPlaceholderActiveColor = .white
+        emailField.placeholderColor = .white
+        
+        passwordField.dtLayer.backgroundColor = UIColor.clear.cgColor
+        passwordField.dtLayer.borderWidth = 0
+        passwordField.floatPlaceholderActiveColor = .white
+        passwordField.placeholderColor = .white
+        
+        confirmPasswordField.dtLayer.backgroundColor = UIColor.clear.cgColor
+        confirmPasswordField.dtLayer.borderWidth = 0
+        confirmPasswordField.floatPlaceholderActiveColor = .white
+        confirmPasswordField.placeholderColor = .white
+        
         self.view.addSubview(button)
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.bottomAnchor.constraint(equalTo: signIntoExistingAccount.topAnchor, constant: -10).isActive = true
         button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
         button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
         button.topAnchor.constraint(equalTo: confirmPasswordField.bottomAnchor, constant: 20).isActive = true
@@ -120,20 +132,11 @@ class newUserVC: UIViewController {
         button.backgroundColor = .white
         button.setTitle("Create Account", for: .normal)
         button.titleLabel?.font =  UIFont(name: "D-DIN-Bold", size: 20)
-        button.cornerRadius = 8.0
+        button.cornerRadius = 25.0
         button.spinnerColor = .white
         button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
         buttonGradient(button: button)
         
-        
-        nameField.attributedPlaceholder = NSAttributedString(string: "Name",
-                                                             attributes: [NSAttributedStringKey.foregroundColor: blueColor])
-        emailField.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                              attributes: [NSAttributedStringKey.foregroundColor: blueColor])
-        passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                                 attributes: [NSAttributedStringKey.foregroundColor: blueColor])
-        confirmPasswordField.attributedPlaceholder = NSAttributedString(string: "Confirm Password",
-                                                                        attributes: [NSAttributedStringKey.foregroundColor: blueColor])
         passwordField.isSecureTextEntry = true
         confirmPasswordField.isSecureTextEntry = true
         nameField.autocorrectionType = .no
@@ -162,5 +165,49 @@ class newUserVC: UIViewController {
             }
         }
     }
+}
+
+
+extension newUserVC{
+    
+    func validateData() -> Bool {
+        
+        guard nameField.text != "" else{
+            nameField.showError(message: "Please Enter Name.")
+            return false
+        }
+        
+        guard emailField.text != "" else{
+            emailField.showError(message: "Please Enter Email.")
+            return false
+        }
+        
+        guard validateEmail(enteredEmail: self.emailField.text!) else{
+            emailField.showError(message: "Please Enter Valid Email")
+            return false
+        }
+        
+        guard (passwordField.text?.count)! > 5 else {
+            passwordField.showError(message: "Password must be atleast 6 characters")
+            return false
+        }
+        
+        guard passwordField.text != "" else{
+            passwordField.showError(message: "Please Enter Password.")
+            return false
+        }
+        
+        guard confirmPasswordField.text != "" else{
+            confirmPasswordField.showError(message: "Please Confirm Password.")
+            return false
+        }
+        
+        guard passwordField.text == confirmPasswordField.text else{
+            confirmPasswordField.showError(message: "Passwords Must Match")
+            return false
+        }
+        return true
+    }
+    
 }
 

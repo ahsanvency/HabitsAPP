@@ -18,8 +18,8 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     @IBOutlet weak var backgroundImg: UIImageView!
     
     
-    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
-    var listOfIntRewards2 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Visit Library", "Work on Your Hobby", "Buy a New Game", "Buy a New Book"]
+    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Work on Your Hobby", "Buy a New Game", "Buy a New Book", "Play Video Games", "Attend Sporting Game", "Drink Wine", "Get House Cleaned" "Play Outdoors"]
+    var listOfIntRewards2 = [String]()
     
     var intReward1: String?
     var intReward2: String?
@@ -27,7 +27,7 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+        listOfIntRewards2 = listOfIntRewards1
         
         intField1.delegate = self
         intField2.delegate = self

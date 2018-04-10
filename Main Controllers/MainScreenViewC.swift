@@ -277,8 +277,11 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
             guard let firstKey = value?.allKeys[0] else {
                 print("n")
                 return }
+            
             //using habit key to get dict
             let firstDict = value![firstKey] as! Dictionary<String,Any>
+            
+            self.habitName = (firstDict["name"] as! String)
             let fbTime  =  firstDict["When"] as? String
             let fbParseTime = fbTime?.split(separator: " ")//
             let fbLength = fbParseTime?.count
@@ -305,6 +308,11 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
         let content = UNMutableNotificationContent()
         content.title = "Reminder"
 //        content.subtitle = "They are up now"
+            
+            guard let user = Auth.auth().currentUser else {
+                return
+            }
+            
             content.body = "In one hour its time to \(String(describing: self.habitName))."
         //App icon for the badge
         content.badge = 1

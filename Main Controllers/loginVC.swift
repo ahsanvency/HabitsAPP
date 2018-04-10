@@ -12,12 +12,16 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
-
+import DTTextField
 
 class loginVC: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBOutlet weak var emailField: DTTextField!
+    @IBOutlet weak var passwordField: DTTextField!
+    
+//    @IBOutlet weak var emailField: UITextField!
+//    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var fbButton: roundedButton!
     
     
@@ -28,21 +32,17 @@ class loginVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(button)
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
-        button.bottomAnchor.constraint(equalTo: fbButton.topAnchor, constant: -20).isActive = true
+        emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
+        emailField.dtLayer.borderWidth = 0
+        emailField.floatPlaceholderActiveColor = .white
+        emailField.placeholderColor = .white
+        
+        passwordField.dtLayer.backgroundColor = UIColor.clear.cgColor
+        passwordField.dtLayer.borderWidth = 0
+        passwordField.floatPlaceholderActiveColor = .white
+        passwordField.placeholderColor = .white
         
         
-        button.backgroundColor = .white
-        button.setTitle("LOGIN", for: .normal)
-        button.titleLabel?.font =  UIFont(name: "D-DIN-Bold", size: 20)
-        button.cornerRadius = 25
-        button.spinnerColor = .white
-        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
-        
-        buttonGradient(button: button)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -53,9 +53,9 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func buttonAction(_ button: TransitionButton) {
         
-//        guard validateData() else{
-//            return
-//        }
+        guard validateData() else{
+            return
+        }
         
         button.startAnimation() // 2: Then start the animation when the user tap the button
         let qualityOfServiceClass = DispatchQoS.QoSClass.background
@@ -68,11 +68,8 @@ class loginVC: UIViewController, UITextFieldDelegate {
             DispatchQueue.main.async(execute: { () -> Void in
 
                 if let email = self.emailField.text, let pwd = self.passwordField.text{
-                    if (email.isEmpty || pwd.isEmpty){
-                        self.upAlert(messages: "All Fields must be filled in")
-                        button.stopAnimation()
-
-                    } else {
+                    
+//                    if (!email.isEmpty && !pwd.isEmpty){
                         Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
                             if error != nil {
                                 self.upAlert(messages: "Invalid Username or Password")
@@ -89,7 +86,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
                                 }
                             }
                         })
-                    }
+//                    }
                 }
             })
         })
@@ -148,39 +145,29 @@ class loginVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-    @IBAction func loginButton(_ sender: Any) {
-        if let email = emailField.text, let pwd = passwordField.text{
-            if (email.isEmpty || pwd.isEmpty){
-                upAlert(messages: "All Fields must be filled in")
-            } else {
-                Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
-                    if error != nil {
-                        self.upAlert(messages: "User Not Found")
-                    }else {
-                        if let user = user {
-                            self.completeSignIn(id: user.uid)
-                        }
-                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
-                        self.present(newViewController, animated: true, completion: nil)
-                    }
-                })
-            }
-        }
-    }
-    
     func completeSignIn(id: String){
         KeychainWrapper.standard.set(id, forKey: KEY_UID);
     }
     
     
     func setupScreen(){
+        self.view.addSubview(button)
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
+        button.bottomAnchor.constraint(equalTo: fbButton.topAnchor, constant: -20).isActive = true
         
-        emailField.attributedPlaceholder = NSAttributedString(string: "Email",
-                                                              attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
-        passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                                 attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        
+        button.backgroundColor = .white
+        button.setTitle("LOGIN", for: .normal)
+        button.titleLabel?.font =  UIFont(name: "D-DIN-Bold", size: 20)
+        button.cornerRadius = 25
+        button.spinnerColor = .white
+        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+        
+        buttonGradient(button: button)
+        
+        
         passwordField.isSecureTextEntry = true
         emailField.autocorrectionType = .no
         emailField.keyboardType = .emailAddress
@@ -191,7 +178,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 125)
+                self.view.frame.origin.y -= (keyboardSize.height - 75)
             }
         }
     }
@@ -200,12 +187,31 @@ class loginVC: UIViewController, UITextFieldDelegate {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 125)
+                self.view.frame.origin.y += (keyboardSize.height - 75)
             }
         }
     }
 }
 
 extension loginVC{
+
+    func validateData() -> Bool {
+
+        guard emailField.text != "" else{
+            emailField.showError(message: "Please Enter Email.")
+            return false
+        }
+        
+        guard passwordField.text != "" else{
+            passwordField.showError(message: "Please Enter Password.")
+            return false
+        }
+        
+//        guard !txtFirstName.text!.isEmptyStr else {
+//            txtFirstName.showError(message: firstNameMessage)
+//            return false
+//        }
+        return true
+    }
     
 }
