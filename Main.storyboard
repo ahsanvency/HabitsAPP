@@ -365,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHp-yp-2X5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="-959"/>
+            <point key="canvasLocation" x="166" y="-959"/>
         </scene>
         <!--Pick HabitVC-->
         <scene sceneID="BwR-Zk-NC4">
@@ -453,7 +453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07d-iS-8KU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-586.39999999999998" y="-254.18719211822662"/>
+            <point key="canvasLocation" x="-657" y="-111"/>
         </scene>
         <!--Habit InfoVC-->
         <scene sceneID="yhM-aq-qNz">
@@ -510,6 +510,9 @@
                                     <constraint firstAttribute="width" constant="45" id="bhL-RK-N0i"/>
                                 </constraints>
                                 <state key="normal" image="Blue Sign Out"/>
+                                <connections>
+                                    <action selector="Logout:" destination="DgZ-ic-iY8" eventType="touchUpInside" id="hgG-3W-vWU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -541,7 +544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ob-a9-mi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="-254"/>
+            <point key="canvasLocation" x="167" y="-111"/>
         </scene>
         <!--Main Screen ViewC-->
         <scene sceneID="ee0-tT-F5s">
@@ -916,7 +919,7 @@
                     <viewLayoutGuide key="safeArea" id="EOL-4a-c20"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-585" y="-959"/>
+            <point key="canvasLocation" x="-658" y="-959"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="ZRJ-X9-J1r">
@@ -1374,7 +1377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KxK-qn-7ak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1372" y="-255"/>
+            <point key="canvasLocation" x="-1373" y="-110"/>
         </scene>
     </scenes>
     <resources>

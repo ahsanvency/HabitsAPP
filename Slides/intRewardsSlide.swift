@@ -18,7 +18,7 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     @IBOutlet weak var backgroundImg: UIImageView!
     
     
-    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Work on Your Hobby", "Buy a New Game", "Buy a New Book", "Play Video Games", "Attend Sporting Game", "Drink Wine", "Get House Cleaned" "Play Outdoors"]
+    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Work on Your Hobby", "Buy a New Game", "Buy a New Book", "Play Video Games", "Attend Sporting Game", "Drink Wine", "Get House Cleaned", "Play Outdoors"]
     var listOfIntRewards2 = [String]()
     
     var intReward1: String?
