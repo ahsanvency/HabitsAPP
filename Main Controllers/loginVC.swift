@@ -14,26 +14,35 @@ import Firebase
 import SwiftKeychainWrapper
 
 
-
 class loginVC: UIViewController, UITextFieldDelegate {
-    
-    
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var fbButton: roundedButton!
     
-
-    
-    var loadingViewNumber: Int?
-    
     
     let button = TransitionButton(frame: CGRect(x: 30, y: 507, width: 315, height: 50))
+    
+    var loadingViewNumber: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.addSubview(button)
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
+        button.bottomAnchor.constraint(equalTo: fbButton.topAnchor, constant: -20).isActive = true
         
+        
+        button.backgroundColor = .white
+        button.setTitle("LOGIN", for: .normal)
+        button.titleLabel?.font =  UIFont(name: "D-DIN-Bold", size: 20)
+        button.cornerRadius = 25
+        button.spinnerColor = .white
+        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+        
+        buttonGradient(button: button)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -43,6 +52,11 @@ class loginVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonAction(_ button: TransitionButton) {
+        
+//        guard validateData() else{
+//            return
+//        }
+        
         button.startAnimation() // 2: Then start the animation when the user tap the button
         let qualityOfServiceClass = DispatchQoS.QoSClass.background
         let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
@@ -163,23 +177,6 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
     func setupScreen(){
         
-        self.view.addSubview(button)
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
-        button.bottomAnchor.constraint(equalTo: fbButton.topAnchor, constant: -20).isActive = true
-        
-        
-        button.backgroundColor = .white
-        button.setTitle("LOGIN", for: .normal)
-        button.titleLabel?.font =  UIFont(name: "D-DIN-Bold", size: 20)
-        button.cornerRadius = 25
-        button.spinnerColor = .white
-        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
-        
-        buttonGradient(button: button)
-        
-        
         emailField.attributedPlaceholder = NSAttributedString(string: "Email",
                                                               attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
         passwordField.attributedPlaceholder = NSAttributedString(string: "Password",
@@ -207,6 +204,8 @@ class loginVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
 }
 
+extension loginVC{
+    
+}
