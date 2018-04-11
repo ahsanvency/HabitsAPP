@@ -74,6 +74,7 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - paper-onboarding (4.0.2)
   - Protobuf (3.5.0)
   - SwiftKeychainWrapper (3.0.1)
   - TransitionButton (0.4.0)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - MultiSelectSegmentedControl
+  - paper-onboarding
   - SwiftKeychainWrapper (from `https://github.com/jrendel/SwiftKeychainWrapper.git`, branch `master`)
   - TransitionButton
 
@@ -121,10 +123,11 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   MultiSelectSegmentedControl: 662be7f12ed2475c994f070aa72e2429c8d204e0
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  paper-onboarding: e6e2778c4e8de8db1d798bb7e3b4922e91fb7f99
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   SwiftKeychainWrapper: e353c2d5ac22e72ff7c1dc3b1de1f0e7341ba030
   TransitionButton: d271030914c84a00b54b4d983446944d2875e7ba
 
-PODFILE CHECKSUM: f2c959272f3c27f26238282ca1d45de0b3c0a13f
+PODFILE CHECKSUM: 18cc17e7e213baa8013884e78f58732be0f61879
 
 COCOAPODS: 1.4.0

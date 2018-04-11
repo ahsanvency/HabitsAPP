@@ -13,6 +13,7 @@ import FBSDKLoginKit
 import Firebase
 import SwiftKeychainWrapper
 import DTTextField
+import paper_onboarding
 
 class loginVC: UIViewController, UITextFieldDelegate {
     
@@ -23,24 +24,16 @@ class loginVC: UIViewController, UITextFieldDelegate {
 //    @IBOutlet weak var emailField: UITextField!
 //    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var fbButton: roundedButton!
+    @IBOutlet weak var backgroundLoginButton: TransitionButton!
     
     
-    let button = TransitionButton(frame: CGRect(x: 30, y: 507, width: 315, height: 50))
+    let button = TransitionButton()
     
     var loadingViewNumber: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
-        emailField.dtLayer.borderWidth = 0
-        emailField.floatPlaceholderActiveColor = .white
-        emailField.placeholderColor = .white
-        
-        passwordField.dtLayer.backgroundColor = UIColor.clear.cgColor
-        passwordField.dtLayer.borderWidth = 0
-        passwordField.floatPlaceholderActiveColor = .white
-        passwordField.placeholderColor = .white
         
         
         
@@ -151,6 +144,23 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
     
     func setupScreen(){
+        
+        
+        button.frame = CGRect(x: backgroundLoginButton.frame.origin.x, y: backgroundLoginButton.frame.origin.y, width: backgroundLoginButton.frame.width, height: backgroundLoginButton.frame.height)
+        
+        emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
+        emailField.dtLayer.borderWidth = 0
+        emailField.floatPlaceholderActiveColor = .white
+        emailField.paddingYErrorLabel = 5
+        emailField.placeholderColor = .white
+        
+        passwordField.dtLayer.backgroundColor = UIColor.clear.cgColor
+        passwordField.dtLayer.borderWidth = 0
+        passwordField.floatPlaceholderActiveColor = .white
+        passwordField.paddingYErrorLabel = 10
+        passwordField.placeholderColor = .white
+        
+        
         self.view.addSubview(button)
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true

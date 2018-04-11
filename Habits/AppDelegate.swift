@@ -17,17 +17,28 @@ import SwiftKeychainWrapper
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        var initialViewController: UIViewController!
         
         let accessToken: String? = KeychainWrapper.standard.string(forKey: KEY_UID)
         if accessToken != nil {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainScreenVC = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
-            self.window?.rootViewController = mainScreenVC
+            
+            initialViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
         }
+        else{
+            let userDefaults = UserDefaults.standard
+            if userDefaults.bool(forKey: "onBoardingComplete"){
+                initialViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
+            }else{
+                initialViewController = storyBoard.instantiateViewController(withIdentifier: "onboardingID") as! onboardingVC
+            }
+            window?.makeKeyAndVisible()
+        }
+            window?.rootViewController = initialViewController
         
         
         //Changes the status bar to be of light content

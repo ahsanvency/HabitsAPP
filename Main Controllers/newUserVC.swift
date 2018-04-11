@@ -121,6 +121,7 @@ class newUserVC: UIViewController {
         confirmPasswordField.dtLayer.backgroundColor = UIColor.clear.cgColor
         confirmPasswordField.dtLayer.borderWidth = 0
         confirmPasswordField.floatPlaceholderActiveColor = .white
+        confirmPasswordField.paddingYErrorLabel = -20
         confirmPasswordField.placeholderColor = .white
         
         self.view.addSubview(button)
