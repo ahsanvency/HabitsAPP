@@ -155,6 +155,16 @@ extension UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    func hideMenuWhenTappedAround(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.hideMenu))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideMenu(){
+        
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

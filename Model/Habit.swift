@@ -31,6 +31,17 @@ class Habit{
         _habitVerb = habitVerb
     }
     
+    
+    init(habitName: String, habitPic: UIImage, intrinsicReason: String, habitVerb: String, why: String, when: String, whhere: String) {
+        _habitName = habitName;
+        _habitPic = habitPic;
+        _intrinsicReason = intrinsicReason;
+        _habitVerb = habitVerb
+        _why = why;
+        _when = when;
+        _whhere = whhere;
+    }
+    
 //    init(habitName: String, habitPic: UIImage, why: String, when: String, whhere: String) {
 //        _habitName = habitName;
 //        _habitPic = habitPic;

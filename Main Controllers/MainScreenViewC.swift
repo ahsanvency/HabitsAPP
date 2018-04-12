@@ -15,6 +15,8 @@ import UserNotifications
 
 class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
+    //
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var animationLabel: UILabel!
@@ -22,19 +24,26 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
     @IBOutlet weak var fakeLabel: UILabel!
     @IBOutlet var loadingView: UIView!
     
-
+    //Menu outlets
+    @IBOutlet weak var menuConstraint: NSLayoutConstraint!
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var menuView: UIView!
+    
     var intrinsicQuestions = [String]()
     var randomPopupNumber = 7
     var firstTimeLoaded: Int?
     let userDefault = UserDefaults.standard
     var habitName: String?
-
+    
+    var isMenuHidden = true
+    var chosenHabit: Habit!
+    
     override func viewDidAppear(_ animated: Bool) {
 
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.notif()
-
+            
         }
         runAnimation()
 
@@ -42,7 +51,15 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        blurView.layer.cornerRadius = 15
+        menuView.layer.cornerRadius = 15
+        menuView.layer.shadowColor = UIColor.black.cgColor
+        menuView.layer.shadowOpacity = 0.8
+        menuView.layer.shadowOffset = CGSize(width: 5, height: 0)
+        
+        menuConstraint.constant = -185
+        
         showLoadingScreen()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
         }
@@ -70,7 +87,8 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
         })
 
     }
-
+    
+    
     func showLoadingScreen(){
         loadingView.bounds.size.width = view.bounds.width
         loadingView.bounds.size.height = view.bounds.height
@@ -193,9 +211,26 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 350;
     }
+    
+    @IBAction func menuButton(_ sender: Any) {
+        if isMenuHidden{
+            UIView.animate(withDuration: 0.5) {
+                self.menuConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }
+        }else{
+            UIView.animate(withDuration: 0.5) {
+                self.menuConstraint.constant = -185
+                self.view.layoutIfNeeded()
+            }
+            
+        }
+        isMenuHidden = !isMenuHidden
+    }
+    
 
     //This is the menu button thats treated as a logout
-    @IBAction func menuAsLogout(_ sender: Any) {
+    @IBAction func logoutButton(_ sender: Any) {
         KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         try! Auth.auth().signOut()
 //        dismiss(animated: true, completion: nil)

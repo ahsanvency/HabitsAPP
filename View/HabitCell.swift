@@ -220,6 +220,7 @@ class HabitCell: UITableViewCell {
             //using habit key to get dict
             let firstDict = value![firstKey] as! Dictionary<String,Any>
             
+            
             //getting dict values and assigning them to labels
             self.nameLbl.text = firstDict["name"] as? String
             self.whyLbl.text = firstDict["Why"] as? String
