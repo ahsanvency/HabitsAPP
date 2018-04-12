@@ -144,21 +144,24 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
     
     func setupScreen(){
-        
+        let placeHolderColor = blueColor
         
         button.frame = CGRect(x: backgroundLoginButton.frame.origin.x, y: backgroundLoginButton.frame.origin.y, width: backgroundLoginButton.frame.width, height: backgroundLoginButton.frame.height)
         
         emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
         emailField.dtLayer.borderWidth = 0
-        emailField.floatPlaceholderActiveColor = .white
+        emailField.floatPlaceholderActiveColor = placeHolderColor
+        emailField.textColor = placeHolderColor
         emailField.paddingYErrorLabel = 5
-        emailField.placeholderColor = .white
+        emailField.placeholderColor = placeHolderColor
         
         passwordField.dtLayer.backgroundColor = UIColor.clear.cgColor
         passwordField.dtLayer.borderWidth = 0
-        passwordField.floatPlaceholderActiveColor = .white
+        passwordField.floatPlaceholderActiveColor = placeHolderColor
+        passwordField.textColor = placeHolderColor
         passwordField.paddingYErrorLabel = 10
-        passwordField.placeholderColor = .white
+        passwordField.placeholderColor = placeHolderColor
+        
         
         
         self.view.addSubview(button)

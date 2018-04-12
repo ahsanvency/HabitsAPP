@@ -75,8 +75,6 @@ class newUserVC: UIViewController {
                                     button.stopAnimation()
                             }
                         })
-                    
-                
             })
         })
     }
@@ -103,26 +101,32 @@ class newUserVC: UIViewController {
     }
     
     func setupScreen(){
+        
+        let placeHolderColor = blueColor
+        
         nameField.dtLayer.backgroundColor = UIColor.clear.cgColor
         nameField.dtLayer.borderWidth = 0
-        nameField.floatPlaceholderActiveColor = .white
-        nameField.placeholderColor = .white
+        nameField.textColor = placeHolderColor
+        nameField.floatPlaceholderActiveColor = placeHolderColor
+        nameField.placeholderColor = placeHolderColor
         
         emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
         emailField.dtLayer.borderWidth = 0
-        emailField.floatPlaceholderActiveColor = .white
-        emailField.placeholderColor = .white
+        emailField.textColor = placeHolderColor
+        emailField.floatPlaceholderActiveColor = placeHolderColor
+        emailField.placeholderColor = placeHolderColor
         
         passwordField.dtLayer.backgroundColor = UIColor.clear.cgColor
         passwordField.dtLayer.borderWidth = 0
-        passwordField.floatPlaceholderActiveColor = .white
-        passwordField.placeholderColor = .white
+        passwordField.textColor = placeHolderColor
+        passwordField.floatPlaceholderActiveColor = placeHolderColor
+        passwordField.placeholderColor = placeHolderColor
         
         confirmPasswordField.dtLayer.backgroundColor = UIColor.clear.cgColor
         confirmPasswordField.dtLayer.borderWidth = 0
-        confirmPasswordField.floatPlaceholderActiveColor = .white
-        confirmPasswordField.paddingYErrorLabel = -20
-        confirmPasswordField.placeholderColor = .white
+        confirmPasswordField.textColor = placeHolderColor
+        confirmPasswordField.floatPlaceholderActiveColor = placeHolderColor
+        confirmPasswordField.placeholderColor = placeHolderColor
         
         self.view.addSubview(button)
         button.bottomAnchor.constraint(equalTo: signIntoExistingAccount.topAnchor, constant: -10).isActive = true

@@ -365,7 +365,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHp-yp-2X5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="-959"/>
+            <point key="canvasLocation" x="458" y="-934"/>
         </scene>
         <!--Pick HabitVC-->
         <scene sceneID="BwR-Zk-NC4">
@@ -977,7 +977,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue Background" translatesAutoresizingMaskIntoConstraints="NO" id="gO2-vc-wIU">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue fill 15% background" translatesAutoresizingMaskIntoConstraints="NO" id="gO2-vc-wIU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Habits For A Better Life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-wa-lwS">
@@ -986,10 +986,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-l3-657" userLabel="Email View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-l3-657" userLabel="Email View" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="387" width="315" height="45"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrF-3c-Ehf" userLabel="Email Line View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrF-3c-Ehf" userLabel="Email Line View" customClass="lineView" customModule="Habits" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="45" width="315" height="2"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1006,7 +1006,7 @@
                                             <outlet property="delegate" destination="kv1-PS-mi9" id="Od0-5O-vF9"/>
                                         </connections>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Mail" translatesAutoresizingMaskIntoConstraints="NO" id="aIL-JL-E3a">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mail" translatesAutoresizingMaskIntoConstraints="NO" id="aIL-JL-E3a">
                                         <rect key="frame" x="10" y="12.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="gxU-Gg-Iae"/>
@@ -1029,7 +1029,7 @@
                                     <constraint firstItem="aIL-JL-E3a" firstAttribute="centerY" secondItem="fCx-l3-657" secondAttribute="centerY" id="nQA-ur-imZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFp-OJ-AC8" userLabel="Pwd View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFp-OJ-AC8" userLabel="Pwd View" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="442" width="315" height="45"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-mG-MVI" userLabel="Password Line View" customClass="lineView" customModule="Habits" customModuleProvider="target">
@@ -1037,7 +1037,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <viewLayoutGuide key="safeArea" id="Ztw-k8-IIS"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Key" translatesAutoresizingMaskIntoConstraints="NO" id="mPm-KR-vza">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Key" translatesAutoresizingMaskIntoConstraints="NO" id="mPm-KR-vza">
                                         <rect key="frame" x="10" y="10" width="20" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="bvW-7u-tvn"/>
@@ -1165,7 +1165,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue Background" translatesAutoresizingMaskIntoConstraints="NO" id="tHu-k6-O0N">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Blue fill 15% background" translatesAutoresizingMaskIntoConstraints="NO" id="tHu-k6-O0N">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HD" translatesAutoresizingMaskIntoConstraints="NO" id="UxA-3f-cOr">
@@ -1184,7 +1184,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ1-bq-ZFG" userLabel="usernameView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ1-bq-ZFG" userLabel="usernameView" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="332" width="315" height="45"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6K-d2-fsL" userLabel="usernamLineView" customClass="lineView" customModule="Habits" customModuleProvider="target">
@@ -1194,15 +1194,15 @@
                                             <constraint firstAttribute="height" constant="1.5" id="brD-b8-rXS"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White User" translatesAutoresizingMaskIntoConstraints="NO" id="cU8-FB-jOu">
-                                        <rect key="frame" x="12" y="12.5" width="15" height="20"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="cU8-FB-jOu">
+                                        <rect key="frame" x="15" y="12.5" width="15" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="l5X-OK-WZj"/>
                                             <constraint firstAttribute="width" constant="15" id="o6h-fn-2Ic"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DTI-g2-YDd" customClass="DTTextField" customModule="DTTextField">
-                                        <rect key="frame" x="37" y="0.0" width="278" height="45"/>
+                                        <rect key="frame" x="40" y="0.0" width="275" height="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -1223,11 +1223,11 @@
                                     <constraint firstAttribute="bottom" secondItem="DTI-g2-YDd" secondAttribute="bottom" id="WUk-q1-aDt"/>
                                     <constraint firstAttribute="trailing" secondItem="DTI-g2-YDd" secondAttribute="trailing" id="kRk-lB-pNb"/>
                                     <constraint firstItem="cU8-FB-jOu" firstAttribute="centerY" secondItem="JQ1-bq-ZFG" secondAttribute="centerY" id="o8R-Y9-wOy"/>
-                                    <constraint firstItem="cU8-FB-jOu" firstAttribute="leading" secondItem="JQ1-bq-ZFG" secondAttribute="leading" constant="12" id="qMh-RV-w7f"/>
+                                    <constraint firstItem="cU8-FB-jOu" firstAttribute="leading" secondItem="JQ1-bq-ZFG" secondAttribute="leading" constant="15" id="qMh-RV-w7f"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="l27-gN-HmF"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-zz-qfc" userLabel="emailView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-zz-qfc" userLabel="emailView" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="387" width="315" height="45"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5h-f6-spu" userLabel="email LineView" customClass="lineView" customModule="Habits" customModuleProvider="target">
@@ -1235,15 +1235,15 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <viewLayoutGuide key="safeArea" id="jfQ-CV-xzH"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Mail" translatesAutoresizingMaskIntoConstraints="NO" id="CW4-lD-mjB">
-                                        <rect key="frame" x="8.5" y="11.5" width="22" height="22"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mail" translatesAutoresizingMaskIntoConstraints="NO" id="CW4-lD-mjB">
+                                        <rect key="frame" x="11.5" y="11.5" width="22" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="22" id="6hu-YG-Nu2"/>
                                             <constraint firstAttribute="height" constant="22" id="LFg-Jp-Adu"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNt-WC-pQN" customClass="DTTextField" customModule="DTTextField">
-                                        <rect key="frame" x="37" y="0.0" width="278" height="45"/>
+                                        <rect key="frame" x="40" y="0.0" width="275" height="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1265,7 +1265,7 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="whw-Z2-Vxr"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19b-td-tyh" userLabel="pwdView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19b-td-tyh" userLabel="pwdView" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="442" width="315" height="45"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ir-RE-HjB" userLabel="pwd LineView" customClass="lineView" customModule="Habits" customModuleProvider="target">
@@ -1273,15 +1273,15 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <viewLayoutGuide key="safeArea" id="qrF-7e-j8S"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="White Key" translatesAutoresizingMaskIntoConstraints="NO" id="qOo-GR-oaK">
-                                        <rect key="frame" x="9.5" y="12.5" width="20" height="20"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Key" translatesAutoresizingMaskIntoConstraints="NO" id="qOo-GR-oaK">
+                                        <rect key="frame" x="12.5" y="12.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="0gm-Sp-T98"/>
                                             <constraint firstAttribute="width" constant="20" id="9JV-MN-XuF"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iyb-3Q-3q8" customClass="DTTextField" customModule="DTTextField">
-                                        <rect key="frame" x="37" y="0.0" width="278" height="45"/>
+                                        <rect key="frame" x="40" y="0.0" width="275" height="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1303,7 +1303,7 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="QFK-SR-6Xn"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlG-f5-Y7j" userLabel="confirmPwdView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlG-f5-Y7j" userLabel="confirmPwdView" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="497" width="315" height="45"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVT-zV-D0o" userLabel="confirmPwd LineView" customClass="lineView" customModule="Habits" customModuleProvider="target">
@@ -1311,15 +1311,15 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <viewLayoutGuide key="safeArea" id="55D-py-Kh5"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="white Confirm Password" translatesAutoresizingMaskIntoConstraints="NO" id="9eA-hx-dnn">
-                                        <rect key="frame" x="10.5" y="12.5" width="18" height="20"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Confirm Password Image" translatesAutoresizingMaskIntoConstraints="NO" id="9eA-hx-dnn">
+                                        <rect key="frame" x="13.5" y="12.5" width="18" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="I0G-Ub-Ilg"/>
                                             <constraint firstAttribute="height" constant="20" id="UOz-pM-L0X"/>
                                         </constraints>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kC-mU-JAJ" customClass="DTTextField" customModule="DTTextField">
-                                        <rect key="frame" x="37" y="0.0" width="278" height="45"/>
+                                        <rect key="frame" x="40" y="0.0" width="275" height="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -1432,17 +1432,17 @@
     <resources>
         <image name="Back Button" width="269" height="104"/>
         <image name="Background" width="1875" height="3335"/>
-        <image name="Blue Background" width="375" height="667"/>
         <image name="Blue Plus Button" width="216" height="222"/>
         <image name="Blue Sign Out" width="347" height="372"/>
+        <image name="Blue fill 15% background" width="375" height="667"/>
+        <image name="Confirm Password Image" width="97" height="101"/>
         <image name="Create Account Button" width="1575" height="250"/>
         <image name="Facebook Login" width="1276" height="203"/>
         <image name="HD" width="154" height="104"/>
+        <image name="Key" width="58" height="65"/>
         <image name="Login Button" width="1576" height="251"/>
-        <image name="White Key" width="289" height="320"/>
-        <image name="White Mail" width="900" height="1024"/>
-        <image name="White User" width="288" height="249"/>
-        <image name="white Confirm Password" width="290" height="299"/>
+        <image name="Mail" width="110" height="76"/>
+        <image name="User" width="58" height="50"/>
         <image name="white sign out" width="347" height="372"/>
     </resources>
 </document>
