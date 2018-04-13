@@ -24,6 +24,13 @@ class editInfoVC: UIViewController {
     @IBOutlet weak var whenPicker: UIDatePicker!
     @IBOutlet weak var segmentedControl: MultiSelectSegmentedControl!
     
+    func upAlert (messages: String) {
+        let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +53,6 @@ class editInfoVC: UIViewController {
             
             self.whyField.text = firstDict["Why"] as! String
             self.whereField.text = firstDict["Where"] as! String
-//            self.whyField.attributedPlaceholder = NSAttributedString(string: firstDict["Why"] as! String,
-//                                                                    attributes: [NSAttributedStringKey.foregroundColor: blueColor])
-//            self.whereField.attributedPlaceholder = NSAttributedString(string: firstDict["Where"] as! String,
-//                                                                       attributes: [NSAttributedStringKey.foregroundColor: blueColor])
             
             let workDaysNS: NSArray = firstDict["freq"]! as! NSArray
             for x in workDaysNS{
@@ -135,16 +138,7 @@ class editInfoVC: UIViewController {
         }
         
         var whyString = whyField.text
-        if whyString == "" {
-            whyString = whyField.placeholder
-        }
-        
         var whereString = whereField.text
-        if whereString == "" {
-            whereString = whereField.placeholder
-        }
-        
-        
         
         if weekArray.count != 0 && whyString != "" && whereString != ""{
             //database instance
@@ -177,27 +171,11 @@ class editInfoVC: UIViewController {
             let mainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
             view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
             self.present(mainScreen,animated: false, completion: nil)
+        }else{
+            self.upAlert(messages: "Please Fill Out Everything.")
         }
-        
     }
     
-//    @objc func keyboardWillShow(notification: NSNotification) {
-//
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-//            if self.view.frame.origin.y == 0{
-//                self.view.frame.origin.y -= (keyboardSize.height - 125)
-//            }
-//        }
-//    }
-//
-//    @objc func keyboardWillHide(notification: NSNotification) {
-//
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-//            if self.view.frame.origin.y != 0{
-//                self.view.frame.origin.y += (keyboardSize.height - 125)
-//            }
-//        }
-//    }
     
     
     @IBAction func back(_ sender: Any) {

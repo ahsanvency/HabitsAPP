@@ -49,6 +49,7 @@
 		3ACBEB06208051A40027B159 /* editInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACBEB05208051A40027B159 /* editInfoVC.swift */; };
 		3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD55F5E201493E5001B9A23 /* editPopups.storyboard */; };
 		3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */; };
+		3AE08F162081195B0089FD02 /* editRewardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE08F152081195B0089FD02 /* editRewardsVC.swift */; };
 		3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFBE922023EB2D00E03455 /* rewardsVC.swift */; };
 		3AEFD884206C08520076E8BE /* D-DIN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD881206C074F0076E8BE /* D-DIN.otf */; };
 		3AEFD885206C08950076E8BE /* D-DINCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3AEFD87E206C074F0076E8BE /* D-DINCondensed.otf */; };
@@ -127,6 +128,7 @@
 		3ACBEB05208051A40027B159 /* editInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editInfoVC.swift; sourceTree = "<group>"; };
 		3AD55F5E201493E5001B9A23 /* editPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = editPopups.storyboard; sourceTree = "<group>"; };
 		3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundGradient.swift; sourceTree = "<group>"; };
+		3AE08F152081195B0089FD02 /* editRewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editRewardsVC.swift; sourceTree = "<group>"; };
 		3AEFBE922023EB2D00E03455 /* rewardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rewardsVC.swift; sourceTree = "<group>"; };
 		3AEFD87B206C074E0076E8BE /* D-DINExp-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DINExp-Italic.otf"; sourceTree = "<group>"; };
 		3AEFD87C206C074E0076E8BE /* D-DIN-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "D-DIN-Bold.otf"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				3ACBEB05208051A40027B159 /* editInfoVC.swift */,
+				3AE08F152081195B0089FD02 /* editRewardsVC.swift */,
 			);
 			path = "editPopup Controllers";
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */,
 				3A1290682048D44400006CD0 /* roundedButton.swift in Sources */,
 				3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */,
+				3AE08F162081195B0089FD02 /* editRewardsVC.swift in Sources */,
 				3AAF93FD207F0EDC00A9DB9E /* textFieldView.swift in Sources */,
 				3A8D8453206ED07600A3E28A /* confirmSlide.swift in Sources */,
 				3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */,

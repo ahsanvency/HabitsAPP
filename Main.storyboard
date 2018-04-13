@@ -30,6 +30,14 @@
             </objects>
             <point key="canvasLocation" x="127" y="-1892"/>
         </scene>
+        <!--editRewardsViewController-->
+        <scene sceneID="WJb-ac-D1R">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="editRewardsViewController" storyboardName="editPopups" referencedIdentifier="editRewardsViewController" id="mAB-sv-wDB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3zd-vE-bzp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="-1558"/>
+        </scene>
         <!--RewardsVC-->
         <scene sceneID="mKK-Jr-ozB">
             <objects>
@@ -780,7 +788,7 @@
                                                         <constraint firstAttribute="height" constant="40" id="aNs-n8-Ci5"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                                    <state key="normal" title="Does Not Work">
+                                                    <state key="normal" title="EDIT REWARDS">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
@@ -788,6 +796,10 @@
                                                             <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="editRewardsButton:" destination="Lqf-UF-riq" eventType="touchUpInside" id="yNT-wK-ozh"/>
+                                                        <segue destination="mAB-sv-wDB" kind="presentation" id="VKN-5A-1l8"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmH-WK-BJZ">
                                                     <rect key="frame" x="57" y="497" width="60" height="60"/>
@@ -1399,7 +1411,6 @@
         <!--Habit InfoVC-->
         <scene sceneID="NNB-aP-zyb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ymg-Qe-NMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="habitInfoVCID" id="sqk-bR-Naj" customClass="habitInfoVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="itz-fC-kro">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1485,6 +1496,7 @@
                         <outlet property="scrollInfo" destination="Hr2-9D-CST" id="Fzy-C8-dFb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymg-Qe-NMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="167" y="-111"/>
         </scene>

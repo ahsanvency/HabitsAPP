@@ -40,12 +40,12 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
     
     override func viewDidAppear(_ animated: Bool) {
         
-        if !isMenuHidden{
-            UIView.animate(withDuration: 0.5) {
-                self.menuConstraint.constant = -185
-            }
-            isMenuHidden = !isMenuHidden
-        }
+//        if !isMenuHidden{
+//            UIView.animate(withDuration: 0.5) {
+//                self.menuConstraint.constant = -185
+//            }
+//            isMenuHidden = !isMenuHidden
+//        }
         
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -64,10 +64,7 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
         menuView.layer.shadowOpacity = 0.8
         menuView.layer.shadowOffset = CGSize(width: 5, height: 0)
         
-        if isMenuHidden{
-            menuConstraint.constant = -185
-            isMenuHidden = !isMenuHidden
-        }
+        menuConstraint.constant = -185
         
         showLoadingScreen()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
@@ -318,6 +315,11 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
     @IBAction func editInfoButton(_ sender: Any) {
         closeMenu()
     }
+    
+    @IBAction func editRewardsButton(_ sender: Any) {
+        closeMenu()
+    }
+    
     
     
     func notif(){
