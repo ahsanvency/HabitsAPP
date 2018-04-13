@@ -11,13 +11,18 @@ import Firebase
 import SwiftKeychainWrapper
 
 class habitInfoVC: UIViewController, UIScrollViewDelegate {
-
+    
     @IBOutlet weak var habitPic: UIImageView!
     @IBOutlet weak var habitNameLbl: UILabel!
     @IBOutlet weak var scrollInfo: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
     
+    
+    
+    @IBOutlet var whySlideXib: whySlide!
+    @IBOutlet var whereSlideXib: whereSlide!
+    @IBOutlet var whenSlideXib: whenSlide!
     
     var chosenHabit: Habit!
     var whySlide: whySlide!
@@ -28,7 +33,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     var advRewardsSlide: advRewardsSlide!
     var confirmSlide: confirmSlide!
     
-
+    var whyXibView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,12 +114,8 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
                 DataService.ds.REF_HABITS.child(uid).removeValue()
                 
                 DataService.ds.REF_HABITS.child(uid).child(habitRefKey).setValue(["Why": whySlide.whyField.text!,"When":"\(whenSlide.daysOfWeekStr)\(whenSlide.timeStr)","Where":whereSlide.whereField.text!,"name":chosenHabit.habitName,"freq":whenSlide.weekArray])
-                
-                //Adding some info for the habit
-                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Details").setValue(["Intrinsic":chosenHabit.intrinsicReason, "habitVerb":chosenHabit.habitVerb])
-                
                 //Adding rewards to habit
-                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["basicReward1":basicRewardsSlide.basicField1.text!,"basicReward2":basicRewardsSlide.basicField2.text!,"intReward1":intRewardsSlide.intField1.text!,"intReward2":intRewardsSlide.intField2.text!,"advReward":advRewardsSlide.advField.text!, "Success": 0])
+                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["basicReward1":basicRewardsSlide.basicField1.text!,"basicReward2":basicRewardsSlide.basicField2.text!,"intReward1":intRewardsSlide.intField1.text!,"intReward2":intRewardsSlide.intField2.text!,"Adv":advRewardsSlide.advField.text!, "Success": 0])
                 
                 //Segue
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -178,7 +179,6 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         self.present(newViewController, animated: false, completion: nil)
     }
     
-    
     @IBAction func back(_ sender: Any) {
         view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
         dismiss(animated: false, completion: nil)
@@ -187,7 +187,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 60)
+                self.view.frame.origin.y -= (keyboardSize.height - 50)
             }
         }
     }
@@ -195,7 +195,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 60)
+                self.view.frame.origin.y += (keyboardSize.height - 50)
             }
         }
     }
@@ -204,6 +204,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         habitPic.image = UIImage(named: "\(chosenHabit.habitName) Blue")
         habitNameLbl.text = chosenHabit.habitName
         //habitPic.image = UIImage(named: "Running")
+        scrollInfo.delegate = self
         let Slides:[UIView] = createSlides()
         setupscrollInfo(Slides: Slides)
         pageControl.numberOfPages = Slides.count
@@ -217,5 +218,5 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         
         self.hideKeyboardWhenTappedAround()
     }
-
+    
 }
