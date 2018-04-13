@@ -19,7 +19,7 @@ class whySlide: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        whyField.attributedPlaceholder = NSAttributedString(string: "Tap To Enter An Intrinsic Reason",
+        whyField.attributedPlaceholder = NSAttributedString(string: "I Want To...",
                                                             attributes: [NSAttributedStringKey.foregroundColor: blueColor])
 //        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
     }

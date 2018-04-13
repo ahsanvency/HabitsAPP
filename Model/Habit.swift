@@ -19,6 +19,12 @@ class Habit{
     private var _when: String!
     private var _whhere: String!
     
+    private var _basicRewards1: String!
+    private var _basicRewards2: String!
+    private var _intRewards1: String!
+    private var _intRewards2: String!
+    private var _advRewards: String!
+    
     
 //    init(habitName: String) {
 //        _habitName = habitName;
@@ -32,7 +38,8 @@ class Habit{
     }
     
     
-    init(habitName: String, habitPic: UIImage, intrinsicReason: String, habitVerb: String, why: String, when: String, whhere: String) {
+    init(habitName: String, habitPic: UIImage, intrinsicReason: String, habitVerb: String,
+         why: String, when: String, whhere: String, basicRewards1: String, basicRewards2: String, intRewards1: String, intRewards2: String ,advRewards: String) {
         _habitName = habitName;
         _habitPic = habitPic;
         _intrinsicReason = intrinsicReason;
@@ -40,6 +47,9 @@ class Habit{
         _why = why;
         _when = when;
         _whhere = whhere;
+        _basicRewards1 = basicRewards1;
+        _intRewards1 = intRewards1;
+        _advRewards = advRewards;
     }
     
 //    init(habitName: String, habitPic: UIImage, why: String, when: String, whhere: String) {
@@ -113,6 +123,52 @@ class Habit{
             _whhere = newValue;
         }
     }
+    
+    var basicRewards1: String{
+        get{
+            return _basicRewards1;
+        }
+        set{
+            _basicRewards1 = newValue;
+        }
+    }
+    
+    var basicRewards2: String{
+        get{
+            return _basicRewards2;
+        }
+        set{
+            _basicRewards2 = newValue;
+        }
+    }
+    
+    var intRewards1: String{
+        get{
+            return _intRewards1;
+        }
+        set{
+            _intRewards1 = newValue;
+        }
+    }
+    
+    var intRewards2: String{
+        get{
+            return _intRewards2;
+        }
+        set{
+            _intRewards2 = newValue;
+        }
+    }
+    
+    var advRewards: String{
+        get{
+            return _advRewards;
+        }
+        set{
+            _advRewards = newValue;
+        }
+    }
+    
     
 }
 

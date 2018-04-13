@@ -417,7 +417,7 @@ class rewardsVC: UIViewController {
                 intMessage = "Congratulations you have earned: \(rewardsDict!["intReward2"]!)"
             }
             
-            let advMessage = "You really deserve this: \(rewardsDict!["Adv"]!)"
+            let advMessage = "You really deserve this: \(rewardsDict!["advReward"]!)"
             
             if leftCheck == "Basic" && middleCheck == "Basic" && rightCheck == "Basic"{
                 self.winner()

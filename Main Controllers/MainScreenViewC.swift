@@ -14,8 +14,8 @@ import UserNotifications
 
 
 class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITableViewDataSource {
+       
 
-    
     //
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -36,17 +36,23 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
     var habitName: String?
     
     var isMenuHidden = true
-    var chosenHabit: Habit!
+    var chosenHabitMain: Habit!
     
     override func viewDidAppear(_ animated: Bool) {
-
+        
+        if !isMenuHidden{
+            UIView.animate(withDuration: 0.5) {
+                self.menuConstraint.constant = -185
+            }
+            isMenuHidden = !isMenuHidden
+        }
+        
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.notif()
             
         }
         runAnimation()
-
     }
 
     override func viewDidLoad() {
@@ -58,7 +64,10 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
         menuView.layer.shadowOpacity = 0.8
         menuView.layer.shadowOffset = CGSize(width: 5, height: 0)
         
-        menuConstraint.constant = -185
+        if isMenuHidden{
+            menuConstraint.constant = -185
+            isMenuHidden = !isMenuHidden
+        }
         
         showLoadingScreen()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
@@ -296,7 +305,21 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
             print(error.localizedDescription)
         }
     }
-
+    
+    func closeMenu(){
+        if !isMenuHidden{
+            UIView.animate(withDuration: 0.5) {
+                self.menuConstraint.constant = -185
+            }
+        }
+        isMenuHidden = true
+    }
+    
+    @IBAction func editInfoButton(_ sender: Any) {
+        closeMenu()
+    }
+    
+    
     func notif(){
         guard let user = Auth.auth().currentUser else {
             print("User not found")
@@ -363,6 +386,7 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
 
             })
     }
+    
 }
 
 

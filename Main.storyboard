@@ -22,21 +22,13 @@
         </array>
     </customFonts>
     <scenes>
-        <!--UIViewController-44y-D1-48f-->
-        <scene sceneID="ZVS-YL-y2F">
+        <!--editInfoViewController-->
+        <scene sceneID="ukq-Bg-La8">
             <objects>
-                <viewControllerPlaceholder storyboardName="editPopups" referencedIdentifier="UIViewController-44y-D1-48f" id="X0J-qv-QC0" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dfv-XM-cWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="editInfoViewController" storyboardName="editPopups" referencedIdentifier="editInfoViewController" id="YDZ-Hy-QOa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="242-Ig-q1z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="-1488"/>
-        </scene>
-        <!--UIViewController-8aE-8D-hy9-->
-        <scene sceneID="2Fb-WS-429">
-            <objects>
-                <viewControllerPlaceholder storyboardName="editPopups" referencedIdentifier="UIViewController-8aE-8D-hy9" id="P9Z-NS-zGd" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qv2-nT-qhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="696" y="-1384"/>
+            <point key="canvasLocation" x="127" y="-1892"/>
         </scene>
         <!--RewardsVC-->
         <scene sceneID="mKK-Jr-ozB">
@@ -60,12 +52,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVz-XO-ARj" customClass="blueButton" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="12.5" width="56" height="25"/>
+                                        <rect key="frame" x="5" y="10" width="30" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="DgT-uk-SAD"/>
-                                            <constraint firstAttribute="width" constant="56" id="ejc-1p-KH8"/>
+                                            <constraint firstAttribute="height" constant="30" id="DgT-uk-SAD"/>
+                                            <constraint firstAttribute="width" constant="30" id="ejc-1p-KH8"/>
                                         </constraints>
-                                        <state key="normal" image="Back Button">
+                                        <state key="normal" image="backArrow">
                                             <color key="titleColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -464,12 +456,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jI-MM-9do">
-                                <rect key="frame" x="16" y="30" width="56" height="25.5"/>
+                                <rect key="frame" x="16" y="30" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="JF5-kQ-mO9"/>
-                                    <constraint firstAttribute="width" constant="56" id="MUa-cK-m0N"/>
+                                    <constraint firstAttribute="height" constant="40" id="JF5-kQ-mO9"/>
+                                    <constraint firstAttribute="width" constant="40" id="MUa-cK-m0N"/>
                                 </constraints>
-                                <state key="normal" image="Back Button">
+                                <state key="normal" image="backArrowBlue">
                                     <color key="titleColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -496,6 +488,9 @@
                                     <constraint firstAttribute="width" constant="335" id="PXQ-uq-eLa"/>
                                     <constraint firstAttribute="height" constant="380" id="XZh-8r-6WM"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="DgZ-ic-iY8" id="3Ex-sX-hhe"/>
+                                </connections>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="FC4-Df-xow">
                                 <rect key="frame" x="87.5" y="50" width="200" height="157"/>
@@ -504,10 +499,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN3-cm-8lr">
-                                <rect key="frame" x="314" y="30" width="45" height="45"/>
+                                <rect key="frame" x="319" y="30" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Nxh-Dh-Ei5"/>
-                                    <constraint firstAttribute="width" constant="45" id="bhL-RK-N0i"/>
+                                    <constraint firstAttribute="height" constant="40" id="Nxh-Dh-Ei5"/>
+                                    <constraint firstAttribute="width" constant="40" id="bhL-RK-N0i"/>
                                 </constraints>
                                 <state key="normal" image="Blue Sign Out"/>
                                 <connections>
@@ -568,10 +563,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERQ-KP-HIO">
-                                        <rect key="frame" x="10" y="17.5" width="40" height="35"/>
+                                        <rect key="frame" x="10" y="22.5" width="30" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="nHf-c7-h1N"/>
-                                            <constraint firstAttribute="height" constant="35" id="u7O-Tt-NZp"/>
+                                            <constraint firstAttribute="width" constant="30" id="nHf-c7-h1N"/>
+                                            <constraint firstAttribute="height" constant="25" id="u7O-Tt-NZp"/>
                                         </constraints>
                                         <state key="normal" image="menuButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -854,7 +849,7 @@
                                                     </constraints>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="HOME">
+                                                            <fragment content="EDIT INFO">
                                                                 <attributes>
                                                                     <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <font key="NSFont" size="17" name="AvenirNext-Bold"/>
@@ -868,22 +863,19 @@
                                                             <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="editInfoButton:" destination="Lqf-UF-riq" eventType="touchUpInside" id="77w-D3-viX"/>
+                                                        <segue destination="YDZ-Hy-QOa" kind="presentation" customClass="LeftToRightSegue" customModule="Habits" customModuleProvider="target" id="2Yt-wV-CaV"/>
+                                                    </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrV-8x-Nkd">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrV-8x-Nkd">
                                                     <rect key="frame" x="10" y="60" width="155" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="aNs-n8-Ci5"/>
                                                     </constraints>
-                                                    <state key="normal">
-                                                        <attributedString key="attributedTitle">
-                                                            <fragment content="ABOUT">
-                                                                <attributes>
-                                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <font key="NSFont" size="17" name="AvenirNext-Bold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                    <state key="normal" title="Does Not Work">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -962,16 +954,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPs-U2-4YQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="cJZ-Az-V4B" userLabel="whenViewTap">
-                    <connections>
-                        <segue destination="X0J-qv-QC0" kind="presentation" id="atB-he-fKI"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="2Dk-Rs-PkT" userLabel="whereViewTap">
-                    <connections>
-                        <segue destination="P9Z-NS-zGd" kind="presentation" id="vMW-Fj-a6c"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="cJZ-Az-V4B" userLabel="whenViewTap"/>
+                <tapGestureRecognizer id="2Dk-Rs-PkT" userLabel="whereViewTap"/>
                 <view contentMode="scaleToFill" id="oy8-gT-yso">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1508,7 +1492,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back Button" width="269" height="104"/>
         <image name="Background" width="1875" height="3335"/>
         <image name="Blue Sign Out" width="347" height="372"/>
         <image name="Blue fill 15% background" width="375" height="667"/>
@@ -1520,6 +1503,8 @@
         <image name="Login Button" width="1576" height="251"/>
         <image name="Mail" width="110" height="76"/>
         <image name="User" width="58" height="50"/>
+        <image name="backArrow" width="492" height="410"/>
+        <image name="backArrowBlue" width="492" height="410"/>
         <image name="menuButton" width="124" height="108"/>
         <image name="white sign out" width="347" height="372"/>
     </resources>
