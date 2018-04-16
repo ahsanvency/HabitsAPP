@@ -40,7 +40,7 @@ class onboardingVC: UIViewController, PaperOnboardingDataSource, PaperOnboarding
         let colorPurple = UIColor(red:102/255, green:23/255, blue: 108/255, alpha:0.8)
         let colorGreen = UIColor(red:34/255, green:139/255, blue: 34/255, alpha:0.8)
         
-        let alphaImageView = UIImageView(image: UIImage(named: "Oval"))
+        let alphaImageView = UIImageView(image: UIImage(named: "clearCircle"))
         alphaImageView.alpha = 0
         
         return [
