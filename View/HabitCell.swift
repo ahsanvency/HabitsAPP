@@ -25,7 +25,6 @@ class HabitCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
         // Initialization code
         progressBar.transform = progressBar.transform.scaledBy(x: 1, y: 15);
         progressBar.tintColor = blueColor

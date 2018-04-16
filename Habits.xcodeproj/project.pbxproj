@@ -13,6 +13,7 @@
 		3A282C6A207E8163002CAFF0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A282C69207E8163002CAFF0 /* OnboardingView.swift */; };
 		3A282C6C207E8362002CAFF0 /* onboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A282C6B207E8362002CAFF0 /* onboardingVC.swift */; };
 		3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */; };
+		3A4D223D20814E9300A0FD74 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D223C20814E9300A0FD74 /* MainVC.swift */; };
 		3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */; };
 		3A5459241FFEA1360068E6A7 /* MainScreenViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */; };
 		3A5F7CE5206F6040000F3A8D /* habitCarouselSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */; };
@@ -88,6 +89,7 @@
 		3A282C6B207E8362002CAFF0 /* onboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingVC.swift; sourceTree = "<group>"; };
 		3A3DA5841FFB7537004C1143 /* Habits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Habits.entitlements; sourceTree = "<group>"; };
 		3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
+		3A4D223C20814E9300A0FD74 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewC.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitCarouselSelector.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				3AEFD88E206C15C50076E8BE /* loginVC.swift */,
 				3A729662206E3444002D1C9E /* newUserVC.swift */,
 				3A5459231FFEA1360068E6A7 /* MainScreenViewC.swift */,
+				3A4D223C20814E9300A0FD74 /* MainVC.swift */,
 				3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */,
 				3A9381DF206D84D2009BA411 /* habitInfoVC.swift */,
 				3AEFBE922023EB2D00E03455 /* rewardsVC.swift */,
@@ -540,6 +543,7 @@
 				3AF47FD62007F50B00F00F42 /* User.swift in Sources */,
 				3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */,
 				3A1290682048D44400006CD0 /* roundedButton.swift in Sources */,
+				3A4D223D20814E9300A0FD74 /* MainVC.swift in Sources */,
 				3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */,
 				3AE08F162081195B0089FD02 /* editRewardsVC.swift in Sources */,
 				3AAF93FD207F0EDC00A9DB9E /* textFieldView.swift in Sources */,
