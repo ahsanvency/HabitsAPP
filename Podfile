@@ -20,6 +20,7 @@ pod 'DTTextField'
 pod 'paper-onboarding'
 pod 'InteractiveSideMenu'
 pod 'MultiSelectSegmentedControl'
+pod 'KDCircularProgress'
 pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git', :branch => 'master'
 
 end

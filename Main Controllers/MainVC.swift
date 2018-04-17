@@ -12,6 +12,7 @@ import Firebase
 import SwiftKeychainWrapper
 import UserNotifications
 import TransitionButton
+import KDCircularProgress
 
 class MainVC: CustomTransitionViewController {
 
@@ -24,6 +25,10 @@ class MainVC: CustomTransitionViewController {
     @IBOutlet weak var habitPic: UIImageView!
     @IBOutlet weak var whyAtWherelabel: UILabel!
     @IBOutlet weak var whenLabel: UILabel!
+    
+    @IBOutlet weak var progressView: KDCircularProgress!
+    @IBOutlet weak var successfulDays: UILabel!
+    
     
     //Menu Outlets
     @IBOutlet weak var menuView: UIView!
@@ -52,6 +57,9 @@ class MainVC: CustomTransitionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        progressView.angle = 180
+        
         
         showLoadingScreen()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
@@ -156,7 +164,9 @@ class MainVC: CustomTransitionViewController {
                 self.habitNameLabel.text = firstDict["name"] as! String
                 self.habitPic.image = UIImage(named: firstDict["name"] as! String)
                 self.whyAtWherelabel.text = "\(whyText) at \(whereText)"
-                
+                self.progressView.angle = Double(360 * Float(rewardsDict!["Success"] as! Double/30))
+                self.successfulDays.text = "\(rewardsDict!["Success"]!)"
+
                 
                 let daysDict: Dictionary = [0:"Saturday",1:"Sunday",2:"Monday",3:"Tuesday",4:"Wednesday",5:"Thursday",6:"Friday"]
                 
@@ -297,6 +307,7 @@ class MainVC: CustomTransitionViewController {
     }
     
     @IBAction func achievedButon(_ sender: Any) {
+        
         //current user
         guard let uid = Auth.auth().currentUser?.uid else {
             return
@@ -316,7 +327,6 @@ class MainVC: CustomTransitionViewController {
             var rewardsDict = firstDict["Rewards"] as? Dictionary<String, Any>
             let success = rewardsDict!["Success"] as? Int
             
-            
             switch (success!){
             case 5..<10:
                 self.randomPopupNumber = 5;
@@ -331,7 +341,7 @@ class MainVC: CustomTransitionViewController {
             self.habitName = (firstDict["name"] as! String)
             
             self.intrinsicQuestions = ["How are you progressing with \(self.habitName!)?",
-                "Why do you want to cself.ontinue \(self.habitName!)?",
+                "Why do you want to continue \(self.habitName!)?",
                 "How does \(self.habitName!) relate to your values?",
                 "What do you gain by \(self.habitName!)?"]
             
