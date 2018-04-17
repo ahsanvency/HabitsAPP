@@ -87,7 +87,7 @@ class editRewardsVC: UIViewController {
             }
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+            let mainScreen = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
             view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
             self.present(mainScreen,animated: false, completion: nil)
         }else {

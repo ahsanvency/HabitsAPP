@@ -40,13 +40,6 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
     
     override func viewDidAppear(_ animated: Bool) {
         
-//        if !isMenuHidden{
-//            UIView.animate(withDuration: 0.5) {
-//                self.menuConstraint.constant = -185
-//            }
-//            isMenuHidden = !isMenuHidden
-//        }
-        
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.notif()
@@ -152,11 +145,10 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let rewardsAction = UITableViewRowAction(style: .normal, title: "Rewards") { (action, index) in
             //current user
-            guard let user = Auth.auth().currentUser else {
+            guard let uid = Auth.auth().currentUser?.uid else {
                 return
             }
-            let uid = user.uid
-
+            
             //Gets the Habit id
             DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 let value = snapshot.value as? NSDictionary
@@ -385,7 +377,6 @@ class MainScreenViewC: CustomTransitionViewController, UITableViewDelegate, UITa
 
         UNUserNotificationCenter.current().add(request) { (error) in
         }
-
             })
     }
     

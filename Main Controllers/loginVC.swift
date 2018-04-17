@@ -73,7 +73,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
                                     self.completeSignIn(id: user.uid)
                                     button.stopAnimation(animationStyle: .expand, completion: {
                                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+                                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
                                         self.present(newViewController, animated: true, completion: nil)
                                     })
                                 }
@@ -132,7 +132,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
                 _ = ["provider" : credential.provider]
                 self.completeSignIn(id: user.uid);
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
                 self.present(newViewController, animated: true, completion: nil)
             }
         }

@@ -32,7 +32,6 @@ class HabitCell: UITableViewCell {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
             
             guard let user = Auth.auth().currentUser else {
-                print("User not found")
                 return
             }
             let uid = user.uid
@@ -45,7 +44,6 @@ class HabitCell: UITableViewCell {
                 
                 //getting habit key
                 guard let firstKey = value?.allKeys[0] else {
-                    print("n")
                     return }
                 //using habit key to get dict
                 let firstDict = value![firstKey] as! Dictionary<String,Any>
@@ -182,7 +180,6 @@ class HabitCell: UITableViewCell {
                             gotWorkOut = true
                             
                         } else if lowerDays.count != 0 {
-                            print(lowerDays)
                             self.whenLbl.text = daysDict[lowerDays[0]]! + " " + fbNewTime
                             gotWorkOut = true
                             
@@ -201,7 +198,6 @@ class HabitCell: UITableViewCell {
     
     func reload(){
         guard let user = Auth.auth().currentUser else {
-            print("User not found")
             return
         }
         let uid = user.uid
@@ -214,7 +210,6 @@ class HabitCell: UITableViewCell {
             
             //getting habit key
             guard let firstKey = value?.allKeys[0] else {
-                print("n")
                 return }
             //using habit key to get dict
             let firstDict = value![firstKey] as! Dictionary<String,Any>

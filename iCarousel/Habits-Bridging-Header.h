@@ -3,3 +3,4 @@
 //
 
 #import "iCarousel.h"
+#import "SWRevealViewController.h"

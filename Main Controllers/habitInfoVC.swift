@@ -119,9 +119,9 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
                 
                 //Segue
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "MainScreenViewCID") as! MainScreenViewC
-                newViewController.firstTimeLoaded = 1;
-                self.present(newViewController, animated: true){
+                let mainViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
+//                newViewController.firstTimeLoaded = 1;
+                self.present(mainViewController, animated: true){
                 }
             } else {
                 print("error")
