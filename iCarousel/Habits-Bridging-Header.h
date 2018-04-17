@@ -4,3 +4,4 @@
 
 #import "iCarousel.h"
 #import "SWRevealViewController.h"
+#import "GlossyButton.h"

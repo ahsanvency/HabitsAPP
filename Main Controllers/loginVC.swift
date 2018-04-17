@@ -33,10 +33,6 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         setupScreen()
@@ -152,23 +148,25 @@ class loginVC: UIViewController, UITextFieldDelegate {
         emailField.dtLayer.borderWidth = 0
         emailField.floatPlaceholderActiveColor = placeHolderColor
         emailField.textColor = placeHolderColor
-        emailField.paddingYErrorLabel = 5
+        emailField.paddingYErrorLabel = 10
+        emailField.floatPlaceholderColor = placeHolderColor
         emailField.placeholderColor = placeHolderColor
         
         passwordField.dtLayer.backgroundColor = UIColor.clear.cgColor
         passwordField.dtLayer.borderWidth = 0
         passwordField.floatPlaceholderActiveColor = placeHolderColor
         passwordField.textColor = placeHolderColor
+        passwordField.floatPlaceholderColor = placeHolderColor
         passwordField.paddingYErrorLabel = 10
         passwordField.placeholderColor = placeHolderColor
         
         
         
         self.view.addSubview(button)
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
-        button.bottomAnchor.constraint(equalTo: fbButton.topAnchor, constant: -20).isActive = true
+        button.heightAnchor.constraint(equalTo: backgroundLoginButton.heightAnchor).isActive = true
+        button.leadingAnchor.constraint(equalTo: backgroundLoginButton.leadingAnchor, constant: 0).isActive = true
+        button.trailingAnchor.constraint(equalTo: backgroundLoginButton.trailingAnchor, constant: 0).isActive = true
+        button.topAnchor.constraint(equalTo: backgroundLoginButton.topAnchor, constant: 0).isActive = true
         
         
         button.backgroundColor = .white
@@ -180,8 +178,6 @@ class loginVC: UIViewController, UITextFieldDelegate {
         
         buttonGradient(button: button)
         
-        
-        passwordField.isSecureTextEntry = true
         emailField.autocorrectionType = .no
         emailField.keyboardType = .emailAddress
         passwordField.textContentType = UITextContentType("")
@@ -191,7 +187,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 75)
+                self.view.frame.origin.y -= (keyboardSize.height - 90)
             }
         }
     }
@@ -200,7 +196,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 75)
+                self.view.frame.origin.y += (keyboardSize.height - 90)
             }
         }
     }

@@ -29,6 +29,9 @@ class newUserVC: UIViewController {
     
     @IBOutlet weak var confirmPasswordView: UIView!
     @IBOutlet weak var signIntoExistingAccount: UIButton!
+    @IBOutlet weak var backgroundLoginButton: roundedButton!
+    
+    
     
     let button = TransitionButton(frame: CGRect(x: 30, y: 562, width: 315, height: 50))
     
@@ -79,7 +82,7 @@ class newUserVC: UIViewController {
         })
     }
     
-    @IBAction func goBack(_ sender: Any) {
+    @IBAction func signIntoExistingAccount(_ sender: Any) {
         
         view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
         dismiss(animated: false, completion: nil)
@@ -108,31 +111,36 @@ class newUserVC: UIViewController {
         nameField.dtLayer.borderWidth = 0
         nameField.textColor = placeHolderColor
         nameField.floatPlaceholderActiveColor = placeHolderColor
+        nameField.floatPlaceholderColor = placeHolderColor
         nameField.placeholderColor = placeHolderColor
         
         emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
         emailField.dtLayer.borderWidth = 0
+        emailField.paddingYErrorLabel = 10
         emailField.textColor = placeHolderColor
         emailField.floatPlaceholderActiveColor = placeHolderColor
+        emailField.floatPlaceholderColor = placeHolderColor
         emailField.placeholderColor = placeHolderColor
         
         passwordField.dtLayer.backgroundColor = UIColor.clear.cgColor
         passwordField.dtLayer.borderWidth = 0
         passwordField.textColor = placeHolderColor
         passwordField.floatPlaceholderActiveColor = placeHolderColor
+        passwordField.floatPlaceholderColor = placeHolderColor
         passwordField.placeholderColor = placeHolderColor
         
         confirmPasswordField.dtLayer.backgroundColor = UIColor.clear.cgColor
         confirmPasswordField.dtLayer.borderWidth = 0
         confirmPasswordField.textColor = placeHolderColor
         confirmPasswordField.floatPlaceholderActiveColor = placeHolderColor
+        confirmPasswordField.floatPlaceholderColor = placeHolderColor
         confirmPasswordField.placeholderColor = placeHolderColor
         
         self.view.addSubview(button)
-        button.bottomAnchor.constraint(equalTo: signIntoExistingAccount.topAnchor, constant: -10).isActive = true
-        button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20).isActive = true
-        button.topAnchor.constraint(equalTo: confirmPasswordField.bottomAnchor, constant: 20).isActive = true
+        button.heightAnchor.constraint(equalTo: backgroundLoginButton.heightAnchor).isActive = true
+        button.leadingAnchor.constraint(equalTo: backgroundLoginButton.leadingAnchor, constant: 0).isActive = true
+        button.trailingAnchor.constraint(equalTo: backgroundLoginButton.trailingAnchor, constant: 0).isActive = true
+        button.topAnchor.constraint(equalTo: backgroundLoginButton.topAnchor, constant: 0).isActive = true
         
         button.backgroundColor = .white
         button.setTitle("Create Account", for: .normal)
@@ -142,8 +150,7 @@ class newUserVC: UIViewController {
         button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
         buttonGradient(button: button)
         
-        passwordField.isSecureTextEntry = true
-        confirmPasswordField.isSecureTextEntry = true
+
         nameField.autocorrectionType = .no
         emailField.autocorrectionType = .no
         nameField.textContentType = UITextContentType("")
@@ -157,7 +164,7 @@ class newUserVC: UIViewController {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 60)
+                self.view.frame.origin.y -= (keyboardSize.height - 75)
             }
         }
     }
@@ -166,7 +173,7 @@ class newUserVC: UIViewController {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 60)
+                self.view.frame.origin.y += (keyboardSize.height - 75)
             }
         }
     }

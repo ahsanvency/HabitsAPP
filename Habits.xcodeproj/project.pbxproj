@@ -15,7 +15,6 @@
 		3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */; };
 		3A4D223D20814E9300A0FD74 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D223C20814E9300A0FD74 /* MainVC.swift */; };
 		3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */; };
-		3A52545420856ED10082C2D2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A52545320856ED10082C2D2 /* SWRevealViewController.m */; };
 		3A5F7CE5206F6040000F3A8D /* habitCarouselSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */; };
 		3A729663206E3444002D1C9E /* newUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A729662206E3444002D1C9E /* newUserVC.swift */; };
 		3A7CC1622072149D0003F071 /* normalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CC1612072149D0003F071 /* normalLabel.swift */; };
@@ -41,12 +40,13 @@
 		3A9FD25C206F2E5500AC0FCF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9FD25A206F2E5500AC0FCF /* iCarousel.m */; };
 		3A9FD25E206F2E9A00AC0FCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9FD25D206F2E9A00AC0FCF /* QuartzCore.framework */; };
 		3AA004BC20857CB700156725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA004BB20857CB700156725 /* ViewController.swift */; };
+		3AA004DD2085A65C00156725 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA004DB2085A65C00156725 /* SWRevealViewController.m */; };
 		3AA1272B207D11F300CFAAFA /* other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA1272A207D11F300CFAAFA /* other.storyboard */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
 		3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */; };
 		3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B31FFB08CE0035A16E /* LaunchScreen.storyboard */; };
+		3AA70D4F2086900E001BDCD6 /* GlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA70D4E2086900E001BDCD6 /* GlossyButton.m */; };
 		3AAF93FD207F0EDC00A9DB9E /* textFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF93FC207F0EDC00A9DB9E /* textFieldView.swift */; };
-		3ACBEB0420801B910027B159 /* confirmInfoSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ACBEB0320801B910027B159 /* confirmInfoSlide.xib */; };
 		3ACBEB06208051A40027B159 /* editInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACBEB05208051A40027B159 /* editInfoVC.swift */; };
 		3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD55F5E201493E5001B9A23 /* editPopups.storyboard */; };
 		3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */; };
@@ -91,8 +91,6 @@
 		3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
 		3A4D223C20814E9300A0FD74 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3A52545220856ED10082C2D2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		3A52545320856ED10082C2D2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitCarouselSelector.swift; sourceTree = "<group>"; };
 		3A729662206E3444002D1C9E /* newUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newUserVC.swift; sourceTree = "<group>"; };
 		3A7CC1612072149D0003F071 /* normalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = normalLabel.swift; sourceTree = "<group>"; };
@@ -120,14 +118,17 @@
 		3A9FD25B206F2E5500AC0FCF /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		3A9FD25D206F2E9A00AC0FCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3AA004BB20857CB700156725 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3AA004DB2085A65C00156725 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		3AA004DC2085A65C00156725 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		3AA1272A207D11F300CFAAFA /* other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = other.storyboard; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA5A3B41FFB08CE0035A16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AA5A3B61FFB08CE0035A16E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA70D4D2086900E001BDCD6 /* GlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlossyButton.h; sourceTree = "<group>"; };
+		3AA70D4E2086900E001BDCD6 /* GlossyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlossyButton.m; sourceTree = "<group>"; };
 		3AAF93FC207F0EDC00A9DB9E /* textFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldView.swift; sourceTree = "<group>"; };
-		3ACBEB0320801B910027B159 /* confirmInfoSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = confirmInfoSlide.xib; sourceTree = "<group>"; };
 		3ACBEB05208051A40027B159 /* editInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editInfoVC.swift; sourceTree = "<group>"; };
 		3AD55F5E201493E5001B9A23 /* editPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = editPopups.storyboard; sourceTree = "<group>"; };
 		3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundGradient.swift; sourceTree = "<group>"; };
@@ -218,7 +219,6 @@
 				3A938215206DF605009BA411 /* intRewardsSlide.xib */,
 				3A93821B206DF6AE009BA411 /* advRewardsSlide.xib */,
 				3A8D8450206ECF7200A3E28A /* confirmSlide.xib */,
-				3ACBEB0320801B910027B159 /* confirmInfoSlide.xib */,
 				3A938207206DB08E009BA411 /* whySlide.swift */,
 				3A938209206DED96009BA411 /* whereSlide.swift */,
 				3A93820F206DF0C0009BA411 /* whenSlide.swift */,
@@ -233,11 +233,13 @@
 		3A9FD258206F2E2E00AC0FCF /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
+				3A9FD259206F2E5400AC0FCF /* Habits-Bridging-Header.h */,
 				3A9FD25B206F2E5500AC0FCF /* iCarousel.h */,
 				3A9FD25A206F2E5500AC0FCF /* iCarousel.m */,
-				3A9FD259206F2E5400AC0FCF /* Habits-Bridging-Header.h */,
-				3A52545220856ED10082C2D2 /* SWRevealViewController.h */,
-				3A52545320856ED10082C2D2 /* SWRevealViewController.m */,
+				3AA004DC2085A65C00156725 /* SWRevealViewController.h */,
+				3AA004DB2085A65C00156725 /* SWRevealViewController.m */,
+				3AA70D4D2086900E001BDCD6 /* GlossyButton.h */,
+				3AA70D4E2086900E001BDCD6 /* GlossyButton.m */,
 			);
 			path = iCarousel;
 			sourceTree = "<group>";
@@ -437,7 +439,6 @@
 				3AEFD884206C08520076E8BE /* D-DIN.otf in Resources */,
 				3A938212206DF469009BA411 /* basicRewardsSlide.xib in Resources */,
 				3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */,
-				3ACBEB0420801B910027B159 /* confirmInfoSlide.xib in Resources */,
 				3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */,
 				3A12906A2048D57E00006CD0 /* Old.storyboard in Resources */,
 				3A938206206DB082009BA411 /* whySlide.xib in Resources */,
@@ -473,6 +474,7 @@
 				"${BUILT_PRODUCTS_DIR}/KDCircularProgress/KDCircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/MultiSelectSegmentedControl/MultiSelectSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -492,6 +494,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KDCircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiSelectSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -551,8 +554,8 @@
 				3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */,
 				3AE08F162081195B0089FD02 /* editRewardsVC.swift in Sources */,
 				3AAF93FD207F0EDC00A9DB9E /* textFieldView.swift in Sources */,
+				3AA004DD2085A65C00156725 /* SWRevealViewController.m in Sources */,
 				3A8D8453206ED07600A3E28A /* confirmSlide.swift in Sources */,
-				3A52545420856ED10082C2D2 /* SWRevealViewController.m in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
 				3A93820A206DED96009BA411 /* whereSlide.swift in Sources */,
 				3A938208206DB08E009BA411 /* whySlide.swift in Sources */,
@@ -573,6 +576,7 @@
 				3A282C6C207E8362002CAFF0 /* onboardingVC.swift in Sources */,
 				3AEFD88F206C15C50076E8BE /* loginVC.swift in Sources */,
 				3A7CC1622072149D0003F071 /* normalLabel.swift in Sources */,
+				3AA70D4F2086900E001BDCD6 /* GlossyButton.m in Sources */,
 				3ACBEB06208051A40027B159 /* editInfoVC.swift in Sources */,
 				3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */,
 				3A729663206E3444002D1C9E /* newUserVC.swift in Sources */,

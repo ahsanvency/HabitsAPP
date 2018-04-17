@@ -17,6 +17,8 @@ class editRewardsVC: UIViewController {
     @IBOutlet weak var intReward2: fancyField!
     @IBOutlet weak var advReward: fancyField!
     
+    @IBOutlet weak var confirmButton: roundedButton!
+    
     
     func upAlert (messages: String) {
         let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
@@ -27,6 +29,13 @@ class editRewardsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
+        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
+        glossyBtn?.setTitle("Confirm", for: .normal)
+        glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
+        glossyBtn?.addTarget(self, action:#selector(confirm(_:)), for: .touchUpInside)
+        
+        view.addSubview(glossyBtn!)
         
         
         guard let user = Auth.auth().currentUser else {
@@ -62,7 +71,7 @@ class editRewardsVC: UIViewController {
         dismiss(animated: false, completion: nil)
     }
     
-    @IBAction func confirm(_ sender: Any) {
+    @IBAction func confirm(_ glossyBtn: GlossyButton) {
         if basicReward1.text != "" && basicReward2.text != "" && intReward1.text != "" && intReward2.text != "" && advReward.text != ""{
             
             var ref: DatabaseReference!

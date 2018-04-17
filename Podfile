@@ -15,12 +15,14 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'Firebase/Messaging'
-pod "TransitionButton"
+pod 'TransitionButton'
 pod 'DTTextField'
 pod 'paper-onboarding'
 pod 'InteractiveSideMenu'
 pod 'MultiSelectSegmentedControl'
 pod 'KDCircularProgress'
 pod 'SwiftKeychainWrapper', :git => 'https://github.com/jrendel/SwiftKeychainWrapper.git', :branch => 'master'
+pod 'SideMenu'
+
 
 end

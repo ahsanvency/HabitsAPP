@@ -16,13 +16,13 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var habitNameLbl: UILabel!
     @IBOutlet weak var scrollInfo: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
-    
-    
+    @IBOutlet weak var confirmButton: UIButton!
     
     
     @IBOutlet var whySlideXib: whySlide!
     @IBOutlet var whereSlideXib: whereSlide!
     @IBOutlet var whenSlideXib: whenSlide!
+    
     
     var chosenHabit: Habit!
     var whySlide: whySlide!
@@ -50,20 +50,27 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     func createSlides() -> [UIView]{
         whySlide = Bundle.main.loadNibNamed("whySlide", owner: self, options: nil)!.first as! whySlide
         whySlide.intrinsicLabel.text = "Did you know intrinsic reasons like \(chosenHabit.intrinsicReason) help you succeed?"
-        whySlide.questionLabel.text = "Why do you want to start \(chosenHabit.habitName)?"
+        whySlide.questionLabel.text = "I want to start \(chosenHabit.habitName) to..."
         
         whereSlide = Bundle.main.loadNibNamed("whereSlide", owner: self, options: nil)!.first as! whereSlide
         whereSlide.consistencyLabel.text = "Did you know being consistent with time and places helps you develop the habit of \(chosenHabit.habitName)?"
-        whereSlide.questionLabel.text = "Where can you consistently \(chosenHabit.habitVerb)?"
+        whereSlide.questionLabel.text = "I can consistently \(chosenHabit.habitVerb) at..."
         
         
         whenSlide = Bundle.main.loadNibNamed("whenSlide", owner: self, options: nil)!.first as! whenSlide
-        whenSlide.questionLabel.text = "When can you consistently \(chosenHabit.habitVerb)?"
+        whenSlide.questionLabel.text = "I can consistently \(chosenHabit.habitVerb) at this time and day:"
         
         basicRewardsSlide = Bundle.main.loadNibNamed("basicRewardsSlide", owner: self, options: nil)!.first as! basicRewardsSlide
         intRewardsSlide = Bundle.main.loadNibNamed("intRewardsSlide", owner: self, options: nil)!.first as! intRewardsSlide
         advRewardsSlide = Bundle.main.loadNibNamed("advRewardsSlide", owner: self, options: nil)!.first as! advRewardsSlide
         confirmSlide = Bundle.main.loadNibNamed("confirmSlide", owner: self, options: nil)!.first as! confirmSlide
+        let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
+        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
+        glossyBtn?.setTitle("Confirm", for: .normal)
+        glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
+        glossyBtn?.addTarget(self, action:#selector(confirmHabit(_:)), for: .touchUpInside)
+        
+        confirmSlide.addSubview(glossyBtn!)
         
         return [whySlide, whereSlide, whenSlide, basicRewardsSlide, intRewardsSlide, advRewardsSlide, confirmSlide]
     }
@@ -85,7 +92,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     }
     
     
-    @IBAction func confirmHabit(_ sender: Any) {
+    @IBAction func confirmHabit(_ glossyBtn: GlossyButton) {
         whenSlide.save()
         
         if Auth.auth().currentUser?.uid != nil {

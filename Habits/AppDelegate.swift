@@ -21,24 +21,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        var initialViewController: UIViewController!
-        
-        let accessToken: String? = KeychainWrapper.standard.string(forKey: KEY_UID)
-        if accessToken != nil {
-            
-            initialViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
-        }
-        else{
-            let userDefaults = UserDefaults.standard
-            if userDefaults.bool(forKey: "onBoardingComplete"){
-                initialViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
-            }else{
-                initialViewController = storyBoard.instantiateViewController(withIdentifier: "onboardingID") as! onboardingVC
-            }
-            window?.makeKeyAndVisible()
-        }
-            window?.rootViewController = initialViewController
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        var initialViewController: UIViewController!
+//        
+//        let accessToken: String? = KeychainWrapper.standard.string(forKey: KEY_UID)
+//        if accessToken != nil {
+//            
+//            initialViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
+//        }
+//        else{
+//            let userDefaults = UserDefaults.standard
+//            if userDefaults.bool(forKey: "onBoardingComplete"){
+//                initialViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
+//            }else{
+//                initialViewController = storyBoard.instantiateViewController(withIdentifier: "onboardingID") as! onboardingVC
+//            }
+//            window?.makeKeyAndVisible()
+//        }
+//            window?.rootViewController = initialViewController
         
         
         //Changes the status bar to be of light content

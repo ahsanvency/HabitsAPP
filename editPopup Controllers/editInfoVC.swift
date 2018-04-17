@@ -15,7 +15,7 @@ class editInfoVC: UIViewController {
     //Variables
     var weekArray = [Int]()
     var timeDict:Dictionary = [String:Int]()
-//    var mainScreenVC = MainScreenViewC()
+
     
     //Outlets
     @IBOutlet weak var whyField: fancyField!
@@ -23,6 +23,9 @@ class editInfoVC: UIViewController {
     
     @IBOutlet weak var whenPicker: UIDatePicker!
     @IBOutlet weak var segmentedControl: MultiSelectSegmentedControl!
+    
+    @IBOutlet weak var confirmButton: roundedButton!
+    
     
     func upAlert (messages: String) {
         let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
@@ -34,6 +37,14 @@ class editInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
+        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
+        glossyBtn?.setTitle("Confirm", for: .normal)
+        glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
+        glossyBtn?.addTarget(self, action:#selector(confirm(_:)), for: .touchUpInside)
+        
+        view.addSubview(glossyBtn!)
         
         whenPicker.setValue(UIColor.white, forKeyPath: "textColor")
         
@@ -83,7 +94,7 @@ class editInfoVC: UIViewController {
         }
     }
     
-    @IBAction func saveButton(_ sender: Any) {
+    @IBAction func confirm(_ glossyBtn: GlossyButton) {
         
         let time = whenPicker.date
         let calender = Calendar.current
