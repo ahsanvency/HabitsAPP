@@ -65,14 +65,12 @@ class MainVC: CustomTransitionViewController {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
         }
         
-        //menuLeadingConstraint.constant = -250
         backgroundLeadingConstraint.constant = 0
         
-        guard let user = Auth.auth().currentUser else {
+        guard let uid = Auth.auth().currentUser?.uid else {
             print("User not found")
             return
         }
-        let uid = user.uid
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
@@ -377,11 +375,10 @@ class MainVC: CustomTransitionViewController {
     }
     
     func notif(){
-        guard let user = Auth.auth().currentUser else {
+        guard let uid = Auth.auth().currentUser?.uid else {
             print("User not found")
             return
         }
-        let uid = user.uid
         
         DataService.ds.REF_HABITS.child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
@@ -416,8 +413,6 @@ class MainVC: CustomTransitionViewController {
                 return
             }
             
-            print(currentHabitTimeMin)
-            print(currentHabitTimeHours)
             //Creates the notification
             let content = UNMutableNotificationContent()
             content.title = "Reminder"

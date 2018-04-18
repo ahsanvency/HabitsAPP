@@ -21,7 +21,7 @@
         <!--Edit InfoVC-->
         <scene sceneID="KIx-XD-3kF">
             <objects>
-                <viewController storyboardIdentifier="editInfoViewController" id="pcA-V3-d2C" customClass="editInfoVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editInfoVCID" id="pcA-V3-d2C" customClass="editInfoVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zqn-pi-Roh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                                     <!--2018-04-13 02:41:12 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilA-rN-uJy" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilA-rN-uJy" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="607" width="315" height="40"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -149,6 +149,7 @@
                             <constraint firstItem="exI-GY-tO7" firstAttribute="top" secondItem="zqn-pi-Roh" secondAttribute="top" id="FHM-fm-JXU"/>
                             <constraint firstItem="Hij-qd-nXk" firstAttribute="centerX" secondItem="zqn-pi-Roh" secondAttribute="centerX" id="N0T-Km-qKR"/>
                             <constraint firstItem="l6t-M2-dW9" firstAttribute="trailing" secondItem="ged-nM-CEQ" secondAttribute="trailing" id="OMq-Dm-urB"/>
+                            <constraint firstItem="D3F-0v-RdV" firstAttribute="bottom" secondItem="ilA-rN-uJy" secondAttribute="bottom" constant="20" id="PWE-L4-VcL"/>
                             <constraint firstItem="exI-GY-tO7" firstAttribute="leading" secondItem="D3F-0v-RdV" secondAttribute="leading" id="QI4-8V-CeM"/>
                             <constraint firstItem="D3F-0v-RdV" firstAttribute="trailing" secondItem="exI-GY-tO7" secondAttribute="trailing" id="Uvz-4K-LOk"/>
                             <constraint firstItem="WC8-Y7-rbx" firstAttribute="trailing" secondItem="ged-nM-CEQ" secondAttribute="trailing" id="WoC-hK-BAk"/>
@@ -162,7 +163,6 @@
                             <constraint firstItem="MlX-ZB-o6V" firstAttribute="centerX" secondItem="zqn-pi-Roh" secondAttribute="centerX" id="hRI-jz-ast"/>
                             <constraint firstItem="sQU-Qe-8Wl" firstAttribute="centerX" secondItem="zqn-pi-Roh" secondAttribute="centerX" id="iLk-KN-rAT"/>
                             <constraint firstItem="PlA-UZ-fIe" firstAttribute="top" secondItem="sQU-Qe-8Wl" secondAttribute="bottom" constant="5" id="mwd-f7-9fY"/>
-                            <constraint firstItem="D3F-0v-RdV" firstAttribute="bottom" secondItem="ilA-rN-uJy" secondAttribute="bottom" constant="20" id="pRF-Lc-ZCY"/>
                             <constraint firstItem="PlA-UZ-fIe" firstAttribute="trailing" secondItem="ged-nM-CEQ" secondAttribute="trailing" id="puM-rx-QQk"/>
                             <constraint firstItem="sQU-Qe-8Wl" firstAttribute="top" secondItem="ged-nM-CEQ" secondAttribute="bottom" constant="25" id="qsy-JY-cmo"/>
                             <constraint firstItem="Hij-qd-nXk" firstAttribute="top" secondItem="PlA-UZ-fIe" secondAttribute="bottom" constant="35" id="sRh-mo-73I"/>
@@ -181,12 +181,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R9e-TB-rid" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171" y="-2049"/>
+            <point key="canvasLocation" x="-418" y="-2037"/>
         </scene>
         <!--Edit RewardsVC-->
         <scene sceneID="V2H-eB-f7L">
             <objects>
-                <viewController storyboardIdentifier="editRewardsViewController" id="as1-9J-SGF" customClass="editRewardsVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editRewardsVCID" id="as1-9J-SGF" customClass="editRewardsVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nlN-wH-02x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,8 +267,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-0d-R6e" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="607" width="315" height="40"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag6-0d-R6e" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="30" y="602" width="315" height="40"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="dKo-v9-KVJ"/>
@@ -320,9 +320,9 @@
                             <constraint firstItem="0d2-iq-iew" firstAttribute="trailing" secondItem="1H7-9m-GFn" secondAttribute="trailing" id="Ckh-Sq-PNh"/>
                             <constraint firstItem="1H7-9m-GFn" firstAttribute="top" secondItem="nlN-wH-02x" secondAttribute="top" id="HZZ-Y7-AI7"/>
                             <constraint firstItem="3jO-7u-lL8" firstAttribute="leading" secondItem="RwS-Ui-2Dx" secondAttribute="leading" id="IdU-xU-dnC"/>
-                            <constraint firstItem="0d2-iq-iew" firstAttribute="bottom" secondItem="ag6-0d-R6e" secondAttribute="bottom" constant="20" id="Pyn-QX-csS"/>
                             <constraint firstItem="psx-xz-U8B" firstAttribute="leading" secondItem="3jO-7u-lL8" secondAttribute="leading" id="SPc-ZU-btJ"/>
                             <constraint firstItem="bsw-p0-iK2" firstAttribute="top" secondItem="nRw-wd-b2f" secondAttribute="bottom" constant="20" id="SXK-R5-uNV"/>
+                            <constraint firstItem="0d2-iq-iew" firstAttribute="bottom" secondItem="ag6-0d-R6e" secondAttribute="bottom" constant="25" id="TlI-4Q-0uW"/>
                             <constraint firstItem="psx-xz-U8B" firstAttribute="trailing" secondItem="3jO-7u-lL8" secondAttribute="trailing" id="WHs-ds-jga"/>
                             <constraint firstItem="BhM-nl-Vgu" firstAttribute="leading" secondItem="psx-xz-U8B" secondAttribute="leading" id="Wxw-9c-sVQ"/>
                             <constraint firstItem="bsw-p0-iK2" firstAttribute="leading" secondItem="nRw-wd-b2f" secondAttribute="leading" id="Yfa-IA-i5x"/>

@@ -39,12 +39,24 @@ class editInfoVC: UIViewController {
         super.viewDidLoad()
         
         let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
-        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
-        glossyBtn?.setTitle("Confirm", for: .normal)
-        glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
-        glossyBtn?.addTarget(self, action:#selector(confirm(_:)), for: .touchUpInside)
+        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)!
+        glossyBtn.setTitle("Confirm", for: .normal)
+        glossyBtn.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
+        glossyBtn.addTarget(self, action:#selector(confirm(_:)), for: .touchUpInside)
         
-        view.addSubview(glossyBtn!)
+        view.addSubview(glossyBtn)
+        
+        glossyBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        glossyBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        glossyBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        NSLayoutConstraint(item: glossyBtn,
+                           attribute: .bottom,
+                           relatedBy: .equal,
+                           toItem: confirmButton,
+                           attribute: .bottom,
+                           multiplier: 1.0,
+                           constant: 0).isActive = true
+
         
         whenPicker.setValue(UIColor.white, forKeyPath: "textColor")
         
@@ -89,12 +101,13 @@ class editInfoVC: UIViewController {
         weekArray = []
         
         for x in segmentedControl.selectedSegmentIndexes{
-            print(x)
+
             weekArray.append(Int(x))
         }
     }
     
     @IBAction func confirm(_ glossyBtn: GlossyButton) {
+        dismiss(animated: true, completion: nil)
         
         let time = whenPicker.date
         let calender = Calendar.current
@@ -148,8 +161,8 @@ class editInfoVC: UIViewController {
             }
         }
         
-        var whyString = whyField.text
-        var whereString = whereField.text
+        let whyString = whyField.text
+        let whereString = whereField.text
         
         if weekArray.count != 0 && whyString != "" && whereString != ""{
             //database instance
@@ -170,8 +183,8 @@ class editInfoVC: UIViewController {
                     return }
                 let whenString = daysOfWeekStr + timeStr
                 ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["When":whenString])
-                ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Why":whyString])
-                ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Where":whereString])
+                ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Why":whyString!])
+                ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Where":self.whereField.text!])
                 ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["freq":self.weekArray])
                 // ...
             }) { (error) in

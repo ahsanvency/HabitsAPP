@@ -39,7 +39,6 @@ class whenSlide: UIView {
     @IBAction func segmentSelected(_ sender: Any) {
         weekArray = []
         for x in segmentedControl.selectedSegmentIndexes{
-            print(x)
             weekArray.append(Int(x))
         }
     }
@@ -61,7 +60,6 @@ class whenSlide: UIView {
         
         timeDict["hour"] = hour
         timeDict["minute"] = minute
-        print("minute",minute)
         var daysOfWeekList = ["sa","su","m","t","w","th","f"]
         for x in weekArray{
             daysOfWeekStr += daysOfWeekList[x] + " "

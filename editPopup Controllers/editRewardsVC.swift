@@ -72,6 +72,9 @@ class editRewardsVC: UIViewController {
     }
     
     @IBAction func confirm(_ glossyBtn: GlossyButton) {
+        
+        dismiss(animated: true, completion: nil)
+        
         if basicReward1.text != "" && basicReward2.text != "" && intReward1.text != "" && intReward2.text != "" && advReward.text != ""{
             
             var ref: DatabaseReference!

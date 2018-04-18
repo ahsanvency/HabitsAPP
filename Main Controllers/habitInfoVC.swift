@@ -171,7 +171,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
             return false
         }
         else {
-            print("GOOD")
+
         }
         return true
     }

@@ -18,14 +18,14 @@ class rewardsVC: UIViewController {
     var spinMedium = 0.075;
     var spinSlow = 0.1;
     var isSpinning = false
-    var stoppedLeft: Int?
     
-    var firstTimeLoaded: Int?
     
     struct slotComp{
         var image: UIImage!
         var reward: String!
     }
+    
+    var glossyBtn = GlossyButton()
     
     var items = [slotComp]()
     
@@ -45,8 +45,6 @@ class rewardsVC: UIViewController {
     var intermediateGap: Int?
     var intermediateGap1: Int?
     var advancedGap: Int?
-    
-    @IBOutlet weak var screenTitle: UILabel!
     
     
     //Number of times to spin each column
@@ -95,16 +93,12 @@ class rewardsVC: UIViewController {
     @IBOutlet weak var right3Bottom: UIImageView!
     
     
-    let oneTopBlue = slotComp(image: UIImage(named: "topBlue7"), reward: "Basic")
-    let oneBottomBlue = slotComp(image: UIImage(named: "bottomBlue7"), reward: "Basic")
-    let oneTopGreen = slotComp(image: UIImage(named: "topGreen7"), reward: "Basic")
-    let oneBottomGreen = slotComp(image: UIImage(named: "bottomGreen7"), reward: "Basic")
-    let oneTopRed = slotComp(image: UIImage(named: "topRed7"), reward: "Basic")
-    let oneBottomRed = slotComp(image: UIImage(named: "bottomRed7"), reward: "Basic")
-    let twoTop = slotComp(image: UIImage(named: "twoTop"), reward: "Intermediate")
-    let twoBottom = slotComp(image: UIImage(named: "twoBottom"), reward: "Intermediate")
-    let threeTop = slotComp(image: UIImage(named: "threeTop"), reward: "Advanced")
-    let threeBottom = slotComp(image: UIImage(named: "threeBottom"), reward: "Advanced")
+    let basicTop = slotComp(image: UIImage(named: "basicTop"), reward: "Basic")
+    let basicBottom = slotComp(image: UIImage(named: "basicBottom"), reward: "Basic")
+    let intTop = slotComp(image: UIImage(named: "intTop"), reward: "Intermediate")
+    let intBottom = slotComp(image: UIImage(named: "intBottom"), reward: "Intermediate")
+    let advTop = slotComp(image: UIImage(named: "advTop"), reward: "Advanced")
+    let advBottom = slotComp(image: UIImage(named: "advBottom"), reward: "Advanced")
 //    let whiteTop = slotComp(image: nil, reward: "nil")
 //    let whiteBottom = slotComp(image: nil, reward: "nil")
     
@@ -112,9 +106,6 @@ class rewardsVC: UIViewController {
         super.viewDidLoad()
         
         setupScreen()
-        
-        let myGradient = UIImage(named: "textRewardsScreen.png")
-        screenTitle.textColor = UIColor(patternImage: myGradient ?? UIImage())
         
         basicGap = 5
         basicGap1 = 10
@@ -160,8 +151,8 @@ class rewardsVC: UIViewController {
             
             if let prevSpunDay = rewardsDict!["SpunDay"] as? Int{
                 
-                if prevSpunDay == day {
-//                if day - 1 == day{
+//                if prevSpunDay == day {
+                if day - 1 == day{
                     //alert
                     let spinAlert = UIAlertController(title: "Alert", message: "Can only play once a day", preferredStyle: UIAlertControllerStyle.alert)
                     let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in})
@@ -201,17 +192,11 @@ class rewardsVC: UIViewController {
         
         //Generates the number of times for each column to spin
         numberOfTimesSpinLeft = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopLeft + selectedItemLeft
-//        if numberOfTimesSpinLeft%2 == 1{
-//            numberOfTimesSpinLeft = numberOfTimesSpinLeft + 1
-//        }
+        
         numberOfTimesSpinMiddle = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopMiddle + selectedItemMiddle
-//        if numberOfTimesSpinMiddle%2 == 1{
-//            numberOfTimesSpinMiddle = numberOfTimesSpinMiddle + 1
-//        }
+
         numberOfTimesSpinRight = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopRight + selectedItemRight
-//        if numberOfTimesSpinRight%2 == 1{
-//            numberOfTimesSpinRight = numberOfTimesSpinRight + 1
-//        }
+
         
         leftCurrentSpinCount = 0;
         middleCurrentSpinCount = 0;
@@ -454,10 +439,12 @@ class rewardsVC: UIViewController {
     
     @objc func getReadyForNextSpin(){
         isSpinning = false
-        spinBtnLbl.text = "SPIN"
+        glossyBtn.setTitle("SPIN", for: .normal)
+//        spinBtnLbl.text = "SPIN"
         //spinBtn.setTitle("SPIN", for: UIControlState.normal)
         spinBtn.isEnabled = true
-        spinBtn.backgroundColor = blueColor
+        glossyBtn.backgroundColor = blueColor
+//        spinBtn.backgroundColor = blueColor
         timerGetReadyForNextSpin.invalidate()
     }
     
@@ -599,9 +586,11 @@ class rewardsVC: UIViewController {
     }
     
     func winner(){
-        spinBtnLbl.text = "WINNER"
+        glossyBtn.setTitle("WINNER", for: .normal)
+//        spinBtnLbl.text = "WINNER"
         //spinBtn.setTitle("WINNER", for: UIControlState.normal)
-        spinBtn.backgroundColor = UIColor.green
+        glossyBtn.backgroundColor = UIColor.green
+//        spinBtn.backgroundColor = UIColor.green
         startBlinking()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
             self.timerGetReadyForNextSpin = Timer.scheduledTimer(timeInterval: 3.0, target:self, selector: #selector(self.getReadyForNextSpin), userInfo: nil, repeats: false)
@@ -629,7 +618,7 @@ class rewardsVC: UIViewController {
         
         
         let layerTop: CALayer = CALayer()
-        layerTop.backgroundColor = seaFoamColor.cgColor //Background color of the view added
+        layerTop.backgroundColor = UIColor.clear.cgColor //Background color of the view added
         layerTop.position = CGPoint(x: slotsView.bounds.width / 2, y:  slotsView.bounds.height - 320) //position of the added view
         layerTop.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2) //creates a rectange for the added view
         layerTop.shadowColor = UIColor.black.cgColor //shadow color
@@ -640,7 +629,7 @@ class rewardsVC: UIViewController {
         //Lower radius means a darker shadow
         
         let layerBottom: CALayer = CALayer()
-        layerBottom.backgroundColor = seaFoamColor.cgColor
+        layerBottom.backgroundColor = UIColor.clear.cgColor
         layerBottom.position = CGPoint(x: slotsView.bounds.width / 2, y: slotsView.bounds.height)
         layerBottom.bounds = CGRect(x: 0, y: 0, width: slotsView.bounds.width, height: 2)
         layerBottom.shadowColor = UIColor.black.cgColor
@@ -652,7 +641,7 @@ class rewardsVC: UIViewController {
         slotsView.layer.addSublayer(layerTop)
         slotsView.layer.addSublayer(layerBottom)
         
-        items = [oneTopBlue, oneBottomBlue, oneTopRed, oneBottomRed, twoTop, twoBottom, oneTopGreen, oneBottomGreen, threeTop, threeBottom, oneTopBlue, oneBottomBlue, twoTop, twoBottom, oneTopRed, oneBottomRed, oneTopGreen, oneBottomGreen, twoTop, twoBottom, oneTopBlue, oneBottomBlue, threeTop, threeBottom, oneTopRed, oneBottomRed, twoTop, twoBottom, oneTopGreen, oneBottomGreen, twoTop, twoBottom, oneTopGreen, oneBottomGreen]
+        items = [basicTop, basicBottom, basicTop, basicBottom, intTop, intBottom, basicTop, basicBottom, advTop, advBottom, basicTop, basicBottom, intTop, intBottom, basicTop, basicBottom, basicTop, basicBottom, intTop, intBottom, basicTop, basicBottom, advTop, advBottom, basicTop, basicBottom, intTop, intBottom, basicTop, basicBottom, intTop, intBottom, basicTop, basicBottom]
         
         isSpinning = false
         selectedItemLeft = Int(arc4random_uniform(UInt32(34)))
@@ -671,7 +660,11 @@ class rewardsVC: UIViewController {
     }
     
     func runSpin(){
-        spinBtnLbl.text = "GOOD LUCK"
+        
+        
+        
+        glossyBtn.setTitle("GOOD LUCK", for: .normal)
+//        spinBtnLbl.text = "GOOD LUCK"
         //spinBtn.setTitle("Good Luck", for: UIControlState.normal)
         isSpinning = true
         spinBtn.isEnabled = false
@@ -682,10 +675,13 @@ class rewardsVC: UIViewController {
     }
     
     func setupScreen(){
-        spinBtn.backgroundColor = blueColor
-        spinBtn.layer.borderWidth = 2.0
-        spinBtn.layer.borderColor = satinColor.cgColor
-        spinBtn.layer.cornerRadius = 5.0 
+        let rect = CGRect(x: spinBtn.frame.origin.x, y: spinBtn.frame.origin.y, width: spinBtn.frame.width, height: spinBtn.frame.height)
+        glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
+        glossyBtn.setTitle("SPIN", for: .normal)
+        glossyBtn.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 36)
+        glossyBtn.addTarget(self, action:#selector(spinButton(_:)), for: .touchUpInside)
+        view.addSubview(glossyBtn)
+        
     }
 }
 

@@ -41,7 +41,7 @@
 		3A9FD25E206F2E9A00AC0FCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9FD25D206F2E9A00AC0FCF /* QuartzCore.framework */; };
 		3AA004BC20857CB700156725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA004BB20857CB700156725 /* ViewController.swift */; };
 		3AA004DD2085A65C00156725 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA004DB2085A65C00156725 /* SWRevealViewController.m */; };
-		3AA1272B207D11F300CFAAFA /* other.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA1272A207D11F300CFAAFA /* other.storyboard */; };
+		3AA1272B207D11F300CFAAFA /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA1272A207D11F300CFAAFA /* Menu.storyboard */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
 		3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */; };
 		3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B31FFB08CE0035A16E /* LaunchScreen.storyboard */; };
@@ -120,7 +120,7 @@
 		3AA004BB20857CB700156725 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3AA004DB2085A65C00156725 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		3AA004DC2085A65C00156725 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		3AA1272A207D11F300CFAAFA /* other.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = other.storyboard; sourceTree = "<group>"; };
+		3AA1272A207D11F300CFAAFA /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 				3AD55F5E201493E5001B9A23 /* editPopups.storyboard */,
 				3A568764204CDC9700E8F6F7 /* Old VC's */,
 				3A1290692048D57E00006CD0 /* Old.storyboard */,
-				3AA1272A207D11F300CFAAFA /* other.storyboard */,
+				3AA1272A207D11F300CFAAFA /* Menu.storyboard */,
 				3AA5A3A91FFB08CE0035A16E /* Habits */,
 				3AA5A3A81FFB08CE0035A16E /* Products */,
 				F1076C6AC597B117E57D2D98 /* Frameworks */,
@@ -447,7 +447,7 @@
 				3A938216206DF605009BA411 /* intRewardsSlide.xib in Resources */,
 				3A918EDF203993B000490104 /* Main.storyboard in Resources */,
 				3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */,
-				3AA1272B207D11F300CFAAFA /* other.storyboard in Resources */,
+				3AA1272B207D11F300CFAAFA /* Menu.storyboard in Resources */,
 				3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */,
 				3A93821C206DF6AE009BA411 /* advRewardsSlide.xib in Resources */,
 			);
