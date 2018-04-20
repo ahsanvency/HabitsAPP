@@ -607,7 +607,7 @@ class rewardsVC: UIViewController {
     }
     
     @IBAction func backButton(_ sender: Any) {
-        view.window?.layer.add(rightTransition(duration: 0.5), forKey: nil)
+        view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
        dismiss(animated: false, completion: nil)
     }
     

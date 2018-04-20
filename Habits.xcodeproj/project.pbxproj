@@ -17,8 +17,8 @@
 		3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */; };
 		3A5F7CE5206F6040000F3A8D /* habitCarouselSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */; };
 		3A729663206E3444002D1C9E /* newUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A729662206E3444002D1C9E /* newUserVC.swift */; };
-		3A7CC1622072149D0003F071 /* normalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CC1612072149D0003F071 /* normalLabel.swift */; };
-		3A7CC16420722E270003F071 /* lineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CC16320722E260003F071 /* lineView.swift */; };
+		3A7CC16420722E270003F071 /* slotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CC16320722E260003F071 /* slotsView.swift */; };
+		3A85BFF0208A7D57006E8BA5 /* circularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85BFEF208A7D57006E8BA5 /* circularImage.swift */; };
 		3A8D8451206ECF7200A3E28A /* confirmSlide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D8450206ECF7200A3E28A /* confirmSlide.xib */; };
 		3A8D8453206ED07600A3E28A /* confirmSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D8452206ED07600A3E28A /* confirmSlide.swift */; };
 		3A918EDF203993B000490104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A918EDE203993B000490104 /* Main.storyboard */; };
@@ -40,7 +40,6 @@
 		3A9FD25C206F2E5500AC0FCF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9FD25A206F2E5500AC0FCF /* iCarousel.m */; };
 		3A9FD25E206F2E9A00AC0FCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9FD25D206F2E9A00AC0FCF /* QuartzCore.framework */; };
 		3AA004BC20857CB700156725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA004BB20857CB700156725 /* ViewController.swift */; };
-		3AA004DD2085A65C00156725 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA004DB2085A65C00156725 /* SWRevealViewController.m */; };
 		3AA1272B207D11F300CFAAFA /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA1272A207D11F300CFAAFA /* Menu.storyboard */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
 		3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */; };
@@ -93,8 +92,8 @@
 		3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitCarouselSelector.swift; sourceTree = "<group>"; };
 		3A729662206E3444002D1C9E /* newUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newUserVC.swift; sourceTree = "<group>"; };
-		3A7CC1612072149D0003F071 /* normalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = normalLabel.swift; sourceTree = "<group>"; };
-		3A7CC16320722E260003F071 /* lineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lineView.swift; sourceTree = "<group>"; };
+		3A7CC16320722E260003F071 /* slotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slotsView.swift; sourceTree = "<group>"; };
+		3A85BFEF208A7D57006E8BA5 /* circularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circularImage.swift; sourceTree = "<group>"; };
 		3A8D8450206ECF7200A3E28A /* confirmSlide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = confirmSlide.xib; sourceTree = "<group>"; };
 		3A8D8452206ED07600A3E28A /* confirmSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmSlide.swift; sourceTree = "<group>"; };
 		3A918EDE203993B000490104 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -118,8 +117,6 @@
 		3A9FD25B206F2E5500AC0FCF /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		3A9FD25D206F2E9A00AC0FCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3AA004BB20857CB700156725 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3AA004DB2085A65C00156725 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		3AA004DC2085A65C00156725 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		3AA1272A207D11F300CFAAFA /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,9 +199,9 @@
 				3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */,
 				3A1290672048D44400006CD0 /* roundedButton.swift */,
 				3AF646CE2015663A002F86B8 /* fancyField.swift */,
-				3A7CC1612072149D0003F071 /* normalLabel.swift */,
-				3A7CC16320722E260003F071 /* lineView.swift */,
+				3A7CC16320722E260003F071 /* slotsView.swift */,
 				3AAF93FC207F0EDC00A9DB9E /* textFieldView.swift */,
+				3A85BFEF208A7D57006E8BA5 /* circularImage.swift */,
 			);
 			path = "Other Views";
 			sourceTree = "<group>";
@@ -236,8 +233,6 @@
 				3A9FD259206F2E5400AC0FCF /* Habits-Bridging-Header.h */,
 				3A9FD25B206F2E5500AC0FCF /* iCarousel.h */,
 				3A9FD25A206F2E5500AC0FCF /* iCarousel.m */,
-				3AA004DC2085A65C00156725 /* SWRevealViewController.h */,
-				3AA004DB2085A65C00156725 /* SWRevealViewController.m */,
 				3AA70D4D2086900E001BDCD6 /* GlossyButton.h */,
 				3AA70D4E2086900E001BDCD6 /* GlossyButton.m */,
 			);
@@ -470,7 +465,6 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/InteractiveSideMenu/InteractiveSideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/KDCircularProgress/KDCircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/MultiSelectSegmentedControl/MultiSelectSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -490,7 +484,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InteractiveSideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KDCircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MultiSelectSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -546,15 +539,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A7CC16420722E270003F071 /* lineView.swift in Sources */,
+				3A7CC16420722E270003F071 /* slotsView.swift in Sources */,
 				3AF47FD62007F50B00F00F42 /* User.swift in Sources */,
 				3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */,
+				3A85BFF0208A7D57006E8BA5 /* circularImage.swift in Sources */,
 				3A1290682048D44400006CD0 /* roundedButton.swift in Sources */,
 				3A4D223D20814E9300A0FD74 /* MainVC.swift in Sources */,
 				3A9381DD206D63ED009BA411 /* habitModel.swift in Sources */,
 				3AE08F162081195B0089FD02 /* editRewardsVC.swift in Sources */,
 				3AAF93FD207F0EDC00A9DB9E /* textFieldView.swift in Sources */,
-				3AA004DD2085A65C00156725 /* SWRevealViewController.m in Sources */,
 				3A8D8453206ED07600A3E28A /* confirmSlide.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
 				3A93820A206DED96009BA411 /* whereSlide.swift in Sources */,
@@ -575,7 +568,6 @@
 				3A5F7CE5206F6040000F3A8D /* habitCarouselSelector.swift in Sources */,
 				3A282C6C207E8362002CAFF0 /* onboardingVC.swift in Sources */,
 				3AEFD88F206C15C50076E8BE /* loginVC.swift in Sources */,
-				3A7CC1622072149D0003F071 /* normalLabel.swift in Sources */,
 				3AA70D4F2086900E001BDCD6 /* GlossyButton.m in Sources */,
 				3ACBEB06208051A40027B159 /* editInfoVC.swift in Sources */,
 				3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */,

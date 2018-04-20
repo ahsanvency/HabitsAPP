@@ -159,7 +159,7 @@ class MainVC: CustomTransitionViewController {
                 let whyText = firstDict["Why"] as! String
                 let whereText = firstDict["Where"] as! String
                 
-                self.habitNameLabel.text = firstDict["name"] as! String
+                self.habitNameLabel.text = (firstDict["name"] as! String)
                 self.habitPic.image = UIImage(named: firstDict["name"] as! String)
                 self.whyAtWherelabel.text = "\(whyText) at \(whereText)"
                 self.progressView.angle = Double(360 * Float(rewardsDict!["Success"] as! Double/30))
@@ -226,7 +226,7 @@ class MainVC: CustomTransitionViewController {
                         var higherDays = [Int]()
                         
                         for x in workDaysArray{
-                            var value = x as! Int
+                            let value = x as! Int
                             if value < cDay {
                                 lowerDays.append(value)
                             } else if value > cDay {
@@ -257,7 +257,7 @@ class MainVC: CustomTransitionViewController {
                     //Check 1
                     for x in workDaysArray{
                         
-                        var check = x as! Int
+                        let check = x as! Int
                         
                         if  check == cDay{
                             
@@ -418,7 +418,7 @@ class MainVC: CustomTransitionViewController {
             content.title = "Reminder"
             //        content.subtitle = "They are up now"
             
-            guard let user = Auth.auth().currentUser else {
+            guard Auth.auth().currentUser != nil else {
                 return
             }
             

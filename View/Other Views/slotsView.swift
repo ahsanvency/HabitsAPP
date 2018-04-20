@@ -8,10 +8,11 @@
 
 import UIKit
 
-class lineView: UIView {
+class slotsView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .clear
+        layer.cornerRadius = 8.0
+        
     }
 }
