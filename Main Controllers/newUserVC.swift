@@ -67,7 +67,7 @@ class newUserVC: UIViewController {
                             //If there are no errors it will register the user
                             if error == nil {
                                 if let user = user {
-                                    let userData = [ "name": self.nameField.text!, "email" : self.emailField.text!]
+                                    let userData = [ "name": self.nameField.text!, "email" : self.emailField.text!, "profileImage": "https://firebasestorage.googleapis.com/v0/b/habitsapp-7ea48.appspot.com/o/myImage.png?alt=media&token=867310eb-eb88-40e1-932d-236ea372061c"]
                                     self.completeSignIn(id: user.uid, userData: userData as Dictionary<String, AnyObject>);
                                     button.stopAnimation(animationStyle: .expand, completion: {
                                         self.performSegue(withIdentifier: "toAdd", sender: nil)

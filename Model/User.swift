@@ -12,32 +12,30 @@ import UIKit
 
 
 class User{
-    private var _userName: String!
-    private var _habits: Array<Any>!
+    
+    private var _name: String!
+    private var _profileImageUrl: String!
 
-    init(userName: String, habits: Array<Any> = []){
-        _userName = userName;
-        _habits = habits;
+    init(name: String, profileImageUrl: String){
+        _name = name;
+        _profileImageUrl = profileImageUrl
     }
     
     var name: String{
         get{
-            return _userName;
+            return _name;
         }
         set{
-            _userName = newValue;
+            _name = newValue;
         }
     }
     
-    var habits: Array<Any>{
+    var proileImageUrl: String{
         get{
-            return _habits
-        }
-        set{
-            _habits = newValue
+            return _profileImageUrl
+        }set{
+            _profileImageUrl = newValue;
         }
     }
-    
-
     
 }

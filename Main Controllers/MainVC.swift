@@ -25,25 +25,18 @@ class MainVC: CustomTransitionViewController {
     @IBOutlet weak var habitPic: UIImageView!
     @IBOutlet weak var whyAtWherelabel: UILabel!
     @IBOutlet weak var whenLabel: UILabel!
-    
     @IBOutlet weak var progressView: KDCircularProgress!
     @IBOutlet weak var successfulDays: UILabel!
     
     
-    //Menu Outlets
-    @IBOutlet weak var menuView: UIView!
-    @IBOutlet weak var menuLeadingConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var backgroundLeadingConstraint: NSLayoutConstraint!
-    
-    //Variables for the menu
-    var isMenuHidden = true
     
     
     //Variables for random popups
     var intrinsicQuestions = [String]()
     var randomPopupNumber = 7
     var habitName: String?
+
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,14 +51,12 @@ class MainVC: CustomTransitionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        progressView.angle = 180
         
         
         showLoadingScreen()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
         }
         
-        backgroundLeadingConstraint.constant = 0
         
         guard let uid = Auth.auth().currentUser?.uid else {
             print("User not found")
@@ -86,44 +77,6 @@ class MainVC: CustomTransitionViewController {
         })
     }
     
-//    @IBAction func menuMainButton(_ sender: Any) {
-//        if isMenuHidden{
-//            UIView.animate(withDuration: 0.5) {
-//                self.menuLeadingConstraint.constant = -250
-//                self.view.frame.origin.x = 250
-//                self.view.layoutIfNeeded()
-//            }
-//        }else{
-//            UIView.animate(withDuration: 0.5) {
-//                self.menuLeadingConstraint.constant = -250
-//                self.view.frame.origin.x = 0
-//                self.view.layoutIfNeeded()
-//            }
-//            
-//        }
-//        isMenuHidden = !isMenuHidden
-//    }
-//    
-//    @IBAction func menuMenuButton(_ sender: Any) {
-//        if isMenuHidden{
-//            UIView.animate(withDuration: 0.5) {
-//                self.menuLeadingConstraint.constant = -250
-//                self.view.frame.origin.x = 250
-//                self.view.layoutIfNeeded()
-//            }
-//        }else{
-//            UIView.animate(withDuration: 0.5) {
-//                self.menuLeadingConstraint.constant = -250
-//                self.view.frame.origin.x = 0
-//                self.view.layoutIfNeeded()
-//            }
-//            
-//        }
-//        isMenuHidden = !isMenuHidden
-//    }
-    
-    
-    
     func showLoadingScreen(){
         loadingView.bounds.size.width = view.bounds.width
         loadingView.bounds.size.height = view.bounds.height
@@ -140,7 +93,6 @@ class MainVC: CustomTransitionViewController {
     
     
     func updateHabit(){
-//        DispatchQueue.main.asyncAfter(deadline: .now(), execute: {
         
             guard let uid = Auth.auth().currentUser?.uid else {
                 return

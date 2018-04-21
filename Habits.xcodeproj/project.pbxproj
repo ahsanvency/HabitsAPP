@@ -39,13 +39,15 @@
 		3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A95581FFF8A5C00502707 /* Habit.swift */; };
 		3A9FD25C206F2E5500AC0FCF /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9FD25A206F2E5500AC0FCF /* iCarousel.m */; };
 		3A9FD25E206F2E9A00AC0FCF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9FD25D206F2E9A00AC0FCF /* QuartzCore.framework */; };
-		3AA004BC20857CB700156725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA004BB20857CB700156725 /* ViewController.swift */; };
+		3AA004BC20857CB700156725 /* menuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA004BB20857CB700156725 /* menuVC.swift */; };
 		3AA1272B207D11F300CFAAFA /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA1272A207D11F300CFAAFA /* Menu.storyboard */; };
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
 		3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */; };
 		3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B31FFB08CE0035A16E /* LaunchScreen.storyboard */; };
 		3AA70D4F2086900E001BDCD6 /* GlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA70D4E2086900E001BDCD6 /* GlossyButton.m */; };
 		3AAF93FD207F0EDC00A9DB9E /* textFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF93FC207F0EDC00A9DB9E /* textFieldView.swift */; };
+		3AB0523B208A9A7600730DBE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0523A208A9A7600730DBE /* SettingsVC.swift */; };
+		3AB0523D208AA27E00730DBE /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0523C208AA27E00730DBE /* imagePicker.swift */; };
 		3ACBEB06208051A40027B159 /* editInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACBEB05208051A40027B159 /* editInfoVC.swift */; };
 		3AD55F5F201493E5001B9A23 /* editPopups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD55F5E201493E5001B9A23 /* editPopups.storyboard */; };
 		3AD567F9206C7A6300DC0DFC /* backgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */; };
@@ -116,7 +118,7 @@
 		3A9FD25A206F2E5500AC0FCF /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		3A9FD25B206F2E5500AC0FCF /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		3A9FD25D206F2E9A00AC0FCF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		3AA004BB20857CB700156725 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3AA004BB20857CB700156725 /* menuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuVC.swift; sourceTree = "<group>"; };
 		3AA1272A207D11F300CFAAFA /* Menu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		3AA5A3A71FFB08CE0035A16E /* Habits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Habits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,8 @@
 		3AA70D4D2086900E001BDCD6 /* GlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlossyButton.h; sourceTree = "<group>"; };
 		3AA70D4E2086900E001BDCD6 /* GlossyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlossyButton.m; sourceTree = "<group>"; };
 		3AAF93FC207F0EDC00A9DB9E /* textFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldView.swift; sourceTree = "<group>"; };
+		3AB0523A208A9A7600730DBE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		3AB0523C208AA27E00730DBE /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
 		3ACBEB05208051A40027B159 /* editInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editInfoVC.swift; sourceTree = "<group>"; };
 		3AD55F5E201493E5001B9A23 /* editPopups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = editPopups.storyboard; sourceTree = "<group>"; };
 		3AD567F8206C7A6300DC0DFC /* backgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundGradient.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 			children = (
 				3ACBEB05208051A40027B159 /* editInfoVC.swift */,
 				3AE08F152081195B0089FD02 /* editRewardsVC.swift */,
+				3AB0523A208A9A7600730DBE /* SettingsVC.swift */,
 			);
 			path = "editPopup Controllers";
 			sourceTree = "<group>";
@@ -294,7 +299,8 @@
 				3AFBF06E206CB2AA00F8396A /* pickHabitVC.swift */,
 				3A9381DF206D84D2009BA411 /* habitInfoVC.swift */,
 				3AEFBE922023EB2D00E03455 /* rewardsVC.swift */,
-				3AA004BB20857CB700156725 /* ViewController.swift */,
+				3AA004BB20857CB700156725 /* menuVC.swift */,
+				3AB0523C208AA27E00730DBE /* imagePicker.swift */,
 			);
 			path = "Main Controllers";
 			sourceTree = "<group>";
@@ -551,11 +557,13 @@
 				3A8D8453206ED07600A3E28A /* confirmSlide.swift in Sources */,
 				3A13731220052FEB000BDD6F /* DataService.swift in Sources */,
 				3A93820A206DED96009BA411 /* whereSlide.swift in Sources */,
+				3AB0523D208AA27E00730DBE /* imagePicker.swift in Sources */,
 				3A938208206DB08E009BA411 /* whySlide.swift in Sources */,
 				3AFBF06F206CB2AA00F8396A /* pickHabitVC.swift in Sources */,
 				3A938210206DF0C0009BA411 /* whenSlide.swift in Sources */,
-				3AA004BC20857CB700156725 /* ViewController.swift in Sources */,
+				3AA004BC20857CB700156725 /* menuVC.swift in Sources */,
 				3A282C6A207E8163002CAFF0 /* OnboardingView.swift in Sources */,
+				3AB0523B208A9A7600730DBE /* SettingsVC.swift in Sources */,
 				3A9381E0206D84D2009BA411 /* habitInfoVC.swift in Sources */,
 				3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */,
 				3A9FD25C206F2E5500AC0FCF /* iCarousel.m in Sources */,

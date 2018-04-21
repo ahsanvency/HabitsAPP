@@ -64,7 +64,6 @@ class rewardsVC: UIViewController {
     
     //Other Outlets
     @IBOutlet weak var spinBtn: UIButton!
-    @IBOutlet weak var spinBtnLbl: normalLabel!
     @IBOutlet weak var slotsView: UIView!
     
     

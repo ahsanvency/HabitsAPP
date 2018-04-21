@@ -661,13 +661,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-l3-657" userLabel="Email View" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="367" width="315" height="45"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrF-3c-Ehf" userLabel="Email Line View" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="45" width="315" height="2"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1.5" id="Oae-Kh-fA4"/>
-                                        </constraints>
-                                    </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dd-Iu-92E" customClass="DTTextField" customModule="DTTextField">
                                         <rect key="frame" x="40" y="0.0" width="275" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -688,15 +681,12 @@
                                 </subviews>
                                 <color key="tintColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="rrF-3c-Ehf" firstAttribute="width" secondItem="fCx-l3-657" secondAttribute="width" id="0OL-tX-UEd"/>
-                                    <constraint firstItem="rrF-3c-Ehf" firstAttribute="top" secondItem="fCx-l3-657" secondAttribute="bottom" id="2JQ-LA-yVm"/>
                                     <constraint firstAttribute="height" constant="45" id="2rn-2d-vm3"/>
                                     <constraint firstItem="aIL-JL-E3a" firstAttribute="leading" secondItem="fCx-l3-657" secondAttribute="leading" constant="10" id="BNs-XS-QVp"/>
                                     <constraint firstAttribute="bottom" secondItem="2dd-Iu-92E" secondAttribute="bottom" id="HEF-ky-LZ4"/>
                                     <constraint firstItem="2dd-Iu-92E" firstAttribute="top" secondItem="fCx-l3-657" secondAttribute="top" id="OiT-Cf-LIt"/>
                                     <constraint firstAttribute="trailing" secondItem="2dd-Iu-92E" secondAttribute="trailing" id="ThC-tP-SM2"/>
                                     <constraint firstItem="2dd-Iu-92E" firstAttribute="leading" secondItem="aIL-JL-E3a" secondAttribute="trailing" constant="10" id="Y5Z-bb-Pfk"/>
-                                    <constraint firstItem="rrF-3c-Ehf" firstAttribute="centerX" secondItem="fCx-l3-657" secondAttribute="centerX" id="fAs-Cf-Dme"/>
                                     <constraint firstItem="2dd-Iu-92E" firstAttribute="centerY" secondItem="fCx-l3-657" secondAttribute="centerY" id="hto-MD-njG"/>
                                     <constraint firstItem="aIL-JL-E3a" firstAttribute="centerY" secondItem="fCx-l3-657" secondAttribute="centerY" id="nQA-ur-imZ"/>
                                 </constraints>
@@ -704,11 +694,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFp-OJ-AC8" userLabel="Pwd View" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="422" width="315" height="45"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RR1-mG-MVI" userLabel="Password Line View" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44" width="315" height="2"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <viewLayoutGuide key="safeArea" id="Ztw-k8-IIS"/>
-                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordLockBlue" translatesAutoresizingMaskIntoConstraints="NO" id="mPm-KR-vza">
                                         <rect key="frame" x="10" y="12.5" width="20" height="20"/>
                                         <constraints>
@@ -732,9 +717,6 @@
                                     <constraint firstAttribute="bottom" secondItem="ow1-YW-Gnd" secondAttribute="bottom" id="NhH-rz-HfQ"/>
                                     <constraint firstItem="ow1-YW-Gnd" firstAttribute="top" secondItem="kFp-OJ-AC8" secondAttribute="top" id="QxK-BU-ptf"/>
                                     <constraint firstItem="mPm-KR-vza" firstAttribute="centerY" secondItem="kFp-OJ-AC8" secondAttribute="centerY" id="S4E-ev-Shi"/>
-                                    <constraint firstItem="RR1-mG-MVI" firstAttribute="centerX" secondItem="PdV-JU-fPp" secondAttribute="centerX" id="VhS-vK-tRO"/>
-                                    <constraint firstItem="RR1-mG-MVI" firstAttribute="width" secondItem="kFp-OJ-AC8" secondAttribute="width" id="m3g-tu-e1z"/>
-                                    <constraint firstItem="PdV-JU-fPp" firstAttribute="bottom" secondItem="RR1-mG-MVI" secondAttribute="bottom" constant="-1" id="wG5-zh-9vm"/>
                                     <constraint firstAttribute="trailing" secondItem="ow1-YW-Gnd" secondAttribute="trailing" id="zoE-9u-cRM"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="PdV-JU-fPp"/>
@@ -808,7 +790,6 @@
                             <constraint firstItem="jlU-Ny-Cgp" firstAttribute="top" secondItem="kFp-OJ-AC8" secondAttribute="bottom" constant="20" id="mmH-Oe-lSz"/>
                             <constraint firstItem="fCx-l3-657" firstAttribute="leading" secondItem="Wv7-ej-lhp" secondAttribute="leading" constant="30" id="nbS-sk-baf"/>
                             <constraint firstItem="gO2-vc-wIU" firstAttribute="trailing" secondItem="Wv7-ej-lhp" secondAttribute="trailing" id="qos-fU-RlX"/>
-                            <constraint firstItem="RR1-mG-MVI" firstAttribute="height" secondItem="rrF-3c-Ehf" secondAttribute="height" id="tqj-xg-6Pn"/>
                             <constraint firstItem="42c-Re-bYQ" firstAttribute="top" secondItem="Wv7-ej-lhp" secondAttribute="top" constant="50" id="wir-4Y-Hse"/>
                             <constraint firstItem="kFp-OJ-AC8" firstAttribute="top" secondItem="fCx-l3-657" secondAttribute="bottom" constant="10" id="ypL-bl-Y5C"/>
                             <constraint firstItem="Wv7-ej-lhp" firstAttribute="bottom" secondItem="gkp-Bb-uAV" secondAttribute="bottom" constant="15" id="zBg-mq-aBu"/>
@@ -859,13 +840,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ1-bq-ZFG" userLabel="usernameView" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="317" width="315" height="45"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6K-d2-fsL" userLabel="usernamLineView" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="-0.5" y="43" width="315" height="2"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1.5" id="brD-b8-rXS"/>
-                                        </constraints>
-                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userBlue" translatesAutoresizingMaskIntoConstraints="NO" id="cU8-FB-jOu">
                                         <rect key="frame" x="15" y="12.5" width="20" height="20"/>
                                         <constraints>
@@ -886,11 +860,8 @@
                                 <color key="tintColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="DTI-g2-YDd" firstAttribute="centerY" secondItem="JQ1-bq-ZFG" secondAttribute="centerY" id="8n2-Fr-14A"/>
-                                    <constraint firstItem="b6K-d2-fsL" firstAttribute="width" secondItem="JQ1-bq-ZFG" secondAttribute="width" id="CYO-io-Kxr"/>
                                     <constraint firstItem="DTI-g2-YDd" firstAttribute="leading" secondItem="cU8-FB-jOu" secondAttribute="trailing" constant="10" id="D6I-ux-suC"/>
                                     <constraint firstAttribute="height" constant="45" id="F4a-oD-ByW"/>
-                                    <constraint firstItem="b6K-d2-fsL" firstAttribute="centerX" secondItem="l27-gN-HmF" secondAttribute="centerX" id="HWY-iX-Ypp"/>
-                                    <constraint firstItem="b6K-d2-fsL" firstAttribute="bottom" secondItem="l27-gN-HmF" secondAttribute="bottom" id="KhF-tZ-ALB"/>
                                     <constraint firstItem="DTI-g2-YDd" firstAttribute="top" secondItem="JQ1-bq-ZFG" secondAttribute="top" id="Sx2-WV-4QL"/>
                                     <constraint firstAttribute="bottom" secondItem="DTI-g2-YDd" secondAttribute="bottom" id="WUk-q1-aDt"/>
                                     <constraint firstAttribute="trailing" secondItem="DTI-g2-YDd" secondAttribute="trailing" id="kRk-lB-pNb"/>
@@ -902,11 +873,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vaz-zz-qfc" userLabel="emailView" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="372" width="315" height="45"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5h-f6-spu" userLabel="email LineView" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="43" width="315" height="2"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <viewLayoutGuide key="safeArea" id="jfQ-CV-xzH"/>
-                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mailBlue" translatesAutoresizingMaskIntoConstraints="NO" id="CW4-lD-mjB">
                                         <rect key="frame" x="15" y="12.5" width="20" height="20"/>
                                         <constraints>
@@ -926,13 +892,10 @@
                                 </subviews>
                                 <color key="tintColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="whw-Z2-Vxr" firstAttribute="bottom" secondItem="y5h-f6-spu" secondAttribute="bottom" id="4oz-AT-6gq"/>
                                     <constraint firstAttribute="trailing" secondItem="bNt-WC-pQN" secondAttribute="trailing" id="Gjr-W0-SyE"/>
                                     <constraint firstItem="bNt-WC-pQN" firstAttribute="centerY" secondItem="Vaz-zz-qfc" secondAttribute="centerY" id="Va7-6c-K1I"/>
-                                    <constraint firstItem="y5h-f6-spu" firstAttribute="centerX" secondItem="whw-Z2-Vxr" secondAttribute="centerX" id="XPU-jt-WLu"/>
                                     <constraint firstItem="CW4-lD-mjB" firstAttribute="centerY" secondItem="Vaz-zz-qfc" secondAttribute="centerY" id="dx7-PM-8zU"/>
                                     <constraint firstAttribute="bottom" secondItem="bNt-WC-pQN" secondAttribute="bottom" id="odf-cD-eca"/>
-                                    <constraint firstItem="y5h-f6-spu" firstAttribute="width" secondItem="Vaz-zz-qfc" secondAttribute="width" id="uQH-Dd-ewX"/>
                                     <constraint firstItem="bNt-WC-pQN" firstAttribute="top" secondItem="Vaz-zz-qfc" secondAttribute="top" id="uT1-s4-dai"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="whw-Z2-Vxr"/>
@@ -940,11 +903,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19b-td-tyh" userLabel="pwdView" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="427" width="315" height="45"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ir-RE-HjB" userLabel="pwd LineView" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44" width="315" height="2"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <viewLayoutGuide key="safeArea" id="qrF-7e-j8S"/>
-                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordLockBlue" translatesAutoresizingMaskIntoConstraints="NO" id="qOo-GR-oaK">
                                         <rect key="frame" x="15" y="12.5" width="20" height="20"/>
                                         <constraints>
@@ -964,25 +922,17 @@
                                 </subviews>
                                 <color key="tintColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="9ir-RE-HjB" firstAttribute="width" secondItem="19b-td-tyh" secondAttribute="width" id="ACM-eS-Ehi"/>
                                     <constraint firstItem="iyb-3Q-3q8" firstAttribute="centerY" secondItem="19b-td-tyh" secondAttribute="centerY" id="DVI-JA-nzr"/>
                                     <constraint firstAttribute="trailing" secondItem="iyb-3Q-3q8" secondAttribute="trailing" id="ZG2-gC-9VD"/>
                                     <constraint firstItem="iyb-3Q-3q8" firstAttribute="top" secondItem="19b-td-tyh" secondAttribute="top" id="a2o-da-L8U"/>
                                     <constraint firstItem="qOo-GR-oaK" firstAttribute="centerY" secondItem="19b-td-tyh" secondAttribute="centerY" id="mrO-LB-HkB"/>
                                     <constraint firstAttribute="bottom" secondItem="iyb-3Q-3q8" secondAttribute="bottom" id="r6f-ae-twg"/>
-                                    <constraint firstItem="QFK-SR-6Xn" firstAttribute="bottom" secondItem="9ir-RE-HjB" secondAttribute="bottom" constant="-1" id="rCD-dJ-Ij3"/>
-                                    <constraint firstItem="9ir-RE-HjB" firstAttribute="centerX" secondItem="QFK-SR-6Xn" secondAttribute="centerX" id="tIC-al-i9b"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="QFK-SR-6Xn"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlG-f5-Y7j" userLabel="confirmPwdView" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="30" y="482" width="315" height="45"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVT-zV-D0o" userLabel="confirmPwd LineView" customClass="lineView" customModule="Habits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44" width="315" height="2"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <viewLayoutGuide key="safeArea" id="55D-py-Kh5"/>
-                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Confirm Password Image" translatesAutoresizingMaskIntoConstraints="NO" id="9eA-hx-dnn">
                                         <rect key="frame" x="15" y="12.5" width="20" height="20"/>
                                         <constraints>
@@ -1003,9 +953,6 @@
                                 <color key="tintColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="9eA-hx-dnn" firstAttribute="centerY" secondItem="xlG-f5-Y7j" secondAttribute="centerY" id="9xX-2O-CmS"/>
-                                    <constraint firstItem="pLH-Wu-Uvn" firstAttribute="bottom" secondItem="VVT-zV-D0o" secondAttribute="bottom" constant="-1" id="O7h-C0-bku"/>
-                                    <constraint firstItem="VVT-zV-D0o" firstAttribute="width" secondItem="xlG-f5-Y7j" secondAttribute="width" id="Zfc-Kh-Bt0"/>
-                                    <constraint firstItem="VVT-zV-D0o" firstAttribute="centerX" secondItem="pLH-Wu-Uvn" secondAttribute="centerX" id="aJS-ZX-Fyw"/>
                                     <constraint firstAttribute="bottom" secondItem="0kC-mU-JAJ" secondAttribute="bottom" id="e4n-Kr-PHr"/>
                                     <constraint firstItem="0kC-mU-JAJ" firstAttribute="top" secondItem="xlG-f5-Y7j" secondAttribute="top" id="fyB-9H-hRF"/>
                                     <constraint firstItem="0kC-mU-JAJ" firstAttribute="centerY" secondItem="xlG-f5-Y7j" secondAttribute="centerY" id="g1y-Gb-zB0"/>
@@ -1049,13 +996,11 @@
                             <constraint firstItem="JQ1-bq-ZFG" firstAttribute="leading" secondItem="mvq-qz-kni" secondAttribute="leading" constant="30" id="5IZ-S4-bBC"/>
                             <constraint firstItem="5y4-bu-l7Y" firstAttribute="trailing" secondItem="JQ1-bq-ZFG" secondAttribute="trailing" id="5vC-bC-GhB"/>
                             <constraint firstItem="0kC-mU-JAJ" firstAttribute="leading" secondItem="iyb-3Q-3q8" secondAttribute="leading" id="6hO-J5-4mi"/>
-                            <constraint firstItem="9ir-RE-HjB" firstAttribute="height" secondItem="b6K-d2-fsL" secondAttribute="height" id="7sa-yz-JnY"/>
                             <constraint firstItem="NVt-6Z-oDl" firstAttribute="top" secondItem="UxA-3f-cOr" secondAttribute="bottom" constant="10" id="9He-dl-vpm"/>
                             <constraint firstItem="19b-td-tyh" firstAttribute="leading" secondItem="JQ1-bq-ZFG" secondAttribute="leading" id="Dkw-9R-Vod"/>
                             <constraint firstItem="xlG-f5-Y7j" firstAttribute="height" secondItem="JQ1-bq-ZFG" secondAttribute="height" id="Dn9-Mz-4aC"/>
                             <constraint firstItem="mvq-qz-kni" firstAttribute="trailing" secondItem="JQ1-bq-ZFG" secondAttribute="trailing" constant="30" id="FbG-8I-A3W"/>
                             <constraint firstItem="UxA-3f-cOr" firstAttribute="top" secondItem="mvq-qz-kni" secondAttribute="top" constant="50" id="Jnd-Oc-B9c"/>
-                            <constraint firstItem="y5h-f6-spu" firstAttribute="height" secondItem="b6K-d2-fsL" secondAttribute="height" id="L5B-y0-ZVR"/>
                             <constraint firstItem="xlG-f5-Y7j" firstAttribute="top" secondItem="19b-td-tyh" secondAttribute="bottom" constant="10" id="LvF-2e-rLE"/>
                             <constraint firstItem="Vaz-zz-qfc" firstAttribute="height" secondItem="JQ1-bq-ZFG" secondAttribute="height" id="M5b-2R-F7o"/>
                             <constraint firstItem="mvq-qz-kni" firstAttribute="trailing" secondItem="tHu-k6-O0N" secondAttribute="trailing" id="QRK-VA-0ac"/>
@@ -1063,7 +1008,6 @@
                             <constraint firstItem="qOo-GR-oaK" firstAttribute="centerX" secondItem="CW4-lD-mjB" secondAttribute="centerX" id="S65-d7-bnZ"/>
                             <constraint firstItem="NVt-6Z-oDl" firstAttribute="centerX" secondItem="eBs-tN-aUF" secondAttribute="centerX" id="SWi-Qp-8oc"/>
                             <constraint firstItem="19b-td-tyh" firstAttribute="trailing" secondItem="JQ1-bq-ZFG" secondAttribute="trailing" id="UAy-Xc-mpV"/>
-                            <constraint firstItem="VVT-zV-D0o" firstAttribute="height" secondItem="b6K-d2-fsL" secondAttribute="height" id="Vwx-3j-N9U"/>
                             <constraint firstItem="5y4-bu-l7Y" firstAttribute="top" secondItem="Rtg-CC-0Ae" secondAttribute="bottom" constant="30" id="X3G-uE-hkX"/>
                             <constraint firstItem="Vaz-zz-qfc" firstAttribute="trailing" secondItem="JQ1-bq-ZFG" secondAttribute="trailing" id="XUZ-ml-Uvi"/>
                             <constraint firstItem="Rtg-CC-0Ae" firstAttribute="leading" secondItem="JQ1-bq-ZFG" secondAttribute="leading" id="Y54-cE-nA0"/>
