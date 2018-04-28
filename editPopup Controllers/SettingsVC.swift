@@ -51,9 +51,7 @@ class SettingsVC: UIViewController{
     
     
     @IBAction func editImage(_ sender: Any) {
-        handleProfileImage()
-        
-        
+//        handleProfileImage()
     }
     
     
