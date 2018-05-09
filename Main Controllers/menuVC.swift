@@ -33,29 +33,29 @@ class menuVC: UIViewController{
                 
                 self.nameOfUser.text = value["name"] as! String
                 
-                let imageUrl = URL(string: value["profileImage"] as! String)
-                let request = NSMutableURLRequest(url:imageUrl!);
-                request.httpMethod = "GET";
+//                let imageUrl = URL(string: value["profileImage"] as! String)
+//                let request = NSMutableURLRequest(url:imageUrl!);
+//                request.httpMethod = "GET";
                 
-                let session = URLSession(configuration: .default)
-                let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
-                    
-                    if error != nil{
-                        print(error)
-                    }else{
-                        if (response as? HTTPURLResponse != nil){
-                            if let imageData = data{
-                                self.profileImage.image = UIImage(data: imageData)
-                            }else{
-                                print("No Image Found")
-                            }
-                        }else{
-                            print("No response from server")
-                        }
-                    }
-                }
-                
-                
+//                let session = URLSession(configuration: .default)
+//                let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
+//
+//                    if error != nil{
+//                        print(error)
+//                    }else{
+//                        if (response as? HTTPURLResponse != nil){
+//                            if let imageData = data{
+//                                self.profileImage.image = UIImage(data: imageData)
+//                            }else{
+//                                print("No Image Found")
+//                            }
+//                        }else{
+//                            print("No response from server")
+//                        }
+//                    }
+//                }
+//
+//
             }) { (error) in
                 print(error.localizedDescription)
             }

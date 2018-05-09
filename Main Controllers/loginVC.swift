@@ -177,26 +177,21 @@ class loginVC: UIViewController, UITextFieldDelegate {
         button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
         
         buttonGradient(button: button)
-        
-        emailField.autocorrectionType = .no
         emailField.keyboardType = .emailAddress
-        passwordField.textContentType = UITextContentType("")
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 75)
+                self.view.frame.origin.y -= (keyboardSize.height - 100)
             }
         }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 75)
+                self.view.frame.origin.y += (keyboardSize.height - 100)
             }
         }
     }
@@ -216,10 +211,6 @@ extension loginVC{
             return false
         }
         
-//        guard !txtFirstName.text!.isEmptyStr else {
-//            txtFirstName.showError(message: firstNameMessage)
-//            return false
-//        }
         return true
     }
     

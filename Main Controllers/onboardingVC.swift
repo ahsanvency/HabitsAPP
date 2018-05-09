@@ -27,7 +27,7 @@ class onboardingVC: UIViewController, PaperOnboardingDataSource, PaperOnboarding
     }
     
     func onboardingItemsCount() -> Int {
-        return 4
+        return 3
     }
     
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
@@ -37,20 +37,18 @@ class onboardingVC: UIViewController, PaperOnboardingDataSource, PaperOnboarding
         
         let colorBlue = UIColor(red:13/255, green:76/255, blue:153/255, alpha:0.85)
         let colorRed = UIColor(red:186/255, green:7/255, blue: 29/255, alpha:0.85)
-        let colorPurple = UIColor(red:102/255, green:23/255, blue: 108/255, alpha:0.8)
+//        let colorPurple = UIColor(red:102/255, green:23/255, blue: 108/255, alpha:0.8)
         let colorGreen = UIColor(red:34/255, green:139/255, blue: 34/255, alpha:0.8)
         
         let alphaImageView = UIImageView(image: UIImage(named: "clearCircle"))
         alphaImageView.alpha = 0
         
         return [
-            OnboardingItemInfo(informationImage: UIImage(named: "Aristotle")!, title: "Habits Are Everything", description: " \"We are what we repeatedly do. Excellence, then, is not an act, but a habit.\" ~ Aristotle",pageIcon: alphaImageView.image!, color: colorBlue, titleColor: .white, descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descriptionFont!),
+            OnboardingItemInfo(informationImage: UIImage(named: "Aristotle")!, title: "Habits Are Everything", description: " \n \"We are what we repeatedly do. Excellence, then, is not an act, but a habit.\" ~ Aristotle",pageIcon: alphaImageView.image!, color: colorBlue, titleColor: .white, descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descriptionFont!),
             
-            OnboardingItemInfo(informationImage: UIImage(named: "Intrinsic1")!, title: "Intrinsic Motivation", description: "Doing something for a challenge, better relationships or peronal health helps you become more successful. Think about why you want better habits!",pageIcon: alphaImageView.image!, color: colorRed, titleColor: .white, descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descriptionFont!),
+            OnboardingItemInfo(informationImage: UIImage(named: "Intrinsic1")!, title: "Consistency and Goal Setting", description: " \n There are a few questions to help you stay consistent and set goals." ,pageIcon: alphaImageView.image!, color: colorRed, titleColor: .white, descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descriptionFont!),
             
-            OnboardingItemInfo(informationImage: UIImage(named: "Ripple1")!, title: "Keystone Habits", description: "Keystone Habits are simple habits that have ripple effects into other areas of your life. Simply making your bed can make you more productive.",pageIcon: alphaImageView.image!, color: colorPurple, titleColor: .white, descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descriptionFont!),
-            
-            OnboardingItemInfo(informationImage: UIImage(named: "Interval Reinforcement")!, title: "Interval Reinforcement", description: "Proven to be the best way to learn, The Habit Developer uses random rewards to help you develop habits.",pageIcon: alphaImageView.image!, color: colorGreen, titleColor: .white, descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descriptionFont!)][index]
+            OnboardingItemInfo(informationImage: UIImage(named: "Interval Reinforcement")!, title: "Interval Reinforcement", description: " \n There are three tiers of rewards because random rewards are fun and proven to be the best way to develop habits.",pageIcon: alphaImageView.image!, color: colorGreen, titleColor: .white, descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descriptionFont!)][index]
     }
     
     func onboardingConfigurationItem(_: OnboardingContentViewItem, index _: Int) {
@@ -58,18 +56,17 @@ class onboardingVC: UIViewController, PaperOnboardingDataSource, PaperOnboarding
     }
     
     func onboardingWillTransitonToIndex(_ index: Int) {
-        if index == 2{
+        if index == 1{
             if self.startHabitsButton.alpha == 1 {
                 UIView.animate(withDuration: 0.2) {
                     self.startHabitsButton.alpha = 0
                 }
             }
-            
         }
     }
     
     func onboardingDidTransitonToIndex(_ index: Int) {
-        if index == 3{
+        if index == 2{
             UIView.animate(withDuration: 0.5) {
                 self.startHabitsButton.alpha = 1
             }

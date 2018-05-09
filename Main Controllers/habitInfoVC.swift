@@ -16,7 +16,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var habitNameLbl: UILabel!
     @IBOutlet weak var scrollInfo: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var confirmButton: UIButton!
+
     
     
     @IBOutlet var whySlideXib: whySlide!
@@ -50,27 +50,27 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
     func createSlides() -> [UIView]{
         whySlide = Bundle.main.loadNibNamed("whySlide", owner: self, options: nil)!.first as! whySlide
         whySlide.intrinsicLabel.text = "Did you know intrinsic reasons like \(chosenHabit.intrinsicReason) help you succeed?"
-        whySlide.questionLabel.text = "I want to start \(chosenHabit.habitName) to..."
+        whySlide.questionLabel.text = "Why would you like to start \(chosenHabit.habitName)?"
         
         whereSlide = Bundle.main.loadNibNamed("whereSlide", owner: self, options: nil)!.first as! whereSlide
         whereSlide.consistencyLabel.text = "Did you know being consistent with time and places helps you develop the habit of \(chosenHabit.habitName)?"
-        whereSlide.questionLabel.text = "I can consistently \(chosenHabit.habitVerb) at..."
+        whereSlide.questionLabel.text = "Where can you consistently \(chosenHabit.habitVerb)?"
         
         
         whenSlide = Bundle.main.loadNibNamed("whenSlide", owner: self, options: nil)!.first as! whenSlide
-        whenSlide.questionLabel.text = "I can consistently \(chosenHabit.habitVerb) at this time and day:"
+        whenSlide.questionLabel.text = "When can you consistently \(chosenHabit.habitVerb)?"
         
         basicRewardsSlide = Bundle.main.loadNibNamed("basicRewardsSlide", owner: self, options: nil)!.first as! basicRewardsSlide
         intRewardsSlide = Bundle.main.loadNibNamed("intRewardsSlide", owner: self, options: nil)!.first as! intRewardsSlide
         advRewardsSlide = Bundle.main.loadNibNamed("advRewardsSlide", owner: self, options: nil)!.first as! advRewardsSlide
         confirmSlide = Bundle.main.loadNibNamed("confirmSlide", owner: self, options: nil)!.first as! confirmSlide
-        let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
-        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
-        glossyBtn?.setTitle("Confirm", for: .normal)
-        glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
-        glossyBtn?.addTarget(self, action:#selector(confirmHabit(_:)), for: .touchUpInside)
+//        let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
+//        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
+//        glossyBtn?.setTitle("Confirm", for: .normal)
+//        glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
+//        glossyBtn?.addTarget(self, action:#selector(confirmHabit(_:)), for: .touchUpInside)
         
-        confirmSlide.addSubview(glossyBtn!)
+//        confirmSlide.addSubview(glossyBtn!)
         
         return [whySlide, whereSlide, whenSlide, basicRewardsSlide, intRewardsSlide, advRewardsSlide, confirmSlide]
     }
@@ -91,8 +91,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = Int(pageIndex)
     }
     
-    
-    @IBAction func confirmHabit(_ glossyBtn: GlossyButton) {
+    @IBAction func confirmHabit(_ sender: Any) {
         whenSlide.save()
         
         if Auth.auth().currentUser?.uid != nil {
@@ -127,7 +126,7 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
                 //Segue
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let mainViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
-//                newViewController.firstTimeLoaded = 1;
+                //                newViewController.firstTimeLoaded = 1;
                 self.present(mainViewController, animated: true){
                 }
             } else {
@@ -135,6 +134,51 @@ class habitInfoVC: UIViewController, UIScrollViewDelegate {
             }
         }
     }
+    
+    
+//    @IBAction func confirmHabit(_ glossyBtn: GlossyButton) {
+//        whenSlide.save()
+//        
+//        if Auth.auth().currentUser?.uid != nil {
+//            
+//            //checks to see if txtFeilds are empty
+//            let valid = validateTextFeilds()
+//            if valid == true{
+//                
+//                //database instance
+//                var ref: DatabaseReference!
+//                ref = Database.database().reference()
+//                
+//                //current user
+//                guard let user = Auth.auth().currentUser else {
+//                    return
+//                }
+//                let uid = user.uid
+//                
+//                //getting key of habits list
+//                let habitRefKey = ref.child("Users").child(uid).child("Habits").childByAutoId().key
+//                //Values to add to Habits list
+//                let childUpdates = ["/Users/\(uid)/Habits/\(habitRefKey)": chosenHabit.habitName]
+//                ref.updateChildValues(childUpdates)
+//                //Adding Habit to Habits node
+//                //This is where the information on the label needs to be changed
+//                DataService.ds.REF_HABITS.child(uid).removeValue()
+//                
+//                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).setValue(["Why": whySlide.whyField.text!,"When":"\(whenSlide.daysOfWeekStr)\(whenSlide.timeStr)","Where":whereSlide.whereField.text!,"name":chosenHabit.habitName,"freq":whenSlide.weekArray])
+//                //Adding rewards to habit
+//                DataService.ds.REF_HABITS.child(uid).child(habitRefKey).child("Rewards").setValue(["basicReward1":basicRewardsSlide.basicField1.text!,"basicReward2":basicRewardsSlide.basicField2.text!,"intReward1":intRewardsSlide.intField1.text!,"intReward2":intRewardsSlide.intField2.text!,"advReward":advRewardsSlide.advField.text!, "Success": 0])
+//                
+//                //Segue
+//                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let mainViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
+////                newViewController.firstTimeLoaded = 1;
+//                self.present(mainViewController, animated: true){
+//                }
+//            } else {
+//                print("error")
+//            }
+//        }
+//    }
     
     func validateTextFeilds() -> Bool{
         if (whySlide.whyField.text == "") {

@@ -151,8 +151,7 @@ class newUserVC: UIViewController {
         buttonGradient(button: button)
         
 
-        nameField.autocorrectionType = .no
-        emailField.autocorrectionType = .no
+
         nameField.textContentType = UITextContentType("")
         emailField.textContentType = UITextContentType("")
         passwordField.textContentType = UITextContentType("")
@@ -163,7 +162,7 @@ class newUserVC: UIViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 85)
+                self.view.frame.origin.y -= (keyboardSize.height - 40)
             }
         }
     }
@@ -171,7 +170,7 @@ class newUserVC: UIViewController {
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 85)
+                self.view.frame.origin.y += (keyboardSize.height - 40)
             }
         }
     }

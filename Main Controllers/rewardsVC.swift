@@ -25,7 +25,7 @@ class rewardsVC: UIViewController {
         var reward: String!
     }
     
-    var glossyBtn = GlossyButton()
+//    var glossyBtn = GlossyButton()
     
     var items = [slotComp]()
     
@@ -98,13 +98,10 @@ class rewardsVC: UIViewController {
     let intBottom = slotComp(image: UIImage(named: "intBottom"), reward: "Intermediate")
     let advTop = slotComp(image: UIImage(named: "advTop"), reward: "Advanced")
     let advBottom = slotComp(image: UIImage(named: "advBottom"), reward: "Advanced")
-//    let whiteTop = slotComp(image: nil, reward: "nil")
-//    let whiteBottom = slotComp(image: nil, reward: "nil")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupScreen()
         
         basicGap = 5
         basicGap1 = 10
@@ -150,8 +147,8 @@ class rewardsVC: UIViewController {
             
             if let prevSpunDay = rewardsDict!["SpunDay"] as? Int{
                 
-//                if prevSpunDay == day {
-                if day - 1 == day{
+                if prevSpunDay == day {
+//                if day - 1 == day{
                     //alert
                     let spinAlert = UIAlertController(title: "Alert", message: "Can only play once a day", preferredStyle: UIAlertControllerStyle.alert)
                     let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in})
@@ -170,7 +167,6 @@ class rewardsVC: UIViewController {
             }
         })
     }
-    
     
     @IBAction func spinButton(_ sender: Any) {
         
@@ -438,12 +434,9 @@ class rewardsVC: UIViewController {
     
     @objc func getReadyForNextSpin(){
         isSpinning = false
-        glossyBtn.setTitle("SPIN", for: .normal)
-//        spinBtnLbl.text = "SPIN"
-        //spinBtn.setTitle("SPIN", for: UIControlState.normal)
+        spinBtn.setTitle("SPIN", for: UIControlState.normal)
         spinBtn.isEnabled = true
-        glossyBtn.backgroundColor = blueColor
-//        spinBtn.backgroundColor = blueColor
+        spinBtn.backgroundColor = blueColor
         timerGetReadyForNextSpin.invalidate()
     }
     
@@ -585,11 +578,8 @@ class rewardsVC: UIViewController {
     }
     
     func winner(){
-        glossyBtn.setTitle("WINNER", for: .normal)
-//        spinBtnLbl.text = "WINNER"
-        //spinBtn.setTitle("WINNER", for: UIControlState.normal)
-        glossyBtn.backgroundColor = UIColor.green
-//        spinBtn.backgroundColor = UIColor.green
+        spinBtn.setTitle("WINNER", for: UIControlState.normal)
+        spinBtn.backgroundColor = UIColor.green
         startBlinking()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
             self.timerGetReadyForNextSpin = Timer.scheduledTimer(timeInterval: 3.0, target:self, selector: #selector(self.getReadyForNextSpin), userInfo: nil, repeats: false)
@@ -660,27 +650,13 @@ class rewardsVC: UIViewController {
     
     func runSpin(){
         
-        
-        
-        glossyBtn.setTitle("GOOD LUCK", for: .normal)
-//        spinBtnLbl.text = "GOOD LUCK"
-        //spinBtn.setTitle("Good Luck", for: UIControlState.normal)
+        spinBtn.setTitle("Good Luck", for: UIControlState.normal)
         isSpinning = true
         spinBtn.isEnabled = false
         prepareNextSpin()
         timerLeft = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateLeft), userInfo: nil, repeats: true)
         timerMiddle = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateMiddle), userInfo: nil, repeats: true)
         timerRight = Timer.scheduledTimer(timeInterval: spinFast, target:self, selector: #selector(updateRight), userInfo: nil, repeats: true)
-    }
-    
-    func setupScreen(){
-        let rect = CGRect(x: spinBtn.frame.origin.x, y: spinBtn.frame.origin.y, width: spinBtn.frame.width, height: spinBtn.frame.height)
-        glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
-        glossyBtn.setTitle("SPIN", for: .normal)
-        glossyBtn.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 36)
-        glossyBtn.addTarget(self, action:#selector(spinButton(_:)), for: .touchUpInside)
-        view.addSubview(glossyBtn)
-        
     }
 }
 

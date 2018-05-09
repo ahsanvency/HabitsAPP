@@ -17,9 +17,9 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
     
     @IBOutlet weak var backgroundImg: UIImageView!
     
-    var listOfBasicRewards1 = ["Chocolate", "Candy", "Sweet Drink", "Posting a Selfie", "Watch a Youtube Video", "Listen to Music", "Light Candles", "Take a Nap", "Use Lottery Ticket"]
+    var listOfBasicRewards1 = ["Chocolate", "Candy", "Sweet Drink", "Use Lottery Ticket", "Watch TV", "Play Video Games"]
     
-    var listOfBasicRewards2 = [String]()
+//    var listOfBasicRewards2 = [String]()
     
     var basicReward1: String?
     var basicReward2: String?
@@ -28,22 +28,23 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        listOfBasicRewards2 = listOfBasicRewards1
+//        listOfBasicRewards2 = listOfBasicRewards1
         
         basicField1.delegate = self
         basicField2.delegate = self
         
         basicPicker1.delegate = self
         basicPicker1.dataSource = self
-        basicPicker2.delegate = self
-        basicPicker2.dataSource = self
+//        basicPicker2.delegate = self
+//        basicPicker2.dataSource = self
         
-        basicField1.text = "Tap to pick a basic reward."
-        basicField2.text = "Tap to pick a basic reward."
+        basicField1.text = "Tap to pick first Basic Reward."
+        basicField2.attributedPlaceholder = NSAttributedString(string: "Enter second Basic Reward.",
+                                                            attributes: [NSAttributedStringKey.foregroundColor: blueColor])
         listOfBasicRewards1.sort()
-        listOfBasicRewards2.sort()
+//        listOfBasicRewards2.sort()
         listOfBasicRewards1.append("Enter Custom Reward Above")
-        listOfBasicRewards2.append("Enter Custom Reward Above")
+//        listOfBasicRewards2.append("Enter Custom Reward Above")
         
         
     }
@@ -59,32 +60,29 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
     }
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
-        var countRow : Int = listOfBasicRewards1.count
+        let countRow : Int = listOfBasicRewards1.count
         
-        if pickerView == basicPicker2{
-            countRow = listOfBasicRewards2.count
-        }
+//        if pickerView == basicPicker2{
+//            countRow = listOfBasicRewards2.count
+//        }
         
         return countRow
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == basicPicker1{
-            let reward = listOfBasicRewards1[row]
-            return reward
-        }else if pickerView == basicPicker2{
-            let reward = listOfBasicRewards2[row]
-            return reward
-        }
-        return ""
-    }
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        if pickerView == basicPicker1{
+//            let reward = listOfBasicRewards1[row]
+//            return reward
+//        }else if pickerView == basicPicker2{
+//            let reward = listOfBasicRewards2[row]
+//            return reward
+//        }
+//        return ""
+//    }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView == basicPicker1{
-            
-            
-            
             if basicReward1 == "Enter Custom Reward Above"{
                 self.basicField1.becomeFirstResponder()
             }
@@ -94,34 +92,18 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
             self.basicPicker1.isHidden = true
             self.basicField2.isHidden = false
             self.basicField2.isEnabled = true
-            
-            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // change
-//                self.basicReward1 = self.listOfBasicRewards1[row]
-//                self.basicPicker1.isHidden = true
-//                self.basicField2.isHidden = false
-//                self.basicField2.isEnabled = true
-////                self.listOfBasicRewards2.remove(at: row)
-//            }
-            
-            
         }
-        else if pickerView == basicPicker2{
-            
-            basicReward2 = self.listOfBasicRewards2[row]
-            
-            if basicReward2 == "Enter Custom Reward Above"{
-                self.basicField2.becomeFirstResponder()
-            }
-            
-            self.basicField2.text = self.basicReward2
-            self.basicPicker2.isHidden = true
-            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//                self.basicField2.text = self.basicReward2
-//                self.basicPicker2.isHidden = true
+//        else if pickerView == basicPicker2{
+//
+//            basicReward2 = self.listOfBasicRewards2[row]
+//
+//            if basicReward2 == "Enter Custom Reward Above"{
+//                self.basicField2.becomeFirstResponder()
 //            }
-        }
+//
+//            self.basicField2.text = self.basicReward2
+//            self.basicPicker2.isHidden = true
+//        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -138,14 +120,15 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
         }
         if textField == self.basicField2{
             
-            basicField1.isEnabled = true
+            basicField2.isEnabled = true
             
-            if basicReward2 != "Enter Custom Reward Above" {
-                self.basicPicker2.isHidden = false
-                textField.endEditing(true)
-            }
+//            if basicReward2 != "Enter Custom Reward Above" {
+////                self.basicPicker2.isHidden = false
+//                textField.endEditing(true)
+//            }
         }
     }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.basicField1 {
             basicReward1 = textField.text

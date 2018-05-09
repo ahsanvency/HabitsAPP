@@ -15,7 +15,7 @@ class advRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     @IBOutlet weak var backgroundImg: UIImageView!
     
     
-    var listOfAdvRewards = ["New Tattoo or Piercing", "Pedicure", "Take a Day Off", "Go on Shopping Spree", "Party", "Go Camping", "Weekend Trip", "Attend Festival"]
+    var listOfAdvRewards = ["New Tattoo or Piercing", "Take a Day Off", "Go on Shopping Spree", "Weekend Trip", "Attend Festival"]
     
     var advReward: String?
     
@@ -28,7 +28,7 @@ class advRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
         advPicker.delegate = self
         advPicker.dataSource = self
         
-        advField.text = "Tap to pick an advanced reward."
+        advField.text = "Tap to pick an Advanced Reward."
         listOfAdvRewards.sort()
         listOfAdvRewards.append("Enter Custom Reward Above.")
         

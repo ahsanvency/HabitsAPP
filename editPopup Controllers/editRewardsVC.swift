@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class editRewardsVC: UIViewController {
+class editRewardsVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var basicReward1: fancyField!
     @IBOutlet weak var basicReward2: fancyField!
@@ -35,6 +35,9 @@ class editRewardsVC: UIViewController {
         glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
         glossyBtn?.addTarget(self, action:#selector(confirm(_:)), for: .touchUpInside)
         
+        advReward.delegate = self
+        intReward2.delegate = self
+        
         view.addSubview(glossyBtn!)
         
         
@@ -53,16 +56,32 @@ class editRewardsVC: UIViewController {
             let firstDict = value![firstKey] as! Dictionary<String,Any>
             let rewardsDict = firstDict["Rewards"] as! Dictionary<String,Any>
             
-            self.basicReward1.text = rewardsDict["basicReward1"] as! String
-            self.basicReward2.text = rewardsDict["basicReward2"] as! String
-            self.intReward1.text = rewardsDict["intReward1"] as! String
-            self.intReward2.text = rewardsDict["intReward2"] as! String
-            self.advReward.text = rewardsDict["advReward"] as! String
+            self.basicReward1.text = (rewardsDict["basicReward1"] as! String)
+            self.basicReward2.text = (rewardsDict["basicReward2"] as! String)
+            self.intReward1.text = (rewardsDict["intReward1"] as! String)
+            self.intReward2.text = (rewardsDict["intReward2"] as! String)
+            self.advReward.text = (rewardsDict["advReward"] as! String)
             
         }) { (error) in
             print(error.localizedDescription)
         }
         self.hideKeyboardWhenTappedAround()
+        
+        
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        
+        if textField == self.advReward || textField == self.intReward2{
+            self.view.frame.origin.y -= 140
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.advReward || textField == self.intReward2{
+            self.view.frame.origin.y += 140
+        }
     }
     
     
@@ -73,9 +92,11 @@ class editRewardsVC: UIViewController {
     
     @IBAction func confirm(_ glossyBtn: GlossyButton) {
         
-        dismiss(animated: true, completion: nil)
         
-        if basicReward1.text != "" && basicReward2.text != "" && intReward1.text != "" && intReward2.text != "" && advReward.text != ""{
+        
+        if validate(){
+            
+            dismiss(animated: true, completion: nil)
             
             var ref: DatabaseReference!
             ref = Database.database().reference()
@@ -105,7 +126,39 @@ class editRewardsVC: UIViewController {
         }else {
             self.upAlert(messages: "Please fill out all fields")
         }
-            
         }
+    
+    func validate() -> Bool{
+        if basicReward1.text == ""{
+            self.upAlert(messages: "Please enter the first basic reward.")
+            return false
+        }
+        else if basicReward2.text == ""{
+            self.upAlert(messages: "Please enter the second basic reward.")
+            return false
+        }
+        else if intReward1.text == ""{
+            self.upAlert(messages: "Please enter the first intermediate reward.")
+            return false
+        }
+        else if intReward2.text == ""{
+            self.upAlert(messages: "Please enter the second intermediate reward.")
+            return false
+        }
+        else if advReward.text == ""{
+            self.upAlert(messages: "Please enter the advanced reward.")
+            return false
+        }
+        return true
+    }
+    
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += (keyboardSize.height - 75)
+            }
+        }
+    }
         
     }

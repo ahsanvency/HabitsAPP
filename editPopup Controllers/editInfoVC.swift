@@ -107,7 +107,7 @@ class editInfoVC: UIViewController {
     }
     
     @IBAction func confirm(_ glossyBtn: GlossyButton) {
-        dismiss(animated: true, completion: nil)
+        
         
         let time = whenPicker.date
         let calender = Calendar.current
@@ -161,10 +161,8 @@ class editInfoVC: UIViewController {
             }
         }
         
-        let whyString = whyField.text
-        let whereString = whereField.text
-        
-        if weekArray.count != 0 && whyString != "" && whereString != ""{
+       if validate(){
+            dismiss(animated: true, completion: nil)
             //database instance
             var ref: DatabaseReference!
             ref = Database.database().reference()
@@ -183,7 +181,7 @@ class editInfoVC: UIViewController {
                     return }
                 let whenString = daysOfWeekStr + timeStr
                 ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["When":whenString])
-                ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Why":whyString!])
+                ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Why":self.whyField.text!])
                 ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Where":self.whereField.text!])
                 ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["freq":self.weekArray])
                 // ...
@@ -200,10 +198,25 @@ class editInfoVC: UIViewController {
         }
     }
     
-    
+    func validate() -> Bool{
+        if whyField.text == ""{
+            self.upAlert(messages: "Please fill out Why.")
+            return false
+        }
+        else if whereField.text == ""{
+            self.upAlert(messages: "Please fill out Where.")
+            return false
+        }else if weekArray.count == 0{
+            self.upAlert(messages: "Please choose the days of the week.")
+            return false
+        }
+        return true
+    }
     
     @IBAction func back(_ sender: Any) {
         view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
         dismiss(animated: false, completion: nil)
     }
 }
+
+

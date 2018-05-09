@@ -18,8 +18,8 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     @IBOutlet weak var backgroundImg: UIImageView!
     
     
-    var listOfIntRewards1 = ["Eat Out", "Dessert", "Watch TV", "Call a Friend", "Enjoy a Long Shower", "Work on Your Hobby", "Buy a New Game", "Buy a New Book", "Play Video Games", "Attend Sporting Game", "Drink Wine", "Get House Cleaned", "Play Outdoors"]
-    var listOfIntRewards2 = [String]()
+    var listOfIntRewards1 = ["Eat Out", "Get Dessert", "Buy Something New", "Attend Sporting Game", "Drink Wine", "Play Outdoors", "Pedicure",]
+//    var listOfIntRewards2 = [String]()
     
     var intReward1: String?
     var intReward2: String?
@@ -27,23 +27,24 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        listOfIntRewards2 = listOfIntRewards1
+//        listOfIntRewards2 = listOfIntRewards1
         
         intField1.delegate = self
         intField2.delegate = self
         
         intPicker1.delegate = self
         intPicker1.dataSource = self
-        intPicker2.delegate = self
-        intPicker2.dataSource = self
+//        intPicker2.delegate = self
+//        intPicker2.dataSource = self
         
         
-        intField1.text = "Tap to pick an intermediate reward."
-        intField2.text = "Tap to pick an intermediate reward."
+        intField1.text = "Tap to pick first Intermediate Reward."
+        intField2.attributedPlaceholder = NSAttributedString(string: "Enter second Intermediate Reward.",
+                                                               attributes: [NSAttributedStringKey.foregroundColor: blueColor])
         listOfIntRewards1.sort()
-        listOfIntRewards2.sort()
+//        listOfIntRewards2.sort()
         listOfIntRewards1.append("Enter Custom Reward Above")
-        listOfIntRewards2.append("Enter Custom Reward Above")
+//        listOfIntRewards2.append("Enter Custom Reward Above")
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int{
@@ -59,24 +60,24 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int{
         var countRow : Int = listOfIntRewards1.count
         
-        if pickerView == intPicker2{
-            countRow = listOfIntRewards2.count
-        }
+//        if pickerView == intPicker2{
+//            countRow = listOfIntRewards2.count
+//        }
         
         return countRow
     }
     
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == intPicker1{
-            let reward = listOfIntRewards1[row]
-            return reward
-        }else if pickerView == intPicker2{
-            let reward = listOfIntRewards2[row]
-            return reward
-        }
-        return ""
-    }
+//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+//        if pickerView == intPicker1{
+//            let reward = listOfIntRewards1[row]
+//            return reward
+//        }else if pickerView == intPicker2{
+//            let reward = listOfIntRewards2[row]
+//            return reward
+//        }
+//        return ""
+//    }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
@@ -91,15 +92,16 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
             self.intField2.isHidden = false
             self.intField2.isEnabled = true
             
-        }else if pickerView == intPicker2{
-            intReward2 = self.listOfIntRewards2[row]
-            if intReward2 == "Enter Custom Reward Above"{
-                self.intField2.becomeFirstResponder()
-            }
-            self.intField2.text = intReward2
-            self.intPicker2.isHidden = true
-            self.intField1.isEnabled = true
         }
+//        else if pickerView == intPicker2{
+//            intReward2 = self.listOfIntRewards2[row]
+//            if intReward2 == "Enter Custom Reward Above"{
+//                self.intField2.becomeFirstResponder()
+//            }
+//            self.intField2.text = intReward2
+//            self.intPicker2.isHidden = true
+//            self.intField1.isEnabled = true
+//        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -113,10 +115,13 @@ class intRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, UIT
             
         }
         if textField == self.intField2{
-            self.intPicker2.isHidden = false
-            if intReward2 != "Enter Custom Reward Above"{
-                textField.endEditing(true)
-                intField1.isEnabled = false}
+            intField2.isEnabled = true
+//            self.intPicker2.isHidden = false
+//            if intReward2 != "Enter Custom Reward Above"{
+//                textField.endEditing(true)
+//                intField1.isEnabled = false
+            
+//        }
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
