@@ -163,10 +163,12 @@ class loginVC: UIViewController, UITextFieldDelegate {
         
         
         self.view.addSubview(button)
-        button.heightAnchor.constraint(equalTo: backgroundLoginButton.heightAnchor).isActive = true
+//        button.heightAnchor.constraint(equalTo: backgroundLoginButton.heightAnchor).isActive = true
+        
         button.leadingAnchor.constraint(equalTo: backgroundLoginButton.leadingAnchor, constant: 0).isActive = true
         button.trailingAnchor.constraint(equalTo: backgroundLoginButton.trailingAnchor, constant: 0).isActive = true
         button.topAnchor.constraint(equalTo: backgroundLoginButton.topAnchor, constant: 0).isActive = true
+        button.bottomAnchor.constraint(equalTo: backgroundLoginButton.bottomAnchor, constant: 0).isActive = true
         
         
         button.backgroundColor = .white
@@ -183,7 +185,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 100)
+                self.view.frame.origin.y -= (keyboardSize.height - 105)
             }
         }
     }
@@ -191,7 +193,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 100)
+                self.view.frame.origin.y += (keyboardSize.height - 105)
             }
         }
     }

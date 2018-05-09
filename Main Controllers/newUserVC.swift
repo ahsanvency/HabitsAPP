@@ -32,9 +32,7 @@ class newUserVC: UIViewController {
     @IBOutlet weak var backgroundLoginButton: roundedButton!
     
     
-    
-    let button = TransitionButton(frame: CGRect(x: 30, y: 562, width: 315, height: 50))
-    
+    let button = TransitionButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +103,8 @@ class newUserVC: UIViewController {
     
     func setupScreen(){
         
+        button.frame = CGRect(x: backgroundLoginButton.frame.origin.x, y: backgroundLoginButton.frame.origin.y, width: backgroundLoginButton.frame.width, height: backgroundLoginButton.frame.height)
+        
         let placeHolderColor = blueColor
         
         nameField.dtLayer.backgroundColor = UIColor.clear.cgColor
@@ -137,10 +137,13 @@ class newUserVC: UIViewController {
         confirmPasswordField.placeholderColor = placeHolderColor
         
         self.view.addSubview(button)
-        button.heightAnchor.constraint(equalTo: backgroundLoginButton.heightAnchor).isActive = true
+        
         button.leadingAnchor.constraint(equalTo: backgroundLoginButton.leadingAnchor, constant: 0).isActive = true
         button.trailingAnchor.constraint(equalTo: backgroundLoginButton.trailingAnchor, constant: 0).isActive = true
         button.topAnchor.constraint(equalTo: backgroundLoginButton.topAnchor, constant: 0).isActive = true
+        button.bottomAnchor.constraint(equalTo: backgroundLoginButton.bottomAnchor, constant: 0).isActive = true
+        
+        
         
         button.backgroundColor = .white
         button.setTitle("Create Account", for: .normal)
