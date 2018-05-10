@@ -180,6 +180,8 @@ class loginVC: UIViewController, UITextFieldDelegate {
         button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
         
         buttonGradient(button: button)
+        emailField.textContentType = UITextContentType("")
+        passwordField.textContentType = UITextContentType("")
         emailField.keyboardType = .emailAddress
     }
     

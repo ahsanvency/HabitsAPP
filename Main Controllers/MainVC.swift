@@ -52,7 +52,6 @@ class MainVC: CustomTransitionViewController {
         super.viewDidLoad()
         
         
-        
         showLoadingScreen()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (success, error) in
         }
@@ -128,6 +127,7 @@ class MainVC: CustomTransitionViewController {
                     let weekDay = myComponents.weekday
                     return weekDay!
                 }
+                
                 let cDay = getDayOfWeek()
                 let fbTime  =  firstDict["When"] as? String
                 let fbParseTime = fbTime?.split(separator: " ")//
@@ -350,6 +350,8 @@ class MainVC: CustomTransitionViewController {
             let fbLength = fbParseTime?.count
             let fbTimeVal = fbParseTime![fbLength! - 2 ..< fbLength! ]
             var fbTimeArray = [String]()
+            
+            
             var fbNewTime = ""
             for x in fbTimeVal {
                 fbTimeArray.append(String(x))
@@ -360,7 +362,7 @@ class MainVC: CustomTransitionViewController {
                 print("error")
                 return
             }
-            guard let  currentHabitTimeHours = Int(fbTimeArray[0].split(separator: ":")[0]) else {
+            guard var currentHabitTimeHours = Int(fbTimeArray[0].split(separator: ":")[0]) else {
                 print("error")
                 return
             }
@@ -368,18 +370,23 @@ class MainVC: CustomTransitionViewController {
             //Creates the notification
             let content = UNMutableNotificationContent()
             content.title = "Reminder"
-            //        content.subtitle = "They are up now"
             
             guard Auth.auth().currentUser != nil else {
                 return
             }
             
-            content.body = "In one hour its time to \(String(describing: self.habitName))."
+            content.body = "Its almost time to start \(String(describing: self.habitName!))."
             //App icon for the badge
             content.badge = 1
             var date = DateComponents()
-            date.hour = currentHabitTimeHours - 1
-            date.minute = currentHabitTimeMin
+            
+            if fbTimeArray[1] == "PM"{
+                currentHabitTimeHours += 12
+            }
+            date.hour = (currentHabitTimeHours - 1)
+            date.minute = (currentHabitTimeMin)
+            print(date.hour)
+            print(date.minute)
             let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
             let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
             //Adds to the notification center which has the job of displaying it

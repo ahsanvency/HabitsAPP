@@ -25,14 +25,7 @@ class SettingsVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
-        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
-        glossyBtn?.setTitle("Confirm", for: .normal)
-        glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
-        glossyBtn?.addTarget(self, action:#selector(confirm(_:)), for: .touchUpInside)
-        
-        view.addSubview(glossyBtn!)
+
         
         guard let uid = Auth.auth().currentUser?.uid else {
             return
@@ -55,7 +48,8 @@ class SettingsVC: UIViewController{
     }
     
     
-    @IBAction func confirm(_ glossyBtn: GlossyButton) {
+    @IBAction func confirm(_ sender: Any) {
+
         
         dismiss(animated: true, completion: nil)
         

@@ -37,25 +37,6 @@ class editInfoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
-        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)!
-        glossyBtn.setTitle("Confirm", for: .normal)
-        glossyBtn.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
-        glossyBtn.addTarget(self, action:#selector(confirm(_:)), for: .touchUpInside)
-        
-        view.addSubview(glossyBtn)
-        
-        glossyBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        glossyBtn.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        glossyBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-        NSLayoutConstraint(item: glossyBtn,
-                           attribute: .bottom,
-                           relatedBy: .equal,
-                           toItem: confirmButton,
-                           attribute: .bottom,
-                           multiplier: 1.0,
-                           constant: 0).isActive = true
 
         
         whenPicker.setValue(UIColor.white, forKeyPath: "textColor")
@@ -106,8 +87,7 @@ class editInfoVC: UIViewController {
         }
     }
     
-    @IBAction func confirm(_ glossyBtn: GlossyButton) {
-        
+    @IBAction func confirm(_ sender: Any) {
         
         let time = whenPicker.date
         let calender = Calendar.current

@@ -29,16 +29,7 @@ class editRewardsVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let rect = CGRect(x: confirmButton.frame.origin.x, y: confirmButton.frame.origin.y, width: confirmButton.frame.width, height: confirmButton.frame.height)
-        let glossyBtn = GlossyButton(frame: rect, withBackgroundColor: blueColor)
-        glossyBtn?.setTitle("Confirm", for: .normal)
-        glossyBtn?.titleLabel?.font = UIFont(name: "D-DIN-BOLD", size: 24)
-        glossyBtn?.addTarget(self, action:#selector(confirm(_:)), for: .touchUpInside)
         
-        advReward.delegate = self
-        intReward2.delegate = self
-        
-        view.addSubview(glossyBtn!)
         
         
         guard let user = Auth.auth().currentUser else {
@@ -90,9 +81,8 @@ class editRewardsVC: UIViewController, UITextFieldDelegate {
         dismiss(animated: false, completion: nil)
     }
     
-    @IBAction func confirm(_ glossyBtn: GlossyButton) {
-        
-        
+    
+    @IBAction func confirm(_ sender: Any) {
         
         if validate(){
             

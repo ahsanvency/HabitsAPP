@@ -103,7 +103,7 @@ class newUserVC: UIViewController {
     
     func setupScreen(){
         
-        button.frame = CGRect(x: 30, y: self.view.frame.height - 125, width: self.view.frame.width - 60, height: backgroundLoginButton.frame.height)
+        button.frame = CGRect(x: 30, y: self.view.frame.height - 120, width: self.view.frame.width - 60, height: backgroundLoginButton.frame.height)
         
         let placeHolderColor = blueColor
         
