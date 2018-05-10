@@ -23,9 +23,8 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
 //    @IBOutlet weak var emailField: UITextField!
 //    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var fbButton: roundedButton!
-    @IBOutlet weak var backgroundLoginButton: TransitionButton!
     
+    @IBOutlet weak var backgroundLoginButton: UIButton!
     
     let button = TransitionButton()
     
@@ -51,7 +50,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
         let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
         backgroundQueue.async(execute: {
 
-            sleep(UInt32(2.0)); // 3: Do your networking task or background work here.
+            sleep(UInt32(1.5)); // 3: Do your networking task or background work here.
 
 
             DispatchQueue.main.async(execute: { () -> Void in
@@ -142,7 +141,9 @@ class loginVC: UIViewController, UITextFieldDelegate {
     func setupScreen(){
         let placeHolderColor = blueColor
         
-        button.frame = CGRect(x: backgroundLoginButton.frame.origin.x, y: backgroundLoginButton.frame.origin.y, width: backgroundLoginButton.frame.width, height: backgroundLoginButton.frame.height)
+//        button.frame = CGRect(x: backgroundLoginButton.frame.origin.x, y: backgroundLoginButton.frame.origin.y, width: backgroundLoginButton.frame.width, height: backgroundLoginButton.frame.height)
+        
+        button.frame = CGRect(x: 30, y: self.view.frame.height - 187, width: self.view.frame.width - 60, height: backgroundLoginButton.frame.height)
         
         emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
         emailField.dtLayer.borderWidth = 0
