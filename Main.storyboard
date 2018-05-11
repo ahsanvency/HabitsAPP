@@ -239,6 +239,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="gwh-Q8-Hko">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yP1-GU-OXT" userLabel="slotsView" customClass="slotsView" customModule="Habits" customModuleProvider="target">
                                 <rect key="frame" x="15" y="148.5" width="345" height="320"/>
                                 <subviews>
@@ -474,12 +477,16 @@
                             <constraint firstItem="Xlt-3x-N81" firstAttribute="leading" secondItem="KSr-bn-S31" secondAttribute="leading" constant="16" id="4No-HB-4yC"/>
                             <constraint firstAttribute="bottom" secondItem="Mti-Xz-PZ3" secondAttribute="bottom" constant="35" id="9IU-PJ-0l9"/>
                             <constraint firstItem="9In-3j-ukc" firstAttribute="top" secondItem="KSr-bn-S31" secondAttribute="top" constant="10" id="CPE-6i-57l"/>
+                            <constraint firstItem="gwh-Q8-Hko" firstAttribute="bottom" secondItem="KSr-bn-S31" secondAttribute="bottom" id="DuO-Ae-a4L"/>
                             <constraint firstItem="Xlt-3x-N81" firstAttribute="centerY" secondItem="9In-3j-ukc" secondAttribute="centerY" id="FVV-Sn-dTW"/>
+                            <constraint firstItem="KSr-bn-S31" firstAttribute="trailing" secondItem="gwh-Q8-Hko" secondAttribute="trailing" id="HJ4-ba-KDg"/>
                             <constraint firstItem="yP1-GU-OXT" firstAttribute="centerY" secondItem="EfP-KD-Ddq" secondAttribute="centerY" constant="-25" id="I5y-0m-mmy"/>
                             <constraint firstItem="9In-3j-ukc" firstAttribute="centerX" secondItem="EfP-KD-Ddq" secondAttribute="centerX" id="NuL-zf-vIc"/>
                             <constraint firstItem="yP1-GU-OXT" firstAttribute="centerX" secondItem="EfP-KD-Ddq" secondAttribute="centerX" id="dZN-nu-E1S"/>
                             <constraint firstItem="Mti-Xz-PZ3" firstAttribute="leading" secondItem="KSr-bn-S31" secondAttribute="leading" constant="20" id="eF8-9d-zfh"/>
                             <constraint firstItem="KSr-bn-S31" firstAttribute="trailing" secondItem="Mti-Xz-PZ3" secondAttribute="trailing" constant="20" id="eWZ-q3-Lgf"/>
+                            <constraint firstItem="gwh-Q8-Hko" firstAttribute="top" secondItem="EfP-KD-Ddq" secondAttribute="top" id="svF-e9-XMx"/>
+                            <constraint firstItem="gwh-Q8-Hko" firstAttribute="leading" secondItem="EfP-KD-Ddq" secondAttribute="leading" id="zWI-i9-OdR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KSr-bn-S31"/>
                     </view>
@@ -508,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHp-yp-2X5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="468" y="-959"/>
+            <point key="canvasLocation" x="468" y="-959.37031484257875"/>
         </scene>
         <!--Pick HabitVC-->
         <scene sceneID="BwR-Zk-NC4">
@@ -660,14 +667,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCx-l3-657" userLabel="Email View" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="367" width="315" height="45"/>
+                                <rect key="frame" x="30" y="432" width="315" height="45"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dd-Iu-92E" customClass="DTTextField" customModule="DTTextField">
                                         <rect key="frame" x="40" y="0.0" width="275" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                                         <connections>
                                             <outlet property="delegate" destination="kv1-PS-mi9" id="Od0-5O-vF9"/>
                                         </connections>
@@ -693,7 +700,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFp-OJ-AC8" userLabel="Pwd View" customClass="textFieldView" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="30" y="422" width="315" height="45"/>
+                                <rect key="frame" x="30" y="487" width="315" height="45"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passwordLockBlue" translatesAutoresizingMaskIntoConstraints="NO" id="mPm-KR-vza">
                                         <rect key="frame" x="10" y="12.5" width="20" height="20"/>
@@ -723,21 +730,11 @@
                                 <viewLayoutGuide key="safeArea" id="PdV-JU-fPp"/>
                             </view>
                             <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlU-Ny-Cgp">
-                                <rect key="frame" x="30" y="487" width="315" height="50"/>
+                                <rect key="frame" x="30" y="552" width="315" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="q9X-tU-ssM"/>
                                 </constraints>
                                 <state key="normal" image="Login Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mn-iN-uV0" customClass="roundedButton" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="60" y="562" width="255" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="yRq-t7-UVs"/>
-                                </constraints>
-                                <state key="normal" image="Login With facebook"/>
-                                <connections>
-                                    <action selector="facebookLogin:" destination="kv1-PS-mi9" eventType="touchUpInside" id="vFS-fX-mfa"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gkp-Bb-uAV">
                                 <rect key="frame" x="30" y="622" width="315" height="15"/>
@@ -770,17 +767,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gkp-Bb-uAV" firstAttribute="top" secondItem="8Mn-iN-uV0" secondAttribute="bottom" constant="20" id="3Yo-aL-RL1"/>
-                            <constraint firstItem="8Mn-iN-uV0" firstAttribute="top" secondItem="jlU-Ny-Cgp" secondAttribute="bottom" constant="25" id="4fb-eL-Wr9"/>
                             <constraint firstItem="jlU-Ny-Cgp" firstAttribute="top" secondItem="kFp-OJ-AC8" secondAttribute="bottom" constant="20" id="5Dz-Nx-Bbp"/>
                             <constraint firstItem="gO2-vc-wIU" firstAttribute="bottom" secondItem="N94-VJ-GE8" secondAttribute="bottom" id="5iy-RC-3Ij"/>
                             <constraint firstItem="jlU-Ny-Cgp" firstAttribute="leading" secondItem="fCx-l3-657" secondAttribute="leading" id="Biu-bQ-5wF"/>
                             <constraint firstItem="gO2-vc-wIU" firstAttribute="leading" secondItem="Wv7-ej-lhp" secondAttribute="leading" id="CLN-BB-cJi"/>
                             <constraint firstItem="gO2-vc-wIU" firstAttribute="top" secondItem="N94-VJ-GE8" secondAttribute="top" id="H7A-fX-eBM"/>
+                            <constraint firstItem="gkp-Bb-uAV" firstAttribute="top" secondItem="jlU-Ny-Cgp" secondAttribute="bottom" constant="20" id="Ihv-Mb-2Iy"/>
                             <constraint firstItem="42c-Re-bYQ" firstAttribute="centerX" secondItem="N94-VJ-GE8" secondAttribute="centerX" id="LIS-te-42Y"/>
-                            <constraint firstItem="8Mn-iN-uV0" firstAttribute="leading" secondItem="fCx-l3-657" secondAttribute="leading" constant="30" id="NlV-Pi-Pjk"/>
                             <constraint firstItem="Wv7-ej-lhp" firstAttribute="trailing" secondItem="fCx-l3-657" secondAttribute="trailing" constant="30" id="Ny3-jo-Bfm"/>
-                            <constraint firstItem="8Mn-iN-uV0" firstAttribute="trailing" secondItem="fCx-l3-657" secondAttribute="trailing" constant="-30" id="Pne-LI-bdV"/>
                             <constraint firstItem="kFp-OJ-AC8" firstAttribute="height" secondItem="fCx-l3-657" secondAttribute="height" id="S1w-Cy-itd"/>
                             <constraint firstItem="kFp-OJ-AC8" firstAttribute="trailing" secondItem="fCx-l3-657" secondAttribute="trailing" id="SYb-9q-XO5"/>
                             <constraint firstItem="gkp-Bb-uAV" firstAttribute="leading" secondItem="fCx-l3-657" secondAttribute="leading" id="Utw-Hu-xZ0"/>
@@ -1147,7 +1141,6 @@
         <image name="Create Account Button" width="1575" height="250"/>
         <image name="HD" width="154" height="104"/>
         <image name="Login Button" width="1576" height="251"/>
-        <image name="Login With facebook" width="1276" height="203"/>
         <image name="backArrow" width="492" height="410"/>
         <image name="backArrowBlue" width="492" height="410"/>
         <image name="backgroundLogin" width="375" height="667"/>

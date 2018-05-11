@@ -181,9 +181,9 @@ class rewardsVC: UIViewController {
         let stopLeft = returnStop()
         let stopMiddle = returnStop()
         let stopRight = returnStop()
-//        let stopLeft = 1
-//        let stopMiddle = 3
-//        let stopRight = 5
+//        let stopLeft = 9
+//        let stopMiddle = 9
+//        let stopRight = 9
         
         //Generates the number of times for each column to spin
         numberOfTimesSpinLeft = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopLeft + selectedItemLeft

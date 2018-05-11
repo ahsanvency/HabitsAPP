@@ -87,7 +87,6 @@
             <connections>
                 <outlet property="advField" destination="HVO-mJ-iEt" id="VM0-Bz-iXt"/>
                 <outlet property="advPicker" destination="7Gf-75-Wal" id="ymv-qW-A8w"/>
-                <outlet property="backgroundImg" destination="kpJ-fb-tPB" id="Wea-tq-8Sw"/>
             </connections>
             <point key="canvasLocation" x="-5.5" y="158"/>
         </view>

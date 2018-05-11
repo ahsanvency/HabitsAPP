@@ -86,9 +86,6 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="bQ2-tp-HSI"/>
-            <connections>
-                <outlet property="backgroundImg" destination="4FW-So-1bX" id="w9F-sm-g47"/>
-            </connections>
             <point key="canvasLocation" x="-643.5" y="165"/>
         </view>
     </objects>

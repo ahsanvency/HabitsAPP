@@ -385,8 +385,6 @@ class MainVC: CustomTransitionViewController {
             }
             date.hour = (currentHabitTimeHours - 1)
             date.minute = (currentHabitTimeMin)
-            print(date.hour)
-            print(date.minute)
             let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
             let request = UNNotificationRequest(identifier: "timerDone", content: content, trigger: trigger)
             //Adds to the notification center which has the job of displaying it

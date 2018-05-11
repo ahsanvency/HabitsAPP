@@ -53,7 +53,7 @@
                     </constraints>
                     <color key="textColor" red="0.050980392159999999" green="0.29803921570000003" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I can consistently &quot;habitVerb&quot; at:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36P-Z9-Vmw">
                     <rect key="frame" x="30" y="205.33333333333334" width="275" height="44"/>
@@ -82,7 +82,6 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="VRd-bH-u3N"/>
             <connections>
-                <outlet property="backgroundImg" destination="cKP-Ez-BtY" id="5Mu-cN-SV9"/>
                 <outlet property="consistencyLabel" destination="pen-ZW-yhZ" id="Bc0-Po-VuD"/>
                 <outlet property="questionLabel" destination="36P-Z9-Vmw" id="8rM-Gl-arS"/>
                 <outlet property="whereField" destination="qvk-5L-b8R" id="yRb-1p-8VG"/>

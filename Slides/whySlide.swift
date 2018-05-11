@@ -13,7 +13,6 @@ class whySlide: UIView {
     @IBOutlet weak var intrinsicLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var whyField: UITextField!
-    @IBOutlet weak var backgroundImg: UIImageView!
     
     
     override func awakeFromNib() {
@@ -21,7 +20,7 @@ class whySlide: UIView {
         
         whyField.attributedPlaceholder = NSAttributedString(string: "I Want To...",
                                                             attributes: [NSAttributedStringKey.foregroundColor: blueColor])
-//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
+        whyField.textContentType = UITextContentType("")
     }
     
 }

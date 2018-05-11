@@ -141,9 +141,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
     func setupScreen(){
         let placeHolderColor = blueColor
         
-//        button.frame = CGRect(x: backgroundLoginButton.frame.origin.x, y: backgroundLoginButton.frame.origin.y, width: backgroundLoginButton.frame.width, height: backgroundLoginButton.frame.height)
-        
-        button.frame = CGRect(x: 30, y: self.view.frame.height - 187, width: self.view.frame.width - 60, height: backgroundLoginButton.frame.height)
+        button.frame = CGRect(x: 30, y: self.view.frame.height - 115, width: self.view.frame.width - 60, height: backgroundLoginButton.frame.height)
         
         emailField.dtLayer.backgroundColor = UIColor.clear.cgColor
         emailField.dtLayer.borderWidth = 0
@@ -188,7 +186,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= (keyboardSize.height - 105)
+                self.view.frame.origin.y -= (keyboardSize.height - 40)
             }
         }
     }
@@ -196,7 +194,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += (keyboardSize.height - 105)
+                self.view.frame.origin.y += (keyboardSize.height - 40)
             }
         }
     }
