@@ -6,6 +6,12 @@
 //  Copyright © 2018 ahsan vency. All rights reserved.
 //
 
+
+//These are the slides we see on the habitInfo screen
+//Each time you swipe you will see a slide and they are listed in this folder
+//Each slide has its own file because thats how it has to be done
+//The remaining slides are similar to this one
+
 import UIKit
 
 class whySlide: UIView {

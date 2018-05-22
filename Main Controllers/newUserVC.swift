@@ -16,18 +16,12 @@ import DTTextField
 class newUserVC: UIViewController {
     
     //Outlets
-    
     @IBOutlet weak var nameField: DTTextField!
     @IBOutlet weak var emailField: DTTextField!
     @IBOutlet weak var passwordField: DTTextField!
     @IBOutlet weak var confirmPasswordField: DTTextField!
     
-    //    @IBOutlet weak var nameField: UITextField!
-//    @IBOutlet weak var emailField: UITextField!
-//    @IBOutlet weak var passwordField: UITextField!
-//    @IBOutlet weak var confirmPasswordField: UITextField!
     
-    @IBOutlet weak var confirmPasswordView: UIView!
     @IBOutlet weak var signIntoExistingAccount: UIButton!
     @IBOutlet weak var backgroundLoginButton: roundedButton!
     
@@ -36,8 +30,7 @@ class newUserVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //button.frame = CGRect(x: self.confirmPasswordView.frame.origin.x, y: self.confirmPasswordView.frame.origin.y + 70, width: self.confirmPasswordView.frame.width, height: 50)
+
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -48,7 +41,7 @@ class newUserVC: UIViewController {
     }
     
     
-    @IBAction func buttonAction(_ button: TransitionButton) {
+    @IBAction func createAccountPressed(_ button: TransitionButton) {
         guard (validateData())else{
             return
         }
@@ -58,14 +51,17 @@ class newUserVC: UIViewController {
         let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
         backgroundQueue.async(execute: {
             
-            sleep(UInt32(2.0)); // 3: Do your networking task or background work here.
+            sleep(UInt32(1.5)); // 3: Do your networking task or background work here.
             
             DispatchQueue.main.async(execute: { () -> Void in
                 Auth.auth().createUser(withEmail: self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) in
                             //If there are no errors it will register the user
                             if error == nil {
                                 if let user = user {
+                                    //sets up a dictionary to upload all these values to firebase
                                     let userData = [ "name": self.nameField.text!, "email" : self.emailField.text!, "profileImage": "https://firebasestorage.googleapis.com/v0/b/habitsapp-7ea48.appspot.com/o/myImage.png?alt=media&token=867310eb-eb88-40e1-932d-236ea372061c"]
+                                    //completes the sign in and see how the userData is uploaded as a dictionary
+                                    //Under the userID its uploaded as a dictionary
                                     self.completeSignIn(id: user.uid, userData: userData as Dictionary<String, AnyObject>);
                                     button.stopAnimation(animationStyle: .expand, completion: {
                                         self.performSegue(withIdentifier: "toAdd", sender: nil)
@@ -96,6 +92,7 @@ class newUserVC: UIViewController {
     }
     
     //Function that makes completing the sign in easier
+    //Once the user creates an account it stores in keychain wrapper to take them to the main screen instead of the login screen again
     func completeSignIn(id: String, userData: Dictionary<String, AnyObject>){
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
         KeychainWrapper.standard.set(id, forKey: KEY_UID);
@@ -150,7 +147,7 @@ class newUserVC: UIViewController {
         button.titleLabel?.font =  UIFont(name: "D-DIN-Bold", size: 20)
         button.cornerRadius = 25.0
         button.spinnerColor = .white
-        button.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(createAccountPressed(_:)), for: .touchUpInside)
         buttonGradient(button: button)
         
 
@@ -182,6 +179,7 @@ class newUserVC: UIViewController {
 
 extension newUserVC{
     
+    //Funtion to make sure the user enters everything correctly
     func validateData() -> Bool {
         
         guard nameField.text != "" else{

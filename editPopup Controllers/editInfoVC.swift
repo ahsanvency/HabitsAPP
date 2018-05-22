@@ -34,11 +34,11 @@ class editInfoVC: UIViewController {
         self.present(myAlert, animated: true, completion: nil)
     }
     
-    
+
+    //We set the values of the textfields to the values the user initially entered
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         whenPicker.setValue(UIColor.white, forKeyPath: "textColor")
         
         guard let user = Auth.auth().currentUser else {
@@ -55,6 +55,7 @@ class editInfoVC: UIViewController {
             //using habit key to get dict
             let firstDict = value![firstKey] as! Dictionary<String,Any>
             
+            //Setting the values of the textfield to the values the user initially entered
             self.whyField.text = firstDict["Why"] as! String
             self.whereField.text = firstDict["Where"] as! String
             
@@ -63,7 +64,7 @@ class editInfoVC: UIViewController {
                 self.weekArray.append(x as! Int)
             }
             
-            
+            //Sets the segmentedControl for the days of the week to the values the user initially chose
             let indexSet = NSMutableIndexSet()
             self.weekArray.forEach(indexSet.add)
             self.segmentedControl.selectedSegmentIndexes = indexSet as IndexSet!
@@ -86,6 +87,7 @@ class editInfoVC: UIViewController {
             weekArray.append(Int(x))
         }
     }
+    
     
     @IBAction func confirm(_ sender: Any) {
         
@@ -141,6 +143,8 @@ class editInfoVC: UIViewController {
             }
         }
         
+        
+        //If the user entered values for everything then it will upload the new values to firebase
        if validate(){
             dismiss(animated: true, completion: nil)
             //database instance
@@ -159,6 +163,7 @@ class editInfoVC: UIViewController {
                 guard let firstKey = value?.allKeys[0] else {
                     print("n")
                     return }
+                //Uploading the new values to firebase
                 let whenString = daysOfWeekStr + timeStr
                 ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["When":whenString])
                 ref.child("Habits").child(uid).child("\(firstKey)").updateChildValues(["Why":self.whyField.text!])

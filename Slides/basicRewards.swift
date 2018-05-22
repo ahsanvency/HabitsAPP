@@ -13,14 +13,16 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
     @IBOutlet weak var basicField1: UITextField!
     @IBOutlet weak var basicPicker1: UIPickerView!
     @IBOutlet weak var basicField2: UITextField!
-    @IBOutlet weak var basicPicker2: UIPickerView!
     
-    @IBOutlet weak var backgroundImg: UIImageView!
+//https:www.youtube.com/watch?v=SfjZwgxlwcc
+//That link should explain how the picker menu works on the basic and intermediate screens
+//Things are commented out because we initially had two pickers one for each reward now we have one picker for the first reward and just a textfield for the second reward
     
     var listOfBasicRewards1 = ["Chocolate", "Candy", "Sweet Drink", "Use Lottery Ticket", "Watch TV", "Play Video Games"]
     
 //    var listOfBasicRewards2 = [String]()
     
+    //How the basic rewards are stored
     var basicReward1: String?
     var basicReward2: String?
     
@@ -30,6 +32,7 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
         
 //        listOfBasicRewards2 = listOfBasicRewards1
         
+        //Setting the delegate
         basicField1.delegate = self
         basicField2.delegate = self
         
@@ -69,16 +72,6 @@ class basicRewardsSlide: UIView, UIPickerViewDelegate, UIPickerViewDataSource, U
         return countRow
     }
     
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        if pickerView == basicPicker1{
-//            let reward = listOfBasicRewards1[row]
-//            return reward
-//        }else if pickerView == basicPicker2{
-//            let reward = listOfBasicRewards2[row]
-//            return reward
-//        }
-//        return ""
-//    }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         

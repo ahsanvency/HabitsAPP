@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+
+//Setting up a class for the habits
+//Only one of the initializers are actually used, I was playing with the other ones for fun
 class Habit{
     private var _habitName: String!
     private var _habitPic: UIImage!
@@ -30,6 +33,7 @@ class Habit{
 //        _habitName = habitName;
 //    }
     
+    //This is the initializer we use to create the habit on the pickHabitVC
     init(habitName: String, habitPic: UIImage, intrinsicReason: String, habitVerb: String) {
         _habitName = habitName;
         _habitPic = habitPic;

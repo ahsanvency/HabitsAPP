@@ -9,6 +9,7 @@
 import UIKit
 import DTTextField
 
+//lets us dynamically change all the textFields
 class fancyField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()

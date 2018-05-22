@@ -8,6 +8,7 @@
 
 import UIKit
 
+//Rounds out the slotsView for us
 class slotsView: UIView {
     
     override func awakeFromNib() {

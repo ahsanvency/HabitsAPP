@@ -8,6 +8,7 @@
 
 import UIKit
 
+//rounds the buttons
 class roundedButton: UIButton {
     
     override func awakeFromNib() {

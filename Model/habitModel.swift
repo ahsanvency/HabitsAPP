@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+
+//Creates all the habits and sets them up as objects
+//The object is passed from the pickHabit VC to the habitInfoVC
 class habitModel{
     class func getHabit() -> [Habit] {
         

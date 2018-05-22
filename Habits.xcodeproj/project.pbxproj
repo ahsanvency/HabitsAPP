@@ -15,7 +15,6 @@
 		3A3DA5861FFB843B004C1143 /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */; };
 		3A4D223D20814E9300A0FD74 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D223C20814E9300A0FD74 /* MainVC.swift */; };
 		3A5122B920351C3B00B8D9BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */; };
-		3A5F7CE5206F6040000F3A8D /* habitCarouselSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */; };
 		3A729663206E3444002D1C9E /* newUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A729662206E3444002D1C9E /* newUserVC.swift */; };
 		3A7CC16420722E270003F071 /* slotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7CC16320722E260003F071 /* slotsView.swift */; };
 		3A85BFF0208A7D57006E8BA5 /* circularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85BFEF208A7D57006E8BA5 /* circularImage.swift */; };
@@ -44,7 +43,6 @@
 		3AA5A3AB1FFB08CE0035A16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5A3AA1FFB08CE0035A16E /* AppDelegate.swift */; };
 		3AA5A3B21FFB08CE0035A16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */; };
 		3AA5A3B51FFB08CE0035A16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5A3B31FFB08CE0035A16E /* LaunchScreen.storyboard */; };
-		3AA70D4F2086900E001BDCD6 /* GlossyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA70D4E2086900E001BDCD6 /* GlossyButton.m */; };
 		3AAF93FD207F0EDC00A9DB9E /* textFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAF93FC207F0EDC00A9DB9E /* textFieldView.swift */; };
 		3AB0523B208A9A7600730DBE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0523A208A9A7600730DBE /* SettingsVC.swift */; };
 		3AB0523D208AA27E00730DBE /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0523C208AA27E00730DBE /* imagePicker.swift */; };
@@ -92,7 +90,6 @@
 		3A3DA5851FFB843B004C1143 /* RandomFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
 		3A4D223C20814E9300A0FD74 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3A5122B820351C3B00B8D9BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habitCarouselSelector.swift; sourceTree = "<group>"; };
 		3A729662206E3444002D1C9E /* newUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newUserVC.swift; sourceTree = "<group>"; };
 		3A7CC16320722E260003F071 /* slotsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = slotsView.swift; sourceTree = "<group>"; };
 		3A85BFEF208A7D57006E8BA5 /* circularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circularImage.swift; sourceTree = "<group>"; };
@@ -125,8 +122,6 @@
 		3AA5A3B11FFB08CE0035A16E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA5A3B41FFB08CE0035A16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AA5A3B61FFB08CE0035A16E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AA70D4D2086900E001BDCD6 /* GlossyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlossyButton.h; sourceTree = "<group>"; };
-		3AA70D4E2086900E001BDCD6 /* GlossyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlossyButton.m; sourceTree = "<group>"; };
 		3AAF93FC207F0EDC00A9DB9E /* textFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldView.swift; sourceTree = "<group>"; };
 		3AB0523A208A9A7600730DBE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		3AB0523C208AA27E00730DBE /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
@@ -238,8 +233,6 @@
 				3A9FD259206F2E5400AC0FCF /* Habits-Bridging-Header.h */,
 				3A9FD25B206F2E5500AC0FCF /* iCarousel.h */,
 				3A9FD25A206F2E5500AC0FCF /* iCarousel.m */,
-				3AA70D4D2086900E001BDCD6 /* GlossyButton.h */,
-				3AA70D4E2086900E001BDCD6 /* GlossyButton.m */,
 			);
 			path = iCarousel;
 			sourceTree = "<group>";
@@ -309,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				3A282C69207E8163002CAFF0 /* OnboardingView.swift */,
-				3A5F7CE4206F6040000F3A8D /* habitCarouselSelector.swift */,
 				3A7CC16520722EA80003F071 /* Other Views */,
 			);
 			path = View;
@@ -573,10 +565,8 @@
 				3A9A95591FFF8A5C00502707 /* Habit.swift in Sources */,
 				3A938218206DF643009BA411 /* intRewardsSlide.swift in Sources */,
 				3A93821A206DF69F009BA411 /* advRewardsSlide.swift in Sources */,
-				3A5F7CE5206F6040000F3A8D /* habitCarouselSelector.swift in Sources */,
 				3A282C6C207E8362002CAFF0 /* onboardingVC.swift in Sources */,
 				3AEFD88F206C15C50076E8BE /* loginVC.swift in Sources */,
-				3AA70D4F2086900E001BDCD6 /* GlossyButton.m in Sources */,
 				3ACBEB06208051A40027B159 /* editInfoVC.swift in Sources */,
 				3AEFBE932023EB2D00E03455 /* rewardsVC.swift in Sources */,
 				3A729663206E3444002D1C9E /* newUserVC.swift in Sources */,

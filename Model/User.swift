@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import UIKit
 
-
+//Never got around to using this class, might want to for the menu though
 class User{
     
     private var _name: String!

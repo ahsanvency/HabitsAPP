@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,18 +23,18 @@
             <objects>
                 <viewController id="AdU-jd-mL5" customClass="menuVC" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8gN-Qy-32e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePic" translatesAutoresizingMaskIntoConstraints="NO" id="n1n-IP-ekk" customClass="circularImage" customModule="Habits" customModuleProvider="target">
-                                <rect key="frame" x="99.666666666666686" y="94" width="175" height="175"/>
+                                <rect key="frame" x="99.5" y="70" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="K8r-Qj-WWQ"/>
                                     <constraint firstAttribute="width" constant="175" id="oop-Wa-haL"/>
                                 </constraints>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFM-Nd-MiY">
-                                <rect key="frame" x="0.0" y="478" width="375" height="225"/>
+                                <rect key="frame" x="0.0" y="367" width="375" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="7Yg-OS-oQs"/>
                                 </constraints>
@@ -43,17 +43,17 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URS-vO-m2I">
-                                <rect key="frame" x="0.0" y="703" width="375" height="109"/>
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign Out Icon" translatesAutoresizingMaskIntoConstraints="NO" id="y00-kv-py1">
-                                        <rect key="frame" x="8" y="34" width="40" height="40"/>
+                                        <rect key="frame" x="8" y="17" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="69c-7d-2kL"/>
                                             <constraint firstAttribute="height" constant="40" id="fZi-fR-FBq"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSn-gh-lod">
-                                        <rect key="frame" x="63" y="41" width="88" height="26"/>
+                                        <rect key="frame" x="63" y="24" width="88" height="26"/>
                                         <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veg-U8-43T">
-                                <rect key="frame" x="93.666666666666686" y="294" width="187" height="28"/>
+                                <rect key="frame" x="93.5" y="270" width="187" height="28"/>
                                 <fontDescription key="fontDescription" name="D-DIN-Bold" family="D-DIN" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -166,18 +166,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dkc-ey-RMP" id="jp0-yI-B8E">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Edit" translatesAutoresizingMaskIntoConstraints="NO" id="92h-tA-V2J">
-                                                    <rect key="frame" x="10" y="17.666666666666671" width="40" height="40"/>
+                                                    <rect key="frame" x="10" y="17.5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="30i-pI-D1l"/>
                                                         <constraint firstAttribute="height" constant="40" id="TnZ-vi-KZM"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i81-WK-axR">
-                                                    <rect key="frame" x="65" y="24.666666666666671" width="86" height="26"/>
+                                                    <rect key="frame" x="65" y="24.5" width="86" height="26"/>
                                                     <fontDescription key="fontDescription" name="D-DIN" family="D-DIN" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -199,11 +199,11 @@
                                         <rect key="frame" x="0.0" y="75" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kVu-Oj-QkD" id="crT-ds-oa9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Edit" translatesAutoresizingMaskIntoConstraints="NO" id="QOY-23-qpu">
-                                                    <rect key="frame" x="8" y="17.666666666666671" width="40" height="40"/>
+                                                    <rect key="frame" x="8" y="17.5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="CyE-p8-EBY"/>
                                                         <constraint firstAttribute="width" constant="40" id="wxm-DM-bSS"/>
@@ -232,7 +232,7 @@
                                         <rect key="frame" x="0.0" y="150" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ptw-e0-ajh" id="NH7-nF-wi2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="pdZ-AY-LUO" customClass="settings">

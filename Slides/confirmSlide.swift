@@ -10,12 +10,9 @@ import UIKit
 
 class confirmSlide: UIView {
 
-    
-    @IBOutlet weak var backgroundImg: UIImageView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-//        backgroundImg.makeBlurImage(targetImageView: backgroundImg, with: .light)
     }
 }

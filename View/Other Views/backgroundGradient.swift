@@ -8,12 +8,11 @@
 
 import UIKit
 
+//View that allows us to set the background of any view to a gradient, not used often because we just use an imageview as the background and set that to a gradient
 class backgroundGradient: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //backgroundColor = seaFoamColor
-        
         let layer : CAGradientLayer = CAGradientLayer()
         layer.frame.size = self.frame.size
         

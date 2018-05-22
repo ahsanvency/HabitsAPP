@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import paper_onboarding
 
+//Needed for the initial onboarding screen with all the info
+
 class OnboardingView: PaperOnboarding{
     
 }

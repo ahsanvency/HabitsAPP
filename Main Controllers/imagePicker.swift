@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+//This will be used when we eventually let users setup their image on the menu
+
 //extension SettingsVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 //    
 //    func handleProfileImage(){

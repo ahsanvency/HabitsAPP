@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 import Firebase
 
+//This is setup so we dont have to enter a lot of code each time we want to reference the habits or the users info from firebase
+
 
 let DB_BASE = Database.database().reference()
 

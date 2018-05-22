@@ -8,6 +8,8 @@
 
 import UIKit
 
+//Lets us dynamically change all the views that have textfields in them
+//The login screens have these views
 class textFieldView: UIView {
     
     override func awakeFromNib() {

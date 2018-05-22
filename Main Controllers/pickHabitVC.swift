@@ -17,16 +17,14 @@ class pickHabitVC: CustomTransitionViewController, iCarouselDelegate, iCarouselD
     
     
     //Carousel variables
+    //Creates an array for all the habits to be in the array titled "habits"
     var habits = habitModel.getHabit()
+    //Sets the height and width of each view
     let customWidth:CGFloat = 200
     let customHeight:CGFloat = 200
-    var habitsCarouselPicker: habitCarouselSelector!
+//    var habitsCarouselPicker: habitCarouselSelector!
     
-    var rotationAngle: CGFloat!
-    let width: CGFloat = 100
-    let height: CGFloat = 100
     
-    //Creating the variable
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +44,21 @@ class pickHabitVC: CustomTransitionViewController, iCarouselDelegate, iCarouselD
         return habits.count
     }
     
+    
+    //Sets up the image and label to be shown in the view
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+        
+        //A general view we add the image and label to for the habits
         let view = UIView(frame: CGRect(x: 0, y: 0, width: customWidth, height: customHeight))
         
+        //Gets the image for the habit object
+        //Each image is stored in assets as the name of the habit
         let habitImageView = UIImageView(image: habits[index].habitPic)
         habitImageView.frame = CGRect(x: 12.5, y: 0, width: 150, height: 175)
         habitImageView.contentMode = .scaleAspectFit
         view.addSubview(habitImageView)
         
+        //Same with the images we are taking the name parameter of each habit and displaying it on the iCarousel
         let habitNameLabel = UILabel()
         habitNameLabel.frame = CGRect(x: 12.5, y: 195, width: 150, height: 30)
         habitNameLabel.text = habits[index].habitName
@@ -68,6 +73,7 @@ class pickHabitVC: CustomTransitionViewController, iCarouselDelegate, iCarouselD
     }
     
     
+    //Code I found online that we need to keep but don't understand why
     func carousel(_ carousel: iCarousel, valueFor option: iCarouselOption, withDefault value: CGFloat) -> CGFloat {
         if option == iCarouselOption.spacing {
             return value * 1
@@ -97,10 +103,14 @@ class pickHabitVC: CustomTransitionViewController, iCarouselDelegate, iCarouselD
     }
 
 
+    //Goes to the next screen where the user will enter information about their habit
     @IBAction func nextScreen(_ sender: Any) {
         let selectedHabit = habits[habitCarousel.currentItemIndex]
+        //This is how you do a transition in code
+        //We have to do it this way if we want to pass variables like the habit object from on VC to another
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let habitInfo = storyBoard.instantiateViewController(withIdentifier: "habitInfoVCID") as! habitInfoVC
+        //Sends over the habit object the user selected to the habitInfo screen for us to use
         habitInfo.chosenHabit = selectedHabit
         view.window?.layer.add(rightTransition(duration: 0.5), forKey: nil)
         self.present(habitInfo, animated: false, completion: nil)

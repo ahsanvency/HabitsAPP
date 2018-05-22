@@ -21,6 +21,7 @@ class menuVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Sets up the name on the menu similarly to how the habit info is setup on the main screen
         if let currentUser = user{
             nameOfUser.text = currentUser.name
         }else{

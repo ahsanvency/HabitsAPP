@@ -21,23 +21,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //This is the variable for what the inital viewController the user enters will be
         var initialViewController: UIViewController!
         
+        //If there is an accessToken in keychainWrapper it means the user is logged in
         let accessToken: String? = KeychainWrapper.standard.string(forKey: KEY_UID)
+
         if accessToken != nil {
-            
+            //If the token is not empty then we will show the mainVC because the user is logged in already
             initialViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
         }
+            //If the user is not logged in we will check to see if they went through onbaording already or not
         else{
+            //If the user default shows they went through onboarding already then we will simply show the login screen
             let userDefaults = UserDefaults.standard
             if userDefaults.bool(forKey: "onBoardingComplete"){
                 initialViewController = storyBoard.instantiateViewController(withIdentifier: "loginID") as! loginVC
+                //If the user has not gone through onboarding yet we will show the onboarding screen to them
             }else{
                 initialViewController = storyBoard.instantiateViewController(withIdentifier: "onboardingID") as! onboardingVC
             }
             window?.makeKeyAndVisible()
         }
+        //Once we set the initialViewController above we are displaying it here as the rootViewController
+        //the rootViewController is the viewController that is shown when the user opens the app
             window?.rootViewController = initialViewController
         
         
@@ -58,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        //Also type these lines of code, they work and its a thing
+        //Lines of code needed for facebook login, dont fuck with it
         let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
         
         return handled

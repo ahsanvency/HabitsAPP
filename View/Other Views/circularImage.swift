@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//Makes the image view on the menu a circular image
 class circularImage: UIImageView{
     
     override func awakeFromNib() {
