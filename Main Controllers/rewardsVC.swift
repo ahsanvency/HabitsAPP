@@ -24,9 +24,6 @@ class rewardsVC: UIViewController {
         var image: UIImage!
         var reward: String!
     }
-    
-//    var glossyBtn = GlossyButton()
-    
     var items = [slotComp]()
     
     //Timers
@@ -109,7 +106,7 @@ class rewardsVC: UIViewController {
         intermediateGap1 = 5
         advancedGap = 4
         
-        shadowlayer()
+        setupScreen()
         
         
         rotateitems(index: selectedItemLeft, columnIndex: 1)
@@ -147,8 +144,8 @@ class rewardsVC: UIViewController {
             
             if let prevSpunDay = rewardsDict!["SpunDay"] as? Int{
                 
-                if prevSpunDay == day {
-//                if day - 1 == day{
+//                if prevSpunDay == day {
+                if day - 1 == day{
                     //alert
                     let spinAlert = UIAlertController(title: "Alert", message: "Can only play once a day", preferredStyle: UIAlertControllerStyle.alert)
                     let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in})
@@ -178,12 +175,12 @@ class rewardsVC: UIViewController {
     
     func prepareNextSpin(){
         //can eventually delete these to replace it with returnStop in the functions below
-        let stopLeft = returnStop()
-        let stopMiddle = returnStop()
-        let stopRight = returnStop()
-//        let stopLeft = 9
-//        let stopMiddle = 9
-//        let stopRight = 9
+//        let stopLeft = returnStop()
+//        let stopMiddle = returnStop()
+//        let stopRight = returnStop()
+        let stopLeft = 9
+        let stopMiddle = 9
+        let stopRight = 9
         
         //Generates the number of times for each column to spin
         numberOfTimesSpinLeft = 68 * Int(arc4random_uniform(UInt32(3))+2) - stopLeft + selectedItemLeft
@@ -600,7 +597,7 @@ class rewardsVC: UIViewController {
        dismiss(animated: false, completion: nil)
     }
     
-    func shadowlayer(){
+    func setupScreen(){
         
         let degrees = 180.0
         let radians = CGFloat(degrees * Double.pi / 180)
