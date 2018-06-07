@@ -51,6 +51,19 @@ class MainVC: CustomTransitionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showSettings),
+                                               name: NSNotification.Name("showSettings"),
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showEditInfo),
+                                               name: NSNotification.Name("showEditInfo"),
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(showEditRewards),
+                                               name: NSNotification.Name("showEditRewards"),
+                                               object: nil)
         
         showLoadingScreen()
         //How the notification is sent
@@ -81,6 +94,21 @@ class MainVC: CustomTransitionViewController {
         })
     }
     
+    @objc func showSettings() {
+        performSegue(withIdentifier: "showSettings", sender: nil)
+    }
+    
+    @objc func showEditInfo() {
+        performSegue(withIdentifier: "showEditInfo", sender: nil)
+    }
+    
+    @objc func showEditRewards() {
+        performSegue(withIdentifier: "showEditRewards", sender: nil)
+    }
+    
+    
+    
+    
     //Function that shows the inital loading screen when they open the app
     func showLoadingScreen(){
         loadingView.bounds.size.width = view.bounds.width
@@ -94,6 +122,12 @@ class MainVC: CustomTransitionViewController {
         }) { (success) in
             
         }
+    }
+    
+    
+
+    @IBAction func menuTapped(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name("ToggleSideMenu"), object: nil)
     }
     
     //This is the function that constantly updates the habit with data from firebase

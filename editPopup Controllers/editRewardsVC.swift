@@ -77,7 +77,7 @@ class editRewardsVC: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func back(_ sender: Any) {
-        view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
+        view.window?.layer.add(bottomTransition(duration: 0.5), forKey: nil)
         dismiss(animated: false, completion: nil)
     }
     
@@ -111,7 +111,7 @@ class editRewardsVC: UIViewController, UITextFieldDelegate {
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let mainScreen = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
-            view.window?.layer.add(leftTransition(duration: 0.5), forKey: nil)
+            view.window?.layer.add(bottomTransition(duration: 0.5), forKey: nil)
             self.present(mainScreen,animated: false, completion: nil)
         }else {
             self.upAlert(messages: "Please fill out all fields")

@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         if accessToken != nil {
             //If the token is not empty then we will show the mainVC because the user is logged in already
-            initialViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
+            initialViewController = storyBoard.instantiateViewController(withIdentifier: "ContainverVCID") as! ContainerVC
         }
             //If the user is not logged in we will check to see if they went through onbaording already or not
         else{

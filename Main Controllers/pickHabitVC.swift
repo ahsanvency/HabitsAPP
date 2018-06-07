@@ -99,7 +99,6 @@ class pickHabitVC: CustomTransitionViewController, iCarouselDelegate, iCarouselD
         let z = CGFloat(-fabs(Float(clampedOffset))) * distance
         let offsetFactor = offset + clampedOffset*spacing
         return CATransform3DTranslate(transform, offsetFactor * 175, 0.0, z)
-        
     }
 
 
