@@ -23,6 +23,7 @@ class menuVC: UIViewController {
     @IBOutlet weak var nameOfUser: UILabel!
     
     var user: User?
+    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,31 +39,23 @@ class menuVC: UIViewController {
                 // Get user value
                 let value = snapshot.value as! NSDictionary
                 
-                self.nameOfUser.text = value["name"] as! String
+                self.nameOfUser.text = (value["name"] as! String)
+                let ref = Storage.storage().reference(forURL: value["profileImage"] as! String)
                 
-                //                let imageUrl = URL(string: value["profileImage"] as! String)
-                //                let request = NSMutableURLRequest(url:imageUrl!);
-                //                request.httpMethod = "GET";
+                ref.getData(maxSize: 2 * 1024 * 1024, completion: { (data, error) in
+                    if error != nil {
+                        print("JESS: Unable to download image from Firebase storage")
+                    } else {
+                        print("JESS: Image downloaded from Firebase storage")
+                        if let imgData = data {
+                            if let img = UIImage(data: imgData) {
+                                self.profileImage.image = img
+                                menuVC.imageCache.setObject(img, forKey: value["profileImage"] as! NSString)
+                            }
+                        }
+                    }
+                })
                 
-                //                let session = URLSession(configuration: .default)
-                //                let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
-                //
-                //                    if error != nil{
-                //                        print(error)
-                //                    }else{
-                //                        if (response as? HTTPURLResponse != nil){
-                //                            if let imageData = data{
-                //                                self.profileImage.image = UIImage(data: imageData)
-                //                            }else{
-                //                                print("No Image Found")
-                //                            }
-                //                        }else{
-                //                            print("No response from server")
-                //                        }
-                //                    }
-                //                }
-                //
-                //
             }) { (error) in
                 print(error.localizedDescription)
             }
