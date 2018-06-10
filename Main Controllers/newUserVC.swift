@@ -262,7 +262,7 @@ class newUserVC: UIViewController, UITextFieldDelegate{
                             if error == nil {
                                 if let user = user {
                                     //sets up a dictionary to upload all these values to firebase
-                                    let userData = [ "name": self.nameField.text!, "email" : self.emailField.text!, "profileImage": "https://firebasestorage.googleapis.com/v0/b/habitsapp-7ea48.appspot.com/o/myImage.png?alt=media&token=867310eb-eb88-40e1-932d-236ea372061c"]
+                                    let userData = [ "name": self.nameField.text!, "email" : self.emailField.text!, "profileImage": "https://firebasestorage.googleapis.com/v0/b/habitsapp-7ea48.appspot.com/o/profilePic.png?alt=media&token=b97f4349-3bc1-433e-81ac-792c5beafec1"]
                                     //completes the sign in and see how the userData is uploaded as a dictionary
                                     //Under the userID its uploaded as a dictionary
                                     self.completeSignIn(id: user.uid, userData: userData as Dictionary<String, AnyObject>);
