@@ -267,7 +267,7 @@ class newUserVC: UIViewController, UITextFieldDelegate{
                                     //Under the userID its uploaded as a dictionary
                                     self.completeSignIn(id: user.uid, userData: userData as Dictionary<String, AnyObject>);
                                     button.stopAnimation(animationStyle: .expand, completion: {
-                                        self.performSegue(withIdentifier: "toAdd", sender: nil)
+                                        self.performSegue(withIdentifier: "toPickHabit", sender: nil)
                                     })
                                 }
                             } else {//If the password was too short

@@ -25,6 +25,7 @@ class menuVC: UIViewController {
     var user: User?
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

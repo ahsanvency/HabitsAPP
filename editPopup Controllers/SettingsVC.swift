@@ -9,12 +9,14 @@
 import UIKit
 import Firebase
 
-class SettingsVC: UIViewController{
+class SettingsVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var editNameField: UITextField!
     @IBOutlet weak var userProfileImage: circularImage!
     
     @IBOutlet weak var confirmButton: roundedButton!
+    
+    var selectedImageFromPicker: UIImage?
     
     func upAlert (messages: String) {
         let myAlert = UIAlertController(title: "Alert", message: messages, preferredStyle: UIAlertControllerStyle.alert)
@@ -43,39 +45,77 @@ class SettingsVC: UIViewController{
     }
     
     
+    
+    
     @IBAction func editImage(_ sender: Any) {
-//        handleProfileImage()
+        handleProfileImage()
     }
     
+    func handleProfileImage(){
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        present(picker, animated: true, completion: nil)
+    }
     
-    @IBAction func confirm(_ sender: Any) {
-
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let editedImage = info["UIImagePickerControllerEditedImage"]{
+            selectedImageFromPicker = (editedImage as! UIImage)
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"]{
+            selectedImageFromPicker = (originalImage as! UIImage)
+        }
+        
+        if let selectedImage = selectedImageFromPicker {
+            userProfileImage.image = selectedImage
+        }
         
         dismiss(animated: true, completion: nil)
-        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("Canceled Picker")
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func uploadMedia(completion: @escaping (_ url: String?) -> Void) {
         let imageName = NSUUID().uuidString
-        
-        let storageRef = Storage.storage().reference().child("\(imageName).png")
-        if let uploadData = UIImagePNGRepresentation(userProfileImage.image!){
+        let storageRef = Storage.storage().reference().child("\(imageName).jpeg")
+        if let uploadData = UIImageJPEGRepresentation(self.userProfileImage.image!, 0.01){
+            
             storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-                if error != nil{
-                    print(error!)
-                    return
-                }
-                if let profileImageUrl = metadata?.downloadURL()?.absoluteURL{
-                    
+                if error != nil {
+                    print("error")
+                    completion(nil)
+                } else {
+                    completion((metadata?.downloadURL()?.absoluteString)!);
+                    // your uploaded photo url.
                 }
             }
         }
+    }
+    
+    
+    
+    
         
+    @IBAction func confirm(_ sender: Any) {
         
+        dismiss(animated: true, completion: nil)
         if editNameField.text != "" {
             
             //current user
             guard let uid = Auth.auth().currentUser?.uid else {
                 return
             }
-            DataService.ds.REF_USERS.child(uid).updateChildValues(["name" : editNameField.text!])
+            uploadMedia() { url in
+                if url != nil {
+                    DataService.ds.REF_USERS.child(uid).updateChildValues(["name" : self.editNameField.text!, "profileImage" : url!])
+                }
+            }
+            
+            
             
             
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
