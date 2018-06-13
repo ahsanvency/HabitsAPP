@@ -78,9 +78,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
                                 if let user = user {
                                     self.completeSignIn(id: user.uid)
                                     button.stopAnimation(animationStyle: .expand, completion: {
-                                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
-                                        self.present(newViewController, animated: true, completion: nil)
+                                        self.present(tabBarVC(), animated: true, completion: nil)
                                     })
                                 }
                             }
@@ -142,9 +140,7 @@ class loginVC: UIViewController, UITextFieldDelegate {
             if let user = user {
                 _ = ["provider" : credential.provider]
                 self.completeSignIn(id: user.uid);
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainVCID") as! MainVC
-                self.present(newViewController, animated: true, completion: nil)
+                self.present(tabBarVC(), animated: true, completion: nil)
             }
         }
     }
